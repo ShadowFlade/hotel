@@ -1,0 +1,44 @@
+extends ../layout/main
+
+block variables
+  - var title = '1st page';
+  - var description = '';
+  - var pageClass = 'base-page';
+  img(src="../../assets/img/icon.svg").icon
+block content
+  .first-half
+    .first-half__column
+    +item('hsla(238, 35%, 19%, 1)'
+  , ['Dark Shade 100%','#1F2041'])
+    +item('#575870'
+  , ['Dark Shade 75%','#1F2041'])
+    +item('#8F8FA0'
+  , ['Dark Shade 50%','#1F2041'])
+    +item('#C7C7CF'
+  , ['Dark Shade 25%','#1F2041'])
+    +item('#F4F4F5'
+  , ['Dark Shade 5%','#1F2041'])
+    +item(' #BC9CFF'  
+  , ['Purple','#BC9CFF'])
+    +item(' #6FCF97'
+  , ['Green','#6FCF97'])
+
+  .second-half
+    .second-half__column
+      .second-half__item.big
+        span.big H1
+        .fonts This one is the sub-section or widget title
+      .second-half__item.medium
+        span.medium H2
+        .fonts Next one is the item title inside widgets
+      .second-half__item.small
+        span.small H3
+        .fonts This is a label or CTA text
+      .second-half__item.mainfont
+        span.mainfont Body
+        .fonts This is the body text which is used for most of the design, like paragraphs, lists, etc.
+      
+  
+
+
+

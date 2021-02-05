@@ -1,0 +1,77 @@
+@import '../utils/vars.scss';
+.dropdown-accom {
+	border-bottom-width:0.5px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	position: relative;
+	user-select: none;
+	&__ul {
+		position: absolute;
+		bottom: 0;
+		left: -1px;
+		background: #000;
+		border: 1px solid rgba(31, 32, 65, 0.5);
+		top: 100%;
+		width: 100%;
+		background-color: white;
+		border-top-width:0px;
+		border-bottom-right-radius: 2px;
+		border-bottom-left-radius: 2px;
+		z-index: 2;
+		height: 123px;
+	li {
+		background: white;
+		display: flex;
+		justify-content: space-between;
+		height: 40px;
+		align-items: center;
+		padding: 5px 10px;
+	}
+	}
+	&__span {
+		font-family:'Montserrat';
+		font-style: normal;
+		font-weight: bold;
+		font-size: 1.1rem;
+		text-align: center;
+		color: #1F2041;
+		width: 10px;
+	}
+	&__btn-group {
+		display: flex;
+		align-items: center;
+	}
+	&__submit {
+		float:right;
+		padding: 19px/$mainFontSize*1rem 13px/$mainFontSize*1rem;
+	}
+	&__footer {
+		width: 100%;
+		height: 20%;
+		z-index: 2;
+		background: white;
+	}
+	&__clear {
+		padding: 19px/$mainFontSize*1rem 13px/$mainFontSize*1rem;
+	}
+}
+
+.dropdown-accom__button--prev,.dropdown-accom__button--next {
+	width: 10%;
+	background-color: transparent;
+	border: 1px solid rgba(31, 32, 65, 0.5);
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin: 0 15px;
+	font-size: 1.4rem;
+	color:rgba(31, 32, 65, 0.5);
+}
+
+.dropdown-accom__button--next {
+	margin-right: 0;
+}
+
+.input-box{
+	position: relative;
+}

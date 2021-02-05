@@ -1,0 +1,45 @@
+.page-item{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	cursor: pointer;
+	color: rgba(31, 32, 65, 0.5);
+}
+.pagination-item {
+	display: flex;
+	&__info {
+		font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	color: rgba(31, 32, 65, 0.75);
+	}
+}
+.page-active{
+	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);;
+}
+.arrow-right__pagination{
+	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+	border-radius: 50%;
+	padding: 8px;
+	box-sizing:content-box;
+}
+.for-arrow {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 50%;
+}

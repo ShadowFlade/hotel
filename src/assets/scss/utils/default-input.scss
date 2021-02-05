@@ -1,0 +1,67 @@
+@import '../utils/vars.scss';
+
+label,.label{
+	position: relative;
+	user-select: none;
+	// width:266/12*1em;
+	@include small
+	margin-bottom: 5px;
+	font-size: 14px;
+	width:320px;
+	display: flex;
+  flex-direction: column;
+}
+
+.input,select {
+  background: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  font-size: 14px;
+  width: 320/14 * 1em;
+  padding: 12/14*1em 31/14*1em 8/14*1em 15/14*1em ;
+  height: 44px;
+  -moz-appearance: none;
+ 	-webkit-appearance: none;
+ 	appearance: none;
+
+
+  &:hover,&:focus{
+    border-color:rgba(31, 32, 65, 0.50);}
+}
+.arrow,.arrow_forward{
+	position: absolute;
+	top: 50%;
+	right:2.5%;
+	transform:translate(-50%,-2.5%);	
+
+	
+} 
+.arrow-right {
+	right: 5%;
+	top: 50%;
+	transform:translate(-5%,-50%);
+	position: absolute;
+	fill:white;
+}	
+
+.disabled{
+	opacity: .5;
+}
+.toggle-details {
+	@include small
+}
+.inbox-button{
+	background-color: transparent;
+	color: #BC9CFF;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+}
+div{
+	@include small
+	font-size: 14px;
+	// margin-bottom: 16px;
+}

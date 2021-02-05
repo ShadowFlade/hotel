@@ -1,0 +1,61 @@
+extends ../layout/main
+include ../utils/mixins.pug
+block variables
+	- var title = 'form-elements';
+block content
+	.form-elements
+		.form-elements__column
+			include ../includes/modules/text-field.pug 
+			include ../includes/modules/dropdown.pug
+			include ../includes/modules/masked-text-field.pug
+			.date-picker-box
+				div 
+					p(class='date-caption').
+						date dropdown
+					include ../includes/modules/date-picker.pug
+				div 
+					p(class='date-caption').
+						date dropdown
+					include ../includes/modules/date-picker.pug
+			include ../includes/modules/filter-date-dropdown.pug
+			include ../includes/modules/subscription-text-field.pug
+			include ../includes/modules/dropdown-accom.pug
+			include ../includes/modules/checkbox-list.pug
+			include ../includes/modules/features.pug 
+		.form-elements__column
+			include ../includes/modules/checkbox-buttons.pug
+			include ../includes/modules/radio-buttons.pug
+			include ../includes/modules/toggle.pug
+			.like
+				.label like button
+				include ../includes/modules/like.pug
+			include ../includes/modules/rate-button.pug
+			.dropdown
+				
+				include ../includes/modules/dropdown-advanced.pug
+			label rich checkbox buttons
+			include ../includes/modules/checkbox-rich.pug
+			include ../includes/modules/comment.pug
+		.form-elements__column
+			include ../includes/modules/range-slider.pug
+			label buttons
+			include ../includes/modules/buttons.pug
+			include ../includes/modules/pay-button.pug
+			.pagination(class='label') pagination
+				include ../includes/modules/pagination.pug
+			.dropdown
+				
+				include ../includes/modules/dropdown-advanced2.pug
+			.bullet-list
+				.label bullet list
+				include ../includes/modules/bullet-list.pug
+
+
+
+
+
+
+
+
+
+

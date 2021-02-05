@@ -1,0 +1,19 @@
+@import '../utils/vars.scss';
+.card {
+  min-width: 380px;
+  min-height: 374px;
+  width: 380px;
+  height: 374px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  &__title {
+    @include big;
+  }
+  &__destination {
+    display: flex;
+    justify-content: space-between;
+  }
+  padding: inems(40px) inems(30px) inems(30px) inems(30px);
+}

@@ -1,0 +1,21 @@
+extends ../layout/main
+include ../utils/mixins.pug
+block variables
+  - var title = 'Cards';
+//- block head
+//-   link(href='../../assets/scss/modules/pay-button.scss')
+block content
+  .card
+    .card__title Найдём номера под ваши пожелания
+    .card__destination
+      +date-picker('Прибытие')
+      +date-picker('Выезд')  
+    +dropdown('Гости',7)
+    button(class='pay-button') перейти к оплате
+      +svg__arrow-right('#FFFFFF','#FFFFFF','arrow-right')
+  .card
+  .card
+  .card
+  .card
+  .card
+  .card              

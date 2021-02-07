@@ -1,19 +1,162 @@
-@import '../../../assets/scss/utils/vars.scss';
+@import '../../layout/vars.scss';
+@import '../../layout/mixins.scss';
+// @import '../../layout/nullstyle.scss';
+body {
+  background: #f4f4f6;
+}
+.container {
+  justify-content: normal;
+  display: flex;
+  max-width: 1440px;
+}
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
   min-width: 380px;
   min-height: 374px;
-  width: 380px;
-  height: 374px;
+  // width: 380px;
+  // height: 374px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px 30px 30px 30px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  padding: em(40px) em(30px) 0 em(30px);
   &__title {
     @include big;
+    margin-bottom: 21px;
   }
   &__destination {
     display: flex;
+    // justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  // &__guests {
+  //   margin-bottom: 31px;
+  // }
+  &__for-button {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    float: left;
+  }
+  &__button {
+    float: right;
+    margin: 30px 0 15px 0;
+  }
+  &__footer {
+    width: 100%;
+    // height: 100/646 * 100%;
+    // height: 10em;
+    margin: 10px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // height: 70px;
+  }
+  .text-field .input {
+    margin-bottom: 21px;
+  }
+  &__summary {
+    margin-bottom: 20px;
+  }
+  &__credentials {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+  }
+}
+
+label {
+  margin-bottom: 5px;
+}
+.summary {
+  display: flex;
+  flex-direction: column;
+  &__row {
+    @include mainfont;
+  }
+  &__price {
+    float: left;
+  }
+  &__sum {
+    float: right;
+  }
+  &__all {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+    color: #1f2041;
+    display: flex;
     justify-content: space-between;
   }
-  padding: inems(40px) inems(30px) inems(30px) inems(30px);
+  &__border {
+    flex: 1 0 0;
+    position: relative;
+    top: -5px;
+    left: 5px;
+    border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+  }
+  &__result {
+    float: left;
+    text-align: left;
+  }
+  &__money {
+    float: right;
+    width: 25%;
+    text-align: right;
+  }
+  &__row {
+    margin-bottom: 10px;
+  }
+  &__row::last-child {
+    margin-bottom: 0;
+  }
+}
+.number {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 17px;
+  color: #1f2041;
+}
+.lux {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #bc9cff;
+}
+.price {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.hotel-card {
+  width: 270px;
+  height: 257px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  &__slider {
+    height: 60%;
+  }
 }

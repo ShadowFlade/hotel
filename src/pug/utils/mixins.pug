@@ -49,12 +49,12 @@ mixin item(left_part, right_part)
 			.item_dark #{right_part[0]}
 			.item_code #{right_part[1]}
 
-mixin dropdown(label,number_of_options)
+mixin dropdown(label,number_of_options,option)
 	-let n=0
 	label #{label}
 	label
 		select
-			option Сколько гостей
+			option #{option}
 			while n<=number_of_options
 				li=n++
 				option(value=n) #{n}
@@ -167,11 +167,27 @@ mixin bullet-list (array_of_arguments)
 
 mixin date-picker(label)
 	.date-picker
-
+		label #{label}
 		label(class='date-picker__item')
 			input(type='text',class='datepicker input',placeholder='ДД.ММ.ГГГГ')
 			img(src='../../../assets/img/arrow.svg',class='arrow')
-
+mixin hotel-card(pictures,lux-number,price,stars,number-of-reviews,lux)
+	.hotel-card__slider
+		each pic in pictures
+			img(src=pic)
+	.hotel-card__info
+		.hotel-card__row
+			span(class='hotel-card__number')(class='number') № #{lux-number}
+				if lux==true
+					span(class='hotel-card__lux lux') ЛЮКС
+			span(class='hotel-card__price price')
+				b
+				|#{price}
+			span(class='day') в сутки
+		.hotel-card__row
+			.hotel-card__stars
+			span(class='hotel-card__reviews') #{number-of-reviews} Отзывов
+			
 mixin pagination(last_page,number_of_first_pages)
 	.pagination-item
 		- let n=1
@@ -184,6 +200,12 @@ mixin pagination(last_page,number_of_first_pages)
 		.for-arrow
 			+svg__arrow-right('#FFFFFF','#FFFFFF','arrow-right__pagination')
 	.pagination-item__info 1 – 12 из 100+ вариантов аренды
+
+
+		
+	
+
+
 
 
 

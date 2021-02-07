@@ -1,7 +1,7 @@
-@import '../../../../assets/scss/utils/vars.scss';
-@import '../utils/mixins';
-@import '../utils/fonts';
-@import '../utils/nullstyle.scss';
+@import '../../layout/vars.scss';
+@import '../../layout/mixins.scss';
+@import '../../layout/fonts.scss';
+@import '../../layout/nullstyle.scss';
 
 .mainfont {
   @include mainfont;
@@ -23,14 +23,14 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
-.container {
-  margin: 0 auto;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+// .container {
+//   margin: 0 auto;
+//   display: flex;
+//   width: 100%;
+//   height: 100%;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+// }
 .icon {
   position: relative;
   top: 30px;

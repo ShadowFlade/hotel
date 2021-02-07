@@ -1,7 +1,7 @@
-@import 'utils/nullstyle.scss';
-@import 'utils/vars';
-@import 'utils/mixins';
-@import 'utils/fonts';
+@import './nullstyle.scss';
+@import './vars';
+@import './mixins';
+@import './fonts';
 
 html {
   line-height: $mainLineHeight;
@@ -27,7 +27,6 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: red;
 }
 .wrapper {
   display: flex;
@@ -42,12 +41,11 @@ body {
   min-height: 100vh;
 }
 .container {
-  margin: 0 auto;
-  width: 100%;
-  flex: 0 0 auto;
-  position: relative;
-  margin: 0 auto;
-  max-width: $desktopWidth;
+  // width: 100%;
+  // flex: 0 0 auto;
+  // position: relative;
+  // margin: 0 auto;
+  // max-width: $desktopWidth;
   @media screen and (max-width: $smDesktopWidth) {
     max-width: tableWidth;
   }

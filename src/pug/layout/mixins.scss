@@ -8,15 +8,25 @@
   }
   @return $pixels / $context * 1rem;
 }
-
-@mixin size($width,$height: $width) {
+@function em($size) {
+  @return $size/$mainFontSize * 1em;
+}
+@mixin size($width, $height: $width) {
   width: $width;
   height: $height;
 }
 
 @mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
 }

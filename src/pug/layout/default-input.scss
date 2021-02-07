@@ -1,11 +1,12 @@
-@import '../utils/vars.scss';
+@import './vars.scss';
 
 label,
 .label {
   position: relative;
   user-select: none;
   // width:266/12*1em;
-  @include small margin-bottom: 5px;
+  @include small;
+  margin-bottom: 5px;
   font-size: 14px;
   width: 320px;
   display: flex;
@@ -60,8 +61,4 @@ select {
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-}
-div {
-  @include small font-size: 14px;
-  // margin-bottom: 16px;
 }

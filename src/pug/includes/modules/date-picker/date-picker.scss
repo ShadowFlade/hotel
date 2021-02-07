@@ -1,131 +1,131 @@
-.ui-button, .ui-state-default, .ui-widget-content .ui-state-default{
-	width: 1.6em;
-	text-align: center;
-	width: 23px;
+.ui-button,
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+  width: 1.6em;
+  text-align: center;
+  width: 23px;
 }
 .ui-datepicker table {
-	margin: 0;
+  margin: 0;
 }
 .date-picker {
-	width: 150px;
-	height: 44px;
-	margin-right: 20px;
-	&__item {
-		position: relative;
-		width: 150px;
-		&::last-child{
-			margin-right: 0
-		}
-	}
+  width: 150px;
+  // height: 44px;
+  margin-right: 20px;
+  &__item {
+    position: relative;
+    width: 150px;
+    &::last-child {
+      margin-right: 0;
+    }
+  }
 }
 .datepicker {
-	width: 150px;
+  width: 150px;
 }
 .date-caption {
-	margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 .date-picker-box {
-	display: flex;
+  display: flex;
 }
 
-.ui-datepicker td span, .ui-datepicker td a {
-  padding: 0 .2em 0 0;
-}   
+.ui-datepicker td span,
+.ui-datepicker td a {
+  padding: 0 0.2em 0 0;
+}
 .ui-datepicker-calendar .ui-state-default {
-	width: 1.6em;
-	text-align: center;
-	width: 23px;
-  }
-
-
-
+  width: 1.6em;
+  text-align: center;
+  width: 23px;
+}
 
 .ui-datepicker {
-background: #FFFF; /* Old browsers */
-background: #FFFF -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* FF3.6+ */
-background: #FFFF -webkit-gradient(linear, left top, left bottom, color- 
-stop(0%,#FFFF)), color-stop(100%,#34495e); /* Chrome,Safari4+ */
-background: #FFFF -webkit-linear-gradient(top,#FFFF 0%, #34495e 100%); /* 
+  background: #ffff; /* Old browsers */
+  background: #ffff -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* FF3.6+ */
+  background: #ffff -webkit-gradient(linear, left top, left bottom, color-
+          stop(0%, #ffff)),
+    color-stop(100%, #34495e); /* Chrome,Safari4+ */
+  background: #ffff -webkit-linear-gradient(top, #ffff 0%, #34495e 100%); /* 
 Chrome10+,Safari5.1+ */
-background: #FFFF -o-linear-gradient(top,#FFFF 0%, #34495e 100%); /* Opera11.10+ 
+  background: #ffff -o-linear-gradient(top, #ffff 0%, #34495e 100%); /* Opera11.10+ 
 */
-background: #FFFF -ms-linear-gradient(top,#FFFF 0%, #34495e 100%); /* IE10+ */
-background: #FFFF linear-gradient(top,#FFFF 0%, #34495e 100%); /* W3C */
-background: linear-gradient(180deg,#bc9cff,#8ba4f9);
-font-size:11px;
-padding:10px;
-border:1px solid #5BFEC8;
-width: 300px;
+  background: #ffff -ms-linear-gradient(top, #ffff 0%, #34495e 100%); /* IE10+ */
+  background: #ffff linear-gradient(top, #ffff 0%, #34495e 100%); /* W3C */
+  background: linear-gradient(180deg, #bc9cff, #8ba4f9);
+  font-size: 11px;
+  padding: 10px;
+  border: 1px solid #5bfec8;
+  width: 300px;
 }
 
 .ui-datepicker table td {
-text-align:center;
-padding-left:6%;
+  text-align: center;
+  padding-left: 6%;
 }
 
 .ui-datepicker a {
-cursor:pointer;
-text-decoration:none;
-}
-
-.ui-datepicker-prev {
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .ui-datepicker-next {
-float:right;
+  float: right;
 }
 
 .ui-datepicker-title {
-text-align: center;
-font-weight:bold;
+  text-align: center;
+  font-weight: bold;
 }
 
-.ui-widget.ui-widget-content{
-    border: 2px solid rgba(31, 32, 65, 0.25);;
+.ui-widget.ui-widget-content {
+  border: 2px solid rgba(31, 32, 65, 0.25);
 }
 
 .ui-datepicker th {
-    padding: .7em .3em;
-    text-align: center;
-    font-weight: bold;
-    border: 0;
-    color: #5BFEC8;
+  padding: 0.7em 0.3em;
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+  color: #5bfec8;
 }
 
 .ui-state-default,
 .ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default{
-    border: 1px solid #B1A0FE;
-    background: #000000;
-    font-weight: normal;
-    color: #000000;;
+.ui-widget-header .ui-state-default {
+  border: 1px solid #b1a0fe;
+  background: #000000;
+  font-weight: normal;
+  color: #000000;
 }
 
-a.ui-state-default:hover{
-    border: 1px solid white;
-    background: #5bfec8;
-    font-weight: bold;
-    color: black;
+a.ui-state-default:hover {
+  border: 1px solid white;
+  background: #5bfec8;
+  font-weight: bold;
+  color: black;
 }
 
-.ui-state-active, .ui-widget-content .ui-state-active,
+.ui-state-active,
+.ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
-    border: 1px solid white;
-    background: #B1A0FE;
-    font-weight: bold;
-    color: black;
+  border: 1px solid white;
+  background: #b1a0fe;
+  font-weight: bold;
+  color: black;
 }
 
 .ui-state-highlight,
-.ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
-    border: 1px solid #dad55e;
-    background: #fffa90;
-    color: black;
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  border: 1px solid #dad55e;
+  background: #fffa90;
+  color: black;
 }
 
 .ui-widget-header {
-    border: 1px solid #5bfec8;
-    background: blue;
-    color: #5bfec8;
-    font-weight: bold;
+  border: 1px solid #5bfec8;
+  background: blue;
+  color: #5bfec8;
+  font-weight: bold;
 }

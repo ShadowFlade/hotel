@@ -1,80 +1,79 @@
-@import '../utils/vars.scss';
+@import '../../../../assets/scss/utils/vars.scss';
 .radio-buttons__box {
-	display: flex;
-	margin-top: 16px/$mainFontSize*1rem;
-	width: 220px;
+  display: flex;
+  margin-top: 16px / $mainFontSize * 1rem;
+  width: 220px;
 }
 .radio-buttons__option {
-	font-family: Montserrat;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 24px;
-	color: rgba(31, 32, 65, 0.75);
-	display: flex;
-	margin-right: 10px;
-	align-items: center;
-	height: 100%;
-	position: relative;
-	width: 50%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  width: 50%;
 }
 
 /*скрыаем дефолтный радио и делаем кастомный сверху*/
 .radio__input {
-	opacity: 0;
-	position: absolute;
-	left: 0;
-	top: -3px;
-	cursor: pointer;
-	z-index: 2;
-	width: 20px;
-	height: 20px;
-} 
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: -3px;
+  cursor: pointer;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+}
 .radio-buttons__title:before {
-	content:'';
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	border: 1px solid #BC9CFF;
-	position: absolute;
-	left: 0;
-	top: -2px;
-}	;  
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #bc9cff;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
 
 /* чекнутое радио */
 .radio-buttons__title:after {
-	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-	border-radius: 10px;
-	content: '';
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	position: absolute;
-	top: 56%;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 10px;
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 56%;
   left: 8%;
-	transform: translate(-50%,-50%) scale(0.5)  ;
-  opacity:0;
-	transition: all 0.3s ease-out;
-	-webkit-transition: all 0.3s ease-out;
-	-moz-transition: all 0.3s ease-out;
-	-ms-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-} 
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
 /* активируем чекнутое радио */
-.radio__input:checked + .radio-buttons__title:after  {
-	opacity: 1;	
-  transform: translate(-50%,-50%) scale(1);
-};
-.radio__input:checked ~ .radio-buttons__title  {
-	color:$DarkShade75;
+.radio__input:checked + .radio-buttons__title:after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.radio__input:checked ~ .radio-buttons__title {
+  color: $DarkShade75;
 }
 .radio-buttons__title {
-	position: relative;
-	padding-left: 30px/$mainFontSize*1rem;
-	color:$DarkShade50;
-	transition:all .3s ease-out;
-
+  position: relative;
+  padding-left: 30px / $mainFontSize * 1rem;
+  color: $DarkShade50;
+  transition: all 0.3s ease-out;
 }
 .radio-buttons__label {
-	@include small;
-} 
+  @include small;
+}

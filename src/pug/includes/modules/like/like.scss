@@ -1,77 +1,71 @@
-@import '../utils/vars.scss';
-.like__item{
-	display: flex;
-	margin-bottom: $mainFontSize/13px*1rem;
-	position: relative;
-	border-radius: 10px;
-	width: 40px;
-	height: 20px;
-	border: 1px solid rgba(31, 32, 65, 0.25);
-} 
-.like-custom {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	font-family: 'Material Icons';
-	font-style: normal;
-	font-weight: normal;
-	font-size: 10px;
-	line-height: 9px;
-	display: flex;
-	align-items: center;
-	text-align: center;
-	color: rgba(31, 32, 65, 0.25);
-	transition:all .3s ease-out;
-
+@import '../../../../assets/scss/utils/vars.scss';
+.like__item {
+  display: flex;
+  margin-bottom: $mainFontSize/13px * 1rem;
+  position: relative;
+  border-radius: 10px;
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
 }
-.like__number{
-	position: absolute;
-	left: 56%;
+.like-custom {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 9px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(31, 32, 65, 0.25);
+  transition: all 0.3s ease-out;
+}
+.like__number {
+  position: absolute;
+  left: 56%;
   top: 9%;
-	font-size: 12px;
-	font-weight: 400;
-	color: rgba(31, 32, 65, 0.25);
-	transition:all .3s linear;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.25);
+  transition: all 0.3s linear;
 }
 .like__icon {
-	position: absolute;
-	top: 16%;
+  position: absolute;
+  top: 16%;
   left: 8%;
-  color:rgba(31, 32, 65, 0.25);
+  color: rgba(31, 32, 65, 0.25);
   font-size: 12px;
   opacity: 1;
-}	
-.like__input:checked ~ .like__icon {
-	opacity: 0;
-	transition:all .3s ease-out;
 }
-.like__icon--active{
-	opacity: 0;
-	transition:.3s ease-out;
-	position: absolute;
-	top: 16%;
+.like__input:checked ~ .like__icon {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.like__icon--active {
+  opacity: 0;
+  transition: 0.3s ease-out;
+  position: absolute;
+  top: 16%;
   left: 8%;
-  color: #BC9CFF;
+  color: #bc9cff;
   font-size: 12px;
 }
 
-.like__input:checked ~ .like__icon--active{
-	opacity: 1;
+.like__input:checked ~ .like__icon--active {
+  opacity: 1;
 }
-.like__input:checked ~ .like-custom{
-	border-color: #BC9CFF;
-	
+.like__input:checked ~ .like-custom {
+  border-color: #bc9cff;
 }
-.like__input:checked ~ .like__number{
-	
-	color:#BC9CFF;
+.like__input:checked ~ .like__number {
+  color: #bc9cff;
 }
 
 .like__input {
-	opacity: 0;
-	z-index: 2;
-	width: 100%;
+  opacity: 0;
+  z-index: 2;
+  width: 100%;
 }
-
-
-

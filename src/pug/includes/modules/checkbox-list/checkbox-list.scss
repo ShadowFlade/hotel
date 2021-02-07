@@ -1,116 +1,112 @@
-@import '../utils/vars.scss';
-::-webkit-details-marker {display: none;}
+@import '../../../../assets/scss/utils/vars.scss';
+::-webkit-details-marker {
+  display: none;
+}
 .checkbox-group {
-	margin-top: $mainFontSize/18px*1rem;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	background-color: #fff;
-	z-index: 2;
+  margin-top: $mainFontSize/18px * 1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
 }
 .checkbox {
-	font-family: 'Montserrat'; 
-	font-weight: 400; 
-	font-style: normal;
-	font-size: $mainFontSize;
-	color:$DarkShade50;
-	text-transform: capitalize;
-	padding-left: 8.5%;
-	padding-top: 3px;
-	&__item {
-		display: flex;
-		margin-bottom: $mainFontSize/13px*1rem;
-		position: relative;
-	}
-	&__input {
-		opacity: 0;
-		width: 20px;
-		height: 20px;
-		margin-right: $mainFontSize/9.74px*1rem;
-		background: #FFFFFF;
-		border: 1px solid rgba(31, 32, 65, 0.25);
-		border-radius: 4px;
-		cursor: pointer;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-style: normal;
+  font-size: $mainFontSize;
+  color: $DarkShade50;
+  text-transform: capitalize;
+  padding-left: 8.5%;
+  padding-top: 3px;
+  &__item {
+    display: flex;
+    margin-bottom: $mainFontSize/13px * 1rem;
+    position: relative;
+  }
+  &__input {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: $mainFontSize/9.74px * 1rem;
+    background: #ffffff;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    cursor: pointer;
     position: absolute;
     left: 0;
     top: 0;
-		&:checked ~ .checkbox-custom  {
-			background: #FFFFFF;
-			border: 1px solid #BC9CFF;
-			border-radius: 4px;
-			&:after {
-				-webkit-transform: rotate(0deg) scale(1);
-			  -ms-transform: rotate(0deg) scale(1);
-			  transform: rotate(0deg) scale(1);
-			  opacity:1;
-			  left: 4px;
-			  top: 1px;
-			  background-color: transparent;
-			};
-		}
-	}
+    &:checked ~ .checkbox-custom {
+      background: #ffffff;
+      border: 1px solid #bc9cff;
+      border-radius: 4px;
+      &:after {
+        -webkit-transform: rotate(0deg) scale(1);
+        -ms-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+        left: 4px;
+        top: 1px;
+        background-color: transparent;
+      }
+    }
+  }
 }
 .checkbox-custom {
-	position: absolute;
-	top: 0;
-	left: 0;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	background: #FFFFFF;
-	border: 1px solid rgba(31, 32, 65, 0.25);
-	background: transparent;
-	border-radius: 4px;
-	&:after {
-		position: absolute;
-	  content: url("../../img/ok.png");
-	  left: 0;
-	  top: 0;
-	  height: 0px;
-	  width: 0px;
-	  border-radius: 5px;
-	  // border: solid #009BFF;
-	  // border-width: 0 3px 3px 0;
-	  -webkit-transform: rotate(0deg) scale(0);
-	  -ms-transform: rotate(0deg) scale(0);
-	  transform: rotate(0deg) scale(0);
-	  opacity:0;
-		transition: all 0.3s ease-out;
-		-webkit-transition: all 0.3s ease-out;
-		-moz-transition: all 0.3s ease-out;
-		-ms-transition: all 0.3s ease-out;
-		-o-transition: all 0.3s ease-out;
-		};
+  position: absolute;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  background: transparent;
+  border-radius: 4px;
+  &:after {
+    position: absolute;
+    content: url('../../../../assets/img/ok.png');
+    left: 0;
+    top: 0;
+    height: 0px;
+    width: 0px;
+    border-radius: 5px;
+    // border: solid #009BFF;
+    // border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(0deg) scale(0);
+    -ms-transform: rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(0);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+  }
 }
 .checkbox-details {
-	position: relative;
-	width:222/12*1em;
+  position: relative;
+  width: 222/12 * 1em;
 }
 summary {
-	width: 320/12 * 1em;
-	text-transform: uppercase;
+  width: 320/12 * 1em;
+  text-transform: uppercase;
 }
 summary::before {
-  content: url('../../../assets/img/arrow.png');
+  content: url('../../../../assets/img/arrow.png');
   // padding-right: 0.5em;
   width: 20px;
   position: absolute;
   top: 0;
-  right:0;
+  right: 0;
   // background-color: red;
 }
 
 details {
-	position: relative;
-	width:222/12*1em;
+  position: relative;
+  width: 222/12 * 1em;
 }
 details[open] > summary::before {
-  content: url('../../../assets/img/arrow-up.png');
+  content: url('../../../../assets/img/arrow-up.png');
   width: 20px;
 }
-
-
-
-
-
-

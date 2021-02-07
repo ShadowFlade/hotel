@@ -1,4 +1,3 @@
-
 @import 'utils/nullstyle.scss';
 @import 'utils/vars';
 @import 'utils/mixins';
@@ -28,6 +27,7 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: red;
 }
 .wrapper {
   display: flex;
@@ -58,5 +58,3 @@ body {
     max-width: smPhoneWidth;
   }
 }
-
-

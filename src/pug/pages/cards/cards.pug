@@ -45,14 +45,15 @@ block content
 
   .cards__column
     .card
-      .card__credentials
+      .card__credentials(class='credentials')
         .card__lux-number
-          span(class='number') № 888
-          span(class='lux')    ЛЮКС 
+          span(class='number')
+            span(class='number-sign')
+              |№
+            span(class='number-number') 888
         .card__lux-price
           span(class='price') 
-            b
-            |  9990₽ 
+            b 9990₽ 
           span(class='day') в сутки
       .card__destination
         +date-picker('Прибытие')
@@ -88,6 +89,10 @@ block content
           button(class='button-default2') Создать
 
   .cards__column
-    +hotel-card(['../../../assets/img/hotel1.png'],840,9900,4,65,true)
-    .card
-              
+    .card(id='card__datepicker') 
+    +hotel-card(['../../../assets/img/hotel1.png','../../../assets/img/hotel2.png'],888,'9900₽ ','5',145,true)
+    +hotel-card(['../../../assets/img/hotel1.png','../../../assets/img/hotel2.png'],840,'9900₽ ','4',65,false)
+    
+
+
+    

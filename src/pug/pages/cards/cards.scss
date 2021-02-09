@@ -1,12 +1,16 @@
 @import '../../layout/vars.scss';
 @import '../../layout/mixins.scss';
 // @import '../../layout/nullstyle.scss';
-body {
-  background: #f4f4f6;
+html {
+  background: #e5e5e5;
 }
+// body {
+//   background: #f4f4f6;
+// }
 .container {
   justify-content: normal;
   display: flex;
+
   max-width: 1440px;
 }
 .card {
@@ -25,6 +29,12 @@ body {
   margin-right: 40px;
   margin-bottom: 40px;
   padding: em(40px) em(30px) 0 em(30px);
+  .number {
+    font-size: 19px;
+  }
+  .number-number {
+    font-size: 24px;
+  }
   &__title {
     @include big;
     margin-bottom: 21px;
@@ -68,11 +78,6 @@ body {
   }
   &__summary {
     margin-bottom: 20px;
-  }
-  &__credentials {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 23px;
   }
 }
 
@@ -132,6 +137,9 @@ label {
   line-height: 17px;
   color: #1f2041;
 }
+.number-number {
+  font-size: 19px;
+}
 .lux {
   font-family: Montserrat;
   font-style: normal;
@@ -144,7 +152,7 @@ label {
 .price {
   font-family: Montserrat;
   font-style: normal;
-  font-weight: bold;
+  // font-weight: bold;
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.5);
@@ -156,7 +164,80 @@ label {
   background: #ffffff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
+  margin-bottom: 27px;
   &__slider {
     height: 60%;
   }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info {
+    padding: 20/15 * 1em;
+  }
+  &__number {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  &__lux {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+.credentials {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+.slider img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.slick-dots {
+  position: absolute;
+  left: 80%;
+  bottom: 7%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 2;
+  display: flex;
+  // width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.slick-dots li {
+  margin: 0 0.5rem;
+  border-radius: 50%;
+}
+.slick-dots li.slick-active {
+  // padding: 2px;
+  // border: 1px solid #ffffff;
+}
+.slick-dots li.slick-active button {
+  background-color: #ffffff;
+  // opacity: 0.57;
+  z-index: 77;
+}
+.slick-dots button {
+  color: transparent;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  // box-shadow: inset 0px 2px 3px 0px rgba(51, 27, 2, 0.75);
+  width: 7.5px;
+  height: 7.5px;
+  z-index: 75;
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+}
+#card__datepicker {
+  padding: 0;
 }

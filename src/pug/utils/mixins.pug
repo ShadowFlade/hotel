@@ -171,22 +171,43 @@ mixin date-picker(label)
 		label(class='date-picker__item')
 			input(type='text',class='datepicker input',placeholder='ДД.ММ.ГГГГ')
 			img(src='../../../assets/img/arrow.svg',class='arrow')
-mixin hotel-card(pictures,lux-number,price,stars,number-of-reviews,lux)
-	.hotel-card__slider
-		each pic in pictures
-			img(src=pic)
-	.hotel-card__info
-		.hotel-card__row
-			span(class='hotel-card__number')(class='number') № #{lux-number}
-				if lux==true
-					span(class='hotel-card__lux lux') ЛЮКС
-			span(class='hotel-card__price price')
-				b
-				|#{price}
-			span(class='day') в сутки
-		.hotel-card__row
-			.hotel-card__stars
-			span(class='hotel-card__reviews') #{number-of-reviews} Отзывов
+mixin hotel-card(pictures,lux_number,price,stars,number_of_reviews,lux)
+	.hotel-card
+		.hotel-card__slider
+			each pic in pictures
+				img(src=pic)
+		.hotel-card__info
+			.hotel-card__row(class='credentials')
+				span(class='hotel-card__number number') 
+					span(class='number-sign')
+					|№
+					span(class='number-number') #{lux_number}
+					if lux==true
+						span(class='hotel-card__lux lux') ЛЮКС
+				span(class='hotel-card__price price')
+					b #{price}
+					span(class='day') в сутки
+			.hotel-card__row
+				span(class='hotel-card__stars') 
+					+rate-button(4)
+				span(class='hotel-card__reviews price')
+					b #{number_of_reviews} 
+					|Отзывов
+
+mixin rate-button(active_stars)
+		.star__group 
+			- var n=active_stars
+			- var r=5-n
+			while n>0
+				.star__united(style={opacity:'1'})
+					+svg__star--active('#BC9CFF','#8BA4F9','star--active')
+					+svg__star('#BC9CFF','#8BA4F9','star--inactive')
+				-n--
+			while r>0
+				.star__united(style={opacity:'.5'}) 
+					+svg__star('#BC9CFF','#8BA4F9','star--inactive')
+				-r--
+
 			
 mixin pagination(last_page,number_of_first_pages)
 	.pagination-item

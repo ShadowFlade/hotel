@@ -1,0 +1,122 @@
+.daterangepicker .calendar-table .next span,
+.daterangepicker .calendar-table .prev span {
+  width: 5px;
+}
+.ui-datepicker .ui-datepicker-calendar thead tr th span {
+  font-size: 1.3rem;
+}
+.daterangepicker .drp-calendar.right {
+  display: none;
+}
+.daterangepicker .drp-calendar .left {
+  width: 320px;
+  position: relative;
+  // left: 40px;
+}
+.daterangepicker .drp-calendar .calendar-table {
+  width: 310px;
+  position: relative;
+  // left: 40px;
+}
+.daterangepicker {
+  width: 320px;
+}
+// .next .available span {
+//   position: relative;
+//   right: 650%;
+// }
+
+.daterangepicker .calendar-table .table-condensed thead tr:nth-child(2) th {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  align-items: center;
+  text-align: center;
+  color: #bc9cff;
+}
+.daterangepicker .calendar-table .table-condensed thead tr:nth-child(1) .month {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 23px;
+  text-align: center;
+  color: #1f2041;
+}
+.daterangepicker .calendar-table .next span,
+.daterangepicker .calendar-table .prev span {
+  background-image: url('../../../../assets/img/arrow_back.svg');
+  border: 0;
+  transform: rotate(180deg);
+  width: 24px;
+  height: 24px;
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #bc9cff;
+}
+.daterangepicker .calendar-table .prev span {
+  transform: rotate(0);
+}
+.daterangepicker .calendar-table th,
+.daterangepicker .calendar-table td {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  align-items: center;
+  text-align: center;
+  color: rgba(31, 32, 65, 0.5);
+}
+// .daterangepicker.show-calendar .drp-buttons {
+//   display: none;
+// }
+.daterangepicker td.active {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  color: white;
+}
+.daterangepicker td.in-range {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  opacity: 0.25;
+  // border-radius: 22px;
+}
+.daterangepicker .calendar-table th,
+.daterangepicker .calendar-table td {
+  border: 0;
+}
+.current-day {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}
+td .weekend .active end-date in-range .available {
+  color: red;
+}
+.daterangepicker.openscenter:before,
+.daterangepicker.openscenter:after,
+.daterangepicker .drp-selected {
+  display: none;
+}
+.daterangepicker .drp-buttons .btn {
+  background-color: transparent;
+  color: #bc9cff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.hotel-card__applybtn {
+  float: right;
+}
+.hotel-card__cancelbtn {
+  float: left;
+}

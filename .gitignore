@@ -9,6 +9,7 @@ node_modules
 # Dist & test
 test
 dist
+node_modules
 
 # BD, logs
 *.log

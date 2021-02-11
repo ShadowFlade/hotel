@@ -1,22 +1,58 @@
 .footer {
-  height: 443/100vh;
+  height: 443 / 1350 * 100%;
   background: white;
   display: flex;
   flex-direction: column;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  margin-bottom: 20px;
+  &__container {
+    padding: 113/1350 * 100% 140/1440 * 100% 100/1350 * 100%;
+    // height: 372/443 * 100%;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+  }
   &__top {
     display: flex;
-    // padding: 113px/100vh * 100% 140/1440 * 100% 100px/100vh * 100%;
   }
   &__column {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 20%;
+    align-items: space-between;
   }
   &__bottom {
     display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    &__container {
+      padding: 27/1350 * 100% 140/1440 * 100%;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+    }
+    &__socials {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__logo {
+    margin-bottom: 20px;
+  }
+  &__item {
+    margin-bottom: 21/14 * 1em;
   }
 }
 .socials {
   display: flex;
+  flex-wrap: wrap;
   &__item {
     margin-right: 20px;
 

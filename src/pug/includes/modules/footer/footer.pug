@@ -1,41 +1,47 @@
 footer(class='footer')
-  .footer__top 
-    .footer__column
-      .footer__logo(class='brand-logo')
-        img(src='../../../../assets/img/fsdlogo.svg')
-      .footer__info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-    .footer__column 
-      .footer__item 
-        b Навигация
-      .footer__item О нас
-      .footer__item Новости
-      .footer__item Служба поддержки
-      .footer__item Услуги
-    .footer__column 
-      .footer__item 
-        b О нас
-      .footer__item О сервисе
-      .footer__item Наша команда
-      .footer__item Вакансии
-      .footer__item Инвесторы
-    .footer__column 
-      .footer__item 
-        b Служба поддержки
-      .footer__item Соглашения
-      .footer__item Сообщества
-      .footer__item Связь с нами
-    .footer__column 
-      .footer__item 
-        b Подписка
-      .footer__item Получайте специальные предложения и новости сервиса
-      .footer__item
-        include ../text-field/text-field.pug
+  .footer__container
+    .footer__top 
+      .footer__column
+        .footer__logo(class='brand-logo')
+          img(src='../../../../assets/img/fsdlogo.svg')
+        .footer__info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+      .footer__column 
+        .footer__item 
+          b Навигация
+        .footer__item О нас
+        .footer__item Новости
+        .footer__item Служба поддержки
+        .footer__item Услуги
+      .footer__column 
+        .footer__item 
+          b О нас
+        .footer__item О сервисе
+        .footer__item Наша команда
+        .footer__item Вакансии
+        .footer__item Инвесторы
+      .footer__column 
+        .footer__item 
+          b Служба поддержки
+        .footer__item Соглашения
+        .footer__item Сообщества
+        .footer__item Связь с нами
+      .footer__column 
+        .footer__item 
+          b Подписка
+        .footer__item Получайте специальные предложения и новости сервиса
+        .footer__item
+          label(class='subscription-text-field__label') 
+            input(type='text',placeholder='Email',class='subscription-text-field',class='input')
+            +svg__arrow-right('#BC9CFF','#8BA4F9','arrow-right__subs-field')
   .footer__bottom
-    .footer__bottom__left 
-      .footer__bottom__content Copyright © 2018 Toxin отель. Все права зачищены.
-    .footer__bottom__right
-      .footer__bottom__socials(class='socials')
-        .socials__item 
-          img(href='../../../../assets/img/twitter.svg')
-          img(href='../../../../assets/img/instagram.svg')
-          img(href='../../../../assets/img/facebook.svg')
+    .footer__bottom__container
+      .footer__bottom__left 
+        .footer__bottom__content Copyright © 2018 Toxin отель. Все права зачищены.
+      .footer__bottom__right
+        .footer__bottom__socials(class='socials')
+          .socials__item 
+            img(src='../../../../assets/img/twitter.svg')
+          .socials__item 
+            img(src='../../../../assets/img/instagram.svg')
+          .socials__item   
+            img(src='../../../../assets/img/facebook.svg')

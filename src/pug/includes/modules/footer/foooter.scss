@@ -1,0 +1,28 @@
+.footer {
+  height: 443/100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  &__top {
+    display: flex;
+    // padding: 113px/100vh * 100% 140/1440 * 100% 100px/100vh * 100%;
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+  &__bottom {
+    display: flex;
+  }
+}
+.socials {
+  display: flex;
+  &__item {
+    margin-right: 20px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

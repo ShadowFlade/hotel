@@ -208,6 +208,16 @@ mixin rate-button(active_stars)
 					+svg__star('#BC9CFF','#8BA4F9','star--inactive')
 				-r--
 
+mixin navbar(array_of_elements,arrow_class)
+	each el in array_of_elements 
+		if el.arrow==true
+			.navbar__item 
+				span(class='navbar__text') #{el.name}
+				span(style={display:'flex'})
+					img(src='../../../assets/img/arrow.svg',class=arrow_class)
+		else 
+			.navbar__item #{el.name}
+
 			
 mixin pagination(last_page,number_of_first_pages)
 	.pagination-item

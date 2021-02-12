@@ -1,7 +1,7 @@
 @import '../../../layout/mixins.scss';
 .footer-mini {
-  width: 768px;
-  height: 367px;
+  max-width: 768px;
+  max-height: 367px;
   background: #ffffff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   margin: 0 auto;
@@ -27,3 +27,7 @@
     left: -2.2%;
   }
 }
+// @media screen and (max-width: 1193px) {
+//   padding-right: 3%;
+//   padding-left: 3%;
+// }

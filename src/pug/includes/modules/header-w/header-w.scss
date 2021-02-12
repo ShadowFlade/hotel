@@ -1,3 +1,5 @@
+@import '../../../layout/vars.scss';
+@import '../../../layout/mixins.scss';
 .navigation {
   width: 100%;
   background-color: white;
@@ -19,7 +21,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+    width: auto;
   }
   &__navbar > div {
     margin-right: 20px;
@@ -41,7 +43,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: rem(14);
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
     padding: 5px 20px;
@@ -58,7 +60,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: rem(14);
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
     align-items: center;
@@ -66,6 +68,7 @@
     min-width: 42px;
     // box-sizing: content-box;
     width: fit-content;
+    cursor: pointer;
   }
   &__item > span {
     margin-right: 5px;
@@ -85,4 +88,44 @@
 }
 .btngroup-authorization {
   display: flex;
+}
+
+@media screen and (max-width: 1193px) {
+  .navigation__content {
+    padding: 0 3%;
+  }
+}
+@media screen and (max-width: 1021px) {
+  html {
+    font-size: rem(12);
+  }
+  .navigation__navbar {
+    display: none;
+  }
+  .burger {
+    display: block;
+    margin-right: 10px;
+  }
+  .navigation__icon-space {
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+  }
+  .btngroup-authorization {
+    order: 2;
+  }
+  .navigation__user {
+    order: 2;
+  }
+  .navigation__content {
+    justify-content: space-between;
+    padding: 0 1%;
+  }
+}
+@media screen and (max-width: 457px) {
+  .logo-img {
+    display: none;
+  }
 }

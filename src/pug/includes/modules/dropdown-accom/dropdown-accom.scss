@@ -1,4 +1,5 @@
 @import '../../../layout/vars.scss';
+@import '../../../layout/mixins.scss';
 .dropdown-accom {
   border-bottom-width: 0.5px;
   border-bottom-right-radius: 0px;
@@ -43,7 +44,7 @@
   }
   &__submit {
     float: right;
-    padding: 19px / $mainFontSize * 1rem 13px / $mainFontSize * 1rem;
+    padding: rem(19) rem(13);
   }
   &__footer {
     width: 100%;
@@ -52,7 +53,7 @@
     background: white;
   }
   &__clear {
-    padding: 19px / $mainFontSize * 1rem 13px / $mainFontSize * 1rem;
+    padding: rem(19) rem(13);
   }
 }
 

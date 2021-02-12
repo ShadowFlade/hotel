@@ -1,3 +1,5 @@
+@import '../../../layout/vars.scss';
+@import '../../../layout/mixins.scss';
 .ui-button,
 .ui-state-default,
 .ui-widget-content .ui-state-default {
@@ -163,7 +165,7 @@ a.ui-state-default:hover {
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      font-size: 19px;
+      font-size: rem(19);
       line-height: 23px;
       text-align: center;
       color: #1f2041;
@@ -188,7 +190,7 @@ a.ui-state-default:hover {
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: bold;
-      font-size: 12px;
+      font-size: rem(12);
       line-height: 15px;
       display: flex;
       align-items: center;
@@ -199,7 +201,7 @@ a.ui-state-default:hover {
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: normal;
-      font-size: 12px;
+      font-size: rem(12);
       line-height: 15px;
       display: flex;
       align-items: center;
@@ -228,7 +230,7 @@ a.ui-state-default:hover {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
+  font-size: rem(12);
   line-height: 15px;
   display: flex;
   align-items: center;

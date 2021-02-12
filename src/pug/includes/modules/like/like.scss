@@ -1,7 +1,8 @@
 @import '../../../layout/vars.scss';
+@import '../../../layout/mixins.scss';
 .like__item {
   display: flex;
-  margin-bottom: $mainFontSize/13px * 1rem;
+  margin-bottom: rem(13);
   position: relative;
   border-radius: 10px;
   width: 40px;
@@ -27,7 +28,7 @@
   position: absolute;
   left: 56%;
   top: 9%;
-  font-size: 12px;
+  font-size: rem(12);
   font-weight: 400;
   color: rgba(31, 32, 65, 0.25);
   transition: all 0.3s linear;
@@ -37,7 +38,7 @@
   top: 16%;
   left: 8%;
   color: rgba(31, 32, 65, 0.25);
-  font-size: 12px;
+  font-size: rem(12);
   opacity: 1;
 }
 .like__input:checked ~ .like__icon {
@@ -51,7 +52,7 @@
   top: 16%;
   left: 8%;
   color: #bc9cff;
-  font-size: 12px;
+  font-size: rem(12);
 }
 
 .like__input:checked ~ .like__icon--active {

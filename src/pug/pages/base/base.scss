@@ -16,7 +16,7 @@
   @include small;
 }
 html {
-  font-size: 14px;
+  font-size: rem(14);
   max-width: 1440px;
 }
 body {

@@ -1,4 +1,5 @@
 @import './vars.scss';
+@import './mixins.scss';
 
 label,
 .label {
@@ -7,7 +8,7 @@ label,
   // width:266/12*1em;
   @include small;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: rem(14);
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -18,7 +19,7 @@ select {
   background: #ffffff;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
-  font-size: 14px;
+  font-size: rem(14);
   width: 320/14 * 1em;
   padding: 12/14 * 1em 31/14 * 1em 8/14 * 1em 15/14 * 1em;
   height: 44px;
@@ -58,7 +59,7 @@ select {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
+  font-size: rem(12);
   line-height: 15px;
   text-transform: uppercase;
 }

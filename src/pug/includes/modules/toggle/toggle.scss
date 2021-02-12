@@ -13,21 +13,21 @@
   padding-top: 3px;
   &__item {
     display: flex;
-    margin-bottom: $mainFontSize/13px * 1rem;
+    margin-bottom: rem(13);
     position: relative;
   }
   &__input {
     opacity: 0;
     width: 20px;
     height: 20px;
-    margin-right: $mainFontSize/9.74px * 1rem;
+    margin-right: rem(10);
     background: #ffffff;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     cursor: default;
   }
   &-group {
-    margin-top: $mainFontSize/18px * 1rem;
+    margin-top: rem(18);
     // position: absolute;
     top: 100%;
     left: 0;
@@ -110,7 +110,8 @@
 }
 summary {
   width: 320/12 * 1em;
-  @include small user-select: none;
+  @include small;
+  user-select: none;
   &::before {
     content: url('../../../../assets/img/arrow.png');
     // padding-right: 0.5em;

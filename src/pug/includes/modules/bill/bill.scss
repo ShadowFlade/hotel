@@ -17,10 +17,10 @@
   margin-bottom: 40px;
   padding: em(40px) em(30px) 0 em(30px);
   .number {
-    font-size: 19px;
+    font-size: rem(19);
   }
   .number-number {
-    font-size: 24px;
+    font-size: rem(24);
   }
   &__title {
     @include big;
@@ -67,7 +67,7 @@ label {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
-    font-size: 19px;
+    font-size: rem(19);
     line-height: 23px;
     color: #1f2041;
     display: flex;
@@ -100,18 +100,18 @@ label {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: rem(24);
   line-height: 17px;
   color: #1f2041;
 }
 .number-number {
-  font-size: 19px;
+  font-size: rem(19);
 }
 .lux {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
+  font-size: rem(12);
   line-height: 15px;
   text-transform: uppercase;
   color: #bc9cff;
@@ -120,7 +120,7 @@ label {
   font-family: Montserrat;
   font-style: normal;
   // font-weight: bold;
-  font-size: 14px;
+  font-size: rem(14);
   line-height: 18px;
   color: rgba(31, 32, 65, 0.5);
 }

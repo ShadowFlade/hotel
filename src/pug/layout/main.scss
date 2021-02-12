@@ -8,15 +8,15 @@ html {
   font-size: $mainFontSize;
   color: $mainFontColor;
   height: 100%;
-  @media screen and (max-width: $desktopWidth) {
-    font-size: 16px;
-  }
-  @media screen and (max-width: $tableWidth) {
-    font-size: 15px;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    font-size: 14px;
-  }
+  // @media screen and (max-width: $desktopWidth) {
+  //   font-size: rem(16);
+  // }
+  // @media screen and (max-width: $tableWidth) {
+  //   font-size: rem(15);
+  // }
+  // @media screen and (max-width: $phoneWidth) {
+  //   font-size: rem(14);
+  // }
 }
 
 body {
@@ -46,13 +46,13 @@ body {
   // position: relative;
   // margin: 0 auto;
   // max-width: $desktopWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: tableWidth;
-  }
-  @media screen and (max-width: $tableWidth) {
-    max-width: phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: smPhoneWidth;
-  }
+  // @media screen and (max-width: $smDesktopWidth) {
+  //   max-width: tableWidth;
+  // }
+  // @media screen and (max-width: $tableWidth) {
+  //   max-width: phoneWidth;
+  // }
+  // @media screen and (max-width: $phoneWidth) {
+  //   max-width: smPhoneWidth;
+  // }
 }

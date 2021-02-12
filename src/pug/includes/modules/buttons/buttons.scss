@@ -1,74 +1,77 @@
+@import '../../../layout/vars.scss';
+@import '../../../layout/mixins.scss';
 .buttons__box {
-	margin-top: 20px;
-	display: flex;
-	flex-wrap: wrap;
-	width: 218px;
-	& > *{
-		margin: 5px;
-	}
-}.button-default1 {
- 	width: 99/12*1em;
-	height: 44/12*1em;
-	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-	border-radius: 22px;
-	font-family: Montserrat;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 15px;
-	text-transform: uppercase;
-	color: #FFFFFF;
-	// flex:1 1 50%;
-	&:hover {
-		opacity: 0.5;
-	};
- }
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 218px;
+  & > * {
+    margin: 5px;
+  }
+}
+.button-default1 {
+  width: 99/12 * 1em;
+  height: 44/12 * 1em;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(12);
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #ffffff;
+  // flex:1 1 50%;
+  &:hover {
+    opacity: 0.5;
+  }
+}
 
 .button-default2 {
- 	flex:1 1 50%;
- 	width: 96%;
-	height: 88%;
-	border-radius: 22px;
-	background: #fff;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 15px;
-	z-index: 10;
-	text-transform: uppercase;
-	color: #BC9CFF;
-	position: relative;
-	z-index: 10;
-	top: 50%;
-	left: 50%;
-	transform:translate(-50%,-50%);
-	margin: 0 auto;
-	font-size: 12px;
-	&__wrapper {
-		background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-		width: 99/12*1em;
-		height: 44/12*1em;
-		border-radius: 22px;
-		font-size: 12px;
-		&:hover {
-				opacity: 0.5;
-		};
-	}
- }
+  flex: 1 1 50%;
+  width: 96%;
+  height: 88%;
+  border-radius: 22px;
+  background: #fff;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(12);
+  line-height: 15px;
+  z-index: 10;
+  text-transform: uppercase;
+  color: #bc9cff;
+  position: relative;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  font-size: rem(12);
+  &__wrapper {
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    width: 99/12 * 1em;
+    height: 44/12 * 1em;
+    border-radius: 22px;
+    font-size: rem(12);
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
 .button-inline {
-	width: 61/12*1em;
-	height: 15/12*1em;	
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 15px;
-	text-transform: uppercase;
-	color: #BC9CFF;
-	background: transparent;
-	// flex:1 1 50%;
-	&:hover {
-		color: rgba(31, 32, 65, 0.5);
-	} 
+  width: 61/12 * 1em;
+  height: 15/12 * 1em;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(12);
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #bc9cff;
+  background: transparent;
+  // flex:1 1 50%;
+  &:hover {
+    color: rgba(31, 32, 65, 0.5);
+  }
 }

@@ -1,15 +1,20 @@
-.pay-button{
-	width: 320px;
-	height: 44px;
-	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-	border-radius: 22px;
-	position: relative;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 15px;
-	text-align: center;
-	text-transform: uppercase;
-	color: #FFFFFF;
+@import '../../../layout/vars.scss';
+@import '../../../layout/mixins.scss';
+.pay-button {
+  width: 320px;
+  height: 44px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  position: relative;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(12);
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.pay-button:hover {
+  opacity: 0.5;
 }

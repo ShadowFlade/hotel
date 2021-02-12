@@ -1,6 +1,6 @@
 ## Build Setup:
 
-```bash
+````bash
 # Download repository:
 git clone https://github.com/ShadowFlade/metalamp/tree/testbranch
 
@@ -15,8 +15,7 @@ npm run dev
 
 # Output will be at dist/ folder
 npm run build
-```
-
+``
 ## Project Structure:
 
 - `src/pug/layout` - put custom layout for pages
@@ -43,4 +42,4 @@ npm run build
     /* Safari, Android, iOS */
       url('/assets/fonts/Helvetica/Base/Helvetica-Base.svg') format('svg'); /* Legacy iOS */
 }
-```
+````

@@ -6,95 +6,14 @@ block variables
 //-   link(href='../../assets/scss/modules/pay-button.scss')
 block content
   .cards__column
-
-    .card
-      .card__title Найдём номера под ваши пожелания
-      .card__destination
-        +date-picker('Прибытие')
-        +date-picker('Выезд')  
-      .card__guests
-        +dropdown('Гости',7,'Сколько гостей')
-      .card__footer
-      button(class='pay-button') перейти к оплате
-        +svg__arrow-right('#FFFFFF','#FFFFFF','arrow-right')
-
-    .card
-      .card__title Регистрация аккаунта
-      .card__info
-        .text-field
-          label
-          label
-            input(type='text',placeholder='Имя',class='input')
-            input(type='text',placeholder='Фамилия',class='input')
-        //-   
-        .text-field
-          label Дата рождения
-          label 
-            input(type='text',placeholder='ДД.ММ.ГГГГ',class='input')
-        .text-field
-          label Данные для входа в сервис
-          label 
-            input(type='text',placeholder='Email',class='input')
-            input(type='text',placeholder='Пароль',class='input')
-        +toggle('',['Получать спецпредложения'])
-        button(class='pay-button') перейти к оплате
-      .card__footer 
-        span(class='card__for-button') Уже есть аккаунт на Toxin
-        .button-default2__wrapper(class='card__button')
-          button(class='button-default2') Войти
-
+    include ../../includes/modules/rooms-for-you/rooms-for-you.pug
+    include ../../includes/modules/registration/registration.pug
   .cards__column
-    .card
-      .card__credentials(class='credentials')
-        .card__lux-number
-          span(class='number')
-            span(class='number-sign')
-              |№
-            span(class='number-number') 888
-        .card__lux-price
-          span(class='price') 
-            b 9990₽ 
-          span(class='day') в сутки
-      .card__destination
-        +date-picker('Прибытие')
-        +date-picker('Выезд')  
-      .card__guests
-        +dropdown2('Гости','2 спальни, 2 кровати','dropdown-accom',['Взрослые','Дети','Младенцы'],'clear')
-      .card__summary(class='summary')
-        .summary__row 
-          .summary__price 9 990₽ х 4 суток
-          .summary__sum 39 960₽
-        .summary__row 
-          .summary__price Сбор за услуги: скидка 2 179₽
-          .summary__sum 0₽
-        .summary__row 
-          .summary__price Сбор за дополнительные услуги
-          .summary__sum 300₽
-        .summary__all
-          .summary__result Итого
-          span(class='summary__border')
-          .summary__money 38 081₽
-      .card__footer
-        button(class='pay-button') Забронировать
-    .card
-      .card__title Войти
-      .text-field
-        input(type='text',placeholder='Email',class='input')
-      .text-field
-        input(type='text',placeholder='Пароль',class='input')
-      button(class='pay-button') Войти
-      .card__footer 
-        span(class='card__for-button') Нет аккаунта на Toxin?
-        .button-default2__wrapper(class='card__button')
-          button(class='button-default2') Создать
-
+    include ../../includes/modules/bill/bill.pug
+    include ../../includes/modules/sign-in/sign-in.pug
   .cards__column
     .card__datepicker
-
-
-    +hotel-card(['../../../assets/img/hotel1.png','../../../assets/img/hotel2.png'],888,'9900₽ ','5',145,true)
-    +hotel-card(['../../../assets/img/hotel1.png','../../../assets/img/hotel2.png'],840,'9900₽ ','4',65,false)
-    
+    include ../../includes/modules/hotel-card/hotel-card.pug
 
 
     

@@ -79,11 +79,12 @@ $(function() {
       firstDay: 1,
     },
     linkedCalendars: false,
+    singleDatePicker: true,
     showCustomRangeLabel: false,
     startDate: '02/04/2021',
     endDate: '02/11/2021',
     autoUpdateInput: true,
-    autoApply: true,
+    autoApply: false,
   })
   $('.card__datepicker').on('hide.daterangepicker', function(ev, picker) {
     $('.card__datepicker').click()

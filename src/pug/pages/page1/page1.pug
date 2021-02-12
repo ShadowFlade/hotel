@@ -1,0 +1,17 @@
+extends ../../layout/landing
+block variables
+  - var title = 'landing page';
+  - var description = '';
+  - var pageclass='Landing-page'
+block content
+  header
+    include ../../includes/modules/header-w/header-w.pug
+  main 
+    .picture 
+      img(src='../../../assets/img/picture.jpg')
+      include ../../includes/modules/rooms-for-you/rooms-for-you.pug
+  footer(class='footer-main')
+    include ../../includes/modules/footer/footer.pug
+  footer(class='footer-secondary')
+    include ../../includes/modules/footer-mini/footer-mini.pug
+

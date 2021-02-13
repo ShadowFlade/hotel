@@ -113,7 +113,7 @@ mixin checkboxlist(label,array_of_arguments)
 							span(class='checkbox-custom')
 
 mixin checkboxRich(label,name,...array_of_arguments)
-	.checkbox-rich
+	.checkbox-rich(class='label') #{label}
 		.checkbox-rich__group
 			each val in array_of_arguments
 				.checkbox-rich__item
@@ -237,6 +237,12 @@ mixin burger-menu(array_of_arguments,classname)
 						span
 							img(src='../../../assets/img/arrow.svg',class='arrow_class')
 
+//- mixin sidebar(array_of_arguments)
+//- 	sidebar(class='sidebar')
+//- 		.sidebar__container
+//- 			each el in array_of_arguments
+//- 				.sidebar__item
+//- 					include #{el}
 
 
 mixin pagination(last_page,number_of_first_pages)

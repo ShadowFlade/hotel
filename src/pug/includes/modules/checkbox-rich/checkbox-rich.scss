@@ -60,7 +60,7 @@
   }
 }
 .checkbox-rich__input:checked ~ .checkbox-rich__custom {
-  background: #ffffff;
+  background: transparent;
   border: 1px solid #bc9cff;
   border-radius: 4px;
   &:after {
@@ -78,7 +78,7 @@
   // position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
+  background-color: transparent;
   z-index: 2;
 }
 .checkbox-rich__desc {

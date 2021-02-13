@@ -1,0 +1,14 @@
+@import '../../layout/vars.scss';
+@import '../../layout/mixins.scss';
+.sidebar {
+  width: 456px;
+  &__container {
+    padding-right: rem(60);
+  }
+  &__item {
+    margin-bottom: 20px;
+  }
+}
+.content {
+  padding: rem(30) rem(140);
+}

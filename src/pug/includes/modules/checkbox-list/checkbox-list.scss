@@ -5,10 +5,10 @@
 }
 .checkbox-group {
   margin-top: $mainFontSize/18px * 1rem;
-  position: absolute;
+  // position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
+  background-color: transparent;
   z-index: 2;
 }
 .checkbox {
@@ -30,7 +30,7 @@
     width: 20px;
     height: 20px;
     margin-right: $mainFontSize/9.74px * 1rem;
-    background: #ffffff;
+    background: transparent;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     cursor: pointer;
@@ -38,7 +38,7 @@
     left: 0;
     top: 0;
     &:checked ~ .checkbox-custom {
-      background: #ffffff;
+      background: transparent;
       border: 1px solid #bc9cff;
       border-radius: 4px;
       &:after {
@@ -60,9 +60,9 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background: #ffffff;
-  border: 1px solid rgba(31, 32, 65, 0.25);
   background: transparent;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  // background: transparent;
   border-radius: 4px;
   &:after {
     position: absolute;

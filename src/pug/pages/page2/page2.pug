@@ -1,29 +1,97 @@
 extends ../../layout/landing
 block variables
-  - var title = 'landing page';
+  - var title = 'search room and filter';
   - var description = '';
   - var pageclass='search-room'
 block content
   header
     include ../../includes/modules/header-w/header-w.pug
   main 
-    .content
-      sidebar(class="sidebar")
-        .sidebar__container 
-          .sidebar__item 
-            include ../../includes/modules/date-picker/date-picker.pug
-          .sidebar__item 
-            include ../../includes/modules/dropdown-advanced/dropdown-advanced.pug
-          .sidebar__item 
-            include ../../includes/modules/range-slider/range-slider.pug
-          .sidebar__item 
-            include ../../includes/modules/checkbox-buttons/checkbox-buttons.pug
-          .sidebar__item 
-            include ../../includes/modules/checkbox-rich/checkbox-rich.pug
-          .sidebar__item 
-            include ../../includes/modules/dropdown-accom/dropdown-accom.pug
-          .sidebar__item 
-            include ../../includes/modules/checkbox-list/checkbox-list.pug
+    div(class="sidebar")
+      .sidebar__container 
+        .sidebar__item 
+          +date-picker('время пребывания в отеле','content__datepicker')
+        .sidebar__item 
+          include ../../includes/modules/dropdown-advanced/dropdown-advanced.pug
+        .sidebar__item 
+          include ../../includes/modules/range-slider/range-slider.pug
+        .sidebar__item 
+          include ../../includes/modules/checkbox-buttons/checkbox-buttons.pug
+        .sidebar__item 
+          include ../../includes/modules/checkbox-rich/checkbox-rich.pug
+        .sidebar__item 
+          include ../../includes/modules/dropdown-accom/dropdown-accom.pug
+        .sidebar__item 
+          include ../../includes/modules/checkbox-list/checkbox-list.pug
+    .content 
+      .content__title Номера, которые мы для вас подобрали
+      .content__items 
+        .content__item
+          +hotel-card(['../../../assets/img/hotel-cards/search-room/image.png',
+                '../../../assets/img/hotel-cards/search-room/image1.png'],
+                '888','9990',5,'145',true)
+        .content__item
+          +hotel-card(['../../../assets/img/hotel-cards/search-room/image1.png',
+                '../../../assets/img/hotel-cards/search-room/image1.png'],
+                '840','9990',4,'65',false)
+        .content__item
+           +hotel-card(['../../../assets/img/hotel-cards/search-room/image3.png',
+                '../../../assets/img/hotel-cards/search-room/image1.png'],
+                '980','8500',3,'35',true)
+        .content__item
+          +hotel-card(['../../../assets/img/hotel-cards/search-room/image4.png',
+                '../../../assets/img/hotel-cards/search-room/image1.png'],
+                '856','7300',4,'19',false)
+        .content__item
+          +hotel-card(['../../../assets/img/hotel-cards/search-room/image5.png',
+                '../../../assets/img/hotel-cards/search-room/image1.png'],
+                '740','5800',3,'44',false)
+        .content__item
+          +hotel-card(['../../../assets/img/hotel-cards/search-room/image6.png',
+                '../../../assets/img/hotel-cards/search-room/image1.png'],
+                '982','5800',3,'56',false)
+        .content__item
+          +hotel-card(['../../../assets/img/hotel-cards/search-room/image7.png',
+                '../../../assets/img/hotel-cards/search-room/image1.png'],
+                '678','5500',5,'45',false)
+        .content__item
+          +hotel-card(['../../../assets/img/hotel-cards/search-room/image8.png',
+                '../../../assets/img/hotel-cards/search-room/image1.png'],
+                '450','5300',4,'39',false)
+        .content__item
+          +hotel-card(['../../../assets/img/hotel-cards/search-room/image9.png',
+                '../../../assets/img/hotel-cards/search-room/image1.png'],
+                '350','5000',3,'77',false)
+        .content__item
+          +hotel-card(['../../../assets/img/hotel-cards/search-room/image10.png',
+                '../../../assets/img/hotel-cards/search-room/image1.png'],
+                '666','5000',5,'25',false)
+        .content__item
+          +hotel-card(['../../../assets/img/hotel-cards/search-room/image11.png',
+                '../../../assets/img/hotel-cards/search-room/image1.png'],
+                '352','5000',3,'55',false)
+        .content__item
+          +hotel-card(['../../../assets/img/hotel-cards/search-room/image8.png',
+                '../../../assets/img/hotel-cards/search-room/image1.png'],
+                '450','5300',4,'39',false)
+        .content__pagination 
+          include ../../includes/modules/pagination/pagination.pug
+            
+
+        
+        
+        
+       
+        
+        
+        
+        
+        
+         
+        
+        
+        
+        
 
     //- +sidebar(['../../includes/modules/datepicker/datepicker.pug','../../includes/modules/dropdown-advanced/dropdown-accom.pug','../../includes/modules/range-slider/range-slider.pug','../../includes/modules/checkbox-buttons/checkbox-buttons.pug','../../includes/modules/checkbox-rich/checkbox-rich.pug','../../includes/modules/dropdown-advanced2/dropdown-advanced.pug','../../includes/modules/datepicker/checkbox-list.pug'])
 
@@ -31,4 +99,5 @@ block content
     include ../../includes/modules/footer/footer.pug
   footer(class='footer-secondary')
     include ../../includes/modules/footer-mini/footer-mini.pug
+  //- script(src='../../modules/includes/hotel-card/hotel-card.js')
 

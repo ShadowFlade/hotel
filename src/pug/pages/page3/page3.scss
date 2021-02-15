@@ -1,0 +1,136 @@
+@import '../../layout/vars.scss';
+@import '../../layout/mixins.scss';
+.room-details {
+  overflow:hidden;
+  .comment {
+    margin-left: -20px;
+
+  }
+  .bullet-list__box {
+    max-width:rem(292);
+  }
+  .card {
+    max-width: 380px;
+    margin-right: 0;
+  }
+  .pictures {
+  display: flex;
+  min-height: 500px;
+  &__item {
+      height: 50%;
+      width:100%;
+    img {
+      display: block;
+      width: 100%;
+      height:100%;
+    }
+    &_big {
+      width: 60%;
+        height: 100%;
+    }
+  }
+  &__column {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+
+  }
+}
+  .content {
+    padding: rem(80) 9% rem(10) 9%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    &__item {
+
+    }
+    &__column {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-right:70/1440*100%;
+      & > div {
+      margin-bottom: 20px;
+    }
+    }
+    // &__side {
+
+    // }
+  }
+  .bullet__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem (19);
+    line-height: 23px;
+    color: #1F2041;
+  }
+
+
+}
+.cancel__item {
+  max-width:341px;
+}
+.cancel__title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem (19);
+  line-height: 23px;
+  color: #1F2041;
+  margin-bottom: 20px;
+}
+.cancel__text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem(14);
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.comments__title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(19);
+  line-height: 23px;
+  color: #1F2041;
+  margin-bottom: 20px;
+}
+.comments__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+@media screen and (max-width:1100px) {
+  .content {
+    flex-wrap: wrap;
+    padding:2% 5%;
+    &__column,&__side{
+      width: 100%;
+      justify-content: center;
+
+    }
+    .card > div {
+      justify-content: center;
+    }
+  .card {
+    margin:0 auto;
+  }
+
+  }
+  .room-details .content {
+    padding: 4% 5%;
+  }
+}
+@media screen and (max-width:765px) {
+  .room-details .pictures__item {
+    width: 100%;
+  }
+  .room-details .pictures__column {
+    width: 100%;
+  }
+  .room-details .pictures {
+    flex-wrap: wrap;
+  }
+}

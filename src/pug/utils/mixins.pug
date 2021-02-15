@@ -2,268 +2,279 @@ block sprites
 
 mixin svg__star(color, endColor,className)
 
-	- id = (color+endColor).split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0)
-	- const fill = endColor!== undefined ?`url(#paint0_linear${id})`: color;
+  - id = (color+endColor).split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0)
+  - const fill = endColor!== undefined ?`url(#paint0_linear${id})`: color;
 
-	svg(class=`${className} star` width="40" height="38" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-		path(fill=fill d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" )
-		defs
-			linearGradient(id=`paint0_linear${id}` x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse")
-				stop(stop-color=color)
-				stop(offset="1" stop-color=endColor)
+  svg(class=`${className} star` width="40" height="38" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+    path(fill=fill d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" )
+    defs
+      linearGradient(id=`paint0_linear${id}` x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse")
+        stop(stop-color=color)
+        stop(offset="1" stop-color=endColor)
 mixin svg__arrow-right(color, endColor,className)
-	- id = (color+endColor).split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0)
-	- const fill = endColor!== undefined ?`url(#paint0_linear${id})`: color;
-	svg(class=`${className}` width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-		path(fill=fill d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z")
-		defs
-			linearGradient(id=`paint0_linear${id}` x1="9" y1="-13" x2="9" y2="31" gradientUnits="userSpaceOnUse")
-				stop(stop-color=color)
-				stop(offset="1" stop-color=endColor)
-			
+  - id = (color+endColor).split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0)
+  - const fill = endColor!== undefined ?`url(#paint0_linear${id})`: color;
+  svg(class=`${className}` width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+    path(fill=fill d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z")
+    defs
+      linearGradient(id=`paint0_linear${id}` x1="9" y1="-13" x2="9" y2="31" gradientUnits="userSpaceOnUse")
+        stop(stop-color=color)
+        stop(offset="1" stop-color=endColor)
+      
 
 mixin svg__star--active(color, endColor,className)
 
-	- id = (color+endColor).split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0)
-	- const fill = endColor!== undefined ?`url(#paint0_linear${id})`: color;
+  - id = (color+endColor).split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0)
+  - const fill = endColor!== undefined ?`url(#paint0_linear${id})`: color;
 
-	svg(class=`${className} star` width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-		path(fill=fill d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z")
-		defs
-			linearGradient(id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse")
-				stop(stop-color=color)
-				stop(offset="1" stop-color=endColor)
+  svg(class=`${className} star` width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+    path(fill=fill d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z")
+    defs
+      linearGradient(id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse")
+        stop(stop-color=color)
+        stop(offset="1" stop-color=endColor)
 
 
 mixin fsd-logo(className) 
-	svg(class=className, width='48', height='48', viewbox='0 0 48 48', xmlns='http://www.w3.org/2000/svg')
-		path(d='M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z', fill-opacity='0.25')
-		path(d='M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z', fill-opacity='0.25')
-		path(d='M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z', fill-opacity='0.25')
+  svg(class=className, width='48', height='48', viewbox='0 0 48 48', xmlns='http://www.w3.org/2000/svg')
+    path(d='M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z', fill-opacity='0.25')
+    path(d='M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z', fill-opacity='0.25')
+    path(d='M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z', fill-opacity='0.25')
 
 
 mixin item(left_part, right_part)
-	.item
-		.item__color(style={background:left_part})
-		.item__desc 
-			.item_dark #{right_part[0]}
-			.item_code #{right_part[1]}
+  .item
+    .item__color(style={background:left_part})
+    .item__desc 
+      .item_dark #{right_part[0]}
+      .item_code #{right_part[1]}
 
 mixin dropdown(label,number_of_options,option)
-	-let n=0
-	label #{label}
-	label
-		select
-			option #{option}
-			while n<=number_of_options
-				li=n++
-				option(value=n) #{n}
-		img(src='../../../assets/img/arrow.svg',class='arrow')
+  -let n=0
+  label #{label}
+  label
+    select
+      option #{option}
+      while n<=number_of_options
+        li=n++
+        option(value=n) #{n}
+    img(src='../../../assets/img/arrow.svg',class='arrow')
 
 mixin dropdown2(label,placeholder,nameofclass,array_of_arguments,option)
-	div(class=`${nameofclass}__big`)
-		label #{label}
-		label
-			.input-box
-				input(class=nameofclass,type='text',class='input',placeholder=placeholder)
-				img(src='../../../assets/img/arrow.svg',class='arrow')
-			ul(class=`${nameofclass}__ul`,style={display:'none'})
-				each val in array_of_arguments
-					li #{val}
-						.dropdown-accom__btn-group
-							button(type='button',class=`${nameofclass}__button--prev`) -
-							div(class=`${nameofclass}__span`) 2
-							button(type='button',class=`${nameofclass}__button--next`) +
-				if(option=='submit')
-					button(class=`${nameofclass}__submit inbox-button`,type='submit') Применить
-				else if(option=='clear')
-					button(class=`${nameofclass}__submit inbox-button`,type='submit') Применить
-					button(type='button',class=`${nameofclass}__clear inbox-button`) очистить
-				else if(option=='none')
-					button(style={'display':'none'})
-				
+  div(class=`${nameofclass}__big`)
+    label #{label}
+    label
+      .input-box
+        input(class=nameofclass,type='text',class='input',placeholder=placeholder)
+        img(src='../../../assets/img/arrow.svg',class='arrow')
+      ul(class=`${nameofclass}__ul`,style={display:'none'})
+        each val in array_of_arguments
+          li #{val}
+            .dropdown-accom__btn-group
+              button(type='button',class=`${nameofclass}__button--prev`) -
+              div(class=`${nameofclass}__span`) 2
+              button(type='button',class=`${nameofclass}__button--next`) +
+        if(option=='submit')
+          button(class=`${nameofclass}__submit inbox-button`,type='submit') Применить
+        else if(option=='clear')
+          button(class=`${nameofclass}__submit inbox-button`,type='submit') Применить
+          button(type='button',class=`${nameofclass}__clear inbox-button`) очистить
+        else if(option=='none')
+          button(style={'display':'none'})
+        
 
 mixin defInput(label,placeholder,nameofclass)
-	div(id=nameofclass)
-		label #{label}
-		label 
-			img(src='../../../assets/img/arrow.svg',class='arrow')
-			input(class=nameofclass,type='text',placeholder=placeholder,class='input')
+  div(id=nameofclass)
+    label #{label}
+    label 
+      img(src='../../../assets/img/arrow.svg',class='arrow')
+      input(class=nameofclass,type='text',placeholder=placeholder,class='input')
 
 
 mixin checkboxlist__notexp(label,array_of_arguments)
-	.checkbox-details
-		label #{label}
-		label
-		.checkbox-group
-			each val in array_of_arguments
-				.checkbox__item
-					label(class='checkbox',for=val) #{val}
-						input(type='checkbox',name=val,id=val,class='checkbox__input')
-						span(class='checkbox-custom')
+  .checkbox-details
+    label #{label}
+    label
+    .checkbox-group
+      each val in array_of_arguments
+        .checkbox__item
+          label(class='checkbox',for=val) 
+            span(class='checkbox__span') #{val}
+            input(type='checkbox',name=val,id=val,class='checkbox__input')
+            span(class='checkbox-custom')
 mixin checkboxlist(label,array_of_arguments)
-	.checkbox-details
-		details
-			summary #{label}
-			.checkbox-group
-				each val in array_of_arguments
-					.checkbox__item
-						label(class='checkbox',for=val) #{val}
-							input(type='checkbox',name=val,id=val,class='checkbox__input')
-							span(class='checkbox-custom')
+  .checkbox-details
+    details
+      summary #{label}
+      .checkbox-group
+        each val in array_of_arguments
+          .checkbox__item
+            label(class='checkbox',for=val) 
+              span(class='checkbox__span') #{val}
+              input(type='checkbox',name=val,id=val,class='checkbox__input')
+              span(class='checkbox-custom')
 
 mixin checkboxRich(label,name,...array_of_arguments)
-	.checkbox-rich(class='label') #{label}
-		.checkbox-rich__group
-			each val in array_of_arguments
-				.checkbox-rich__item
-					input(type='checkbox',name=name,id=name,class='checkbox-rich__input',val=val[0])
-					span(class='checkbox-rich__custom')
-					label(class='checkbox-rich__info')
-						div(class='checkbox-rich__label',for=name) #{val[0]}	
-						div(class='checkbox-rich__desc') #{val[1]}
-					
+  .checkbox-rich(class='label') #{label}
+    .checkbox-rich__group
+      each val in array_of_arguments
+        .checkbox-rich__item
+          input(type='checkbox',name=name,id=name,class='checkbox-rich__input',val=val[0])
+          span(class='checkbox-rich__custom')
+          label(class='checkbox-rich__info')
+            div(class='checkbox-rich__label',for=name) #{val[0]}  
+            div(class='checkbox-rich__desc') #{val[1]}
+          
 
 mixin features(pic,feature,desc)
-	.feature__item
-		.feature__pic 
-			img(src=pic)
-		.feature__info
-			.feature__label #{feature}
-			.feature__desc #{desc}
+  .feature__item
+    .feature__pic 
+      img(src=pic)
+    .feature__info
+      .feature__label #{feature}
+      .feature__desc #{desc}
 
 mixin radio-buttons(label,array_of_arguments,name)
-	.radio-buttons
-		span(class='radio-buttons__label') #{label}
-		.radio-buttons__box
-			each val in array_of_arguments
-				.radio-buttons__option
-					input(type='radio',name=name,value=val,id=val,class='radio__input')
-					label(class='radio-buttons__title',for=val) #{val}
+  .radio-buttons
+    span(class='radio-buttons__label') #{label}
+    .radio-buttons__box
+      each val in array_of_arguments
+        .radio-buttons__option
+          input(type='radio',name=name,value=val,id=val,class='radio__input')
+          label(class='radio-buttons__title',for=val) #{val}
 
 mixin toggle(label,array_of_arguments)
-	.toggle-details #{label}
-		.toggle-group
-			each val in array_of_arguments
-				.toggle__item
-					label(class='toggle',for=val) #{val}
-						input(type='checkbox',name=val,id=val,class='toggle__input')
-						span(class='toggle-custom')
-							span(class='toggle-custom__helper')
-							span(class='toggle-custom__helper2')
+  .toggle-details #{label}
+    .toggle-group
+      each val in array_of_arguments
+        .toggle__item
+          label(class='toggle',for=val) #{val}
+            input(type='checkbox',name=val,id=val,class='toggle__input')
+            span(class='toggle-custom')
+              span(class='toggle-custom__helper')
+              span(class='toggle-custom__helper2')
 
 mixin like(number_of_likes,id)
-	.like__item
-		input(type='checkbox',name='like',id=id,class='like__input')
-		label(class='like__number',for=id) #{number_of_likes}
-		i(class='material-icons like__icon') favorite_border
-		i(class='material-icons like__icon--active') favorite
-		span(class='like-custom')
+  .like__item
+    input(type='checkbox',name='like',id=id,class='like__input')
+    label(class='like__number',for=id) #{number_of_likes}
+    i(class='material-icons like__icon') favorite_border
+    i(class='material-icons like__icon--active') favorite
+    span(class='like-custom')
 
-mixin bullet-list (array_of_arguments)
-	.bullet-list__box
-		each val in array_of_arguments
-			span(class='bullet-list__item') #{val}
+mixin bullet-list (array_of_arguments,title)
+  .bullet__title #{title}
+  .bullet-list__box
+    each val in array_of_arguments
+      span(class='bullet-list__item') #{val}
 
-mixin date-picker(label)
-	.date-picker
-		label #{label}
-		label(class='date-picker__item')
-			input(type='text',class='datepicker input',placeholder='ДД.ММ.ГГГГ')
-			img(src='../../../assets/img/arrow.svg',class='arrow')
+mixin date-picker(label,classname)
+  .date-picker(class)
+    label #{label}
+    label(class='date-picker__item')
+      input(type='text',class='datepicker input',class=classname,placeholder='ДД.ММ.ГГГГ')
+      img(src='../../../assets/img/arrow.svg',class='arrow')
 
 mixin hotel-card(pictures,lux_number,price,stars,number_of_reviews,lux)
-	.hotel-card
-		.hotel-card__slider
-			each pic in pictures
-				img(src=pic)
-		.hotel-card__info
-			.hotel-card__row(class='credentials')
-				span(class='hotel-card__number number') 
-					span(class='number-sign')
-					|№
-					span(class='number-number') #{lux_number}
-					if lux==true
-						span(class='hotel-card__lux lux') ЛЮКС
-				span(class='hotel-card__price price')
-					b #{price}
-					span(class='day') в сутки
-			.hotel-card__row
-				span(class='hotel-card__stars') 
-					+rate-button(4)
-				span(class='hotel-card__reviews price')
-					b #{number_of_reviews} 
-					|Отзывов
+  .hotel-card
+    .hotel-card__slider
+      each pic in pictures
+        img(src=pic)
+    .hotel-card__info
+      .hotel-card__row(class='credentials')
+        span(class='hotel-card__number number') 
+          span(class='number-sign')
+          |№
+          span(class='number-number') #{lux_number}
+          if lux==true
+            span(class='hotel-card__lux lux') ЛЮКС
+        span(class='hotel-card__price price')
+          b #{price}
+          span(class='day') в сутки
+      .hotel-card__row
+        span(class='hotel-card__stars') 
+          +rate-button(4)
+        span(class='hotel-card__reviews price')
+          b #{number_of_reviews} 
+          |Отзывов
 
 mixin rate-button(active_stars)
-		.star__group 
-			- var n=active_stars
-			- var r=5-n
-			while n>0
-				.star__united(style={opacity:'1'})
-					+svg__star--active('#BC9CFF','#8BA4F9','star--active')
-					+svg__star('#BC9CFF','#8BA4F9','star--inactive')
-				-n--
-			while r>0
-				.star__united(style={opacity:'.5'}) 
-					+svg__star('#BC9CFF','#8BA4F9','star--inactive')
-				-r--
+    .star__group 
+      - var n=active_stars
+      - var r=5-n
+      while n>0
+        .star__united(style={opacity:'1'})
+          +svg__star--active('#BC9CFF','#8BA4F9','star--active')
+          +svg__star('#BC9CFF','#8BA4F9','star--inactive')
+        -n--
+      while r>0
+        .star__united(style={opacity:'.5'}) 
+          +svg__star('#BC9CFF','#8BA4F9','star--inactive')
+        -r--
 
 mixin navbar(array_of_elements,arrow_class)
-	each el in array_of_elements 
-		if el.arrow==true
-			.navbar__item
-				span(class='navbar__text') #{el.name}
-				span(style={display:'flex',position: 'relative',
+  each el in array_of_elements 
+    if el.arrow==true
+      .navbar__item
+        span(class='navbar__text') #{el.name}
+        span(style={display:'flex',position: 'relative',
     top: '5%'})
-					img(src='../../../assets/img/arrow.svg',class='arrow_class')
-		else 
-			.navbar__item #{el.name}
+          img(src='../../../assets/img/arrow.svg',class='arrow_class')
+    else 
+      .navbar__item #{el.name}
 
 mixin burger-menu(array_of_arguments,classname) 
-	div(class=classname)
-		button(class='burger__button')
-			span(class='burger__item')
-		ul(class='burger__first-ul')
-			each val in array_of_arguments 
-				if typeof val=='array'
-					li #{val.name}
-						ul(class='burger__secondary-ul')
-							each el in val 
-								li #{el}
-				else   
-					if val.arrow=='true'
-						li #{val.name}
-						span
-							img(src='../../../assets/img/arrow.svg',class='arrow_class')
+  div(class=classname)
+    button(class='burger__button')
+      span(class='burger__item')
+    ul(class='burger__first-ul')
+      each val in array_of_arguments 
+        if typeof val=='array'
+          li #{val.name}
+            ul(class='burger__secondary-ul')
+              each el in val 
+                li #{el}
+        else   
+          if val.arrow=='true'
+            li #{val.name}
+            span
+              img(src='../../../assets/img/arrow.svg',class='arrow_class')
 
 //- mixin sidebar(array_of_arguments)
-//- 	sidebar(class='sidebar')
-//- 		.sidebar__container
-//- 			each el in array_of_arguments
-//- 				.sidebar__item
-//- 					include #{el}
+//-   sidebar(class='sidebar')
+//-     .sidebar__container
+//-       each el in array_of_arguments
+//-         .sidebar__item
+//-           include #{el}
+mixin comment(img,name,days_ago,text)
+  .comment
+    .comment__wrapper
+      .comment__left
+        .comment__pic
+          img(src=img)
+        +like('12','like__murad')
+      .comment__right
+        .comment__name #{name}
+        .comment__days #{days_ago}  назад
+        .comment__content #{text}
 
 
 mixin pagination(last_page,number_of_first_pages)
-	.pagination-item
-		- let n=1
-		while n<number_of_first_pages+1
-			div(class='page-item') #{n}
-				span 
-			-n++
-		div(class='page-intro page-item') ...
-		div(class='page-item last-page') 15 
-		.for-arrow
-			+svg__arrow-right('#FFFFFF','#FFFFFF','arrow-right__pagination')
-	.pagination-item__info 1 – 12 из 100+ вариантов аренды
+  .pagination-item
+    - let n=1
+    while n<number_of_first_pages+1
+      div(class='page-item') #{n}
+        span 
+      -n++
+    div(class='page-intro page-item') ...
+    div(class='page-item last-page') 15 
+    .for-arrow
+      +svg__arrow-right('#FFFFFF','#FFFFFF','arrow-right__pagination')
+  .pagination-item__info 1 – 12 из 100+ вариантов аренды
 
 
-		
-	
-
-
-
+    
+  
 
 
 
@@ -273,18 +284,21 @@ mixin pagination(last_page,number_of_first_pages)
 
 
 
-	
-
-			
-					
-				
-		
 
 
-		
+
+  
+
+      
+          
+        
+    
 
 
-						
-													
-				
-		
+    
+
+
+            
+                          
+        
+    

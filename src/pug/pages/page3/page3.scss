@@ -2,6 +2,11 @@
 @import '../../layout/mixins.scss';
 .room-details {
   overflow:hidden;
+  .content__item{
+    &:not(:last-child,:first-child){
+      padding-left:60px;
+    };
+  }
   .comment {
     margin-left: -20px;
 
@@ -21,11 +26,12 @@
       width:100%;
     img {
       display: block;
-      width: 100%;
-      height:100%;
+      max-width: 100%;
+      max-height: 100%;
+      height: 100%;
     }
     &_big {
-      width: 60%;
+      width: 100%;
         height: 100%;
     }
   }
@@ -33,29 +39,39 @@
     display: flex;
     flex-wrap: wrap;
     width: 50%;
+    height:100%;
 
   }
 }
   .content {
-    padding: rem(80) 9% rem(10) 9%;
+    padding: 5.71429rem 0 .7% 9%;
     display: flex;
     width: 100%;
     justify-content: center;
     &__item {
-
+      // margin-right: rem(70);
+      margin-bottom: 20px;
+      // width: 39%;
+      &:last-child {
+        margin-right: 0;
+      };
     }
     &__column {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
       margin-right:70/1440*100%;
+      height: 100%;
       & > div {
       margin-bottom: 20px;
+      height:100%;
     }
     }
-    // &__side {
-
-    // }
+    &__side {
+      .content__item {
+        padding-left: 0;
+      }
+    }
   }
   .bullet__title {
     font-family: 'Montserrat';
@@ -87,6 +103,9 @@
   font-size: rem(14);
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
+}
+.comments {
+  max-width:rem(711);
 }
 .comments__title {
   font-family: Montserrat;
@@ -126,6 +145,9 @@
 @media screen and (max-width:765px) {
   .room-details .pictures__item {
     width: 100%;
+    & img {
+      width: 100%;
+    }
   }
   .room-details .pictures__column {
     width: 100%;

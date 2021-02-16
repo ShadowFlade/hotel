@@ -3,7 +3,7 @@
 .comment {
   // position: absolute;
   bottom: -450px;
-  width: 711px;
+  max-width: 711px;
   &__wrapper {
     display: flex;
   }

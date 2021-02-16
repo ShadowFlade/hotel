@@ -2,7 +2,7 @@ extends ../../layout/landing
 block variables
   - var title = 'room details';
   - var description = '';
-  - var pageclass='room-details'
+  - var pageclass='room-details' 
 block content
   header
     include ../../includes/modules/header-w/header-w.pug
@@ -20,17 +20,19 @@ block content
       .content__column
         .content__item
           include ../../includes/modules/features/features.pug
+        .content__item
+          include ../../includes/modules/graph/graph.pug
         .comments
           .comments__header
             span(class='comments__title') Отзывы посетителей номера
             span(class='comments__count') 2 отзыва
-          .content__item
+          .comments__item
             +comment('../../../assets/img/avatar.png','Мурад Сарафанов','5 дней','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
 
-          .content__item
+          .comments__item
             +comment('../../../assets/img/avatar2.png','Патрисия Стёклышкова','Неделю','Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
 
-        .content__item
+        .comments__item
           +bullet-list(['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00,а выезд до 12:00'],'Правила')
         .content__item
           .cancel__item

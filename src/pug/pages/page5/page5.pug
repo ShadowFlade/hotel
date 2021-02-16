@@ -1,17 +1,15 @@
 extends ../../layout/landing
 block variables
-  - var title = 'Registration';
+  - var title = 'sign-in';
   - var description = '';
-  - var pageclass='registration'
-block content 
+  - var pageclass='sign-in'
+block content
   header
     include ../../includes/modules/header-w/header-w.pug
   main 
     .picture 
-      img(src='../../../assets/img/last-page.png')  
-      include ../../includes/modules/registration/registration.pug
-
-
+      img(src='../../../assets/img/last-page.png')
+      include ../../includes/modules/sign-in/sign-in.pug
   footer(class='footer-main')
     include ../../includes/modules/footer/footer.pug
   footer(class='footer-secondary')

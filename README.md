@@ -2,7 +2,7 @@
 
 ````bash
 # Download repository:
-git clone https://github.com/ShadowFlade/metalamp/tree/testbranch
+git clone https://github.com/ShadowFlade/metalamp.git
 
 # Go to the app:
 cd metalamp

@@ -10,14 +10,8 @@ block content
 			include ../../includes/modules/dropdown/dropdown.pug
 			include ../../includes/modules/masked-text-field/masked-text-field.pug
 			.date-picker-box
-				div 
-					p(class='date-caption').
-						date dropdown
-					include ../../includes/modules/date-picker/date-picker.pug
-				div 
-					p(class='date-caption').
-						date dropdown
-					include ../../includes/modules/date-picker/date-picker.pug
+				+date-picker('date dropdown')
+				+date-picker('date dropdown')
 			include ../../includes/modules/filter-date-dropdown/filter-date-dropdown.pug
 			include ../../includes/modules/subscription-text-field/subscription-text-field.pug
 			include ../../includes/modules/dropdown-accom/dropdown-accom.pug
@@ -27,9 +21,8 @@ block content
 			include ../../includes/modules/checkbox-buttons/checkbox-buttons.pug
 			include ../../includes/modules/radio-buttons/radio-buttons.pug
 			include ../../includes/modules/toggle/toggle.pug
-			.like
-				.label like button
-				include ../../includes/modules/like/like.pug
+
+			include ../../includes/modules/like/like.pug
 			include ../../includes/modules/rate-button/rate-button.pug
 			.dropdown
 				

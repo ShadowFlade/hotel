@@ -1,15 +1,11 @@
 import { Chart } from 'chart.js';
 $(function () {
   var options= {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
+    events:[]
+  };
+
   var data = {
+
     datasets: [{
         data: [10, 20, 30],
          borderColor: [
@@ -27,8 +23,10 @@ $(function () {
    };
   var myChart=new Chart($('#myChart'), {
     type: 'pie',
-    option: options,
+    options: options,
     data: data,
+
+
    
   });
   $('#myChart').css('width','100%');

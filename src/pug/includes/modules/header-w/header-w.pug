@@ -7,10 +7,10 @@ nav(class='navigation')
     .navigation__navbar 
       .navigation__items
         +navbar([{name:'О нас',arrow:false},
-        {name:'Услуги',arrow:true},
+        {name:'Услуги',arrow:true,list:['serega','lox','no','u','nego','dr','poetomy','on','krutoi']},
         {name:'Вакансии',arrow:false},
         {name:'Новости',arrow:false},
-        {name:'Соглашения',arrow:true}],'navigation__arrow')
+        {name:'Соглашения',arrow:true,list:['arsenal','vpered','xd']}],'navigation__arrow')
     
     if username!=0
       .navigation__user #{username}

@@ -12,6 +12,12 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  &__item {
+    &:hover {
+      color:black;
+      font-weight: 500;
+    };
+  }
   // margin-bottom: 20px;
   &__container {
     padding: 113/1350 * 100% 140/1440 * 100% 100/1350 * 100%;
@@ -71,7 +77,9 @@
     }
   }
 }
-
+a{
+  cursor: pointer;
+}
 @media screen and (max-width: 1193px) {
   html {
     font-size: rem(12);

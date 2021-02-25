@@ -22,6 +22,8 @@
 }
 .daterangepicker {
   width: 320px;
+  height:359px;
+  overflow:hidden;
 }
 // .next .available span {
 //   position: relative;
@@ -49,7 +51,8 @@
 }
 .daterangepicker .calendar-table .next span,
 .daterangepicker .calendar-table .prev span {
-  background-image: url('../../../../assets/img/arrow_back.svg');
+  background-image: url('../../../../assets/img/arrow_back.png');
+  background: url('../../../../assets/img/arrow_back.png')center / contain no-repeat;
   border: 0;
   transform: rotate(180deg);
   width: 24px;
@@ -63,7 +66,28 @@
   align-items: center;
   text-align: center;
   color: #bc9cff;
+  position: relative;
+  right: -25%;
 }
+.daterangepicker thead tr:nth-child(1) {
+  margin-bottom: 20px;
+};
+// .daterangepicker .calendar-table td, .daterangepicker .calendar-table th {
+//     background-image: url('../../../../assets/img/arrow_back.svg');
+//   border: 0;
+//   transform: rotate(180deg);
+//   width: 24px;
+//   height: 24px;
+//   font-family: 'Material Icons';
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: rem(24);
+//   line-height: 20px;
+//   display: flex;
+//   align-items: center;
+//   text-align: center;
+//   color: #bc9cff;
+// }
 .daterangepicker .calendar-table .prev span {
   transform: rotate(0);
 }
@@ -77,10 +101,15 @@
   align-items: center;
   text-align: center;
   color: rgba(31, 32, 65, 0.5);
+  padding:10px;
 }
-// .daterangepicker.show-calendar .drp-buttons {
-//   display: none;
-// }
+.daterangepicker.show-calendar .drp-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding:0;
+  border:0;
+  padding-top:5%;
+  }
 .daterangepicker td.active {
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
@@ -94,6 +123,9 @@
 .daterangepicker .calendar-table th,
 .daterangepicker .calendar-table td {
   border: 0;
+}
+.daterangepicker td.available:hover {
+  border-radius: 50%;
 }
 .current-day {
   background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);

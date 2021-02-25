@@ -52,7 +52,7 @@ mixin item(left_part, right_part)
 mixin dropdown(label,number_of_options,option)
   -let n=0
   label #{label}
-  label
+  label 
     select
       option #{option}
       while n<=number_of_options
@@ -157,10 +157,10 @@ mixin toggle(label,array_of_arguments)
 mixin like(number_of_likes,id)
   .like__item
     input(type='checkbox',name='like',id=id,class='like__input')
-    label(class='like__number',for=id) #{number_of_likes}
+    div(class='like__number',for=id) #{number_of_likes}
     i(class='material-icons like__icon') favorite_border
     i(class='material-icons like__icon--active') favorite
-    span(class='like-custom')
+    //- span(class='like-custom')
 
 mixin bullet-list (array_of_arguments,title)
   .bullet__title #{title}

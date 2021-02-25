@@ -1,23 +1,41 @@
 .form-elements {
-  display: flex;
+  .container {
+    display: flex;
   // // justify-content: space-between;
   // flex-wrap: wrap;
   // // align-items: flex-start;
   width: 100%;
+  background: white;
   & > div,
   & > label {
     margin-bottom: 20px;
+  }
+  }
+  
+  .comment {
+    position: absolute;
+    bottom:-300px;
+    right:200px;
+  }
+  .rate-buttons,
+  .like-buttons {
+    display: flex;
+    // justify-content: space-between;
+    & > div {
+      margin-right: 10px;
+    }
   }
 
   &__column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex: 1 1 30%;
     margin-right: 126/1440 * 100%;
-    & > div:not(.comment) {
+    & > div:not(.comment),
+    & > button {
       margin-bottom: 20px;
-      // width: 320px;
+      width: 320px;
     }
   }
 }
@@ -29,5 +47,5 @@ html {
   // background: white;
 }
 .container {
-  padding: 141/1440 * 100% 143/1440 * 100%;
+  padding: 141/1440 * 100% 141/1440 * 100%;
 }

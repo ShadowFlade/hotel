@@ -1,97 +1,106 @@
 @import '../../layout/vars.scss';
 @import '../../layout/mixins.scss';
-.search-room{
+.search-room {
+  background: white;
   .sidebar {
-  padding-left: 140/1440 *100%;
-  width: 456px;
-  .label {
-    width:100%;
+    padding-left: 140/1440 * 100%;
+    width: 456px;
+    .label {
+      width: rem(266);
+    }
+    &__container {
+      padding-right: 60/1440 * 100%;
+    }
+    &__item {
+      margin-bottom: 20px;
+      // width: 228px;
+    }
+    .date-picker,
+    .datepicker,
+    .date-picker__item,
+    input:not(#facilities),
+    .input-box {
+      width: rem(266);
+    }
   }
-  &__container {
-    padding-right: 60/1440 *100%;
-  }
-  &__item {
-    margin-bottom: 20px;
-  }
-  .date-picker,.datepicker,.date-picker__item,input:not(#facilities),.input-box {
-    width:rem(266);
-  }
-
-}
-main {
-  padding:30px 0;
-  display: flex;
-}
-.content {
-  // padding: rem(30) rem(140);
-  padding-left: 60px;
-  // display: flex;
-  &__title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
-    color: #1f2041;
-    margin-bottom: 20px;
-  }
-  &__items {
+  main {
+    padding: 30px 0;
     display: flex;
-    flex-wrap: wrap;
-    margin-right: -12px;
-  }
-  &__item {
-    margin-right: 12px;
-  }
-  &__pagination {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-
-}
-@media screen and (max-width:1044px) {
-  .content__items {
-    width: 100%;
-    justify-content: center;
-  }
-}
-@media screen and (max-width:765px) {
-  html {
-    font-size: 12px;
   }
   .content {
-    padding: 15px;
+    // padding: rem(30) rem(140);
+    padding-left: 60px;
+    // display: flex;
+    &__title {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      color: #1f2041;
+      margin-bottom: 20px;
+    }
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -12px;
+    }
+    &__item {
+      margin-right: 12px;
+    }
+    &__pagination {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
   }
-  .sidebar {
-    padding-left: 3%;
+  @media screen and (max-width: 1044px) {
+    .content__items {
+      width: 100%;
+      justify-content: center;
+    }
   }
+  @media screen and (max-width: 765px) {
+    html {
+      font-size: 12px;
+    }
+    .content {
+      padding: 15px;
+    }
+    .sidebar {
+      padding-left: 3%;
+    }
+  }
+  @media screen and (max-width: 625px) {
+    main {
+      flex-wrap: wrap;
+    }
+    .sidebar {
+      width: 100%;
+    }
+    .date-picker,
+    .datepicker,
+    .date-picker__item,
+    input:not(#facilities),
+    .input-box {
+      width: auto;
+    }
+    .sidebar__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .sidebar__container > div {
+      margin-right: 8px;
+      margin-bottom: 8px;
+      width: 266px;
+    }
+    // TODO it does nothing?
 
+    .range-slider {
+      width: 100%;
+    }
+  }
 }
-@media screen and (max-width: 625px) {
-  main {
-    flex-wrap: wrap;
-  }
-  .sidebar {
-    width: 100%;
-  }
-  .date-picker,.datepicker,.date-picker__item,input:not(#facilities),.input-box {
-    width:auto;
-  }
-  .sidebar__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .sidebar__container > div {
-    margin-right: 8px;
-    margin-bottom: 8px;
-    width:228px;
-  }
-  .range-slider {
-    width:100%;
-  }
-
-}}

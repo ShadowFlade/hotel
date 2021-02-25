@@ -2,29 +2,30 @@ include ../utils/mixins
 block variables
 doctype html
 html(lang='en')
-	head
-		meta(charset='utf-8')
-		title #{title}
-		//- link(rel="stylesheet",href="./mixins.scss")
-		//- link(rel="stylesheet",href="./vars.scss")
-		link(rel="stylesheet",href="../../assets/scss/main.scss")
-		meta(name="description", content=description)
-		script(rel="stylesheet",src="https://code.jquery.com/jquery-1.12.4.js")
-		script(rel="stylesheet",src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
-		link(rel="stylesheet",href="https:/jqueryui.com/resources/demos/style.css")
-		link(rel="stylesheet",href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
-		//- script(type="text/javascript", src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js")
-		script(type="text/javascript", src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js")
-		script(type="text/javascript",src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
-		link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css")
-		link(href="https://fonts.googleapis.com/icon?family=Material+Icons",rel='stylesheet')
-		link(rel="preconnect" href="https://fonts.gstatic.com")
-		link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet")
-		//- script(type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js")
-		script(type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
-		link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
-		script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
-		block head
-	body
-		.container
-			block content
+  head
+    meta(charset='utf-8')
+    title #{title}
+    //- link(rel="stylesheet",href="./mixins.scss")
+    //- link(rel="stylesheet",href="./vars.scss")
+    link(rel="stylesheet",href="../../assets/scss/main.scss")
+    meta(name="description", content=description)
+    script(rel="stylesheet",src="https://code.jquery.com/jquery-1.12.4.js")
+    script(rel="stylesheet",src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    link(rel="stylesheet",href="https:/jqueryui.com/resources/demos/style.css")
+    link(rel="stylesheet",href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+    //- script(type="text/javascript", src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js")
+    script(type="text/javascript", src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js")
+    script(type="text/javascript",src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+    script(type="text/javascript",src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+
+    link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons",rel='stylesheet')
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet")
+    //- script(type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js")
+    script(type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
+    link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+    script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+    block head
+    body
+      block content

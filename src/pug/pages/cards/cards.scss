@@ -1,18 +1,25 @@
 @import '../../layout/vars.scss';
 @import '../../layout/mixins.scss';
 // @import '../../layout/nullstyle.scss';
-html {
-  background: #e5e5e5;
-}
+// html {
+//   background: #e5e5e5;
+// }
 // body {
 //   background: #f4f4f6;
 // }
-.container {
-  justify-content: normal;
+.cards{
+
+  .moveup {
+    top: 14%;
+  }
+    .container {
+      justify-content: normal;
   display: flex;
 
   max-width: 1440px;
-}
+  }
+  
+
 
 .number {
   font-family: 'Montserrat';
@@ -45,4 +52,8 @@ html {
 
 .card__datepicker {
   margin-bottom: 20px;
+  height: 358px;
 }
+
+}
+

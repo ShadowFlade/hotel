@@ -114,7 +114,9 @@ $(function() {
         .css('display', 'block')
     }
   })
-
+  var bgc = $('html').css('background')
+  $('.dropdown-accom__ul').css('background', 'white')
+  // $('.dropdown-accom__ul').css('background', 'red')
   // $(document).find(dropAcc).find(dropAccInsert).val(`${inputFunc(0)} спален, ${inputFunc('1')} кроватей, ${inputFunc('2')} ванных комнат`)
 })
 

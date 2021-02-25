@@ -32,7 +32,7 @@ $(function () {
       ],
       firstDay: 1,
     },
-    linkedCalendars: true,
+    linkedCalendars: false,
     singleDatePicker: false,
     showCustomRangeLabel: false,
     startDate: '02/04/2021',

@@ -18,10 +18,10 @@
     border-top-width: 0px;
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px;
-    z-index: 2;
+    z-index: 10;
     height: 123px;
     li {
-      background: white;
+      // background: white;
       display: flex;
       justify-content: space-between;
       height: 40px;

@@ -15,7 +15,6 @@ npm run dev
 
 # Output will be at dist/ folder
 npm run build
-``
 ## Project Structure:
 
 - `src/pug/layout` - put custom layout for pages
@@ -26,11 +25,8 @@ npm run build
 - `src/index.js` - main app file where you include/import all required libs and init app
 - `static/` - folder with extra static assets that will be copied into output folder
 
-<div align="center">
-  <h2>Settings:</h2>
-</div>
 
-```scss
+SCSS
 // Example with Helvetica
 @font-face {
   font-family: 'Helvetica-Base';

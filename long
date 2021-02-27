@@ -1,0 +1,23 @@
+* [33m[2021-02-25][m [32m[f2eb8b3][m | [31mfinished last page,fixed some bugs [1;31m{{ShadowFlade}}[m [34m (HEAD -> testbranch, origin/testbranch, origin/newbranch, newbranch)[m
+* [33m[2021-02-22][m [32m[f54909f][m | [31madded burger functionality,frefactoring remaining [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-16][m [32m[99c4f4b][m | [31mfinishded all pages,added pie chart to 3d page [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-16][m [32m[5dd745f][m | [31madded page4(unfinished) [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-14][m [32m[91f5931][m | [31mstarted search room [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-12][m [32m[c97bfcb][m | [31mfinished landing page [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-12][m [32m[b8fbb86][m | [31mfinished headers and footers,detected media query problem [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-12][m [32m[c39f191][m | [31mbroke cards into compontents,added slider arrows [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-11][m [32m[80f3425][m | [31mcorrected readmefile [1;31m{{ShadowFlade}}[m [34m[m
+*   [33m[2021-02-11][m [32m[9c4f3f0][m | [31mMerge branch 'testbranch' of https://github.com/ShadowFlade/metalamp into testbranch [1;31m{{ShadowFlade}}[m [34m[m
+[32m|[m[33m\[m  
+[32m|[m * [33m[2021-02-11][m [32m[9dcdc9b][m | [31mchecking from mac [1;31m{{ShadowFlade}}[m [34m[m
+* [33m|[m [33m[2021-02-11][m [32m[a262b4f][m | [31mfinished headers and footers [1;31m{{ShadowFlade}}[m [34m[m
+[33m|[m[33m/[m  
+* [33m[2021-02-11][m [32m[634b4d6][m | [31mstarted footers and headers [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-10][m [32m[4031cb1][m | [31madded calendar(not finished) [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-09][m [32m[cae8b3c][m | [31madded datepicker and hotel cards [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-07][m [32m[70f1563][m | [31malmost finifshed hotel cards [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-07][m [32m[85e95f5][m | [31mrestructuring the fs(2) [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-07][m [32m[966ee81][m | [31mreworking the fs,modulules' styles working [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-07][m [32m[e47ccac][m | [31mtrying to restructure the fs [1;31m{{ShadowFlade}}[m [34m[m
+* [33m[2021-02-05][m [32m[da640d6][m | [31mstable version,added unfinished page cards [1;31m{{ShadowFlade}}[m [34m (origin/master, origin/HEAD, master)[m
+* [33m[2021-02-05][m [32m[cfd622a][m | [31madded colors&type + form elements [1;31m{{ShadowFlade}}[m [34m[m

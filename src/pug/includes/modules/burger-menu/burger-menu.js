@@ -1,3 +1,4 @@
+import './burger-menu.scss'
 $(function() {
   $('.burger__button').click(function() {
     console.log($(this).siblings('.first-ul'))

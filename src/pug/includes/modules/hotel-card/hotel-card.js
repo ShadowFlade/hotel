@@ -1,3 +1,4 @@
+import './hotel-card.scss'
 import slick from 'slick'
 $(function() {
   $('.hotel-card__slider').slick({

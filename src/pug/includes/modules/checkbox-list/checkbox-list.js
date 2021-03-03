@@ -1,3 +1,10 @@
- $(function () {
-     $('.checkbox-group').css('background',$('div').first().css('background'))
- })
+import './checkbox-list.scss'
+$(function() {
+  $('.checkbox-group').css(
+    'background',
+    $('div')
+      .first()
+      .css('background')
+  )
+  console.log('im not here')
+})

@@ -1,5 +1,5 @@
 {
-  "name": "webpacktemplate",
+  "name": "metalamp",
   "version": "1.0.0",
   "description": "My template + pug",
   "main": "index.js",
@@ -11,13 +11,13 @@
     "> 1%",
     "last 3 version"
   ],
-  "author": "https://github.com/vedees",
+  "author": "Vladimir Drugov <Wolffdrugov@yandex.ru>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vedees/webpack-template-pug.git"
+    "url": ""
   },
   "bugs": {
-    "url": "https://github.com/vedees/webpack-template-pug/issues"
+    "url": ""
   },
   "keywords": [
     "webpack",
@@ -26,8 +26,7 @@
     "bable",
     "bable7",
     "scss",
-    "pug",
-    "vue"
+    "pug"
   ],
   "license": "MIT",
   "devDependencies": {

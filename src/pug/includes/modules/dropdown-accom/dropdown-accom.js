@@ -1,3 +1,4 @@
+import './dropdown-accom.scss'
 $(function() {
   const dropSpan = $('.dropdown-accom__span')
   const dropPrButton = $('.dropdown-accom__button--prev')

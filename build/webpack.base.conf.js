@@ -20,7 +20,6 @@ const PAGES_DIR = `${PATHS.src}/pug/pages/`
 const PAGES = []
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
-
 fs.readdirSync(path.resolve(__dirname, '../', 'src', 'pug', 'pages')).forEach(
   (file) => {
     PAGES.push(file.split('/', 2))
@@ -34,46 +33,43 @@ const htmlPlugins = PAGES.map(
       minify: {
         collapseWhitespace: isProd,
         // collapseWhitespace: false
+        chunks: [fileName, 'index'],
       },
     })
 )
+const entry = () => {
+  const point = {}
+  PAGES.forEach((page) => {
+    point[page] = path.resolve(__dirname, `../src/pug/pages/${page}/${page}.js`)
+  })
 
+  return point
+}
 module.exports = {
   // BASE config
   externals: {
     paths: PATHS,
   },
-  entry: {
-    app: PATHS.src,
-    // module: `${PATHS.src}/your-module.js`,
-  },
+  entry: entry(),
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
     path: PATHS.dist,
     publicPath: '/',
   },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          name: 'vendors',
-          test: /node_modules/,
-          chunks: 'all',
-          enforce: true,
-        },
-      },
-    },
-  },
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //     minSize: 1,
+  //     minChunks: 2,
+  //   },
+  // },
   module: {
     rules: [
       {
         test: /\.pug$/,
         oneOf: [
           // this applies to <template lang="pug"> in Vue components
-          {
-            resourceQuery: /^\?vue/,
-            use: ['pug-plain-loader'],
-          },
+
           // this applies to pug imports inside JavaScript
           {
             use: ['pug-loader'],
@@ -84,15 +80,6 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: '/node_modules/',
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loader: {
-            scss: 'vue-style-loader!css-loader!sass-loader',
-          },
-        },
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -152,15 +139,15 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '~': PATHS.src,
-      vue$: 'vue/dist/vue.js',
+      // ~Img: path.resolve(__dirname, '../src/assets/img'),
+      Src: PATHS.src,
     },
   },
   plugins: [
     // new HtmlWebpackPugPlugin({
     //   adjustIndent: true,
     // }),
-    new VueLoaderPlugin(),
+
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),

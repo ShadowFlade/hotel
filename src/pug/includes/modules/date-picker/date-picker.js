@@ -1,3 +1,4 @@
+import './date-picker.scss'
 import daterangepicker from 'daterangepicker'
 $(function() {
   $('.datepicker').daterangepicker({

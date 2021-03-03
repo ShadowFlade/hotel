@@ -1,1 +1,1 @@
-// import './pay-button.scss'
+import './pay-button.scss'

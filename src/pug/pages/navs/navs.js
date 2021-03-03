@@ -1,0 +1,1 @@
+import './navs.scss'

@@ -1,3 +1,4 @@
+import './filter-date-dropdown.scss'
 import moment from 'moment'
 // import 'moment/locale/ru'npm
 // moment.locale('ru')

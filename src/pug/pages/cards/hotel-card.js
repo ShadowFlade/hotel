@@ -1,10 +1,10 @@
 import moment from 'moment'
+// import 'Src/pug/includes/modules/filter-date-dropdown/filter-date-dropdown.js'
 // import 'moment/locale/ru'npm
 // moment.locale('ru')
 $(function() {
   // moment.locale('ru')
   $('.card__datepicker').daterangepicker({
-
     maxSpan: {
       days: 7,
     },

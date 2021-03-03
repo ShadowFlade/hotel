@@ -1,6 +1,7 @@
-$(function () {
-	$('.content__datepicker').daterangepicker({
-	maxSpan: {
+import './page2.scss'
+$(function() {
+  $('.content__datepicker').daterangepicker({
+    maxSpan: {
       days: 60,
     },
     opens: 'center',

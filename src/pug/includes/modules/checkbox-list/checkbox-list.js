@@ -6,5 +6,4 @@ $(function() {
       .first()
       .css('background')
   )
-  console.log('im not here')
 })

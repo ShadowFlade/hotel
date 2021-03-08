@@ -2,3 +2,11 @@
 @import '../../layout/mixins.scss';
 @import '../../layout/fonts.scss';
 @import '../../layout/nullstyle.scss';
+.container {
+  padding: 141/1440 * 100% 141/1440 * 100%;
+}
+.icon {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}

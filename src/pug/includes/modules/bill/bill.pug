@@ -16,17 +16,28 @@
     +dropdown2('Гости','2 спальни, 2 кровати','dropdown-accom',['Взрослые','Дети','Младенцы'],'clear')
   .card__summary(class='summary')
     .summary__row 
+     
       .summary__price 9 990₽ х 4 суток
-      .summary__sum 39 960₽
+      div(style={display:'flex','min-width':' 30%',
+    'justify-content': 'space-between'})  
+        .summary__info-icon i
+        .summary__sum 39 960₽
     .summary__row 
       .summary__price Сбор за услуги: скидка 2 179₽
-      .summary__sum 0₽
+      div(style={display:'flex','min-width': '30%',
+    'justify-content': 'space-between'}) 
+        .summary__info-icon i
+        .summary__sum 0₽
     .summary__row 
+      
       .summary__price Сбор за дополнительные услуги
-      .summary__sum 300₽
+      div(style={display:'flex','min-width': '30%',
+    'justify-content': 'space-between'}) 
+        .summary__info-icon i
+        .summary__sum 300₽
     .summary__all
       .summary__result Итого
-      span(class='summary__border')
+      div(class='summary__border')
       .summary__money 38 081₽
   .card__footer
     button(class='pay-button') Забронировать

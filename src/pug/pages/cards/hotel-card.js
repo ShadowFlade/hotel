@@ -71,7 +71,7 @@ $(function() {
     } else if (thisMonth[thisMonth.length - 1] !== 'т') {
       thisMonth = thisMonth.slice(0, 6) + 'я'
     }
-    // moment.locale('ru')
+
     $(this).val(
       picker.startDate.format('D ' + thisMonth) +
         ' - ' +
@@ -89,10 +89,10 @@ $(function() {
   //   console.log('hey')
   // })
 
-  $('.card__datepicker').click()
+  // $('.card__datepicker').click()
   $(document).mouseup(function() {
     $('.end-date').removeClass(
       'in-range'
-    ) /*not the best solution,needs reworking*/
+    ) /*TODO not the best solution,needs reworking*/
   })
 })

@@ -1,7 +1,7 @@
 include ../utils/mixins
 block variables
 doctype html
-html(lang='en')
+html(lang='en') 
   head
     meta(charset='utf-8')
     title #{title}
@@ -29,4 +29,5 @@ html(lang='en')
     block head
     body(class=pageclass)
       img(src="../../../assets/img/fsdicon.svg").icon
-      block content
+      .container
+        block content

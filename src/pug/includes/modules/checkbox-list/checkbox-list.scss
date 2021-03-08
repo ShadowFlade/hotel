@@ -10,7 +10,7 @@
   left: 0;
   position: absolute;
   background: #e5e5e5;
-  z-index: 10;
+  z-index: 10; //TODO background is transparent for some reason
 }
 .checkbox {
   font-family: 'Montserrat';
@@ -105,7 +105,7 @@ summary {
   text-transform: uppercase;
 }
 summary::before {
-  content: url('../../../../assets/img/arrow.png');
+  content: url('../../../../assets/img/arrow.png'); //TODO make an animation of an arrow
   // padding-right: 0.5em;
   width: 20px;
   position: absolute;
@@ -116,7 +116,7 @@ summary::before {
 
 details {
   position: relative;
-  width: 222/12 * 1em;
+  // width: 222/12 * 1em;
 }
 details[open] > summary::before {
   content: url('../../../../assets/img/arrow-up.png');

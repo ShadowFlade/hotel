@@ -4,7 +4,7 @@
 .radio-buttons__box {
   display: flex;
   margin-top: rem(16);
-  width: 220px;
+  // width: 220px;
 }
 .radio-buttons__option {
   font-family: Montserrat;
@@ -52,8 +52,8 @@
   height: 12px;
   border-radius: 50%;
   position: absolute;
-  top: 56%;
-  left: 8%;
+  top: 51%;
+  left: 9%;
   transform: translate(-50%, -50%) scale(0.5);
   opacity: 0;
   transition: all 0.3s ease-out;

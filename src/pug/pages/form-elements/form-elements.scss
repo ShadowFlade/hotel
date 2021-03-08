@@ -1,21 +1,24 @@
+html {
+  font-size: 12px;
+}
 .form-elements {
   .container {
     display: flex;
-  // // justify-content: space-between;
-  // flex-wrap: wrap;
-  // // align-items: flex-start;
-  width: 100%;
-  background: white;
-  & > div,
-  & > label {
-    margin-bottom: 20px;
+    // // justify-content: space-between;
+    // flex-wrap: wrap;
+    // // align-items: flex-start;
+    width: 100%;
+    background: white;
+    & > div,
+    & > label {
+      margin-bottom: 20px;
+    }
   }
-  }
-  
+
   .comment {
     position: absolute;
-    bottom:-300px;
-    right:200px;
+    bottom: -300px;
+    right: 200px;
   }
   .rate-buttons,
   .like-buttons {

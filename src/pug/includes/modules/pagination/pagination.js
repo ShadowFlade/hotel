@@ -1,4 +1,3 @@
-import './pagination.scss'
 $(function() {
   $('.page-item').on('click', function() {
     if (!$(this).hasClass('page-active')) {
@@ -10,3 +9,4 @@ $(function() {
     }
   })
 })
+import './pagination.scss'

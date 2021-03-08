@@ -69,7 +69,8 @@ mixin dropdown2(label,placeholder,nameofclass,array_of_arguments,option)
         img(src='../../../assets/img/arrow.svg',class='arrow')
       ul(class=`${nameofclass}__ul`,style={display:'none'})
         each val in array_of_arguments
-          li #{val}
+          li 
+            .dropdown-accom__variant #{val}
             .dropdown-accom__btn-group
               button(type='button',class=`${nameofclass}__button--prev`) -
               div(class=`${nameofclass}__span`) 2

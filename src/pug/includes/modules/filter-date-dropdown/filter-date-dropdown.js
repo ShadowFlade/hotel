@@ -80,8 +80,9 @@ $(function() {
   var thisMonth = moment()
     .locale('ru')
     .format('MMMM')
-  console.log(thisMonth)
-  console.log(thisMonth[thisMonth.length - 1])
+  // console.log(thisMonth)
+  // console.log(thisMonth[thisMonth.length - 1])
+  $('.daterangepicker').css('top', '20%')
 })
 // document.addEventListener('DOMContentLoaded', function() {
 //   function simClick() {

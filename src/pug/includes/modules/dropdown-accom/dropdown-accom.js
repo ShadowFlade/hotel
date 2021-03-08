@@ -7,7 +7,7 @@ $(function() {
   const dropAccUl = $('.dropdown-accom__ul')
   const dropAccInput = $('.input-box')
   const dropAccInsert = $('.dropdown-accom')
-
+  //TODO 2 instances cant work on the same page together,fix it
   const inputFunc = (index) => {
     return $(this)
       .find(dropSpan)
@@ -37,7 +37,10 @@ $(function() {
       .text(num)
     setInput()
     // $(this).parentsUntil(dropAcc).find(dropAccInsert).val(`${inputFunc(0)} спален, ${inputFunc('1')} кроватей, ${inputFunc('2')} ванных комнат`)
-
+    $(this)
+      .parentsUntil(dropAcc)
+      .find(dropAccInsert)
+      .val(`${+inputFunc(0) + +inputFunc('1')} гостей`)
     if (
       Number(
         $(this)
@@ -68,9 +71,23 @@ $(function() {
       .parentsUntil(dropAcc)
       .find(dropAccInsert)
       .val(
-        `${inputFunc(0)} спален, ${inputFunc('1')} кроватей, ${inputFunc(
-          '2'
-        )} ванных комнат`
+        `${+inputFunc(0) + +inputFunc('1')} гостей`
+        // `${inputFunc(0)} ${$(this)
+        //   .parents('ul')
+        //   .find('li')
+        //   .eq(0)
+        //   .find('.dropdown-accom__variant')
+        //   .text()}, ${inputFunc('1')} ${$(this)
+        //   .parents('ul')
+        //   .find('li')
+        //   .eq(1)
+        //   .find('.dropdown-accom__variant')
+        //   .text()}, ${inputFunc('2')} ${$(this)
+        //   .parents('ul')
+        //   .find('li')
+        //   .eq(2)
+        //   .find('.dropdown-accom__variant')
+        //   .text()}`
       )
     if (
       Number(

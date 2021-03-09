@@ -72,6 +72,12 @@
     .sidebar {
       padding-left: 3%;
     }
+    .footer-main {
+      display: none;
+    }
+    .footer-secondary {
+      display: block;
+    }
   }
   @media screen and (max-width: 625px) {
     main {

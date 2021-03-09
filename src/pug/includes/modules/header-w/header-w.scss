@@ -32,8 +32,8 @@
     display: flex;
   }
   &__button-wrapper {
-    width: 87/12 * 1em;
-    height: 34/12 * 1em;
+    width: 6.45em;
+    height: 2.5em;
     margin-right: 20/1440 * 100%;
   }
   &__bigbutton {
@@ -94,6 +94,7 @@
 }
 .btngroup-authorization {
   display: flex;
+  align-items: center;
 }
 .dd {
   display: none;

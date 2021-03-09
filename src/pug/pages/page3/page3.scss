@@ -1,50 +1,48 @@
 @import '../../layout/vars.scss';
 @import '../../layout/mixins.scss';
 .room-details {
-  overflow:hidden;
-  .content__item{
-    &:not(:last-child,:first-child){
-      padding-left:60px;
-    };
+  overflow: hidden;
+  .content__item {
+    &:not(:last-child, :first-child) {
+      padding-left: 60px;
+    }
   }
   .comment {
     margin-left: -20px;
-
   }
   .bullet-list__box {
-    max-width:rem(292);
+    max-width: rem(292);
   }
   .card {
     max-width: 380px;
     margin-right: 0;
   }
   .pictures {
-  display: flex;
-  min-height: 500px;
-  &__item {
+    display: flex;
+    min-height: 500px;
+    &__item {
       height: 50%;
-      width:100%;
-    img {
-      display: block;
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        height: 100%;
+      }
+      &_big {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__column {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
       height: 100%;
     }
-    &_big {
-      width: 100%;
-        height: 100%;
-    }
   }
-  &__column {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    height:100%;
-
-  }
-}
   .content {
-    padding: 5.71429rem 0 .7% 9%;
+    padding: 5.71429rem 0 0.7% 9%;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -54,18 +52,18 @@
       // width: 39%;
       &:last-child {
         margin-right: 0;
-      };
+      }
     }
     &__column {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
-      margin-right:70/1440*100%;
+      margin-right: 70/1440 * 100%;
       height: 100%;
       & > div {
-      margin-bottom: 20px;
-      height:100%;
-    }
+        margin-bottom: 20px;
+        height: 100%;
+      }
     }
     &__side {
       .content__item {
@@ -79,13 +77,11 @@
     font-weight: bold;
     font-size: rem (19);
     line-height: 23px;
-    color: #1F2041;
+    color: #1f2041;
   }
-
-
 }
 .cancel__item {
-  max-width:341px;
+  max-width: 341px;
 }
 .cancel__title {
   font-family: 'Montserrat';
@@ -93,7 +89,7 @@
   font-weight: bold;
   font-size: rem (19);
   line-height: 23px;
-  color: #1F2041;
+  color: #1f2041;
   margin-bottom: 20px;
 }
 .cancel__text {
@@ -105,7 +101,7 @@
   color: rgba(31, 32, 65, 0.75);
 }
 .comments {
-  max-width:rem(711);
+  max-width: rem(711);
 }
 .comments__title {
   font-family: Montserrat;
@@ -113,7 +109,7 @@
   font-weight: bold;
   font-size: rem(19);
   line-height: 23px;
-  color: #1F2041;
+  color: #1f2041;
   margin-bottom: 20px;
 }
 .comments__header {
@@ -121,28 +117,27 @@
   width: 100%;
   justify-content: space-between;
 }
-@media screen and (max-width:1100px) {
+@media screen and (max-width: 1100px) {
   .content {
     flex-wrap: wrap;
-    padding:2% 5%;
-    &__column,&__side{
+    padding: 2% 5%;
+    &__column,
+    &__side {
       width: 100%;
       justify-content: center;
-
     }
     & > div {
       justify-content: center;
     }
-  .card {
-    margin:0 auto;
-  }
-
+    .card {
+      margin: 0 auto;
+    }
   }
   .room-details .content {
     padding: 4% 5%;
   }
 }
-@media screen and (max-width:765px) {
+@media screen and (max-width: 765px) {
   .room-details .pictures__item {
     width: 100%;
     & img {
@@ -154,5 +149,11 @@
   }
   .room-details .pictures {
     flex-wrap: wrap;
+  }
+  .footer-main {
+    display: none;
+  }
+  .footer-secondary {
+    display: block;
   }
 }

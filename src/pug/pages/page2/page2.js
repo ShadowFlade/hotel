@@ -1,3 +1,15 @@
+import '../../includes/modules/range-slider/range-slider.js'
+import '../../includes/modules/rate-button/rate-button.js'
+import '../../includes/modules/subscription-text-field/subscription-text-field.js'
+import '../../includes/modules/text-field/text-field.js'
+import '../../includes/modules/toggle/toggle.js'
+import '../../includes/modules/checkbox-rich/checkbox-rich.js'
+import '../../includes/modules/dropdown-accom/dropdown-accom.js'
+import '../../includes/modules/hotel-card/hotel-card.js'
+import '../../includes/modules/pagination/pagination.js'
+import '../../includes/modules/filter-date-dropdown/filter-date-dropdown.js'
+import '../../includes/modules/checkbox-list/checkbox-list.js'
+
 import './page2.scss'
 $(function() {
   $('.content__datepicker').daterangepicker({

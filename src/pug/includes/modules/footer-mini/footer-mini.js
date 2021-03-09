@@ -1,0 +1,1 @@
+import './footer-mini.scss'

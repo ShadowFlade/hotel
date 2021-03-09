@@ -5,9 +5,9 @@
   position: relative;
   &__arrow {
     position: absolute;
-    right:5px;
-    top:50%;
-    transform:translateY(-50%)
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   &__item {
     width: 20px;
@@ -36,34 +36,33 @@
     }
   }
   &__button {
-      height: 20px;
-      background: transparent;
-    }
+    height: 20px;
+    background: transparent;
+  }
   // &__first-ul {
-
 
   //   &__item {
 
   //   };
-    &__secondary-ul {
+  &__secondary-ul {
     display: none;
     position: absolute;
   }
-    }
-  
+}
 
-  // &__button {
-  // }
+// &__button {
+// }
 
 .first-ul {
-        display: none;
-      position: absolute;
-      top: 100%;
-      width: auto;
-      left: 0;
-      border:1px solid #BC9CFF, 100%;
-      border-top:0;
-      border-radius: 4px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: auto;
+  left: 0;
+  border: 1px solid #bc9cff, 100%;
+  border-top: 0;
+  border-radius: 4px;
+  z-index: 10;
   &__item {
     position: relative;
     text-align: left;
@@ -76,16 +75,17 @@
     font-size: rem(14);
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
-    
-    background:#E5E5E5;
+
+    background: #e5e5e5;
     text-transform: capitalize;
-    padding: 1em 20px 1em .5em;
+    padding: 1em 20px 1em 0.5em;
     width: 100%;
     text-align: left;
 
     &:hover {
-      background-color:scale-color(#BC9CFF,$lightness:15%);
-      color:black;
-      transition:all .3s linear;
-  }}}
-
+      background-color: scale-color(#bc9cff, $lightness: 15%);
+      color: black;
+      transition: all 0.3s linear;
+    }
+  }
+}

@@ -137,6 +137,7 @@ $(function() {
   // $('.dropdown-accom__ul').css('background', 'red')
   // $(document).find(dropAcc).find(dropAccInsert).val(`${inputFunc(0)} спален, ${inputFunc('1')} кроватей, ${inputFunc('2')} ванных комнат`)
 })
+//TODO needs to apply changes only when pressed apply
 
 // 1st Var
 // const inputFunc=function (index){

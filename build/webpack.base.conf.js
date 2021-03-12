@@ -26,7 +26,7 @@ const htmlPlugins = PAGES.map(
       filename: `${fileName}.html`,
       template: `src/pug/pages/${fileName}/${fileName}.pug`,
       chunks: [fileName, 'index'],
-      inject: 'head',
+      inject: 'body',
       minify: {
         collapseWhitespace: isProd,
         // collapseWhitespace: false

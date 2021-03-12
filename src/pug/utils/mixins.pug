@@ -58,7 +58,7 @@ mixin dropdown(label,number_of_options,option)
       while n<=number_of_options
         li=n++
         option(value=n) #{n}
-    //- img(src='../../../assets/img/arrow.svg',class='arrow')
+    //- img(src='assets/img/arrow.svg',class='arrow')
     img(src='assets/img/arrow.svg',class='arrow')
 
 
@@ -175,7 +175,7 @@ mixin date-picker(label,classname)
     label #{label}
     label(class='date-picker__item')
       input(type='text',class='datepicker input',class=classname,placeholder='ДД.ММ.ГГГГ')
-      img(src='../../../assets/img/arrow.svg',class='arrow')
+      img(src='assets/img/arrow.svg',class='arrow')
 
 mixin hotel-card(pictures,lux_number,price,stars,number_of_reviews,lux)
   .hotel-card
@@ -221,7 +221,7 @@ mixin navbar(array_of_elements,arrow_class)
         span(class='navbar__text') #{el.name}
         span(style={display:'flex',position: 'relative',
     top: '5%'})
-          img(src='../../../assets/img/arrow.svg',class='arrow_class')
+          img(src='assets/img/arrow.svg',class='arrow_class')
         if el.list
           .navbar__dd(class='dd')
             each val in el.list
@@ -243,7 +243,7 @@ mixin burger-menu(array_of_arguments,classname)
         else   
           if val.arrow=='true'
             li(class='first-ul__item') #{val.name}
-              img(src='../../../assets/img/arrow.svg',class='burger__arrow')
+              img(src='assets/img/arrow.svg',class='burger__arrow')
 
 //- mixin sidebar(array_of_arguments)
 //-   sidebar(class='sidebar')

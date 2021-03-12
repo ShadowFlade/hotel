@@ -50,7 +50,7 @@ module.exports = {
   output: {
     filename: `[name].js`,
     path: PATHS.dist,
-    publicPath: '/',
+    publicPath: '/metalamp',
   },
   // optimization: {
   //   runtimeChunk: 'single',

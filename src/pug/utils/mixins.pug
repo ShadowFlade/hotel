@@ -58,7 +58,9 @@ mixin dropdown(label,number_of_options,option)
       while n<=number_of_options
         li=n++
         option(value=n) #{n}
-    img(src='../../../assets/img/arrow.svg',class='arrow')
+    //- img(src='../../../assets/img/arrow.svg',class='arrow')
+    img(src='assets/img/arrow.svg',class='arrow')
+
 
 mixin dropdown2(label,placeholder,nameofclass,array_of_arguments,option)
   div(class=`${nameofclass}__big`)
@@ -66,7 +68,7 @@ mixin dropdown2(label,placeholder,nameofclass,array_of_arguments,option)
     label
       .input-box
         input(class=nameofclass,type='text',class='input',placeholder=placeholder)
-        img(src='../../../assets/img/arrow.svg',class='arrow')
+        img(src='assets/img/arrow.svg',class='arrow')
       ul(class=`${nameofclass}__ul`,style={display:'none'})
         each val in array_of_arguments
           li 
@@ -88,7 +90,7 @@ mixin defInput(label,placeholder,nameofclass)
   div(id=nameofclass)
     label #{label}
     label 
-      img(src='../../../assets/img/arrow.svg',class='arrow')
+      img(src='assets/img/arrow.svg',class='arrow')
       input(class=nameofclass,type='text',placeholder=placeholder,class='input')
 
 

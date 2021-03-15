@@ -4,7 +4,12 @@ const baseWebpackConfig = require('./webpack.base.conf')
 const buildWebpackConfig = merge(baseWebpackConfig, {
   // BUILD config
   mode: 'production',
-  plugins: []
+  plugins: [],
+  // output: {
+  //   filename: `[name].js`,
+  //   path: PATHS.dist,
+  //   publicPath: '/metalamp',
+  // },
 })
 
 module.exports = new Promise((resolve, reject) => {

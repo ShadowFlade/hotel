@@ -70,7 +70,7 @@
   border-radius: 4px;
   &:after {
     position: absolute;
-    content: url('/assets/img/ok.png');
+    content: url('/../img/ok.png');
     left: 0;
     top: 0;
     height: 0px;
@@ -105,7 +105,7 @@ summary {
   text-transform: uppercase;
 }
 summary::before {
-  content: url('../../../../assets/img/arrow.png'); //TODO make an animation of an arrow
+  content: url('/arrow.png'); //TODO make an animation of an arrow
   // padding-right: 0.5em;
   width: 20px;
   position: absolute;
@@ -119,6 +119,6 @@ details {
   // width: 222/12 * 1em;
 }
 details[open] > summary::before {
-  content: url('../../../../assets/img/arrow-up.png');
+  content: url('/arrow-up.png');
   width: 20px;
 }

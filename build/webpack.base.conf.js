@@ -41,6 +41,13 @@ const entry = () => {
 
   return point
 }
+const publicPath = () => {
+  if (!isDev) {
+    return '/metalamp'
+  } else {
+    return '/'
+  }
+}
 module.exports = {
   // BASE config
   externals: {
@@ -50,7 +57,7 @@ module.exports = {
   output: {
     filename: `[name].js`,
     path: PATHS.dist,
-    publicPath: '/metalamp',
+    publicPath: publicPath(),
   },
   // optimization: {
   //   runtimeChunk: 'single',

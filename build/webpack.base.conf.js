@@ -43,7 +43,7 @@ const entry = () => {
 }
 const publicPath = () => {
   if (!isDev) {
-    return '/metalamp'
+    return '/metalamp/'
   } else {
     return '/'
   }

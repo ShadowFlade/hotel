@@ -1,6 +1,6 @@
 @import '../../../layout/vars.scss';
 @import '../../../layout/mixins.scss';
-::-webkit-details-marker {
+::marker {
   display: none;
 }
 .checkbox-group {
@@ -105,7 +105,10 @@ summary {
   text-transform: uppercase;
 }
 summary::before {
-  content: url('/arrow.png'); //TODO make an animation of an arrow
+  &::marker {
+    display: none;
+  }
+  content: url('/assets/img/arrow.png'); //TODO make an animation of an arrow
   // padding-right: 0.5em;
   width: 20px;
   position: absolute;
@@ -121,4 +124,7 @@ details {
 details[open] > summary::before {
   content: url('/arrow-up.png');
   width: 20px;
+}
+summary {
+  list-style-type: none;
 }

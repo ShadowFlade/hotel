@@ -1,5 +1,6 @@
 import './dropdown-accom.scss'
 $(function() {
+  console.log('dropdown accom loaded')
   const dropSpan = $('.dropdown-accom__span')
   const dropPrButton = $('.dropdown-accom__button--prev')
   const dropNxtButton = $('.dropdown-accom__button--next')

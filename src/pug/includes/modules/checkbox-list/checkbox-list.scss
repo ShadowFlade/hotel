@@ -108,12 +108,13 @@ summary::before {
   &::marker {
     display: none;
   }
-  content: url('/assets/img/arrow.png'); //TODO make an animation of an arrow
+  content: url('/metalamp/assets/img/arrow.png'); //TODO make an animation of an arrow
   // padding-right: 0.5em;
   width: 20px;
   position: absolute;
   top: 0;
   right: 0;
+  transition: all 0.3s ease-out;
   // background-color: red;
 }
 
@@ -122,7 +123,7 @@ details {
   // width: 222/12 * 1em;
 }
 details[open] > summary::before {
-  content: url('/arrow-up.png');
+  transform: scaleY(-0.5);
   width: 20px;
 }
 summary {

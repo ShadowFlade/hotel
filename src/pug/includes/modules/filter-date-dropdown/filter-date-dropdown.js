@@ -1,8 +1,9 @@
-import './filter-date-dropdown.scss'
+import './filter-date-dropdown.scss' //TODO make it close on click out of the element
 import moment from 'moment'
 // import 'moment/locale/ru'npm
 // moment.locale('ru')
 $(function() {
+  console.log('filter-date-dropdown loaded')
   // moment.locale('ru')
   $('.filter-date-dropdown').daterangepicker({
     maxSpan: {

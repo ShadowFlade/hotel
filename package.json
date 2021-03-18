@@ -15,14 +15,11 @@
   "author": "Vladimir Drugov <Wolffdrugov@yandex.ru>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/ShadowFlade/metalamp"
   },
   "keywords": [
     "webpack",
     "webpack4",
-    "merge",
-    "bable",
-    "bable7",
     "scss",
     "pug"
   ],

@@ -41,13 +41,17 @@ const entry = () => {
 
   return point
 }
-const publicPath = () => {
-  if (!isDev) {
-    return '/metalamp/'
-  } else {
-    return '/'
-  }
+// let publicPath = () => {
+//   if (!isDev) {
+//     return '/metalamp/'
+//   } else {
+//     return '/'
+//   }
+// }
+let publicPath = () => {
+  !isDev ? '/metalamp' : '/'
 }
+
 module.exports = {
   // BASE config
   externals: {

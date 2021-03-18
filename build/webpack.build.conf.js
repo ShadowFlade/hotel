@@ -11,7 +11,10 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
   //   publicPath: '/metalamp',
   // },
 })
-
+const mod = new Promise((resolve, reject) => {
+  resolve(buildWebpackConfig)
+})
+mod.then((v) => console.log(v))
 module.exports = new Promise((resolve, reject) => {
   resolve(buildWebpackConfig)
 })

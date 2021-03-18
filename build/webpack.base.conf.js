@@ -49,7 +49,7 @@ const entry = () => {
 //   }
 // }
 let publicPath = () => {
-  !isDev ? '/metalamp' : '/'
+  return !isDev ? '/metalamp' : '/'
 }
 
 module.exports = {

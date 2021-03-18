@@ -4,8 +4,8 @@
   "description": "My template + pug",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --watch  --config ./build/webpack.dev.conf.js",
-    "build": "webpack --config ./build/webpack.build.conf.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server  --open --watch  --config ./build/webpack.dev.conf.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.build.conf.js",
     "deploy": "gh-pages -d dist"
   },
   "browserslist": [
@@ -58,6 +58,7 @@
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "chartjs": "^0.3.24",
+    "cross-env": "^7.0.3",
     "material-design-icons": "^3.0.1",
     "slick": "^1.12.2",
     "vue": "^2.6.10"

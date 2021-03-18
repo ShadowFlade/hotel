@@ -78,9 +78,9 @@ $(function() {
         picker.endDate.format('D ' + thisMonth)
     )
   })
-  $('.card__datepicker').on('hide.daterangepicker', function(ev, picker) {
-    $('.card__datepicker').click()
-  })
+  // $('.card__datepicker').on('hide.daterangepicker', function(ev, picker) {
+  //   $('.card__datepicker').click()
+  // })
   $('td').on('click', function() {
     $('.end-date').removeClass('in-range')
   })

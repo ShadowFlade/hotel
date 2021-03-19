@@ -16,6 +16,16 @@
   margin-right: 40px;
   margin-bottom: 40px;
   padding: em(40px) em(30px) 0 em(30px);
+  &__footer {
+    width: 100%;
+    // height: 100/646 * 100%;
+    // height: 10em;
+    margin: 10px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // height: 70px;
+  }
   .number {
     font-size: rem(19);
   }
@@ -26,7 +36,7 @@
     @include big;
     margin-bottom: 21px;
   }
-  .text-field  {
+  .text-field {
     margin-bottom: 21px;
   }
 }

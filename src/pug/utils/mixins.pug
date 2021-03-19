@@ -69,22 +69,21 @@ mixin dropdown2(label,placeholder,nameofclass,array_of_arguments,option)
       .input-box
         input(class=nameofclass,type='text',class='input',placeholder=placeholder)
         img(src='assets/img/arrow.svg',class='arrow')
-      ul(class=`${nameofclass}__ul`,style={display:'none'})
-        each val in array_of_arguments
-          li 
-            .dropdown-accom__variant #{val}
-            .dropdown-accom__btn-group
-              button(type='button',class=`${nameofclass}__button--prev`) -
-              div(class=`${nameofclass}__span`) 2
-              button(type='button',class=`${nameofclass}__button--next`) +
-        if(option=='submit')
-          button(class=`${nameofclass}__submit inbox-button`,type='submit') Применить
-        else if(option=='clear')
-          button(class=`${nameofclass}__submit inbox-button`,type='submit') Применить
-          button(type='button',class=`${nameofclass}__clear inbox-button`) очистить
-        else if(option=='none')
-          button(style={'display':'none'})
-        
+        ul(class=`${nameofclass}__ul`,style={display:'none'})
+          each val in array_of_arguments
+            li 
+              .dropdown-accom__variant #{val}
+              .dropdown-accom__btn-group
+                button(type='button',class=`${nameofclass}__button--prev`) -
+                div(class=`${nameofclass}__span`) 2
+                button(type='button',class=`${nameofclass}__button--next`) +
+          if(option=='submit')
+            button(class=`${nameofclass}__submit inbox-button`,type='submit') Применить
+          else if(option=='clear')
+            button(class=`${nameofclass}__submit inbox-button`,type='submit') Применить
+            button(type='button',class=`${nameofclass}__clear inbox-button`) очистить
+          else if(option=='none')
+            button(style={'display':'none'})
 
 mixin defInput(label,placeholder,nameofclass)
   div(id=nameofclass)

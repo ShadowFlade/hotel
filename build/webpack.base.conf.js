@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -49,7 +50,7 @@ const entry = () => {
 //   }
 // }
 let publicPath = () => {
-  return !isDev ? '/metalamp' : '/'
+  return !isDev ? '/metalamp/' : '/'
 }
 
 module.exports = {
@@ -63,23 +64,12 @@ module.exports = {
     path: PATHS.dist,
     publicPath: publicPath(),
   },
-  // optimization: {
-  //   runtimeChunk: 'single',
-  //   splitChunks: {
-  //     chunks: 'all',
-  //     minSize: 1,
-  //     minChunks: 2,
-  //   },
-  // },
 
   module: {
     rules: [
       {
         test: /\.pug$/,
         oneOf: [
-          // this applies to <template lang="pug"> in Vue components
-
-          // this applies to pug imports inside JavaScript
           {
             use: ['pug-loader'],
           },
@@ -153,6 +143,7 @@ module.exports = {
     },
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),

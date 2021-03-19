@@ -1,6 +1,6 @@
 import './dropdown-accom.scss'
 $(function() {
-  console.log('dropdown accom loaded')
+  console.log('dropdown loaded')
   const dropSpan = $('.dropdown-accom__span')
   const dropPrButton = $('.dropdown-accom__button--prev')
   const dropNxtButton = $('.dropdown-accom__button--next')
@@ -37,7 +37,6 @@ $(function() {
       .next()
       .text(num)
     setInput()
-    // $(this).parentsUntil(dropAcc).find(dropAccInsert).val(`${inputFunc(0)} спален, ${inputFunc('1')} кроватей, ${inputFunc('2')} ванных комнат`)
     $(this)
       .parentsUntil(dropAcc)
       .find(dropAccInsert)
@@ -71,25 +70,7 @@ $(function() {
     $(this)
       .parentsUntil(dropAcc)
       .find(dropAccInsert)
-      .val(
-        `${+inputFunc(0) + +inputFunc('1')} гостей`
-        // `${inputFunc(0)} ${$(this)
-        //   .parents('ul')
-        //   .find('li')
-        //   .eq(0)
-        //   .find('.dropdown-accom__variant')
-        //   .text()}, ${inputFunc('1')} ${$(this)
-        //   .parents('ul')
-        //   .find('li')
-        //   .eq(1)
-        //   .find('.dropdown-accom__variant')
-        //   .text()}, ${inputFunc('2')} ${$(this)
-        //   .parents('ul')
-        //   .find('li')
-        //   .eq(2)
-        //   .find('.dropdown-accom__variant')
-        //   .text()}`
-      )
+      .val(`${+inputFunc(0) + +inputFunc('1')} гостей`)
     if (
       Number(
         $(this)
@@ -121,29 +102,28 @@ $(function() {
     // $('.dropdown-accom-ul').css('display','block')
     if (
       $(this)
-        .siblings(dropAccUl)
+        .find(dropAccUl)
         .css('display') === 'block'
     ) {
       $(this)
-        .siblings(dropAccUl)
+        .find(dropAccUl)
         .css('display', 'none')
     } else {
       $(this)
-        .siblings(dropAccUl)
+        .find(dropAccUl)
         .css('display', 'block')
     }
   })
   var bgc = $('html').css('background')
   $('.dropdown-accom__ul').css('background', 'white')
-  // $('.dropdown-accom__ul').css('background', 'red')
-  // $(document).find(dropAcc).find(dropAccInsert).val(`${inputFunc(0)} спален, ${inputFunc('1')} кроватей, ${inputFunc('2')} ванных комнат`)
+})
+$(document).click(function(event) {
+  var $target = $(event.target)
+  if (
+    !$target.closest('.dropdown-accom').length &&
+    $('.dropdown-accom__ul').is(':visible')
+  ) {
+    $('.dropdown-accom__ul').hide()
+  }
 })
 //TODO needs to apply changes only when pressed apply
-
-// 1st Var
-// const inputFunc=function (index){
-// 		return $(this).find(dropSpan).eq(index).text()
-// 	}
-// 	const setInput=function () {
-// 		$(this).parentsUntil(dropAcc).find(dropAccInsert).val(`${inputFunc(0)} спален, ${inputFunc('1')} кроватей, ${inputFunc('2')} ванных комнат`)
-// 	}

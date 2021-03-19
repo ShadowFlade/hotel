@@ -1,8 +1,11 @@
 ## Build Setup:
 
-````bash
+```bash
 # Download repository:
 git clone https://github.com/ShadowFlade/metalamp.git
+
+#Deployed on GH Pages
+https://shadowflade.github.io/metalamp/
 
 # Go to the app:
 cd metalamp
@@ -38,4 +41,4 @@ SCSS
     /* Safari, Android, iOS */
       url('/assets/fonts/Helvetica/Base/Helvetica-Base.svg') format('svg'); /* Legacy iOS */
 }
-````
+```

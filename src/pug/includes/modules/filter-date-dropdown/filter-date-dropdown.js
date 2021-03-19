@@ -3,7 +3,6 @@ import moment from 'moment'
 // import 'moment/locale/ru'npm
 // moment.locale('ru')
 $(function() {
-  console.log('filter-date-dropdown loaded')
   // moment.locale('ru')
   $('.filter-date-dropdown').daterangepicker({
     maxSpan: {
@@ -62,16 +61,12 @@ $(function() {
       .locale('ru')
       .format('MMMM')
 
-    // var lastMonth = moment()
-    //   .subtract(1, 'month')
-    //   .format('MMMM')
-
     if (thisMonth[thisMonth.length - 1] == 'т') {
       thisMonth += 'а'
     } else if (thisMonth[thisMonth.length - 1] !== 'т') {
       thisMonth = thisMonth.slice(0, 6) + 'я'
     }
-    // moment.locale('ru')
+
     $(this).val(
       picker.startDate.format('D ' + thisMonth) +
         ' - ' +
@@ -81,8 +76,7 @@ $(function() {
   var thisMonth = moment()
     .locale('ru')
     .format('MMMM')
-  // console.log(thisMonth)
-  // console.log(thisMonth[thisMonth.length - 1])
+
   $('.daterangepicker').css('top', '20%')
 })
 // document.addEventListener('DOMContentLoaded', function() {
@@ -90,4 +84,3 @@ $(function() {
 //     document.getElementById('filter-date-dropdown').click
 //   }
 //   simClick()
-// })

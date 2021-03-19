@@ -9,7 +9,7 @@
   top: 100%;
   left: 0;
   position: absolute;
-  background: #e5e5e5;
+  background: white;
   z-index: 10; //TODO background is transparent for some reason
 }
 .checkbox {
@@ -94,7 +94,6 @@
   width: 222/12 * 1em;
   .checkbox-group {
     position: static;
-    background: transparent; //the backgound we get from the pageclass class,check js file
   }
 }
 .checkbox-details details .checkbox-group {
@@ -108,7 +107,7 @@ summary::before {
   &::marker {
     display: none;
   }
-  content: url('/metalamp/assets/img/arrow.png'); //TODO make an animation of an arrow
+  content: url('/assets/img/arrow.png'); //TODO make an animation of an arrow
   // padding-right: 0.5em;
   width: 20px;
   position: absolute;

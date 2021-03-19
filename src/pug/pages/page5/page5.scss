@@ -5,3 +5,25 @@
     left: 187px;
   }
 }
+.picture {
+  img {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .footer-main {
+    display: none;
+  }
+  .footer-secondary {
+    display: block;
+  }
+}
+@media screen and (max-width: 765px) {
+  .sign-in {
+    .card {
+      left: 10px;
+    }
+  }
+}

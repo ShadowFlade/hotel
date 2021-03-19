@@ -22,6 +22,9 @@
   .number-number {
     font-size: rem(24);
   }
+  &__destination {
+    display: flex;
+  }
   &__title {
     @include big;
     margin-bottom: 21px;
@@ -44,7 +47,7 @@
     margin-bottom: 21px;
     &:last-child {
       margin-bottom: 0;
-    };
+    }
   }
   &__summary {
     margin-bottom: 20px;

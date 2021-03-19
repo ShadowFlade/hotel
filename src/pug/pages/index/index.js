@@ -11,4 +11,3 @@ import '../../includes/modules/footer/footer.js'
 import '../../includes/modules/footer-mini/footer-mini.js'
 import '../../includes/modules/burger-menu/burger-menu.js'
 import '../base/base.scss'
-// console.log(process.env.NODE_ENV)

@@ -125,7 +125,7 @@ summary {
 details {
   position: relative;
 }
-details[open] > summary::before {
-  content: url('../../../../assets/img/arrow-up.png');
-  width: 20px;
-}
+// details[open] > summary::before {
+//   content: url('../../../../assets/img/arrow-up.png');
+//   width: 20px;
+// }

@@ -61,4 +61,9 @@ $(function() {
     ) /*not the best solution,needs reworking*/
   }),
     $('.ui-datepicker-calendar a.ui-state-default').css('width', '20px')
-})
+
+  // $('.datepicker').on('click', function(event) {
+  //   if ($('.daterangepicker').css('display') == 'block') {
+  //     $('.daterangepicker').hide()
+  //   }
+}) //TODO not hiding as expected(also tried with css display none) should hide on click

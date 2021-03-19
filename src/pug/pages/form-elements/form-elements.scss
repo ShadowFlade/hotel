@@ -2,11 +2,9 @@ html {
   font-size: 12px;
 }
 .form-elements {
+  // background-color: red;
   .container {
     display: flex;
-    // // justify-content: space-between;
-    // flex-wrap: wrap;
-    // // align-items: flex-start;
     width: 100%;
     background: white;
     & > div,
@@ -15,15 +13,9 @@ html {
     }
   }
 
-  .comment {
-    // position: absolute;
-    // bottom: -300px;
-    // right: 200px;
-  }
   .rate-buttons,
   .like-buttons {
     display: flex;
-    // justify-content: space-between;
     & > div {
       margin-right: 10px;
     }
@@ -32,7 +24,6 @@ html {
   &__column {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     flex: 1 1 30%;
     margin-right: 126/1440 * 100%;
     & > div:not(.comment),
@@ -47,7 +38,6 @@ body,
 html {
   max-width: 1440px;
   margin: 0 auto;
-  // background: white;
 }
 .container {
   padding: 141/1440 * 100% 141/1440 * 100%;

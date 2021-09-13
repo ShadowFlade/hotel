@@ -36,6 +36,8 @@
     }
   }
   &__button {
+    z-index: 100;
+
     height: 20px;
     background: transparent;
   }

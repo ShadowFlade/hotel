@@ -1,11 +1,13 @@
+#Deployed on GH Pages
+https://shadowflade.github.io/metalamp/
+
 ## Build Setup:
 
 ```bash
 # Download repository:
 git clone https://github.com/ShadowFlade/metalamp.git
 
-#Deployed on GH Pages
-https://shadowflade.github.io/metalamp/
+
 
 # Go to the app:
 cd metalamp

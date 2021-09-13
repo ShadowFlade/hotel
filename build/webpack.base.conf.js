@@ -30,7 +30,6 @@ const htmlPlugins = PAGES.map(
       inject: 'body',
       minify: {
         collapseWhitespace: isProd,
-        // collapseWhitespace: false
       },
     })
 )
@@ -42,13 +41,7 @@ const entry = () => {
 
   return point
 }
-// let publicPath = () => {
-//   if (!isDev) {
-//     return '/metalamp/'
-//   } else {
-//     return '/'
-//   }
-// }
+
 let publicPath = () => {
   return !isDev ? '/metalamp/' : '/'
 }
@@ -59,6 +52,7 @@ module.exports = {
     paths: PATHS,
   },
   entry: entry(),
+  devtool: 'inline-source-map',
   output: {
     filename: `[name].js`,
     path: PATHS.dist,
@@ -74,6 +68,11 @@ module.exports = {
             use: ['pug-loader'],
           },
         ],
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
       {
         test: /\.js$/,
@@ -141,6 +140,7 @@ module.exports = {
       // ~Img: path.resolve(__dirname, '../src/assets/img'),
       Src: PATHS.src,
     },
+    extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
     new CleanWebpackPlugin(),

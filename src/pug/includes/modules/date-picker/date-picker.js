@@ -34,36 +34,24 @@ $(function() {
       ],
       firstDay: 1,
     },
-    // linkedCalendars: false,
     singleDatePicker: true,
     showCustomRangeLabel: false,
     startDate: '02/04/2021',
     endDate: '02/11/2021',
     autoUpdateInput: true,
-    // autoApply: false,
   })
 
-  // $('.card__datepicker').on('hide.daterangepicker', function(ev, picker) {
-  //   $('.card__datepicker').click()
-  // })
+
   $('td').on('click', function() {
     $('.end-date').removeClass('in-range')
   })
-  // $('.card__datepicker').on('apply.daterangepicker', function(ev, picker) {
-  //   $('.card__datepicker').after("<div id='object1'>hey hey hey</div>")
-  //   console.log('hey')
-  // })
 
   $('.card__datepicker').click()
   $(document).mouseup(function() {
     $('.end-date').removeClass(
       'in-range'
-    ) /*not the best solution,needs reworking*/
+    )
   }),
     $('.ui-datepicker-calendar a.ui-state-default').css('width', '20px')
 
-  // $('.datepicker').on('click', function(event) {
-  //   if ($('.daterangepicker').css('display') == 'block') {
-  //     $('.daterangepicker').hide()
-  //   }
-}) //TODO not hiding as expected(also tried with css display none) should hide on click
+}) 

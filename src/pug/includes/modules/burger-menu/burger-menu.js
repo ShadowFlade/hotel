@@ -1,5 +1,5 @@
 import './burger-menu.scss'
-
+import {BindOutsideClickDetection} from '../../../utils/utils'
 // const hideOnClickOutside=(element) =>{
 //   const outsideClickListener = (event) => {
 //     const target=event.target
@@ -31,24 +31,11 @@ import './burger-menu.scss'
 //   }
 //   burger.addEventListener('click',HandleBurgerClicked)
 // })
-const isVisible = elem => !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length ) 
-const burger = document.getElementsByClassName('burger')[0];
-const list=document.getElementsByClassName('first-ul')[0]
-const cat=(e)=>{
-  const isClickInside = burger.contains(e.target);
-  if (!isClickInside) {
-    list.style.display='none'
-  }
-}
-burger.addEventListener('click',(e)=>{
-  const kidsHaveTarget=list.contains(e.target)
-  if (!isVisible(list)) {
-    list.style.display='block'
-    document.addEventListener('click',cat)
 
-  } else if (isVisible(list )&& !kidsHaveTarget){
-    list.style.display='none'
-    document.removeEventListener('click',cat)
-  }
 
+
+
+document.addEventListener('DOMContentLoaded',(e)=>{
+  BindOutsideClickDetection('.burger','.first-ul')
 })
+

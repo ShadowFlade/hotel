@@ -1,129 +1,76 @@
 import './dropdown-accom.scss'
-$(function() {
-  console.log('dropdown loaded')
-  const dropSpan = $('.dropdown-accom__span')
-  const dropPrButton = $('.dropdown-accom__button--prev')
-  const dropNxtButton = $('.dropdown-accom__button--next')
-  const dropAcc = $('.dropdown-accom__big')
-  const dropAccUl = $('.dropdown-accom__ul')
-  const dropAccInput = $('.input-box')
-  const dropAccInsert = $('.dropdown-accom')
-  //TODO 2 instances cant work on the same page together,fix it
-  const inputFunc = (index) => {
-    return $(this)
-      .find(dropSpan)
-      .eq(index)
-      .text()
+import {BindOutsideClickDetection} from '../../../utils/utils'
+class DropdownAccom{
+  // queryName
+  constructor(inputElement,list,limit){
+    this.inputElementName=inputElement
+    this.listName=list
+    this.bindPopup()
+    this.bindIncrement()
+    this.limit=limit
   }
-  const setInput = function() {
-    $(this)
-      .parentsUntil(dropAcc)
-      .find(dropAccInsert)
-      .val(
-        `${inputFunc(0)} спален, ${inputFunc('1')} кроватей, ${inputFunc(
-          '2'
-        )} ванных комнат`
-      )
+  bindPopup(elementName,listName) {
+    this.list=document.querySelector(this.listName)
+    this.input=document.querySelector(this.inputElementName)
+    BindOutsideClickDetection(this.inputElementName,this.listName)
   }
-  dropAccUl.has('.inbox-button').css('height', '159px')
-  dropPrButton.click(function() {
-    let num = Number(
-      $(this)
-        .next()
-        .text()
-    )
-    num -= 1
-    $(this)
-      .next()
-      .text(num)
-    setInput()
-    $(this)
-      .parentsUntil(dropAcc)
-      .find(dropAccInsert)
-      .val(`${+inputFunc(0) + +inputFunc('1')} гостей`)
-    if (
-      Number(
-        $(this)
-          .next()
-          .text() === '0'
-      )
-    ) {
-      $(this).prop('disabled', true)
-      $(this).addClass('disabled')
-    } else {
-      $(this).prop('disabled', false)
-      $(this).removeClass('disabled')
+  bindIncrement() {
+    const listChidlren=Array.from(this.input.querySelectorAll(`${this.listName} li`))
+    this.count=new Map()
+    const HandleIncrementClick=(e)=>{
+      const target=e.target
+      const li=target.closest('li')
+      const category=li.getElementsByClassName('dropdown-accom__variant')[0].textContent.toLowerCase()
+      const storage=this.count.get(category)
+      const value=Number(storage.get('value'))
+      this.restrictDecrement(category,value+1)
+      this.count.get(category).set('value',value+1 )
+      this.refresh(category)
     }
-  })
+    const HandleDecrementClick=(e)=>{
+      const target=e.target
+      const li=target.closest('li')
+      const category=li.getElementsByClassName('dropdown-accom__variant')[0].textContent.toLowerCase()
+      const storage=this.count.get(category)
+      const value=Number(storage.get('value'))
+      this.restrictDecrement(category,value-1)
+      this.count.get(category).set('value', value-1)
+      this.refresh(category)
+    }
+    listChidlren.forEach((child)=>{
+      const textElement=child.getElementsByClassName('dropdown-accom__span')[0]
+      const increment=child.getElementsByClassName('dropdown-accom__button--next')[0]
+      const decrement=child.getElementsByClassName('dropdown-accom__button--prev')[0]
+      const category=child.getElementsByClassName('dropdown-accom__variant')[0]
+      const storage=new Map()
+      storage.set('increment',increment)
+      storage.set('decrement',decrement)
+      storage.set('value',Number(textElement.textContent))
+      storage.set('textElement',textElement)
+      this.count.set(category.textContent.toLowerCase(),storage)
+      increment.addEventListener('click',HandleIncrementClick)
+      decrement.addEventListener('click',HandleDecrementClick)
+    })
 
-  dropNxtButton.click(function() {
-    let num = Number(
-      $(this)
-        .prev()
-        .text()
-    )
-    num += 1
-    $(this)
-      .prev()
-      .text(num)
-    setInput()
-    $(this)
-      .parentsUntil(dropAcc)
-      .find(dropAccInsert)
-      .val(`${+inputFunc(0) + +inputFunc('1')} гостей`)
-    if (
-      Number(
-        $(this)
-          .prev()
-          .text() === '0'
-      )
-    ) {
-      $(this)
-        .prev()
-        .prev()
-        .prop('disabled', true)
-      $(this)
-        .prev()
-        .prev()
-        .addClass('disabled')
-    } else {
-      $(this)
-        .prev()
-        .prev()
-        .prop('disabled', false)
-      $(this)
-        .prev()
-        .prev()
-        .removeClass('disabled')
-    }
-  })
-
-  dropAccInput.click(function() {
-    // $('.dropdown-accom-ul').css('display','block')
-    if (
-      $(this)
-        .find(dropAccUl)
-        .css('display') === 'block'
-    ) {
-      $(this)
-        .find(dropAccUl)
-        .css('display', 'none')
-    } else {
-      $(this)
-        .find(dropAccUl)
-        .css('display', 'block')
-    }
-  })
-  var bgc = $('html').css('background')
-  $('.dropdown-accom__ul').css('background', 'white')
-})
-$(document).click(function(event) {
-  var $target = $(event.target)
-  if (
-    !$target.closest('.dropdown-accom').length &&
-    $('.dropdown-accom__ul').is(':visible')
-  ) {
-    $('.dropdown-accom__ul').hide()
   }
+  refresh(category){
+    let value=this.count.get(category).get('value')
+    this.restrictDecrement(category,value)
+    const textElement=this.count.get(category).get('textElement')
+    textElement.textContent=String(value)
+    }
+
+  
+  restrictDecrement(category,value){
+    const decrement=this.count.get(category).get('decrement')
+    if (value===this.limit) {
+      decrement.disabled=true
+      return false
+    } else {
+      decrement.disabled=false
+  }
+}}
+document.addEventListener('DOMContentLoaded',(e)=>{
+  const dropAccom=new DropdownAccom('.dropdown-accom__big','.dropdown-accom__ul',0)
 })
-//TODO needs to apply changes only when pressed apply
+

@@ -4,8 +4,7 @@ import {BindOutsideClickDetection} from '../../../utils/utils'
 //   const outsideClickListener = (event) => {
 //     const target=event.target
 //       if (!element.contains(target) && isVisible(element)) { 
-//         console.log('im also clicked')
-//         element.style.display = 'none'
+//         element.classList.remove('show')
 //         removeClickListener()
 //       }
 //   }
@@ -22,10 +21,9 @@ import {BindOutsideClickDetection} from '../../../utils/utils'
 //   const HandleBurgerClicked=e=>{
 //     const list=burger.getElementsByClassName('first-ul')[0]
 //     if (isVisible(list)) {
-//       list.style.display='none'
+//       list.classList.remove('show')
 //     } else if (!isVisible(list)) {
-//       console.log('im clicked')
-//       list.style.display='block'
+//       list.classList.add('show')
 //       hideOnClickOutside(list)
 //     }
 //   }

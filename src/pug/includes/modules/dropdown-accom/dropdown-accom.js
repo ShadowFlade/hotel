@@ -1,7 +1,6 @@
 import './dropdown-accom.scss'
 import {BindOutsideClickDetection} from '../../../utils/utils'
 class DropdownAccom{
-  // queryName
   constructor(inputElement,list,limit){
     this.inputElementName=inputElement
     this.listName=list

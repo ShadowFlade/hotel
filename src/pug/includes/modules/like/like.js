@@ -5,7 +5,6 @@ class Like {
     this.likeItem=likeItem
     this.getElemenets()
     this.bindIncrement()
-    console.log(this.input,this.count,this.clicked)
   }
   getElemenets(){
     this.input=this.likeItem.getElementsByClassName('like__input')[0]

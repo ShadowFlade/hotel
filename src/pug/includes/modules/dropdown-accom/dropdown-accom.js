@@ -1,20 +1,30 @@
 import './dropdown-accom.scss'
 import {BindOutsideClickDetection} from '../../../utils/utils'
 class DropdownAccom{
-  constructor(inputElement,list,limit){
-    this.inputElementName=inputElement
+  constructor(element,list,limit){
     this.listName=list
-    this.bindPopup()
+    this.bindPopup(element,list)
     this.bindIncrement()
     this.limit=limit
   }
   bindPopup(elementName,listName) {
-    this.list=document.querySelector(this.listName)
-    this.input=document.querySelector(this.inputElementName)
-    BindOutsideClickDetection(this.inputElementName,this.listName)
+    if (typeof elementName==='string' ) {
+      this.element=document.querySelector(elementName)
+    } else if (typeof elementName==='object') {
+      this.element=elementName
+    }
+    this.list=this.element.querySelector(this.listName)
+    this.input=this.element.getElementsByClassName('dropdown-accom input')[0]
+
+    BindOutsideClickDetection(elementName,listName)
+    const submitButton=this.element.querySelector('.dropdown-accom__submit')
+    this.submit=submitButton
+    const clearButton=this.element.querySelector('.dropdown-accom__clear')
+    this.clear=clearButton
+
   }
   bindIncrement() {
-    const listChidlren=Array.from(this.input.querySelectorAll(`${this.listName} li`))
+    const listChidlren=Array.from(this.element.querySelectorAll(`${this.listName} li`))
     this.count=new Map()
     const HandleIncrementClick=(e)=>{
       const target=e.target
@@ -50,16 +60,63 @@ class DropdownAccom{
       increment.addEventListener('click',HandleIncrementClick)
       decrement.addEventListener('click',HandleDecrementClick)
     })
-
+    const onSubmit=()=>{
+      this.input.setAttribute('placeholder',this.total)
+    }
+    const onClear=()=>{
+      this.returnToDefault()
+      this.refresh()
+      this.input.setAttribute('placeholder',this.total)
+    }
+    if (this.submit && this.count) {
+      this.submit.addEventListener('click',onSubmit)
+      this.count.set('total',0)
+    }
+    if (this.count&& this.clear) {
+      this.clear.addEventListener('click',onClear)
+    }
+  }
+  returnToDefault(){
+    Array.from(this.count.keys()).forEach((item)=>{
+      if (item==='total') {
+        return false
+      }
+      this.count.get(item).set('value',2)
+    })
   }
   refresh(category){
+    if (category===undefined) {
+      let categories=Array.from(this.count.keys())
+      categories=categories.filter((item)=>item!=='total')
+      console.log(categories)
+      categories.forEach((item)=>{
+        if (item==='total') {
+          return false
+        }
+        this.refresh(item)
+      })
+      return 
+    }
     let value=this.count.get(category).get('value')
     this.restrictDecrement(category,value)
     const textElement=this.count.get(category).get('textElement')
     textElement.textContent=String(value)
+    if (this.submit) {
+      const total=this.countTottal()
+      this.total=total
     }
+    }  
+  countTottal() {
+    let total=0
+    Array.from(this.count.keys()).forEach((item)=>{
+      if (item==='total'){
+        return false
+      }
+      total+=Number(this.count.get(item).get('value'))
 
-  
+    })
+    return total
+  }
   restrictDecrement(category,value){
     const decrement=this.count.get(category).get('decrement')
     if (value===this.limit) {
@@ -70,6 +127,10 @@ class DropdownAccom{
   }
 }}
 document.addEventListener('DOMContentLoaded',(e)=>{
-  const dropAccom=new DropdownAccom('.dropdown-accom__big','.dropdown-accom__ul',0)
+  const dropdowns=Array.from(document.getElementsByClassName('dropdown-accom__big'))
+  dropdowns.forEach(item => {
+    const dropdown=new DropdownAccom(item,'.dropdown-accom__ul',0)
+  });
+  // const dropAccom=new DropdownAccom('.dropdown-accom__big','.dropdown-accom__ul',0)
 })
 

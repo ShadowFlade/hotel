@@ -4,13 +4,13 @@ const isVisible = elem => !!elem && !!( elem.offsetWidth || elem.offsetHeight ||
 const BindOutsideClickDetection=(clickElementName,popElementName)=>{
   let clickElement
   let popElement
-  if (typeof clickElementName==='string' && typeof popElementName==='string') {
+  if (typeof clickElementName==='string' ) {
      clickElement=document.querySelector(clickElementName)
-     popElement=document.querySelector(popElementName)
-  } else if (typeof clickElementName==='object' && typeof popElementName==='object') {
+  } else if (typeof clickElementName==='object' ) {
      clickElement=clickElementName
-     popElement=popElementName
   }
+  popElement=clickElement.querySelector(popElementName)
+
 
   const cat=(e)=>{
     const isClickInside = clickElement.contains(e.target) || clickElement.parentNode.contains(e.target);
@@ -20,7 +20,6 @@ const BindOutsideClickDetection=(clickElementName,popElementName)=>{
   }
   clickElement.addEventListener('click',(e)=>{
     const kidsHaveTarget=popElement.contains(e.target)
-    console.log('🚀 ~ clickElement.addEventListener ~ kidsHaveTarget', kidsHaveTarget)
     if (!isVisible(popElement)) {
       popElement.style.display='block'
       document.addEventListener('click',cat)

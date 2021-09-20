@@ -7,8 +7,6 @@ https://shadowflade.github.io/metalamp/
 # Download repository:
 git clone https://github.com/ShadowFlade/metalamp.git
 
-
-
 # Go to the app:
 cd metalamp
 

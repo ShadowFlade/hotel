@@ -7,8 +7,6 @@ https://shadowflade.github.io/metalamp/
 # Download repository:
 git clone https://github.com/ShadowFlade/metalamp.git
 
-
-
 # Go to the app:
 cd metalamp
 
@@ -30,17 +28,3 @@ npm run build
 - `src/index.js` - main app file where you include/import all required libs and init app
 - `static/` - folder with extra static assets that will be copied into output folder
 
-
-SCSS
-// Example with Helvetica
-@font-face {
-  font-family: 'Helvetica-Base';
-  src: url('/assets/fonts/Helvetica/Base/Helvetica-Base.eot'); /* IE9 Compat Modes */
-  src: url('/assets/fonts/Helvetica/Base/Helvetica-Base.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('/assets/fonts/Helvetica/Base/Helvetica-Base.woff') format('woff'),
-    /* Pretty Modern Browsers */
-      url('/assets/fonts/Helvetica/Base/Helvetica-Base.ttf') format('truetype'),
-    /* Safari, Android, iOS */
-      url('/assets/fonts/Helvetica/Base/Helvetica-Base.svg') format('svg'); /* Legacy iOS */
-}
-```

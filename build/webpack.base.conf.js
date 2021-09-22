@@ -43,7 +43,7 @@ const entry = () => {
 }
 
 let publicPath = () => {
-  return !isDev ? '/metalamp/' : '/'
+  return !isDev ? '/hotel/' : '/'
 }
 
 module.exports = {

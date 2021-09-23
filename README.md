@@ -1,5 +1,5 @@
 #Deployed on GH Pages
-https://shadowflade.github.io/metalamp/
+https://shadowflade.github.io/hotel/
 
 ## Build Setup:
 

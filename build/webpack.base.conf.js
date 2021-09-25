@@ -41,7 +41,7 @@ const entry = () => {
 
   return point
 }
-
+ 
 let publicPath = () => {
   return !isDev ? '/hotel/' : '/'
 }

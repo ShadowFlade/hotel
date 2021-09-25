@@ -1,9 +1,10 @@
 extends ../../layout/main
-include ../../utils/mixins.pug
+
+
 block variables
   - var title = 'Cards';
   - var pageclass='cards';
-
+include ../../includes/modules/hotel-card/hotel-card.pug 
 //- block head
 //-   link(href='../../assets/scss/modules/pay-button.scss')
 block content
@@ -16,7 +17,8 @@ block content
       include ../../includes/modules/sign-in/sign-in.pug
     .cards__column
       .card__datepicker
-      include ../../includes/modules/hotel-card/hotel-card.pug 
+      +hotel-card(['assets/img/hotel1.png','assets/img/hotel2.png'],888,'9900₽ ','5',145,true)
+      +hotel-card(['assets/img/hotel1.png','assets/img/hotel2.png'],840,'9900₽ ','4',65,false)
 
 
     

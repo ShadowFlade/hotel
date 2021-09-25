@@ -1,2 +1,24 @@
-+hotel-card(['assets/img/hotel1.png','assets/img/hotel2.png'],888,'9900₽ ','5',145,true)
-+hotel-card(['assets/img/hotel1.png','assets/img/hotel2.png'],840,'9900₽ ','4',65,false)
+include  ../rate-button/rate-button.pug
+mixin hotel-card(pictures,lux_number,price,stars,number_of_reviews,lux)
+  .hotel-card
+    .hotel-card__slider
+      each pic in pictures
+        img(src=pic)
+    .hotel-card__info
+      .hotel-card__row(class='credentials')
+        span(class='hotel-card__number number') 
+          span(class='number-sign')
+          |№
+          span(class='number-number') #{lux_number}
+          if lux==true
+            span(class='hotel-card__lux lux') ЛЮКС
+        span(class='hotel-card__price price')
+          b #{price}
+          span(class='day') в сутки
+      .hotel-card__row
+        span(class='hotel-card__stars') 
+          +rate-button(4)
+        span(class='hotel-card__reviews price')
+          b #{number_of_reviews} 
+          |Отзывов
+

@@ -1,9 +1,11 @@
 extends ../../layout/landing
+include ../../includes/modules/hotel-card/hotel-card.pug
+
 block variables
   - var title = 'search room and filter';
   - var description = '';
   - var pageclass='search-room'
-block content
+block content 
   header
     include ../../includes/modules/header-w/header-w.pug
   main 

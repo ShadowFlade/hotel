@@ -8,4 +8,4 @@ import '../../includes/modules/date-picker/date-picker.js'
 import '../../includes/modules/hotel-card/hotel-card.js'
 import '../../includes/modules/dropdown-accom/dropdown-accom.js'
 
-import './page3.scss'
+import './roomDetails.scss'

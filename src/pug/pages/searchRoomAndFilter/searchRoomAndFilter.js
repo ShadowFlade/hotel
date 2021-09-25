@@ -10,8 +10,9 @@ import '../../includes/modules/pagination/pagination.js'
 import '../../includes/modules/filter-date-dropdown/filter-date-dropdown.js'
 import '../../includes/modules/checkbox-list/checkbox-list.js'
 
-import './page2.scss'
+import './searchRoomAndFilter.scss'
 $(function() {
+  console.log(searchRoomAndFilter)
   $('.content__datepicker').daterangepicker({
     maxSpan: {
       days: 60,

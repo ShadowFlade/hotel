@@ -1,10 +1,15 @@
-.comment
-	.comment__wrapper
-		.comment__left
-			.comment__pic 
-				img(src='assets/img/avatar.png')
-			+like('12','like__murad')
-		.comment__right
-			.comment__name Мурад Сарафанов
-			.comment__days 5 дней назад
-			.comment__content Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+mixin comment(options)
+  .comment
+    .comment__wrapper
+      .comment__left
+        .comment__pic
+          img(src=options.img)
+        +like('12','like__murad')
+      .comment__right
+        .comment__name #{options.name}
+        .comment__days #{options.days_ago}  назад
+        .comment__content #{options.text}
+
++comment({img:'assets/img/avatar.png',name:'Мурад Сарафанов',days_ago:'5 дней назад',
+text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+

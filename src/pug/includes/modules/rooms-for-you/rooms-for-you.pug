@@ -1,3 +1,4 @@
+include ../svg__arrow-right/svg__arrow-right.pug
 .card
   .card__title Найдём номера под ваши пожелания
   .card__destination
@@ -7,4 +8,4 @@
     +dropdown2('Гости','Сколько гостей','dropdown-accom',['Взрослые','Дети','Младенцы'],'clear')
   .card__footer
     button(class='pay-button') подобрать номер
-      +svg__arrow-right('#FFFFFF','#FFFFFF','arrow-right')
+      +svg__arrow-right({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right'})

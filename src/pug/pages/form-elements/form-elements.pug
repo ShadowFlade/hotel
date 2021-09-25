@@ -1,8 +1,9 @@
 extends ../../layout/main
 //- include ../../utils/mixins.pug
+
 block variables
 	- let title = 'form-elements';
-	- let description = 'wtf';
+	- let description = 'smth';
 	- let pageclass='form-elements';
 block content 
 	.form-elements(style={display:"flex",'justify-content':"space-between"}) 
@@ -26,10 +27,11 @@ block content
 			.like-buttons
 				include ../../includes/modules/like/like.pug
 				include ../../includes/modules/like/like.pug
-			include ../../includes/modules/rate-button/rate-button.pug
+			div(class='label') rate button
+				include ../../includes/modules/rate-button/rate-button.pug
+				+rate-button(5)
 				
 			.dropdown
-				
 				include ../../includes/modules/dropdown-advanced/dropdown-advanced.pug
 			include ../../includes/modules/checkbox-rich/checkbox-rich.pug
 				

@@ -1,14 +1,6 @@
 block sprites
 
-mixin svg__arrow-right(color, endColor,className)
-  - id = (color+endColor).split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0)
-  - const fill = endColor!== undefined ?`url(#paint0_linear${id})`: color;
-  svg(class=`${className}` width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-    path(fill=fill d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z")
-    defs
-      linearGradient(id=`paint0_linear${id}` x1="9" y1="-13" x2="9" y2="31" gradientUnits="userSpaceOnUse")
-        stop(stop-color=color)
-        stop(offset="1" stop-color=endColor)
+
       
 
 
@@ -37,7 +29,6 @@ mixin dropdown(label,number_of_options,option)
       while n<=number_of_options
         li=n++
         option(value=n) #{n}
-    //- img(src='assets/img/arrow.svg',class='arrow')
     img(src='assets/img/arrow.svg',class='arrow')
 
 
@@ -159,68 +150,14 @@ mixin date-picker(label,classname)
 
 
 
-mixin navbar(array_of_elements,arrow_class)
-  each el in array_of_elements 
-    if el.arrow==true
-      .navbar__item
-        span(class='navbar__text') #{el.name}
-        span(style={display:'flex',position: 'relative',
-    top: '5%'})
-          img(src='assets/img/arrow.svg',class='arrow_class')
-        if el.list
-          .navbar__dd(class='dd')
-            each val in el.list
-              a(class='dd__item') #{val}
-    else 
-      .navbar__item #{el.name}
-
-mixin burger-menu(array_of_arguments,classname) 
-  div(class=classname)
-    button(class='burger__button')
-      span(class='burger__item')
-    ul(class='burger__first-ul first-ul')
-      each val in array_of_arguments 
-        if typeof val=='array'
-          li(class='first-ul__item') #{val.name}
-            ul(class='burger__secondary-ul secondary__ul')
-              each el in val 
-                li(class='secondary-ul__item') #{el}
-        else   
-          if val.arrow=='true'
-            li(class='first-ul__item') #{val.name}
-              img(src='assets/img/arrow.svg',class='burger__arrow')
-
-//- mixin sidebar(array_of_arguments)
-//-   sidebar(class='sidebar')
-//-     .sidebar__container
-//-       each el in array_of_arguments
-//-         .sidebar__item
-//-           include #{el}
-mixin comment(img,name,days_ago,text)
-  .comment
-    .comment__wrapper
-      .comment__left
-        .comment__pic
-          img(src=img)
-        +like('12','like__murad')
-      .comment__right
-        .comment__name #{name}
-        .comment__days #{days_ago}  назад
-        .comment__content #{text}
 
 
-mixin pagination(last_page,number_of_first_pages)
-  .pagination-item
-    - let n=1
-    while n<number_of_first_pages+1
-      div(class='page-item') #{n}
-        span 
-      -n++
-    div(class='page-intro page-item') ...
-    div(class='page-item last-page') 15 
-    .for-arrow
-      +svg__arrow-right('#FFFFFF','#FFFFFF','arrow-right__pagination')
-  .pagination-item__info 1 – 12 из 100+ вариантов аренды
+
+
+
+
+
+
 
 
     

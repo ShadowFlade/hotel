@@ -1,0 +1,14 @@
+mixin navbar(options)
+  each el in options.array_of_elements 
+    if el.arrow==true
+      .navbar__item
+        span(class='navbar__text') #{el.name}
+        span(style={display:'flex',position: 'relative',
+    top: '5%'})
+          img(src='assets/img/arrow.svg',class='arrow_class')
+        if el.list
+          .navbar__dd(class='dd')
+            each val in el.list
+              a(class='dd__item') #{val}
+    else 
+      .navbar__item #{el.name}

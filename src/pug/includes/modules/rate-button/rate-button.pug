@@ -39,39 +39,7 @@ mixin rate-button(active_stars)
 
 
 block content
-	div(class='label') rate button
-	.star__group 
-		.star__united
-			+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active'})
-			+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
-		.star__united
-			+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
-			+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active'})
-		.star__united
-			+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
-			+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active'})
-		.star__united
-			+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
-			+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active'})
-		.star__united
-			+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
-			+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active'})
-	.star__group 
-		.star__united
-			+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active'})
-			+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
-		.star__united
-			+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
-			+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active'})
-		.star__united
-			+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
-			+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active'})
-		.star__united
-			+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
-			+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active'})
-		.star__united
-			+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
-			+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active'})
+	+rate-button(5)
 
 
 

@@ -1,24 +1,24 @@
 include  ../rate-button/rate-button.pug
-mixin hotel-card(pictures,lux_number,price,stars,number_of_reviews,lux)
+mixin hotel-card(options)
   .hotel-card
     .hotel-card__slider
-      each pic in pictures
+      each pic in options.pictures
         img(src=pic)
     .hotel-card__info
       .hotel-card__row(class='credentials')
         span(class='hotel-card__number number') 
           span(class='number-sign')
           |№
-          span(class='number-number') #{lux_number}
-          if lux==true
+          span(class='number-number') #{options.lux_number}
+          if options.lux==true
             span(class='hotel-card__lux lux') ЛЮКС
         span(class='hotel-card__price price')
-          b #{price}
+          b #{options.price}
           span(class='day') в сутки
       .hotel-card__row
         span(class='hotel-card__stars') 
           +rate-button(4)
         span(class='hotel-card__reviews price')
-          b #{number_of_reviews} 
+          b #{options.number_of_reviews} 
           |Отзывов
 

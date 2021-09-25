@@ -1,7 +1,7 @@
-mixin like(number_of_likes,id)
+mixin like(options)
   .like__item
-    input(type='checkbox',name='like',id=id,class='like__input')
-    div(class='like__number',for=id) #{number_of_likes}
+    input(type='checkbox',name='like',id=options.id,class='like__input')
+    div(class='like__number',for=id) #{options.number_of_likes}
     i(class='material-icons like__icon') favorite_border
     i(class='material-icons like__icon--active') favorite
 

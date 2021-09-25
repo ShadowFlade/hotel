@@ -14,7 +14,7 @@ block content
     div(class="sidebar")
       .sidebar__container 
         .sidebar__item 
-          +date-picker('время пребывания в отеле','content__datepicker')
+          +date-picker({label:'время пребывания в отеле',classname:'content__datepicker'})
         .sidebar__item 
           +dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
         .sidebar__item 
@@ -31,53 +31,41 @@ block content
       .content__title Номера, которые мы для вас подобрали
       .content__items 
         .content__item
-          +hotel-card(['assets/img/hotel-cards/search-room/image.png',
-                'assets/img/hotel-cards/search-room/image1.png'],
-                '888','9990',5,'145',true)
+          +hotel-card({pictures:['assets/img/hotel-cards/search-room/image.png','assets/img/hotel-cards/search-room/image1.png'],
+                lux_number:'888',price:'9990',stars:5,number_of_reviews:'145',lux:true})
         .content__item
-          +hotel-card(['assets/img/hotel-cards/search-room/image1.png',
-                'assets/img/hotel-cards/search-room/image1.png'],
-                '840','9990',4,'65',false)
+          +hotel-card({pictures:['assets/img/hotel-cards/search-room/image1.png','assets/img/hotel-cards/search-room/image1.png'],
+                lux_number:'840',price:'9990',stars:4,number_of_reviews:'65',lux:false})
         .content__item
-           +hotel-card(['assets/img/hotel-cards/search-room/image3.png',
-                'assets/img/hotel-cards/search-room/image1.png'],
-                '980','8500',3,'35',true)
+           +hotel-card({pictures:['assets/img/hotel-cards/search-room/image3.png','assets/img/hotel-cards/search-room/image1.png'],
+                lux_number:'980',price:'8500',stars:3,number_of_reviews:'35',lux:true})
         .content__item
-          +hotel-card(['assets/img/hotel-cards/search-room/image4.png',
-                'assets/img/hotel-cards/search-room/image1.png'],
-                '856','7300',4,'19',false)
+          +hotel-card({pictures:['assets/img/hotel-cards/search-room/image4.png','assets/img/hotel-cards/search-room/image1.png'],
+                lux_number:'856',price:'7300',stars:4,number_of_reviews:'19',lux:false})
         .content__item
-          +hotel-card(['assets/img/hotel-cards/search-room/image5.png',
-                'assets/img/hotel-cards/search-room/image1.png'],
-                '740','5800',3,'44',false)
+          +hotel-card({pictures:['assets/img/hotel-cards/search-room/image5.png','assets/img/hotel-cards/search-room/image1.png'],
+                lux_number:'740',price:'5800',stars:3,number_of_reviews:'44',lux:false})
         .content__item
-          +hotel-card(['assets/img/hotel-cards/search-room/image6.png',
-                'assets/img/hotel-cards/search-room/image1.png'],
-                '982','5800',3,'56',false)
+          +hotel-card({pictures:['assets/img/hotel-cards/search-room/image6.png','assets/img/hotel-cards/search-room/image1.png'],
+                lux_number:'982',price:'5800',stars:3,number_of_reviews:'56',lux:false})
         .content__item
-          +hotel-card(['assets/img/hotel-cards/search-room/image7.png',
-                'assets/img/hotel-cards/search-room/image1.png'],
-                '678','5500',5,'45',false)
+          +hotel-card({pictures:['assets/img/hotel-cards/search-room/image7.png','assets/img/hotel-cards/search-room/image1.png'],
+                lux_number:'678',price:'5500',stars:5,number_of_reviews:'45',lux:false})
         .content__item
-          +hotel-card(['assets/img/hotel-cards/search-room/image8.png',
-                'assets/img/hotel-cards/search-room/image1.png'],
-                '450','5300',4,'39',false)
+          +hotel-card({pictures:['assets/img/hotel-cards/search-room/image8.png','assets/img/hotel-cards/search-room/image1.png'],
+                lux_number:'450',price:'5300',stars:4,number_of_reviews:'39',lux:false})
         .content__item
-          +hotel-card(['assets/img/hotel-cards/search-room/image9.png',
-                'assets/img/hotel-cards/search-room/image1.png'],
-                '350','5000',3,'77',false)
+          +hotel-card({pictures:['assets/img/hotel-cards/search-room/image9.png','assets/img/hotel-cards/search-room/image1.png'],
+                lux_number:'350',price:'5000',stars:3,number_of_reviews:'77',lux:false})
         .content__item
-          +hotel-card(['assets/img/hotel-cards/search-room/image10.png',
-                'assets/img/hotel-cards/search-room/image1.png'],
-                '666','5000',5,'25',false)
+          +hotel-card({pictures:['assets/img/hotel-cards/search-room/image10.png','assets/img/hotel-cards/search-room/image1.png'],
+                lux_number:'666',price:'5000',stars:5,number_of_reviews:'25',lux:false})
         .content__item
-          +hotel-card(['assets/img/hotel-cards/search-room/image11.png',
-                'assets/img/hotel-cards/search-room/image1.png'],
-                '352','5000',3,'55',false)
+          +hotel-card({pictures:['assets/img/hotel-cards/search-room/image11.png','assets/img/hotel-cards/search-room/image1.png'],
+                lux_number:'352',price:'5000',stars:3,number_of_reviews:'55',lux:false})
         .content__item
-          +hotel-card(['assets/img/hotel-cards/search-room/image8.png',
-                'assets/img/hotel-cards/search-room/image1.png'],
-                '450','5300',4,'39',false)
+          +hotel-card({pictures:['assets/img/hotel-cards/search-room/image8.png','assets/img/hotel-cards/search-room/image1.png'],
+                lux_number:'450',price:'5300',stars:4,number_of_reviews:'39',lux:false})
         .content__pagination 
           include ../../includes/modules/pagination/pagination.pug
   footer(class='footer-main')

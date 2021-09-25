@@ -1,11 +1,11 @@
 block variables
-mixin dropdown(label,number_of_options,option)
+mixin dropdown(options={label:'dropdown',number_of_options:7,option:'Сколько гостей'})
   -let n=0
-  label #{label}
+  label #{options.label}
   label 
     select
-      option #{option}
-      while n<=number_of_options
+      option #{options.option}
+      while n<=options.number_of_options
         li=n++
         option(value=n) #{n}
     img(src='assets/img/arrow.svg',class='arrow')

@@ -9,30 +9,30 @@ block head
   link(rel="stylesheet",href="./vars.scss")
 block content
 
-mixin item(left_part, right_part)
+mixin item(options)
   .item  
-    .item__color(style={background:left_part})
+    .item__color(style={background:options.left_part})
     .item__desc 
-      .item_dark #{right_part[0]}
-      .item_code #{right_part[1]}
+      .item_dark #{options.right_part[0]}
+      .item_code #{options.right_part[1]}
 
   .base(style={display:"flex",'justify-content':"space-between"})
     .first-half
       .first-half__column
-      +item('hsla(238, 35%, 19%, 1)'
-    , ['Dark Shade 100%','#1F2041'])
-      +item('#575870'
-    , ['Dark Shade 75%','#1F2041'])
-      +item('#8F8FA0'
-    , ['Dark Shade 50%','#1F2041'])
-      +item('#C7C7CF'
-    , ['Dark Shade 25%','#1F2041'])
-      +item('#F4F4F5'
-    , ['Dark Shade 5%','#1F2041'])
-      +item(' #BC9CFF'  
-    , ['Purple','#BC9CFF'])
-      +item(' #6FCF97'
-    , ['Green','#6FCF97'])
+      +item({left_part:'hsla(238, 35%, 19%, 1)'
+    , right_part:['Dark Shade 100%','#1F2041']})
+      +item({left_part:'#575870'
+    , right_part:['Dark Shade 75%','#1F2041']})
+      +item({left_part:'#8F8FA0'
+    , right_part:['Dark Shade 50%','#1F2041']})
+      +item({left_part:'#C7C7CF'
+    , right_part:['Dark Shade 25%','#1F2041']})
+      +item({left_part:'#F4F4F5'
+    , right_part:['Dark Shade 5%','#1F2041']})
+      +item({left_part:' #BC9CFF'  
+    , right_part:['Purple','#BC9CFF']})
+      +item({left_part:' #6FCF97'
+    , right_part:['Green','#6FCF97']})
 
     .second-half
       .second-half__column

@@ -17,11 +17,11 @@ block content
 		.form-elements__column
 			include ../../includes/modules/text-field/text-field.pug 
 			.dropdown
-				+dropdown('dropdown',7,'Сколько гостей')
+				+dropdown()
 			include ../../includes/modules/masked-text-field/masked-text-field.pug
 			.date-picker-box
-				+date-picker('date dropdown')
-				+date-picker('date dropdown')
+				+date-picker({lalbel:'date dropdown'})
+				+date-picker({lalbel:'date dropdown'})
 			include ../../includes/modules/filter-date-dropdown/filter-date-dropdown.pug
 			include ../../includes/modules/subscription-text-field/subscription-text-field.pug
 			+dropdownSubmitAndClear({label:'удобство',placeholder:'2 спальни, 2 кровати',nameofclass:'dropdown-accom',array_of_arguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
@@ -30,12 +30,13 @@ block content
 		.form-elements__column
 			include ../../includes/modules/checkbox-buttons/checkbox-buttons.pug
 			span(class='radio-buttons__label') RADIO BUTTONS
-			+radio-buttons('Radio Buttons',['Мужчина','Женщина'],'gender')    .text-field(id='birthday')
+			+radio-buttons({array_of_arguments:['Мужчина','Женщина'],name:'gender'})    
+		.text-field(id='birthday')
 
-			+toggle('toggle',['Получать спецпредложения','fish'])
+			+toggle({label:'toggle',array_of_arguments:['Получать спецпредложения','fish']})
 			.like-buttons
-				+like('12','like')
-				+like('12','like')
+				+like({number_of_likes:'12',id:'like'})
+				+like({number_of_likes:'12',id:'like'})
 			div(class='label') rate button
 				include ../../includes/modules/rate-button/rate-button.pug
 				+rate-button(5)

@@ -1,13 +1,13 @@
-mixin checkboxlist(label,array_of_arguments)
+mixin checkboxlist(options={label:'дополнительные удобства',array_of_arguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']})
   .checkbox-details
     details
-      summary #{label}
+      summary #{options.label}
       .checkbox-group
-        each val in array_of_arguments
+        each val in options.array_of_arguments
           .checkbox__item
             label(class='checkbox',for=val) 
               span(class='checkbox__span') #{val}
               input(type='checkbox',name=val,id=val,class='checkbox__input')
               span(class='checkbox-custom')
 
-+checkboxlist('дополнительные удобства',['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']) 
++checkboxlist() 

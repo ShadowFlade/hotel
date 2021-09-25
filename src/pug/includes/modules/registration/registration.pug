@@ -10,7 +10,8 @@ include ../radio-buttons/radio-buttons.pug
         input(type='text',placeholder='Имя',class='input')
         input(type='text',placeholder='Фамилия',class='input')
 
-      +radio-buttons('Radio Buttons',['Мужчина','Женщина'],'gender')    .text-field(id='birthday')
+      +radio-buttons({array_of_arguments:['Мужчина','Женщина'],name:'gender'})    
+    .text-field(id='birthday')
       label Дата рождения
       label 
         input(type='text',placeholder='ДД.ММ.ГГГГ',class='input')
@@ -19,7 +20,7 @@ include ../radio-buttons/radio-buttons.pug
       label 
         input(type='text',placeholder='Email',class='input')
         input(type='password',placeholder='Пароль',class='input')
-    +toggle('smth',['Получать спецпредложения'])
+    +toggle({label:'smth',array_of_arguments:['Получать спецпредложения']})
     button(class='pay-button') перейти к оплате
   .card__footer 
     span(class='card__for-button') Уже есть аккаунт на Toxin

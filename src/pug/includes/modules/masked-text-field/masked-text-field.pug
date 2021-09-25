@@ -1,8 +1,8 @@
-mixin defInput(label,placeholder,nameofclass)
-  div(id=nameofclass)
-    label #{label}
+mixin defInput(options)
+  div(id=options.nameofclass)
+    label #{options.label}
     label 
       img(src='assets/img/arrow.svg',class='arrow')
-      input(class=nameofclass,type='text',placeholder=placeholder,class='input')
+      input(class=options.nameofclass,type='text',placeholder=options.placeholder,class='input')
       
-+defInput('masked text field','ДД.ММ.ГГГГ')
++defInput({label:'masked text field',placeholder:'ДД.ММ.ГГГГ'})

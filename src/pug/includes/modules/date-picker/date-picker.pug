@@ -1,7 +1,7 @@
-mixin date-picker(label,classname)
+mixin date-picker(options)
   .date-picker(class)
-    label #{label}
+    label #{options.label}
     label(class='date-picker__item')
-      input(type='text',class='datepicker input',class=classname,placeholder='ДД.ММ.ГГГГ')
+      input(type='text',class='datepicker input',class=options.classname,placeholder='ДД.ММ.ГГГГ')
       img(src='assets/img/arrow.svg',class='arrow')
 

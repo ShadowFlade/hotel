@@ -5,8 +5,8 @@ include ../dropdownSubmitAndClear/dropdownSubmitAndClear.pug
 .card
   .card__title Найдём номера под ваши пожелания
   .card__destination
-    +date-picker('Прибытие')
-    +date-picker('Выезд')  
+    +date-picker({label:'Прибытие'})
+    +date-picker({label:'Выезд'})  
   .card__guests
     +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',nameofclass:'dropdown-accom',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
   .card__footer

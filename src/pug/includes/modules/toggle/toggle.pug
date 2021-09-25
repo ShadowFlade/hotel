@@ -1,7 +1,7 @@
-mixin toggle(label,array_of_arguments)
-  .toggle-details #{label}
+mixin toggle(options)
+  .toggle-details #{options.label}
     .toggle-group
-      each val in array_of_arguments
+      each val in options.array_of_arguments
         .toggle__item
           label(class='toggle',for=val) #{val}
             input(type='checkbox',name=val,id=val,class='toggle__input')

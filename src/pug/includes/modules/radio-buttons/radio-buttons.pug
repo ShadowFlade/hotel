@@ -1,8 +1,8 @@
-mixin radio-buttons(label,array_of_arguments,name)
+mixin radio-buttons(options)
   .radio-buttons
     .radio-buttons__box
-      each val in array_of_arguments
+      each val in options.array_of_arguments
         .radio-buttons__option
-          input(type='radio',name=name,value=val,id=val,class='radio__input')
+          input(type='radio',name=options.name,value=val,id=val,class='radio__input')
           label(class='radio-buttons__title',for=val) #{val}
 

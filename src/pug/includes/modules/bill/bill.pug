@@ -13,8 +13,8 @@ include ../dropdownSubmitAndClear/dropdownSubmitAndClear.pug
         b 9990₽ 
       span(class='day') в сутки
   .card__destination
-    +date-picker('Прибытие')
-    +date-picker('Выезд')  
+    +date-picker({label:'Прибытие'})
+    +date-picker({label:'Выезд'})  
   .card__guests
     +dropdownSubmitAndClear({label:'Гости',placeholder:'2 спальни, 2 кровати',nameofclass:'dropdown-accom',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
   .card__summary(class='summary')

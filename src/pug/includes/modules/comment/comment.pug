@@ -5,7 +5,7 @@ mixin comment(options)
       .comment__left
         .comment__pic
           img(src=options.img)
-        +like('12','like__murad')
+        +like({number_of_likes:'12',id:'like__murad'})
       .comment__right
         .comment__name #{options.name}
         .comment__days #{options.days_ago}  назад

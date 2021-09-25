@@ -1,11 +1,11 @@
 #Deployed on GH Pages
-https://shadowflade.github.io/metalamp/
+https://shadowflade.github.io/hotel/
 
 ## Build Setup:
 
 ```bash
 # Download repository:
-git clone https://github.com/ShadowFlade/metalamp.git
+git clone https://github.com/ShadowFlade/hotel.git
 
 # Go to the app:
 cd metalamp

@@ -1,4 +1,4 @@
-import './dropdown-accom.scss'
+import './dropdownSubmitAndClear.scss'
 import {BindOutsideClickDetection} from '../../../utils/utils'
 class DropdownAccom{
   constructor(element,list,limit){

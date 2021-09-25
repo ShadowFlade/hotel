@@ -99,12 +99,6 @@
   }
 }
 
-.navbar__item:hover .dd {
-  display: block;
-}
-.navbar__item:hover .arrow_class {
-  transform: rotate(-90deg);
-}
 @media screen and (max-width: 1193px) {
   .navigation__content {
     padding: 0 3%;

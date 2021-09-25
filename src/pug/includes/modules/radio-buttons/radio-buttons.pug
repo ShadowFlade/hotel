@@ -1,1 +1,8 @@
-+radio-buttons('Radio Buttons',['Мужчина','Женщина'],'gender')
+mixin radio-buttons(label,array_of_arguments,name)
+  .radio-buttons
+    .radio-buttons__box
+      each val in array_of_arguments
+        .radio-buttons__option
+          input(type='radio',name=name,value=val,id=val,class='radio__input')
+          label(class='radio-buttons__title',for=val) #{val}
+

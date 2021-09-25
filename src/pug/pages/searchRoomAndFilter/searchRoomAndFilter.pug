@@ -1,5 +1,7 @@
 extends ../../layout/landing
 include ../../includes/modules/hotel-card/hotel-card.pug
+include ../../includes/modules/date-picker/date-picker.pug
+include ../../includes/modules/dropdownSubmitAndClear/dropdownSubmitAndClear.pug
 
 block variables
   - var title = 'search room and filter';
@@ -14,7 +16,7 @@ block content
         .sidebar__item 
           +date-picker('время пребывания в отеле','content__datepicker')
         .sidebar__item 
-          include ../../includes/modules/dropdown-advanced/dropdown-advanced.pug
+          +dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
         .sidebar__item 
           include ../../includes/modules/range-slider/range-slider.pug
         .sidebar__item 
@@ -22,7 +24,7 @@ block content
         .sidebar__item 
           include ../../includes/modules/checkbox-rich/checkbox-rich.pug
         .sidebar__item 
-          include ../../includes/modules/dropdown-accom/dropdown-accom.pug
+          +dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
         .sidebar__item 
           include ../../includes/modules/checkbox-list/checkbox-list.pug
     .content 
@@ -78,12 +80,8 @@ block content
                 '450','5300',4,'39',false)
         .content__pagination 
           include ../../includes/modules/pagination/pagination.pug
-
-    //- +sidebar(['../../includes/modules/datepicker/datepicker.pug','../../includes/modules/dropdown-advanced/dropdown-accom.pug','../../includes/modules/range-slider/range-slider.pug','../../includes/modules/checkbox-buttons/checkbox-buttons.pug','../../includes/modules/checkbox-rich/checkbox-rich.pug','../../includes/modules/dropdown-advanced2/dropdown-advanced.pug','../../includes/modules/datepicker/checkbox-list.pug'])
-
   footer(class='footer-main')
     include ../../includes/modules/footer/footer.pug
   footer(class='footer-secondary')
     include ../../includes/modules/footer-mini/footer-mini.pug
-  //- script(src='../../modules/includes/hotel-card/hotel-card.js')
 

@@ -1,1 +1,7 @@
-+date-picker('время прибывания в отеле')
+mixin date-picker(label,classname)
+  .date-picker(class)
+    label #{label}
+    label(class='date-picker__item')
+      input(type='text',class='datepicker input',class=classname,placeholder='ДД.ММ.ГГГГ')
+      img(src='assets/img/arrow.svg',class='arrow')
+

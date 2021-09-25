@@ -1,4 +1,5 @@
 extends ../../layout/landing
+include ../../includes/modules/navbar/navbar.pug
 block variables
   - var title = 'room details';
   - var description = ''; 
@@ -32,7 +33,7 @@ block content
             +comment({img:'assets/img/avatar2.png',name:'Патрисия Стёклышкова',days_ago:'Неделю',text:'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
 
         .comments__item
-          +bullet-list(['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00,а выезд до 12:00'],'Правила')
+            include ../../includes/modules/bullet-list/bullet-list.pug
         .content__item
           .cancel__item
             .cancel__title Отмена

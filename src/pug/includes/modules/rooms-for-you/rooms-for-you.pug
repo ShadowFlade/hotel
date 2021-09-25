@@ -1,11 +1,14 @@
+include ../date-picker/date-picker.pug
 include ../svg__arrow-right/svg__arrow-right.pug
+include ../dropdownSubmitAndClear/dropdownSubmitAndClear.pug
+
 .card
   .card__title Найдём номера под ваши пожелания
   .card__destination
     +date-picker('Прибытие')
     +date-picker('Выезд')  
   .card__guests
-    +dropdown2('Гости','Сколько гостей','dropdown-accom',['Взрослые','Дети','Младенцы'],'clear')
+    +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',nameofclass:'dropdown-accom',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
   .card__footer
     button(class='pay-button') подобрать номер
       +svg__arrow-right({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right'})

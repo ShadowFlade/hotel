@@ -1,6 +1,16 @@
 block variables
-.dropdown
-	+dropdown('dropdown',7,'Сколько гостей')
+mixin dropdown(label,number_of_options,option)
+  -let n=0
+  label #{label}
+  label 
+    select
+      option #{option}
+      while n<=number_of_options
+        li=n++
+        option(value=n) #{n}
+    img(src='assets/img/arrow.svg',class='arrow')
+
+
 
 
 

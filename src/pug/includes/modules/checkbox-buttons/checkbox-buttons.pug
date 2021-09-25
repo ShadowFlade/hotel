@@ -1,1 +1,12 @@
+mixin checkboxlist__notexp(label,array_of_arguments)
+  .checkbox-details
+    label #{label}
+    label
+    .checkbox-group
+      each val in array_of_arguments
+        .checkbox__item
+          label(class='checkbox',for=val) 
+            span(class='checkbox__span') #{val}
+            input(type='checkbox',name=val,id=val,class='checkbox__input')
+            span(class='checkbox-custom')
 +checkboxlist__notexp('Правила дома',['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)'])

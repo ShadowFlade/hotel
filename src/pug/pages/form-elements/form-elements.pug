@@ -1,5 +1,12 @@
 extends ../../layout/main
-//- include ../../utils/mixins.pug
+include ../../includes/modules/date-picker/date-picker.pug
+include ../../includes/modules/like/like.pug
+include ../../includes/modules/dropdown/dropdown.pug
+include ../../includes/modules/dropdownSubmitAndClear/dropdownSubmitAndClear.pug
+include ../../includes/modules/toggle/toggle.pug
+include ../../includes/modules/radio-buttons/radio-buttons.pug
+
+
 
 block variables
 	- let title = 'form-elements';
@@ -9,30 +16,32 @@ block content
 	.form-elements(style={display:"flex",'justify-content':"space-between"}) 
 		.form-elements__column
 			include ../../includes/modules/text-field/text-field.pug 
-			include ../../includes/modules/dropdown/dropdown.pug
+			.dropdown
+				+dropdown('dropdown',7,'Сколько гостей')
 			include ../../includes/modules/masked-text-field/masked-text-field.pug
 			.date-picker-box
 				+date-picker('date dropdown')
 				+date-picker('date dropdown')
 			include ../../includes/modules/filter-date-dropdown/filter-date-dropdown.pug
 			include ../../includes/modules/subscription-text-field/subscription-text-field.pug
-			include ../../includes/modules/dropdown-accom/dropdown-accom.pug
+			+dropdownSubmitAndClear({label:'удобство',placeholder:'2 спальни, 2 кровати',nameofclass:'dropdown-accom',array_of_arguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
 			include ../../includes/modules/checkbox-list/checkbox-list.pug
 			include ../../includes/modules/features/features.pug 
 		.form-elements__column
 			include ../../includes/modules/checkbox-buttons/checkbox-buttons.pug
 			span(class='radio-buttons__label') RADIO BUTTONS
-			include ../../includes/modules/radio-buttons/radio-buttons.pug
-			include ../../includes/modules/toggle/toggle.pug
+			+radio-buttons('Radio Buttons',['Мужчина','Женщина'],'gender')    .text-field(id='birthday')
+
+			+toggle('toggle',['Получать спецпредложения','fish'])
 			.like-buttons
-				include ../../includes/modules/like/like.pug
-				include ../../includes/modules/like/like.pug
+				+like('12','like')
+				+like('12','like')
 			div(class='label') rate button
 				include ../../includes/modules/rate-button/rate-button.pug
 				+rate-button(5)
 				
 			.dropdown
-				include ../../includes/modules/dropdown-advanced/dropdown-advanced.pug
+				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
 			include ../../includes/modules/checkbox-rich/checkbox-rich.pug
 				
 		.form-elements__column
@@ -43,8 +52,7 @@ block content
 			.pagination(class='label') pagination
 				include ../../includes/modules/pagination/pagination.pug
 			.dropdown
-				
-				include ../../includes/modules/dropdown-advanced2/dropdown-advanced2.pug
+				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:["взрослые","дети","младенцы"],option:'clear'})
 			.bullet-list
 				.label bullet list
 				include ../../includes/modules/bullet-list/bullet-list.pug

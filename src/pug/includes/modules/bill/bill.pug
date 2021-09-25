@@ -1,3 +1,6 @@
+include ../date-picker/date-picker.pug
+include ../dropdownSubmitAndClear/dropdownSubmitAndClear.pug
+
 .card
   .card__credentials(class='credentials')
     .card__lux-number
@@ -13,7 +16,7 @@
     +date-picker('Прибытие')
     +date-picker('Выезд')  
   .card__guests
-    +dropdown2('Гости','2 спальни, 2 кровати','dropdown-accom',['Взрослые','Дети','Младенцы'],'clear')
+    +dropdownSubmitAndClear({label:'Гости',placeholder:'2 спальни, 2 кровати',nameofclass:'dropdown-accom',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
   .card__summary(class='summary')
     .summary__row 
      

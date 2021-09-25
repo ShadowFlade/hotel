@@ -15,12 +15,17 @@
     align-items: center;
     justify-content: center;
     min-width: 42px;
-
     width: fit-content;
     cursor: pointer;
     position: relative;
     span img {
       transition: all 0.15s linear;
+    }
+    &:hover .arrow_class {
+      transform: rotate(-90deg);
+    }
+    &:hover .dd {
+      display: block;
     }
   }
   &__item > span {

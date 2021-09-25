@@ -1,3 +1,6 @@
+include ../toggle/toggle.pug
+include ../radio-buttons/radio-buttons.pug
+
 .card
   .card__title Регистрация аккаунта
   .card__info
@@ -6,9 +9,8 @@
       label
         input(type='text',placeholder='Имя',class='input')
         input(type='text',placeholder='Фамилия',class='input')
-    //-   
-    include ../radio-buttons/radio-buttons.pug
-    .text-field(id='birthday')
+
+      +radio-buttons('Radio Buttons',['Мужчина','Женщина'],'gender')    .text-field(id='birthday')
       label Дата рождения
       label 
         input(type='text',placeholder='ДД.ММ.ГГГГ',class='input')
@@ -17,7 +19,7 @@
       label 
         input(type='text',placeholder='Email',class='input')
         input(type='password',placeholder='Пароль',class='input')
-    +toggle('',['Получать спецпредложения'])
+    +toggle('smth',['Получать спецпредложения'])
     button(class='pay-button') перейти к оплате
   .card__footer 
     span(class='card__for-button') Уже есть аккаунт на Toxin

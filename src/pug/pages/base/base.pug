@@ -8,6 +8,14 @@ block head
   link(rel="stylesheet",href="./mixins.scss")
   link(rel="stylesheet",href="./vars.scss")
 block content
+
+mixin item(left_part, right_part)
+  .item  
+    .item__color(style={background:left_part})
+    .item__desc 
+      .item_dark #{right_part[0]}
+      .item_code #{right_part[1]}
+
   .base(style={display:"flex",'justify-content':"space-between"})
     .first-half
       .first-half__column

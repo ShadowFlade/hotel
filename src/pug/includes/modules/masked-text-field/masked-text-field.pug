@@ -1,1 +1,8 @@
+mixin defInput(label,placeholder,nameofclass)
+  div(id=nameofclass)
+    label #{label}
+    label 
+      img(src='assets/img/arrow.svg',class='arrow')
+      input(class=nameofclass,type='text',placeholder=placeholder,class='input')
+      
 +defInput('masked text field','ДД.ММ.ГГГГ')

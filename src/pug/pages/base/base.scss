@@ -5,6 +5,10 @@
 
 .mainfont {
   @include mainfont;
+  .fonts {
+    width: 58%;
+    word-spacing: 5px;
+  }
 }
 .big {
   @include big;
@@ -16,7 +20,7 @@
   @include small;
 }
 html {
-  font-size: rem(14);
+  font-size: 16px;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -25,19 +29,12 @@ body {
   margin: 0 auto;
 }
 .container {
-  padding: 6.5% 11.8%;
+  padding: 6.79% 10.35%;
 }
 
-.icon {
-  position: relative;
-  top: 28px;
-  left: 30px;
-  width: 60px;
-  height: 60px;
-}
 .first-half {
   margin-bottom: 20px;
-  margin-right: 55.4%;
+  margin-right: 0;
   &__column {
     display: flex;
     display: block;
@@ -45,7 +42,7 @@ body {
     justify-content: space-between;
   }
   .item {
-    margin-bottom: 22px;
+    margin-bottom: 20/16 * 1rem;
     display: flex;
     width: 241.61111%;
     &:last-child {
@@ -53,24 +50,25 @@ body {
     }
     &__color {
       border-radius: 6px;
-      $sqr: 79px;
+      $sqr: 70px;
       width: $sqr;
       height: $sqr;
     }
     &__desc {
-      padding: 1.7% 9.5%;
-      font-size: 22/14 * 1em;
-      line-height: 1.4;
+      padding: 1.1% 6.6%;
+      font-size: 1.57143em;
+      line-height: 1.3;
       display: flex;
       flex-direction: column;
-      letter-spacing: 0.2px;
+      letter-spacing: -1.1px;
     }
   }
 }
 .second-half {
-  width: 50%;
+  width: 59%;
   display: flex;
   justify-content: flex-end;
+  padding-left: 20%;
 
   &__column {
     display: flex;
@@ -80,11 +78,17 @@ body {
   }
   &__item {
     display: flex;
-    margin-bottom: 51 / $fh * 100%;
-    width: 158%;
+    margin-bottom: 3.54167%;
+    width: 131%;
+
+    .h {
+      width: 6%;
+    }
   }
   .fonts {
     padding-left: 5.7%;
     text-align: left;
+    width: 69%;
+    letter-spacing: -2px;
   }
 }

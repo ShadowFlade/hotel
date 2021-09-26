@@ -18,5 +18,4 @@ import '../../includes/modules/text-field/text-field.js'
 import '../../includes/modules/toggle/toggle.js'
 import '../../includes/modules/graph/graph.js'
 import '../../includes/modules/hotel-card/hotel-card.js'
-
 import './form-elements.scss'

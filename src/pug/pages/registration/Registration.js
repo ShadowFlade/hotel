@@ -1,5 +1,4 @@
-// import '../../includes/modules/toggle/toggle.js'
-// import '../../includes/modules/radio-buttons/radio-buttons.js'
-// import '../../includes/modules/toggle/toggle.js'
+import '../../includes/modules/navbar/navbar.js'
+
 import '../../includes/modules/registration/registration.js'
 import './registration.scss'

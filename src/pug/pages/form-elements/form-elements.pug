@@ -5,9 +5,6 @@ include ../../includes/modules/dropdown/dropdown.pug
 include ../../includes/modules/dropdownSubmitAndClear/dropdownSubmitAndClear.pug
 include ../../includes/modules/toggle/toggle.pug
 include ../../includes/modules/radio-buttons/radio-buttons.pug
-
-
-
 block variables
 	- let title = 'form-elements';
 	- let description = 'smth';
@@ -31,7 +28,7 @@ block content
 			include ../../includes/modules/checkbox-buttons/checkbox-buttons.pug
 			span(class='radio-buttons__label') RADIO BUTTONS
 			+radio-buttons({array_of_arguments:['Мужчина','Женщина'],name:'gender'})    
-		.text-field(id='birthday')
+			.text-field(id='birthday')
 
 			+toggle({label:'toggle',array_of_arguments:['Получать спецпредложения','fish']})
 			.like-buttons

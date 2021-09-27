@@ -1,10 +1,11 @@
-.card
+include ../pay-button/pay-button.pug
+.card.sign-in
   .card__title Войти
   .text-field
     input(type='text',placeholder='Email',class='input')
   .text-field
     input(type='password',placeholder='Пароль',class='input')
-  button(class='pay-button') Войти
+  +pay-button({label:'войти',arrow:true})
   .card__footer 
     span(class='card__for-button') Нет аккаунта на Toxin?
     .button-default2__wrapper(class='card__button')

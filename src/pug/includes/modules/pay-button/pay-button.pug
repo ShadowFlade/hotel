@@ -1,4 +1,5 @@
 include ../svg__arrow-right/svg__arrow-right.pug
-//- import './pay-button.scss'
-button(class='pay-button') перейти к оплате
-	+svg__arrow-right({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right'})
+mixin pay-button(options)
+	button.pay-button #{options.label}
+		if options.arrow
+			+svg__arrow-right({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right'})

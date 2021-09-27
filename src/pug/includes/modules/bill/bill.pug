@@ -1,13 +1,15 @@
 include ../date-picker/date-picker.pug
 include ../dropdownSubmitAndClear/dropdownSubmitAndClear.pug
-
-.card
+include ../dropdown/dropdown.pug
+include ../pay-button/pay-button.pug
+.card.bill
   .card__credentials(class='credentials')
     .card__lux-number
-      span(class='number')
-        span(class='number-sign')
+      span.number
+        span.number__sign
           |№
-        span(class='number-number') 888
+        span.number__number 888
+        span.number__lux люкс
     .card__lux-price
       span(class='price') 
         b 9990₽ 
@@ -16,26 +18,20 @@ include ../dropdownSubmitAndClear/dropdownSubmitAndClear.pug
     +date-picker({label:'Прибытие'})
     +date-picker({label:'Выезд'})  
   .card__guests
-    +dropdownSubmitAndClear({label:'Гости',placeholder:'2 спальни, 2 кровати',nameofclass:'dropdown-accom',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
+    +dropdown({label:'Гости',placeholder:'2 спальни, 2 кровати',nameofclass:'dropdown-accom',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
   .card__summary(class='summary')
     .summary__row 
-     
       .summary__price 9 990₽ х 4 суток
-      div(style={display:'flex','min-width':' 30%',
-    'justify-content': 'space-between'})  
-        .summary__info-icon i
+      .summary__money(style={'padding-left': '27px'})  
         .summary__sum 39 960₽
     .summary__row 
       .summary__price Сбор за услуги: скидка 2 179₽
-      div(style={display:'flex','min-width': '30%',
-    'justify-content': 'space-between'}) 
+      .summary__money
         .summary__info-icon i
         .summary__sum 0₽
     .summary__row 
-      
       .summary__price Сбор за дополнительные услуги
-      div(style={display:'flex','min-width': '30%',
-    'justify-content': 'space-between'}) 
+      .summary__money
         .summary__info-icon i
         .summary__sum 300₽
     .summary__all
@@ -43,4 +39,4 @@ include ../dropdownSubmitAndClear/dropdownSubmitAndClear.pug
       div(class='summary__border')
       .summary__money 38 081₽
   .card__footer
-    button(class='pay-button') Забронировать
+    +pay-button({label:'Забронировать',arrow:true}) 

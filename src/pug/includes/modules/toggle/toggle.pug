@@ -1,6 +1,7 @@
 mixin toggle(options)
   .toggle-details 
-    label.toggle__label #{options.label}
+    if options.label
+      label.toggle__label #{options.label}
     .toggle-group
       each val in options.array_of_arguments
         .toggle__item

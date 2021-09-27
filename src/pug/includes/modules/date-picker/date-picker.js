@@ -53,5 +53,15 @@ $(function() {
     )
   }),
     $('.ui-datepicker-calendar a.ui-state-default').css('width', '20px')
+    setTimeout(()=>{
+      const datepicker=document.getElementsByClassName('daterangepicker ltr show-calendar opensright moveup')[0]
+      datepicker.style.position='relative'
+      datepicker.style.top='-6px'
+      datepicker.style.left='0px'
+      const target=document.querySelector('.card__datepicker')
+      target.appendChild(datepicker)
+    },0)
+
 
 }) 
+

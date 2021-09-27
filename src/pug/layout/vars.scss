@@ -22,9 +22,9 @@ $fw: 900;
   color: $DarkShade75;
 }
 @mixin big {
-  font-size: 24/14 * 1rem;
-  line-height: 29/14 * 1rem;
-  font-weight: 700;
+  font-size: 1.41429rem;
+  line-height: 2.07143rem;
+  font-weight: 900;
 }
 @mixin medium {
   font-size: 19/14 * 1rem;

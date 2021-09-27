@@ -6,7 +6,15 @@
   background: #ffffff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
-  margin-bottom: 27px;
+  margin-bottom: rem(36);
+  .price {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: rem(14);
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 0.87rem;
+  }
   &__slider {
     height: 60%;
   }
@@ -121,7 +129,7 @@
   color: #1f2041;
 }
 .number-number {
-  font-size: rem(19);
+  font-size: 1.15714rem;
 }
 .lux {
   font-family: 'Montserrat';
@@ -135,10 +143,10 @@
 .price {
   font-family: 'Montserrat';
   font-style: normal;
-  // font-weight: bold;
   font-size: rem(14);
   line-height: 18px;
   color: rgba(31, 32, 65, 0.5);
+  font-size: 0.87rem;
 }
 .hotel-card__applybtn {
   float: right;

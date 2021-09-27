@@ -1,13 +1,9 @@
 @import '../../layout/vars.scss';
 @import '../../layout/mixins.scss';
-// @import '../../layout/nullstyle.scss';
-// html {
-//   background: #e5e5e5;
-// }
-// body {
-//   background: #f4f4f6;
-// }
 .cards {
+  display: flex;
+  justify-content: space-between;
+  padding: 7.1% 9.9%;
   &__column {
     width: 380px;
     margin-right: rem(40);
@@ -55,7 +51,7 @@
   }
 
   .card__datepicker {
-    margin-bottom: 20px;
+    margin-bottom: rem(40);
     height: 358px;
   }
   .radio-buttons {

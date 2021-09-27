@@ -1,12 +1,10 @@
 extends ../../layout/main
-
-
 block variables
   - var title = 'Cards';
   - var pageclass='cards';
 include ../../includes/modules/hotel-card/hotel-card.pug 
 block content
-  .cards(style={display:"flex",'justify-content':"space-between"})
+  .cards
     .cards__column
       include ../../includes/modules/rooms-for-you/rooms-for-you.pug
       include ../../includes/modules/registration/registration.pug 

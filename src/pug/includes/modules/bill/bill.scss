@@ -6,8 +6,6 @@
   align-items: space-between;
   min-width: 380px;
   min-height: 374px;
-  // width: 380px;
-  // height: 374px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -19,8 +17,21 @@
   .number {
     font-size: rem(19);
   }
-  .number-number {
-    font-size: rem(24);
+  .number__sign {
+    font-size: rem(11);
+  }
+  .number__number {
+    font-size: 1.31429rem;
+  }
+  .number__lux {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #bc9cff;
+    margin-left: rem(3);
   }
   &__destination {
     display: flex;
@@ -29,19 +40,13 @@
     @include big;
     margin-bottom: 21px;
   }
-  &__button {
-    float: right;
-    margin: 30px 0 15px 0;
-  }
+
   &__footer {
     width: 100%;
-    // height: 100/646 * 100%;
-    // height: 10em;
     margin: 10px 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // height: 70px;
   }
   .text-field .input {
     margin-bottom: 21px;
@@ -51,6 +56,7 @@
   }
   &__summary {
     margin-bottom: 20px;
+    padding-top: rem(13);
   }
 }
 
@@ -60,16 +66,20 @@ label {
 .summary {
   display: flex;
   flex-direction: column;
+
   &__row {
     @include mainfont;
     display: flex;
     justify-content: space-between;
   }
   &__price {
-    // float: left;
+    font-size: rem(13);
+    word-spacing: -2px;
   }
-  &__sum {
-    // float: right;
+  &__money {
+    display: flex;
+    justify-content: space-between;
+    min-width: 30%;
   }
   &__all {
     font-family: 'Montserrat';
@@ -91,10 +101,10 @@ label {
   &__result {
     float: left;
     text-align: left;
+    font-size: rem(17);
   }
   &__money {
     float: right;
-    // width: 30%;
     text-align: right;
   }
   &__info-icon {
@@ -107,7 +117,6 @@ label {
     color: rgba(31, 32, 65, 0.25);
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 50%;
-    // margin-right: 10px;
     width: 20px;
     height: 20px;
     display: flex;
@@ -134,6 +143,14 @@ label {
 .number-number {
   font-size: rem(19);
 }
+.card__lux-price {
+  vertical-align: bottom;
+  padding-right: rem(12);
+  font-size: 0.5rem;
+  .day {
+    font-size: 1.5em;
+  }
+}
 .lux {
   font-family: Montserrat;
   font-style: normal;
@@ -146,8 +163,16 @@ label {
 .price {
   font-family: Montserrat;
   font-style: normal;
-  // font-weight: bold;
   font-size: rem(14);
   line-height: 18px;
   color: rgba(31, 32, 65, 0.5);
+}
+
+.card.bill {
+  .card__credentials {
+    padding-top: rem(10);
+  }
+  .card__footer {
+    margin-top: 0;
+  }
 }

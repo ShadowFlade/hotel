@@ -6,8 +6,6 @@
   align-items: space-between;
   min-width: 380px;
   min-height: 374px;
-  // width: 380px;
-  // height: 374px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -28,12 +26,9 @@
   }
   &__destination {
     display: flex;
-    // justify-content: space-between;
     margin-bottom: 20px;
   }
-  // &__guests {
-  //   margin-bottom: 31px;
-  // }
+
   &__for-button {
     font-family: 'Montserrat';
     font-style: normal;
@@ -47,24 +42,27 @@
     float: left;
     font-size: 14px;
   }
-  &__button {
-    float: right;
-    margin: 30px 0 15px 0;
-  }
+
   &__footer {
     width: 100%;
-    // height: 100/646 * 100%;
-    // height: 10em;
     margin: 10px 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // height: 70px;
   }
   .text-field .input {
-    margin-bottom: 21px;
+    width: 19.85714rem;
+    margin-bottom: rem(11);
   }
+
   &__summary {
     margin-bottom: 20px;
+  }
+}
+
+.card.registration {
+  padding: 2.6714em 1.9em 0;
+  .registration__title {
+    margin-bottom: 1.34286rem;
   }
 }

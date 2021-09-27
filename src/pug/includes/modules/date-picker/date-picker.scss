@@ -13,8 +13,12 @@
 }
 .date-picker {
   width: 150px;
-  // height: 44px;
   margin-right: 20px;
+  font-size: rem(11);
+  &__label {
+    margin-bottom: rem(4);
+    font-size: 0.65714rem;
+  }
   &__item {
     position: relative;
     width: 150px;

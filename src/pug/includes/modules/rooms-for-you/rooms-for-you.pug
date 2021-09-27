@@ -2,12 +2,13 @@ include ../date-picker/date-picker.pug
 include ../svg__arrow-right/svg__arrow-right.pug
 include ../dropdownSubmitAndClear/dropdownSubmitAndClear.pug
 
-.card
+.card.rooms-for-you
   .card__title Найдём номера под ваши пожелания
   .card__destination
     +date-picker({label:'Прибытие'})
     +date-picker({label:'Выезд'})  
   .card__guests
+    span.card__guest-label.label ГОСТИ
     +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',nameofclass:'dropdown-accom',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
   .card__footer
     button(class='pay-button') подобрать номер

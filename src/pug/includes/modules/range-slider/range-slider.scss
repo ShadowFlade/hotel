@@ -1,19 +1,25 @@
+@import '../../../layout/mixins.scss';
 #slider {
- 
   height: 6px;
   width: 100%;
 }
 .range-slider {
-  width: 266px;
+  width: rem(266);
+  &__context {
+    width: 30%;
+  }
+  &__title {
+    width: 37%;
+    display: flex;
+    text-align: left;
+    width: 100%;
+    font-size: rem(12);
+  }
   &__info {
     display: flex;
     justify-content: space-between;
     font-size: rem(12);
-    margin-bottom: 23px;
-  }
-  &__title {
-    width: 100%;
-    font-size: rem(12);
+    margin-bottom: rem(13);
   }
   &__start,
   &__end {

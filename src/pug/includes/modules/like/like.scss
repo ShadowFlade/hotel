@@ -3,16 +3,14 @@
 .like__item {
   display: flex;
   margin-bottom: rem(13);
+  margin-right: rem(11);
   position: relative;
   border-radius: 10px;
   width: 40px;
   height: 20px;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  margin-top: -20px;
-
   align-items: center;
   justify-content: center;
-  /* width: auto; */
   min-width: 40px;
   max-width: 60px;
 }

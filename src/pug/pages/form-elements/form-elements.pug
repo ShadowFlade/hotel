@@ -17,13 +17,16 @@ block content
 				+dropdown()
 			include ../../includes/modules/masked-text-field/masked-text-field.pug
 			.date-picker-box
-				+date-picker({lalbel:'date dropdown'})
-				+date-picker({lalbel:'date dropdown'})
+				//- label.date-picker__label DATE DROPDOWN
+				+date-picker({label:'date dropdown'})
+				//- label.date-picker__label
+				+date-picker({label:'date dropdown'})
 			include ../../includes/modules/filter-date-dropdown/filter-date-dropdown.pug
 			include ../../includes/modules/subscription-text-field/subscription-text-field.pug
 			+dropdownSubmitAndClear({label:'удобство',placeholder:'2 спальни, 2 кровати',nameofclass:'dropdown-accom',array_of_arguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
 			include ../../includes/modules/checkbox-list/checkbox-list.pug
 			include ../../includes/modules/features/features.pug 
+
 		.form-elements__column
 			include ../../includes/modules/checkbox-buttons/checkbox-buttons.pug
 			span(class='radio-buttons__label') RADIO BUTTONS
@@ -32,19 +35,26 @@ block content
 
 			+toggle({label:'toggle',array_of_arguments:['Получать спецпредложения','fish']})
 			.like-buttons
-				+like({number_of_likes:'12',id:'like'})
-				+like({number_of_likes:'12',id:'like'})
-			div(class='label') rate button
-				include ../../includes/modules/rate-button/rate-button.pug
-				+rate-button(5)
+				.like-buttons__label.label LIKE BUTTON
+				.like-buttons__group
+					+like({number_of_likes:'12',id:'like'})
+					+like({number_of_likes:'12',id:'like'})
+			.rate__buttons
+				span.rate__label.label RATE BUTTON
+				.rate__items
+					include ../../includes/modules/rate-button/rate-button.pug
+					+rate-button(5)
 				
 			.dropdown
 				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
 			include ../../includes/modules/checkbox-rich/checkbox-rich.pug
-				
+			.comment__box
+				include ../../includes/modules/comment/comment.pug
+
 		.form-elements__column
-			include ../../includes/modules/range-slider/range-slider.pug
-			label buttons
+			.range-slider__box
+				include ../../includes/modules/range-slider/range-slider.pug
+			label.buttons__label buttons
 			include ../../includes/modules/buttons/buttons.pug
 			include ../../includes/modules/pay-button/pay-button.pug
 			.pagination(class='label') pagination
@@ -54,7 +64,6 @@ block content
 			.bullet-list
 				.label bullet list
 				include ../../includes/modules/bullet-list/bullet-list.pug
-			include ../../includes/modules/comment/comment.pug
 			
 
 

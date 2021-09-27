@@ -1,17 +1,19 @@
+@import '../../../layout/mixins.scss';
 .star__group {
-	display: flex;
+  display: flex;
 }
 .star--active {
-	opacity: 0;
-	position: absolute;
-	left: 0;
-	top: 0;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
-.star{
-	width: 20px;
-	height: 20px;
-	&__united {
-		position: relative;
-		opacity: 0.5;
-	}
+.star {
+  width: rem(20);
+  height: rem(20);
+  margin-right: 0.1rem;
+  &__united {
+    position: relative;
+    opacity: 0.5;
+  }
 }

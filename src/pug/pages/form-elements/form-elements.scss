@@ -1,35 +1,49 @@
+@import '../../layout/mixins.scss';
 html {
-  font-size: 12px;
+  font-size: 16px;
 }
 .form-elements {
-  // background-color: red;
-  .container {
-    display: flex;
-    width: 100%;
-    background: white;
-    & > div,
-    & > label {
-      margin-bottom: 20px;
-    }
-  }
-
-  .rate-buttons,
-  .like-buttons {
-    display: flex;
-    & > div {
-      margin-right: 10px;
-    }
-  }
-
+  display: flex;
+  width: 100%;
+  background: white;
+  padding: 6.48% 9.75%;
   &__column {
     display: flex;
     flex-direction: column;
     flex: 1 1 30%;
-    margin-right: 126/1440 * 100%;
-    & > div:not(.comment),
+    margin-right: 10.75%;
+    & > div:not(.comment__box),
     & > button {
-      margin-bottom: 20px;
       width: 320px;
+      margin-bottom: 1.15rem;
+    }
+  }
+  & > div,
+  & > label {
+    margin-bottom: 20px;
+  }
+
+  .rate__buttons,
+  .like-buttons {
+    display: flex;
+    flex-direction: column;
+    & > div {
+      margin-right: 10px;
+    }
+    &__group {
+      display: flex;
+    }
+    &__label {
+      padding-bottom: rem(17);
+      font-weight: 530;
+      font-size: rem(12);
+    }
+  }
+
+  .rate__items {
+    display: flex;
+    & > div:not(:last-child) {
+      margin-right: 1.25rem;
     }
   }
 }
@@ -41,4 +55,19 @@ html {
 }
 .container {
   padding: 141/1440 * 100% 141/1440 * 100%;
+}
+
+.range-slider__box {
+  margin-bottom: 2rem;
+}
+
+.buttons__label {
+  margin-top: 1.6rem;
+  margin-bottom: 0;
+}
+
+.comment__box {
+  position: absolute;
+  top: 97.2rem;
+  left: 50.5rem;
 }

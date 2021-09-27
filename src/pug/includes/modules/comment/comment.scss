@@ -1,9 +1,6 @@
 @import '../../../layout/vars.scss';
 @import '../../../layout/mixins.scss';
 .comment {
-  // position: absolute;
-  // bottom: -200px;
-  // right: 150px;
   max-width: 711px;
   &__wrapper {
     display: flex;
@@ -23,10 +20,14 @@
       top: 10%;
     }
   }
+  &__like {
+    margin-top: rem(-15);
+  }
   &__right {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 0.9429rem;
   }
   &__name {
     font-family: Montserrat;
@@ -40,10 +41,11 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
-    font-size: rem(14);
+    font-size: 0.8rem;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
     text-transform: none;
+    margin-top: rem(6);
   }
   &__content {
     font-family: Montserrat;

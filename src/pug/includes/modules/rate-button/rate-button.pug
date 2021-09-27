@@ -23,18 +23,19 @@ mixin svg__star--active(options)
 				stop(offset="1" stop-color=options.endColor)
 
 mixin rate-button(active_stars)
-		.star__group 
-			- var n=active_stars
-			- var r=5-n
-			while n>0
-				.star__united(style={opacity:'1'})
-					+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active'})
-					+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
-				-n--
-			while r>0
-				.star__united(style={opacity:'.5'}) 
-					+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
-				-r--
+		.rate__item
+			.star__group 
+				- var n=active_stars
+				- var r=5-n
+				while n>0
+					.star__united(style={opacity:'1'})
+						+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active'})
+						+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
+					-n--
+				while r>0
+					.star__united(style={opacity:'.5'}) 
+						+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
+					-r--
 
 
 

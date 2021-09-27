@@ -1,8 +1,7 @@
 mixin defInput(options)
-  div(id=options.nameofclass)
+  div(class=options.nameofclass)
     label #{options.label}
     label 
-      img(src='assets/img/arrow.svg',class='arrow')
       input(class=options.nameofclass,type='text',placeholder=options.placeholder,class='input')
       
-+defInput({label:'masked text field',placeholder:'ДД.ММ.ГГГГ'})
++defInput({label:'masked text field',placeholder:'ДД.ММ.ГГГГ',nameofclass:'text-field'})

@@ -1,4 +1,6 @@
 @import '../../../layout/vars.scss';
+@import '../../../layout/mixins.scss';
+
 ::-webkit-details-marker {
   display: none;
 }
@@ -10,10 +12,16 @@
   color: $DarkShade50;
   text-transform: capitalize;
   padding-left: 13.5%;
-  padding-top: 3px;
+  padding-top: rem(3);
+  height: rem(27);
+  &__text {
+    padding-left: rem(9);
+  }
+  &__label {
+    margin-bottom: 14/16 * 1rem;
+  }
   &__item {
     display: flex;
-    margin-bottom: rem(13);
     position: relative;
   }
   &__input {
@@ -27,8 +35,6 @@
     cursor: default;
   }
   &-group {
-    margin-top: rem(18);
-    // position: absolute;
     top: 100%;
     left: 0;
     background-color: transparent;

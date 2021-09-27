@@ -1,17 +1,20 @@
 @import '../../../layout/vars.scss';
 @import '../../../layout/mixins.scss';
-.buttons__box {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  // width: 218px;
-  & > * {
-    margin: 5px;
+.buttons {
+  &__box {
+    margin-top: 0.9571rem;
+    display: flex;
+    flex-wrap: wrap;
+    & > *:not(:last-child) {
+      margin-right: rem(22);
+      margin-bottom: rem(31);
+    }
   }
 }
+
 .button-default1 {
-  width: 99/12 * 1em;
-  height: 44/12 * 1em;
+  width: 7em;
+  height: 3em;
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
   font-family: Montserrat;

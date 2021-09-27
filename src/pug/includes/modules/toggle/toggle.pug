@@ -1,9 +1,11 @@
 mixin toggle(options)
-  .toggle-details #{options.label}
+  .toggle-details 
+    label.toggle__label #{options.label}
     .toggle-group
       each val in options.array_of_arguments
         .toggle__item
-          label(class='toggle',for=val) #{val}
+          label(class='toggle',for=val) 
+            span.toggle__text #{val}
             input(type='checkbox',name=val,id=val,class='toggle__input')
             span(class='toggle-custom')
               span(class='toggle-custom__helper')

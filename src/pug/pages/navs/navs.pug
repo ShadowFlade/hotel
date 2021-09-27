@@ -1,10 +1,11 @@
-extends ../../layout/landing
+extends ../../layout/main
+include ../../includes/modules/header-w/header-w.pug
 block variables
   - var title = 'headers&footers';
   - var description = '';
 block content
   .navs 
-    include ../../includes/modules/header-w/header-w.pug
     include ../../includes/modules/header-wo/header-wo.pug 
+    +navigation({username:'Юлий Цезарь',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
     include ../../includes/modules/footer/footer.pug 
     include ../../includes/modules/footer-mini/footer-mini.pug 

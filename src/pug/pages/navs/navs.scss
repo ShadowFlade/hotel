@@ -1,6 +1,8 @@
+@import '../../layout/vars.scss';
+@import '../../layout/mixins.scss';
 .navs {
   margin-bottom: 20px;
-  padding: 140px 0;
+  padding: 5.6rem 0;
 }
 .navs > nav {
   margin-bottom: 40px;

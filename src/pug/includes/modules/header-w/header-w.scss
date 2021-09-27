@@ -9,10 +9,14 @@
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   &__content {
     display: flex;
-    padding: 0 140/1440 * 100%;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding: 0 9% 0 9.72222%;
+  }
+  &__interactive {
+    display: flex;
+    justify-content: space-between;
   }
   &__icon-space {
     height: 40px;
@@ -23,6 +27,7 @@
     justify-content: flex-end;
     align-items: center;
     width: auto;
+    margin-right: 0.25714rem;
   }
   &__navbar > div {
     margin-right: 20px;
@@ -41,14 +46,20 @@
     height: 34/12 * 1em;
   }
   &__user {
+    display: flex;
+  }
+  &__username {
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: normal;
-    font-size: rem(14);
+    font-weight: 500;
+    font-size: 0.9rem;
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
-    padding: 5px 20px;
     border-left: 1px solid rgba(31, 32, 65, 0.1);
+    padding: rem(5) 0 0 rem(24);
+  }
+  &__divider {
+    margin-right: 10px;
   }
 }
 
@@ -58,6 +69,10 @@
 .btngroup-authorization {
   display: flex;
   align-items: center;
+  padding-right: 0.91429rem;
+  & > div:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 .dd {
   display: none;
@@ -69,10 +84,6 @@
   border-top: 0;
   border-radius: 4px;
   z-index: 10;
-
-  // &__content {
-
-  // }
 
   &__item {
     text-align: left;

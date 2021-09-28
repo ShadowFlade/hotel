@@ -1,59 +1,71 @@
-.picture {
-  position: relative;
-  .card {
-    position: absolute;
-    top: 70px;
-    left: 187px;
-    width: 40%;
-    z-index: 10000;
+@import '../../layout/mixins.scss';
+.landing-page {
+  .card__destination {
+    margin-bottom: 0.55714rem;
   }
-}
-.footer-secondary {
-  display: none;
-}
-@media screen and (max-width: 834px) {
-  .footer-main {
+  .picture {
+    position: relative;
+    background-image: url('../../../assets/img/picture.jpg');
+    height: 51.91429rem;
+    .card {
+      position: absolute;
+      top: 70px;
+      left: 141px;
+      width: 26.3%;
+      z-index: 10000;
+    }
+  }
+  .rooms-for-you {
+    padding: 3.1714em 1.9em 0;
+  }
+
+  .footer-secondary {
     display: none;
   }
-  .footer-secondary {
-    display: block;
+  @media screen and (max-width: 834px) {
+    .footer-main {
+      display: none;
+    }
+    .footer-secondary {
+      display: block;
+    }
+    .card__title {
+      font-size: 1rem;
+    }
+    .card {
+      padding: 1em;
+    }
+    .card__footer {
+      margin: 5px 0 10px;
+    }
+    .card__title,
+    .card__destination {
+      margin-bottom: 5px;
+    }
   }
-  .card__title {
-    font-size: 1rem;
+  @media screen and (max-width: 700px) {
+    .picture .card {
+      top: 10px;
+      left: 10px;
+    }
   }
-  .card {
-    padding: 1em;
+  @media screen and (max-width: 600px) {
+    .picture .card {
+      top: 2%;
+      left: 2%;
+      width: 60%;
+    }
   }
-  .card__footer {
-    margin: 5px 0 10px;
+  .date-picker {
+    max-width: 140px;
+    margin-right: 20px;
+    width: 44%;
+    &:last-child {
+      margin-right: 0;
+    }
   }
-  .card__title,
-  .card__destination {
-    margin-bottom: 5px;
+  .input-box {
+    max-width: 320px;
+    width: 95%;
   }
-}
-@media screen and (max-width: 700px) {
-  .picture .card {
-    top: 10px;
-    left: 10px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .picture .card {
-    top: 2%;
-    left: 2%;
-    width: 60%;
-  }
-}
-.date-picker {
-  max-width: 140px;
-  margin-right: 20px;
-  width: 44%;
-  &:last-child {
-    margin-right: 0;
-  }
-}
-.input-box {
-  max-width: 320px;
-  width: 95%;
 }

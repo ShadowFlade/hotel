@@ -1,14 +1,14 @@
 extends ../../layout/landing
+include ../../includes/modules/header-w/header-w.pug
 block variables
   - var title = 'landing page';
   - var description = '';
   - var pageclass='landing-page'
 block content
   header
-    include ../../includes/modules/header-w/header-w.pug
+    +navigation({username:'',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
   main 
     .picture 
-      img(src='assets/img/picture.jpg',style={'max-width':'100%'})
       include ../../includes/modules/rooms-for-you/rooms-for-you.pug
   footer(class='footer-main')
     include ../../includes/modules/footer/footer.pug

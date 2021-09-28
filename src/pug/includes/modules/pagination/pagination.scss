@@ -1,6 +1,6 @@
 @import '../../../layout/vars.scss';
 @import '../../../layout/mixins.scss';
-.page-item {
+.pagination__item {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -11,23 +11,29 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: normal;
-  font-size: rem(12);
   line-height: 15px;
   display: flex;
   align-items: center;
   text-align: center;
   cursor: pointer;
   color: rgba(31, 32, 65, 0.5);
+  font-size: 0.685714rem;
 }
-.pagination-item {
+.pagination {
   display: flex;
+  flex-direction: column;
+  padding-right: 2.7rem;
+  &__pages {
+    display: flex;
+  }
   &__info {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: rem(14);
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
+    margin-top: rem(7);
+    font-size: 0.85rem;
   }
 }
 .page-active {

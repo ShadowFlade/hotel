@@ -1,15 +1,16 @@
 include ../svg__arrow-right/svg__arrow-right.pug
 mixin pagination(number_of_first_pages)
-  .pagination-item
-    - let n=1
-    while n<number_of_first_pages+1
-      div(class='page-item') #{n}
-        span 
-      -n++
-    div(class='page-intro page-item') ...
-    div(class='page-item last-page') 15 
-    .for-arrow
-      +svg__arrow-right({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right__pagination'})
-  .pagination-item__info 1 – 12 из 100+ вариантов аренды
+  .pagination
+    .pagination__pages
+      - let n=1
+      while n<number_of_first_pages+1
+        div(class='pagination__item') #{n}
+          span 
+        -n++
+      div(class='pagination__intro pagination__item') ...
+      div(class='pagination__item pagination__item--last-page') 15 
+      .for-arrow
+        +svg__arrow-right({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right__pagination'})
+    .pagination__info 1 – 12 из 100+ вариантов аренды
 
 +pagination(3)

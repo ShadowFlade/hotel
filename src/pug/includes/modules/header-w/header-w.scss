@@ -93,15 +93,14 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: rem(14);
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
     width: auto;
-
     background: #e5e5e5;
     text-transform: capitalize;
     padding: 1em;
     text-align: left;
+    font-size: 0.8rem;
     &:hover {
       background-color: scale-color(#bc9cff, $lightness: 15%);
       color: black;

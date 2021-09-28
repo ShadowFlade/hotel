@@ -1,15 +1,12 @@
 @import '../../../layout/vars.scss';
 @import '../../../layout/mixins.scss';
-.ui-button,
-.ui-state-default,
-.ui-widget-content .ui-state-default {
-  width: 1.6em;
-  text-align: center;
-  width: 23px;
-}
-.ui-datepicker table {
-  margin: 0;
-  height: 80%;
+.arrow-span {
+  position: relative;
+  right: 8%;
+  width: auto;
+  height: 100%;
+  translate: transformY(-50%);
+  transform: translate(6px, 4px);
 }
 .date-picker {
   width: 150px;
@@ -35,6 +32,11 @@
 }
 .date-picker-box {
   display: flex;
+}
+
+.ui-datepicker table {
+  margin: 0;
+  height: 80%;
 }
 
 .ui-datepicker td span,
@@ -99,15 +101,6 @@ Chrome10+,Safari5.1+ */
   color: #5bfec8;
 }
 
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default {
-  border: 1px solid #b1a0fe;
-  background: #000000;
-  font-weight: normal;
-  color: #000000;
-}
-
 a.ui-state-default:hover {
   border: 1px solid white;
   background: #5bfec8;
@@ -133,14 +126,11 @@ a.ui-state-default:hover {
 }
 
 .ui-widget-header {
-  // border: 1px solid #5bfec8;
   background: blue;
   color: #5bfec8;
   font-weight: bold;
 }
-// .ui-datepicker .ui-datepicker-prev .ui-icon {
-//   background: url('../../../../assets/img/arrow.png');
-// }
+
 #card__datepicker .ui-widget.ui-widget-content {
   border: 0;
   width: 320px;
@@ -178,7 +168,6 @@ a.ui-state-default:hover {
       .ui-icon {
         background: url('../../../../assets/img/arrow_back.png') center /
           contain no-repeat;
-        // transform: rotate(90deg);
       }
     }
     & .ui-datepicker-next {
@@ -220,10 +209,6 @@ a.ui-state-default:hover {
       align-items: center;
     }
 
-    // .ui-datepicker-current-day {
-    //   background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-    //   border-radius: 22px;
-    // }
     .ui-state-active {
       background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
       border-radius: 22px;

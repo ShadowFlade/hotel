@@ -30,3 +30,23 @@
     margin: rem(24) 0 rem(20);
   }
 }
+
+.rooms-for-you.card {
+  padding: 2.2714em 1.9em 0;
+  .card__footer {
+    margin: 1.31429rem 0 1.42857rem;
+  }
+  // .arrow-right {
+  //   left: 12%;
+  //   top: 3%;
+  //   position: relative;
+  //   fill: #fff;
+  // }
+}
+@media screen and (max-width: 1012px) {
+  .rooms-for-you.card {
+    .arrow-right {
+      display: none;
+    }
+  }
+}

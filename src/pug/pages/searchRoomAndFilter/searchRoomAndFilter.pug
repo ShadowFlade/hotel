@@ -2,6 +2,9 @@ extends ../../layout/landing
 include ../../includes/modules/hotel-card/hotel-card.pug
 include ../../includes/modules/date-picker/date-picker.pug
 include ../../includes/modules/dropdownSubmitAndClear/dropdownSubmitAndClear.pug
+include ../../includes/modules/header-w/header-w.pug
+include ../../includes/modules/range-slider/range-slider.pug
+
 
 block variables
   - var title = 'search room and filter';
@@ -9,16 +12,16 @@ block variables
   - var pageclass='search-room'
 block content 
   header
-    include ../../includes/modules/header-w/header-w.pug
+    +navigation({username:'',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
   main 
-    div(class="sidebar")
+    .sidebar
       .sidebar__container 
         .sidebar__item 
           +date-picker({label:'время пребывания в отеле',classname:'content__datepicker'})
         .sidebar__item 
           +dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
         .sidebar__item 
-          include ../../includes/modules/range-slider/range-slider.pug
+          +range-slider('Диапазон цены')
         .sidebar__item 
           include ../../includes/modules/checkbox-buttons/checkbox-buttons.pug
         .sidebar__item 
@@ -66,8 +69,8 @@ block content
         .content__item
           +hotel-card({pictures:['assets/img/hotel-cards/search-room/image8.png','assets/img/hotel-cards/search-room/image1.png'],
                 lux_number:'450',price:'5300',stars:4,number_of_reviews:'39',lux:false})
-        .content__pagination 
-          include ../../includes/modules/pagination/pagination.pug
+      .content__pagination 
+        include ../../includes/modules/pagination/pagination.pug
   footer(class='footer-main')
     include ../../includes/modules/footer/footer.pug
   footer(class='footer-secondary')

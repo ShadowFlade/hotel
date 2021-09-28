@@ -1,7 +1,7 @@
 import './pagination.scss'
 
 $(function() {
-  $('.page-item').on('click', function() {
+  $('.pagination__item').on('click', function() {
     if (!$(this).hasClass('page-active')) {
       $(this)
         .siblings()

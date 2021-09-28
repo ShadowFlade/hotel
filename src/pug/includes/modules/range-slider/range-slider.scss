@@ -1,12 +1,21 @@
 @import '../../../layout/mixins.scss';
 #slider {
   height: 6px;
-  width: 100%;
+  width: 87%;
 }
 .range-slider {
   width: rem(266);
   &__context {
-    width: 30%;
+    width: 58%;
+  }
+  &__caption {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(31, 32, 65, 0.5);
+    margin-top: rem(14);
   }
   &__title {
     width: 37%;

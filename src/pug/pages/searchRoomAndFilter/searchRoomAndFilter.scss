@@ -2,6 +2,9 @@
 @import '../../layout/mixins.scss';
 .search-room {
   background: white;
+  .hotel-card {
+    margin-bottom: 1.47143rem;
+  }
   .sidebar {
     padding-left: 140/1440 * 100%;
     width: 456px;
@@ -12,16 +15,14 @@
       padding-right: 60/1440 * 100%;
     }
     &__item {
-      margin-bottom: 20px;
-      // width: 228px;
+      margin-bottom: 2.04286rem;
     }
     .date-picker,
     .datepicker,
     .date-picker__item,
-    input:not(#facilities),
     details,
     .input-box {
-      width: rem(266);
+      width: 16.5rem;
     }
   }
   main {
@@ -29,9 +30,8 @@
     display: flex;
   }
   .content {
-    // padding: rem(30) rem(140);
-    padding-left: 60px;
-    // display: flex;
+    padding-left: rem(25);
+    padding-right: 7.07143rem;
     &__title {
       font-family: 'Montserrat';
       font-style: normal;
@@ -54,7 +54,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 20px;
+      margin-top: rem(12);
     }
   }
   @media screen and (max-width: 1044px) {

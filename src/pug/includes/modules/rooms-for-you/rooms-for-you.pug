@@ -1,6 +1,7 @@
 include ../date-picker/date-picker.pug
 include ../svg__arrow-right/svg__arrow-right.pug
 include ../dropdownSubmitAndClear/dropdownSubmitAndClear.pug
+include ../pay-button/pay-button.pug
 
 .card.rooms-for-you
   .card__title Найдём номера под ваши пожелания
@@ -11,5 +12,5 @@ include ../dropdownSubmitAndClear/dropdownSubmitAndClear.pug
     span.card__guest-label.label ГОСТИ
     +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',nameofclass:'dropdown-accom',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
   .card__footer
-    button(class='pay-button') подобрать номер
+    +pay-button({label:"подобрать номер",arrow:true})
       +svg__arrow-right({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right'})

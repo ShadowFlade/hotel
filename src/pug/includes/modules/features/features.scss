@@ -7,33 +7,34 @@
   display: flex;
   position: relative;
   width: 100%;
-  margin-bottom: rem(40);
   width: 291px;
+  margin-bottom: 1.25714rem;
+
   padding-bottom: 17px;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-.feature__pic {
-  margin-right: 10px;
-}
-
 .feature__label {
   @include mainfont;
   font-weight: 700;
+  line-height: 1.61429rem;
+  font-size: 0.9rem;
 }
 
 .feature__desc {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 1rem;
   line-height: 24px;
   text-transform: none;
+  font-size: 0.85rem;
 }
 
 .feature__info {
   position: relative;
   top: -0.3em;
+  margin-left: rem(17);
 }

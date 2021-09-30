@@ -1,52 +1,53 @@
 extends ../../layout/landing
 include ../../includes/modules/navbar/navbar.pug
+include ../../includes/modules/header-w/header-w.pug
+
 block variables
   - var title = 'room details';
   - var description = ''; 
-  - var pageclass='room-details' 
+  - var pageclass='roomDetails'; 
 block content
-  header        
-    include ../../includes/modules/header-w/header-w.pug
-  main 
-    .gallery 
-      .gallery__pitures(class='pictures')
-        .pictures__item(class='pictures__item_big')
-          img(src='assets/img/hotel-cards/room-details/image1.png')
-        .pictures__column
-          .pictures__item
-            img(src='assets/img/hotel-cards/room-details/image2.png')
-          .pictures__item
-             img(src='assets/img/hotel-cards/room-details/image 3.png')
-    .content
-      .content__column
-        .content__item
-          include ../../includes/modules/features/features.pug
-        .content__item
-          include ../../includes/modules/graph/graph.pug
-        .comments
-          .comments__header
-            span(class='comments__title') Отзывы посетителей номера
-            span(class='comments__count') 2 отзыва
-          .comments__item
-            include ../../includes/modules/comment/comment.pug
-          .comments__item
-            +comment({img:'assets/img/avatar2.png',name:'Патрисия Стёклышкова',days_ago:'Неделю',text:'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
-
-        .comments__item
-            include ../../includes/modules/bullet-list/bullet-list.pug
-        .content__item
-          .cancel__item
-            .cancel__title Отмена
-            .cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-
-      .content__side
+  .room-details
+    header
+      +navigation({username:'',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
+    main 
+      .gallery 
+        .gallery__pitures(class='pictures')
+          .pictures__item(class='pictures__item_big')
+            img(src='assets/img/hotel-cards/room-details/image1.png')
+          .pictures__column
+            .pictures__item
+              img(src='assets/img/hotel-cards/room-details/image2.png')
+            .pictures__item
+              img(src='assets/img/hotel-cards/room-details/image 3.png')
+      .content 
+        .content__column 
+          .content__item 
+            .content__title Сведения о номере
+            include ../../includes/modules/features/features.pug
+          .content__item 
+            include ../../includes/modules/graph/graph.pug
+          .content__item
+            .content__comments 
+              .content__title 
+                span.content__caption Отзывы посетителей номера
+                span.content__count 2 отзыва
+              .content__comment 
+                include ../../includes/modules/comment/comment.pug
+              .content__comment 
+                +comment({img:'assets/img/avatar2.png',name:'Патрисия Стёелышкова',days_ago:'Неделю2',text:'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
+          .content__item 
+            .content__card
+              .content__title Правила
+              include ../../includes/modules/bullet-list/bullet-list.pug
+          .content__item 
+            .content__card
+              .content__title Отмена
+              .content__cancelText Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полынй возврат за вычетом сбора за услуги.
+        .content__side 
           .content__item 
             include ../../includes/modules/bill/bill.pug
-
-
-
-
-  footer(class='footer-main')
-    include ../../includes/modules/footer/footer.pug
-  footer(class='footer-secondary')
-    include ../../includes/modules/footer-mini/footer-mini.pug
+    footer(class='footer-main')
+      include ../../includes/modules/footer/footer.pug
+    footer(class='footer-secondary')
+      include ../../includes/modules/footer-mini/footer-mini.pug

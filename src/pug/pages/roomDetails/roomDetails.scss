@@ -2,11 +2,13 @@
 @import '../../layout/mixins.scss';
 .room-details {
   overflow: hidden;
-  .content__item {
-    &:not(:last-child, :first-child) {
-      padding-left: 60px;
-    }
+  .graph {
+    padding-left: 3.81429rem;
   }
+  .gallery {
+    width: 102%;
+  }
+
   .comment {
     margin-left: -20px;
   }
@@ -42,14 +44,27 @@
     }
   }
   .content {
-    padding: 5.71429rem 0 0.7% 9%;
     display: flex;
     width: 100%;
     justify-content: center;
+    padding-right: 9.7%;
+    padding: 3.41429rem 9.7% 3.7% 10%;
+    &__card {
+      max-width: 22.35714rem;
+      .content__title {
+        margin-bottom: rem(16);
+        padding-left: 1.27143rem;
+      }
+    }
+    &__comment {
+      margin-bottom: rem(7);
+    }
+    &__count {
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
     &__item {
-      // margin-right: rem(70);
       margin-bottom: 20px;
-      // width: 39%;
       &:last-child {
         margin-right: 0;
       }
@@ -61,8 +76,8 @@
       margin-right: 70/1440 * 100%;
       height: 100%;
       & > div {
-        margin-bottom: 20px;
         height: 100%;
+        margin-bottom: rem(9);
       }
     }
     &__side {
@@ -80,10 +95,8 @@
     color: #1f2041;
   }
 }
-.cancel__item {
-  max-width: 341px;
-}
-.cancel__title {
+
+.content__cancelItem {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
@@ -92,31 +105,37 @@
   color: #1f2041;
   margin-bottom: 20px;
 }
-.cancel__text {
+.content__cancelText {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: normal;
-  font-size: rem(14);
+  font-size: rem(15);
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
+  padding-left: rem(22);
+  letter-spacing: -0.5px;
 }
-.comments {
+.content__comments {
   max-width: rem(711);
+  width: 98%;
+  margin-bottom: 1.95714rem;
+  .content__title {
+    margin-bottom: 0.26rem;
+  }
 }
-.comments__title {
+.content__title {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: rem(19);
   line-height: 23px;
   color: #1f2041;
-  margin-bottom: 20px;
-}
-.comments__header {
+  font-size: 1.15714rem;
+  margin-bottom: 1.7571rem;
   display: flex;
-  width: 100%;
   justify-content: space-between;
+  width: 104%;
 }
+
 @media screen and (max-width: 1100px) {
   .content {
     flex-wrap: wrap;

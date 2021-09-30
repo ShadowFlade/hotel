@@ -38,6 +38,13 @@
 
 .card.sign-in {
   height: 22.5rem;
+  padding: 3.25em 1.7em;
+  input {
+    width: 100%;
+  }
+  .text-field {
+    margin-bottom: rem(12);
+  }
   .card__footer {
     margin: 0;
     padding-top: rem(16);

@@ -28,6 +28,7 @@
     flex-direction: column;
     justify-content: center;
     padding-top: 0.9429rem;
+    margin-left: -12px;
   }
   &__name {
     font-family: Montserrat;
@@ -45,7 +46,6 @@
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
     text-transform: none;
-    margin-top: rem(6);
   }
   &__content {
     font-family: Montserrat;
@@ -55,6 +55,7 @@
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
     text-transform: none;
+    margin-top: rem(5);
   }
   &__lower {
     display: flex;

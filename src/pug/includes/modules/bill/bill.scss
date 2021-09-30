@@ -13,7 +13,7 @@
   padding: 40px 30px 30px 30px;
   margin-right: 40px;
   margin-bottom: 40px;
-  padding: em(40px) em(30px) 0 em(30px);
+  padding: 2.05714em 1.4286em 0;
   .number {
     font-size: rem(19);
   }
@@ -21,7 +21,8 @@
     font-size: rem(11);
   }
   .number__number {
-    font-size: 1.31429rem;
+    font-size: 1.61429rem;
+    margin-left: 4px;
   }
   .number__lux {
     font-family: 'Montserrat';
@@ -35,6 +36,8 @@
   }
   &__destination {
     display: flex;
+    margin-bottom: 0.85714rem;
+    margin-bottom: 1.9rem;
   }
   &__title {
     @include big;
@@ -71,10 +74,12 @@ label {
     @include mainfont;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 6px;
   }
   &__price {
     font-size: rem(13);
     word-spacing: -2px;
+    line-height: 1.6;
   }
   &__money {
     display: flex;
@@ -90,7 +95,9 @@ label {
     color: #1f2041;
     display: flex;
     justify-content: space-between;
+    margin-top: 0.41429rem;
   }
+
   &__border {
     flex-grow: 1;
     position: relative;
@@ -169,10 +176,23 @@ label {
 }
 
 .card.bill {
+  padding: 2.05714em 1.4286em 0;
+  .dropdown-accom {
+    width: 95%;
+  }
+  .summary__sum {
+    font-size: 0.9rem;
+  }
+  .card__summary {
+    padding-top: 0.752857rem;
+  }
   .card__credentials {
     padding-top: rem(10);
   }
   .card__footer {
     margin-top: 0;
+  }
+  .card__destination {
+    margin-bottom: 2.2rem;
   }
 }

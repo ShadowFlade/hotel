@@ -15,16 +15,15 @@ label,
 
 .input,
 select {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
-  font-size: rem(14);
-  // width: 320/14 * 1em;
-  padding: 12/14 * 1em 31/14 * 1em 8/14 * 1em 15/14 * 1em;
+  font-size: 0.91rem;
   height: 44px;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  padding: 0.5em 2.21429em 0.57143em 1.07143em;
 
   &:hover,
   &:focus {
@@ -34,9 +33,9 @@ select {
 .arrow,
 .arrow_forward {
   position: absolute;
-  top: 50%;
-  right: 2.5%;
   transform: translate(-50%, -2.5%);
+  top: 43%;
+  right: 6.5%;
 }
 .arrow-right {
   right: 5%;

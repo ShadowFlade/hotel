@@ -8,7 +8,6 @@ import '../../includes/modules/date-picker/date-picker.js'
 import '../../includes/modules/dropdownSubmitAndClear/dropdownSubmitAndClear.js'
 import '../../includes/modules/navbar/navbar.js'
 import './roomDetails.scss'
-
 $(function() {
   $('.hotel-card__slider').slick({
     infinite: true,

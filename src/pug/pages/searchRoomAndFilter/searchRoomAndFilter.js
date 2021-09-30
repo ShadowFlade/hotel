@@ -11,7 +11,6 @@ import '../../includes/modules/filter-date-dropdown/filter-date-dropdown.js'
 import '../../includes/modules/checkbox-list/checkbox-list.js'
 import '../../includes/modules/navbar/navbar.js'
 import '../../includes/modules/date-picker/date-picker.js'
-
 import './searchRoomAndFilter.scss'
 $(function() {
   $('.content__datepicker').daterangepicker({

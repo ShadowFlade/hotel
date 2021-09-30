@@ -1,25 +1,24 @@
 mixin dropdownSubmitAndClear(options)
   div(class=`${options.nameofclass}__big`)
     label #{label}
-    label
-      .input-box
-        input(class=options.nameofclass,type='text',class='input',placeholder=options.placeholder)
-        img(src='assets/img/arrow.svg',class='arrow')
-        ul(class=`${options.nameofclass}__ul`,style={display:'none'})
-          each val in options.array_of_arguments
-            li 
-              .dropdown-accom__variant #{val}
-              .dropdown-accom__btn-group
-                button(type='button',class=`${options.nameofclass}__button--prev`) -
-                div(class=`${options.nameofclass}__span`) 2
-                button(type='button',class=`${options.nameofclass}__button--next`) +
-          if(option=='submit')
-            button(class=`${options.nameofclass}__submit inbox-button`,type='submit') Применить
-          else if(option=='clear')
-            button(class=`${options.nameofclass}__submit inbox-button`,type='submit') Применить
-            button(type='button',class=`${options.nameofclass}__clear inbox-button`) очистить
-          else if(option=='none')
-            button(style={'display':'none'})
+    .input-box
+      input(class=options.nameofclass,type='text',class='input',placeholder=options.placeholder)
+      img(src='assets/img/arrow.svg',class='arrow')
+      ul(class=`${options.nameofclass}__ul`,style={display:'none'})
+        each val in options.array_of_arguments
+          li 
+            .dropdown-accom__variant #{val}
+            .dropdown-accom__btn-group
+              button(type='button',class=`${options.nameofclass}__button--prev`) -
+              div(class=`${options.nameofclass}__span`) 2
+              button(type='button',class=`${options.nameofclass}__button--next`) +
+        if(option=='submit')
+          button(class=`${options.nameofclass}__submit inbox-button`,type='submit') Применить
+        else if(option=='clear')
+          button(class=`${options.nameofclass}__submit inbox-button`,type='submit') Применить
+          button(type='button',class=`${options.nameofclass}__clear inbox-button`) очистить
+        else if(option=='none')
+          button(style={'display':'none'})
 
 
 

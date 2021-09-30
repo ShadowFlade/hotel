@@ -2,10 +2,11 @@
 @import '../../layout/mixins.scss';
 @import '../../layout/fonts.scss';
 @import '../../layout/nullstyle.scss';
-// .container {
-//   padding: 141/1440 * 100% 141/1440 * 100%;
-// }
-
+.index {
+  padding: 39px 0 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
 .picture {
   position: relative;
 }

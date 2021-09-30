@@ -66,79 +66,7 @@
 label {
   margin-bottom: 5px;
 }
-.summary {
-  display: flex;
-  flex-direction: column;
 
-  &__row {
-    @include mainfont;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 6px;
-  }
-  &__price {
-    font-size: rem(13);
-    word-spacing: -2px;
-    line-height: 1.6;
-  }
-  &__money {
-    display: flex;
-    justify-content: space-between;
-    min-width: 30%;
-  }
-  &__all {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: rem(19);
-    line-height: 23px;
-    color: #1f2041;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.41429rem;
-  }
-
-  &__border {
-    flex-grow: 1;
-    position: relative;
-    top: -5px;
-    left: 5px;
-    border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
-  }
-  &__result {
-    float: left;
-    text-align: left;
-    font-size: rem(17);
-  }
-  &__money {
-    float: right;
-    text-align: right;
-  }
-  &__info-icon {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
-    /* identical to box height, or 117% */
-    color: rgba(31, 32, 65, 0.25);
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 2px;
-  }
-  &__row {
-    margin-bottom: 10px;
-  }
-  &__row::last-child {
-    margin-bottom: 0;
-  }
-}
 .number {
   font-family: 'Montserrat';
   font-style: normal;
@@ -177,8 +105,11 @@ label {
 
 .card.bill {
   padding: 2.05714em 1.4286em 0;
+  .card__guests {
+    width: 96%;
+  }
   .dropdown-accom {
-    width: 95%;
+    width: 100%;
   }
   .summary__sum {
     font-size: 0.9rem;
@@ -194,5 +125,78 @@ label {
   }
   .card__destination {
     margin-bottom: 2.2rem;
+  }
+  .card__summary {
+    display: flex;
+    flex-direction: column;
+
+    .card__row {
+      @include mainfont;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .card__price {
+      font-size: rem(13);
+      word-spacing: -2px;
+      line-height: 1.6;
+    }
+    .card__money {
+      display: flex;
+      justify-content: space-between;
+      min-width: 30%;
+    }
+    .card__all {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(19);
+      line-height: 23px;
+      color: #1f2041;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.41429rem;
+    }
+
+    .card__border {
+      flex-grow: 1;
+      position: relative;
+      top: -5px;
+      left: 5px;
+      border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+    }
+    .card__result {
+      float: left;
+      text-align: left;
+      font-size: rem(17);
+    }
+    .card__money {
+      float: right;
+      text-align: right;
+    }
+    .card__info-icon {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      /* identical to box height, or 117% */
+      color: rgba(31, 32, 65, 0.25);
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: 2px;
+    }
+    .card__row {
+      margin-bottom: 10px;
+    }
+    .card__row::last-child {
+      margin-bottom: 0;
+    }
   }
 }

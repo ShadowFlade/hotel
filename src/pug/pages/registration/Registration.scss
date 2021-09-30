@@ -1,14 +1,26 @@
+@import '../../layout/mixins.scss';
 .registration {
   .card {
     position: absolute;
-    top: 10px;
-    left: 187px;
+    top: 2.3%;
+    left: 37%;
+    max-width: 23.14286rem;
+    &__title {
+      font-size: 1.451429rem;
+    }
   }
 }
 .radio-buttons {
+  &__option {
+    width: 30%;
+  }
   margin-bottom: 20px;
+  &__box {
+    margin-top: 0;
+  }
 }
 .picture {
+  height: 42.5rem;
   img {
     max-width: 100%;
     height: 100%;

@@ -1,11 +1,13 @@
 extends ../../layout/landing
+include  ../../includes/modules/header-w/header-w.pug
+
 block variables
   - var title = 'Registration';
   - var description = '';
   - var pageclass='registration'
 block content 
   header
-    include ../../includes/modules/header-w/header-w.pug
+    +navigation({username:'',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
   main 
     .picture 
       img(src='assets/img/last-page.png')  

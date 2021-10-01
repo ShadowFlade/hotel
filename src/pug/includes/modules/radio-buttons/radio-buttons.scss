@@ -3,8 +3,6 @@
 
 .radio-buttons__box {
   display: flex;
-  margin-top: rem(16);
-  // width: 220px;
 }
 .radio-buttons__option {
   font-family: Montserrat;
@@ -78,4 +76,5 @@
 }
 .radio-buttons__label {
   @include small;
+  margin-bottom: rem(16);
 }

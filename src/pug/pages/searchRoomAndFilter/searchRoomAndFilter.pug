@@ -19,7 +19,7 @@ block content
         .sidebar__item 
           +date-picker({label:'время пребывания в отеле',classname:'js-datepicker'})
         .sidebar__item 
-          +dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
+          +dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
         .sidebar__item 
           +range-slider('Диапазон цены')
         .sidebar__item 
@@ -27,7 +27,7 @@ block content
         .sidebar__item 
           include ../../includes/modules/checkbox-rich/checkbox-rich.pug
         .sidebar__item 
-          +dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
+          +dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
         .sidebar__item 
           include ../../includes/modules/checkbox-list/checkbox-list.pug
     .content 

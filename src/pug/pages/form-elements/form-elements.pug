@@ -10,7 +10,7 @@ block variables
 	- let description = 'smth';
 	- let pageclass='form-elements';
 block content 
-	.form-elements(style={display:"flex",'justify-content':"space-between"}) 
+	.form-elements
 		.form-elements__column
 			include ../../includes/modules/text-field/text-field.pug 
 			.dropdown.js-dropdown
@@ -21,7 +21,7 @@ block content
 				+date-picker({label:'date dropdown'})
 			include ../../includes/modules/filter-date-dropdown/filter-date-dropdown.pug
 			include ../../includes/modules/subscription-text-field/subscription-text-field.pug
-			+dropdownSubmitAndClear({label:'удобство',placeholder:'2 спальни, 2 кровати',nameofclass:'dropdown-accom',array_of_arguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
+			+dropdownSubmitAndClear({label:'удобство',placeholder:'2 спальни, 2 кровати',array_of_arguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
 			include ../../includes/modules/checkbox-list/checkbox-list.pug
 			include ../../includes/modules/features/features.pug 
 
@@ -40,9 +40,8 @@ block content
 				.rate__items
 					include ../../includes/modules/rate-button/rate-button.pug
 					+rate-button(5)
-				
 			.dropdown
-				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
+				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
 			include ../../includes/modules/checkbox-rich/checkbox-rich.pug
 			.comment__box
 				include ../../includes/modules/comment/comment.pug
@@ -56,7 +55,7 @@ block content
 			.pagination(class='label') pagination
 				include ../../includes/modules/pagination/pagination.pug
 			.dropdown
-				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:["взрослые","дети","младенцы"],option:'clear'})
+				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',array_of_arguments:["взрослые","дети","младенцы"],option:'clear'})
 			.bullet-list
 				.label bullet list
 				include ../../includes/modules/bullet-list/bullet-list.pug

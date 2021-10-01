@@ -4,9 +4,11 @@ html {
 }
 .form-elements {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   background: white;
   padding: 6.48% 9.75%;
+
   &__column {
     display: flex;
     flex-direction: column;

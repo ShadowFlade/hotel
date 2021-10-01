@@ -28,12 +28,12 @@ mixin rate-button(active_stars)
 				- var n=active_stars
 				- var r=5-n
 				while n>0
-					.star__united(style={opacity:'1'})
+					.star__united
 						+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active js-star--active'})
 						+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
 					-n--
 				while r>0
-					.star__united(style={opacity:'.5'}) 
+					.star__united--disabled
 						+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
 					-r--
 

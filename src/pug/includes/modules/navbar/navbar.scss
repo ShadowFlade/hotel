@@ -28,6 +28,11 @@
       display: block;
     }
   }
+  &__arrow {
+    display: flex;
+    position: relative;
+    top: 5%;
+  }
   &__item > span {
     margin-right: 5px;
   }

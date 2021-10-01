@@ -44,6 +44,8 @@
   &__bigbutton {
     width: 196/12 * 1em;
     height: 34/12 * 1em;
+    width: rem(196);
+    height: rem(34);
   }
   &__user {
     display: flex;

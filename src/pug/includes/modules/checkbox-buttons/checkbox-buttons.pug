@@ -1,7 +1,6 @@
 mixin checkboxlist__notexp(options={label:'Правила дома',array_of_arguments:['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']})
   .checkbox-details
-    label #{options.label}
-    label
+    label.checkbox__label #{options.label}
     .checkbox-group
       each val in options.array_of_arguments
         .checkbox__item

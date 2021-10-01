@@ -100,7 +100,6 @@
 }
 .toggle__input:checked + .toggle-custom .toggle-custom__helper2 {
   opacity: 1;
-  // z-index: 2;
   -webkit-transform: translate(120%, -50%);
   -ms-transform: translate(120%, -50%);
   transform: translate(120%, -50%);
@@ -113,24 +112,3 @@
 .toggle-details {
   position: relative;
 }
-summary {
-  width: 320/12 * 1em;
-  @include small;
-  user-select: none;
-  &::before {
-    content: url('../../../../assets/img/arrow.png');
-    // padding-right: 0.5em;
-    width: 20px;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-}
-
-details {
-  position: relative;
-}
-// details[open] > summary::before {
-//   content: url('../../../../assets/img/arrow-up.png');
-//   width: 20px;
-// }

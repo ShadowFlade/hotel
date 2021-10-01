@@ -1,12 +1,12 @@
 @import '../../layout/vars.scss';
 @import '../../layout/mixins.scss';
 .navs {
-  margin-bottom: 20px;
   padding: 5.6rem 0;
 }
-.navs > nav {
+.navigation {
   margin-bottom: 40px;
 }
-.navs > footer {
+.footer,
+.footer-mini {
   margin-bottom: 40px;
 }

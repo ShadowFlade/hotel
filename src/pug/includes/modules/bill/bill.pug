@@ -2,44 +2,43 @@ include ../date-picker/date-picker.pug
 include ../dropdownSubmitAndClear/dropdownSubmitAndClear.pug
 include ../dropdown/dropdown.pug
 include ../pay-button/pay-button.pug
-mixin bill
-  .card.bill
-    .card__credentials(class='credentials')
-      .card__lux-number
-        span.number
-          span.number__sign
-            |№
-          span.number__number 888
-          span.number__lux люкс
-      .card__lux-price
-        span(class='price') 
-          b 9990₽ 
-        span(class='day') в сутки
-    .card__destination
-      +date-picker({label:'Прибытие'})
-      +date-picker({label:'Выезд'})  
-    .card__guests
-      +dropdownSubmitAndClear({label:'Гости',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
-    .card__summary
-      .card__row 
-        .card__price 9 990₽ х 4 суток
-        .card__money(style={'padding-left': '27px'})  
-          .card__sum 39 960₽
-      .card__row 
-        .card__price Сбор за услуги: скидка 2 179₽
-        .card__money
-          .card__info-icon i
-          .card__sum 0₽
-      .card__row 
-        .card__price Сбор за дополнительные услуги
-        .card__money
-          .card__info-icon i
-          .card__sum 300₽
-      .card__all
-        .card__result Итого
-        .card__border
-        .card__money 38 081₽
-    .card__footer
-      +pay-button({label:'Забронировать',arrow:true}) 
 
-+bill
+.card.bill
+  .card__credentials(class='credentials')
+    .card__lux-number
+      span.number
+        span.number__sign
+          |№
+        span.number__number 888
+        span.number__lux люкс
+    .card__lux-price
+      span(class='price') 
+        b 9990₽ 
+      span(class='day') в сутки
+  .card__destination
+    +date-picker({label:'Прибытие'})
+    +date-picker({label:'Выезд'})  
+  .card__guests
+    +dropdownSubmitAndClear({label:'Гости',placeholder:'3 гостя',nameofclass:'dropdown-accom',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
+  .card__summary
+    .card__row 
+      .card__price 9 990₽ х 4 суток
+      .card__money(style={'padding-left': '27px'})  
+        .card__sum 39 960₽
+    .card__row 
+      .card__price Сбор за услуги: скидка 2 179₽
+      .card__money
+        .card__info-icon i
+        .card__sum 0₽
+    .card__row 
+      .card__price Сбор за дополнительные услуги
+      .card__money
+        .card__info-icon i
+        .card__sum 300₽
+    .card__all
+      .card__result Итого
+      .card__border
+      .card__money 38 081₽
+  .card__footer
+    +pay-button({label:'Забронировать',arrow:true}) 
+

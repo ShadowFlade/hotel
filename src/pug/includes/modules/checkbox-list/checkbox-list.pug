@@ -1,13 +1,13 @@
 mixin checkboxlist(options={label:'дополнительные удобства',array_of_arguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']})
   .checkbox-details
-    details
-      summary #{options.label}
-      .checkbox-group
+    details.checkbox-details__details
+      summary.checkbox-details__summary #{options.label}
+      .checkbox-details__group
         each val in options.array_of_arguments
-          .checkbox__item
-            label(class='checkbox',for=val) 
-              span(class='checkbox__span') #{val}
-              input(type='checkbox',name=val,id=val,class='checkbox__input')
-              span(class='checkbox-custom')
+          .checkbox-details__item
+            label(class='checkbox-details__label',for=val) 
+              span(class='checkbox-details__span') #{val}
+              input(type='checkbox',name=val,id=val,class='checkbox-details__input')
+              span(class='checkbox-details__custom')
 
 +checkboxlist() 

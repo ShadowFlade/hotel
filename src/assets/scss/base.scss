@@ -38,14 +38,12 @@ body {
   left: 30px;
 }
 .first-half {
-  // margin-right: (492 / $fw) * 100%;
   margin-bottom: 20px;
   &__column {
     display: flex;
     display: block;
     flex-direction: column;
     justify-content: space-between;
-    // align-items: space-between;
   }
   .item {
     margin-bottom: 20px;

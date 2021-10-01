@@ -1,7 +1,5 @@
 .burger {
   display: none;
-  // width: 10px;
-  // height: 30px
   position: relative;
   &__arrow {
     position: absolute;
@@ -41,20 +39,12 @@
     height: 20px;
     background: transparent;
   }
-  // &__first-ul {
 
-  //   &__item {
-
-  //   };
   &__secondary-ul {
     display: none;
     position: absolute;
   }
 }
-
-// &__button {
-// }
-
 .first-ul {
   display: none;
   position: absolute;
@@ -77,13 +67,11 @@
     font-size: rem(14);
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
-
     background: #e5e5e5;
     text-transform: capitalize;
     padding: 1em 20px 1em 0.5em;
     width: 100%;
     text-align: left;
-
     &:hover {
       background-color: scale-color(#bc9cff, $lightness: 15%);
       color: black;

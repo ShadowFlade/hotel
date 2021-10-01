@@ -112,3 +112,54 @@
     width: 20px;
   }
 }
+
+// @import '../../../layout/vars.scss';
+// @import '../../../layout/mixins.scss';
+// ::marker {
+//   display: none;
+// }
+// .checkbox-group {
+//   margin-top: $mainFontSize/18px * 1rem;
+//   top: 100%;
+//   left: 0;
+//   position: absolute;
+//   background: white;
+//   z-index: 10;
+// }
+
+// .checkbox-details {
+//   position: relative;
+//   width: 222/12 * 1em;
+//   .checkbox-group {
+//     position: static;
+//   }
+//   summary {
+//     width: 320/12 * 1em;
+//     text-transform: uppercase;
+//   }
+//   summary::before {
+//     &::marker {
+//       display: none;
+//     }
+//     content: url('/assets/img/arrow.png');
+//     width: 20px;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     transition: all 0.3s ease-out;
+//   }
+
+//   details {
+//     position: relative;
+//   }
+//   details[open] > summary::before {
+//     transform: scaleY(-0.5);
+//     width: 20px;
+//   }
+//   summary {
+//     list-style-type: none;
+//   }
+// }
+// .checkbox-details details .checkbox-group {
+//   position: absolute;
+// }

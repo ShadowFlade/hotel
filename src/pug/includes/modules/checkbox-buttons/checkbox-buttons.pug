@@ -1,11 +1,11 @@
 mixin checkboxlist__notexp(options={label:'Правила дома',array_of_arguments:['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']})
-  .checkbox-details
-    label.checkbox__label #{options.label}
-    .checkbox-group
+  .checkbox-buttons
+    label.checkbox-buttons__label #{options.label}
+    .checkbox-buttons__group
       each val in options.array_of_arguments
-        .checkbox__item
-          label(class='checkbox',for=val) 
-            span(class='checkbox__span') #{val}
-            input(type='checkbox',name=val,id=val,class='checkbox__input')
-            span(class='checkbox-custom')
+        .checkbox-buttons__item
+          label(class='checkbox-buttons__btn',for=val) 
+            span(class='checkbox-button__text') #{val}
+            input(type='checkbox',name=val,id=val,class='checkbox-buttons__input')
+            span(class='checkbox-buttons__custom') 
 +checkboxlist__notexp()

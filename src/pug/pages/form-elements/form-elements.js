@@ -1,5 +1,7 @@
 import '../../includes/modules/checkbox-list/checkbox-list.js'
 import '../../includes/modules/comment/comment.js'
+import '../../includes/modules/checkbox-buttons/checkbox-buttons.js'
+
 import '../../includes/modules/bullet-list/bullet-list.js'
 import '../../includes/modules/buttons/buttons.js'
 import '../../includes/modules/checkbox-rich/checkbox-rich.js'

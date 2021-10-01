@@ -58,23 +58,21 @@
   &__clear {
     padding: rem(19) rem(13);
   }
-}
-
-.dropdown-accom__button--prev,
-.dropdown-accom__button--next {
-  width: 10%;
-  background-color: transparent;
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin: 0 15px;
-  font-size: 1.4rem;
-  color: rgba(31, 32, 65, 0.5);
-}
-
-.dropdown-accom__button--next {
-  margin-right: 0;
+  &__button--prev,
+  &__button--next {
+    width: 10%;
+    background-color: transparent;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 15px;
+    font-size: 1.4rem;
+    color: rgba(31, 32, 65, 0.5);
+  }
+  &__button--next {
+    margin-right: 0;
+  }
 }
 
 .input-box {

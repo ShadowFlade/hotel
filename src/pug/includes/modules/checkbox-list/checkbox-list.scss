@@ -9,7 +9,7 @@
   left: 0;
   position: absolute;
   background: white;
-  z-index: 10; //TODO background is transparent for some reason
+  z-index: 10;
 }
 .checkbox {
   font-family: 'Montserrat';
@@ -64,7 +64,6 @@
   height: 20px;
   background: transparent;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  // background: transparent;
   border-radius: 4px;
   &:after {
     position: absolute;
@@ -74,8 +73,6 @@
     height: 0px;
     width: 0px;
     border-radius: 5px;
-    // border: solid #009BFF;
-    // border-width: 0 3px 3px 0;
     -webkit-transform: rotate(0deg) scale(0);
     -ms-transform: rotate(0deg) scale(0);
     transform: rotate(0deg) scale(0);
@@ -93,36 +90,33 @@
   .checkbox-group {
     position: static;
   }
+  summary {
+    width: 320/12 * 1em;
+    text-transform: uppercase;
+  }
+  summary::before {
+    &::marker {
+      display: none;
+    }
+    content: url('/assets/img/arrow.png');
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.3s ease-out;
+  }
+
+  details {
+    position: relative;
+  }
+  details[open] > summary::before {
+    transform: scaleY(-0.5);
+    width: 20px;
+  }
+  summary {
+    list-style-type: none;
+  }
 }
 .checkbox-details details .checkbox-group {
   position: absolute;
-}
-summary {
-  width: 320/12 * 1em;
-  text-transform: uppercase;
-}
-summary::before {
-  &::marker {
-    display: none;
-  }
-  content: url('/assets/img/arrow.png'); //TODO make an animation of an arrow
-  // padding-right: 0.5em;
-  width: 20px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: all 0.3s ease-out;
-  // background-color: red;
-}
-
-details {
-  position: relative;
-  // width: 222/12 * 1em;
-}
-details[open] > summary::before {
-  transform: scaleY(-0.5);
-  width: 20px;
-}
-summary {
-  list-style-type: none;
 }

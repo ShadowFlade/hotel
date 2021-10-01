@@ -21,15 +21,15 @@ $(function() {
       },
     ],
   }
-  var myChart = new Chart($('#myChart'), {
+  var myChart = new Chart($('.js-myChart'), {
     type: 'pie',
     options: options,
     data: data,
   })
-  $('#myChart').css('width', '100%')
-  $('#myChart').css('height', '100%')
+  $('.js-myChart').css('width', '100%')
+  $('.js-myChart').css('height', '100%')
   let i = 0
-  $('.graph__span').each(function(index) {
+  $('.js-graph__span').each(function(index) {
     $(this).css('background-color', data.datasets[0].backgroundColor[i])
     i += 1
   })

@@ -1,7 +1,7 @@
 import './filter-date-dropdown.scss'
 import moment from 'moment'
 $(function() {
-  $('.filter-date-dropdown').daterangepicker({
+  $('.js-filter-date-dropdown').daterangepicker({
     maxSpan: {
       days: 7,
     },
@@ -35,7 +35,7 @@ $(function() {
     startDate: '02/04/2021',
     endDate: '02/11/2021',
   })
-  $('.filter-date-dropdown').on('apply.daterangepicker', function(ev, picker) {
+  $('.js-filter-date-dropdown').on('apply.daterangepicker', function(ev, picker) {
     var monthNames = [
       'Январь',
       'Февраль',

@@ -127,10 +127,9 @@ class DropdownAccom{
   }
 }}
 document.addEventListener('DOMContentLoaded',(e)=>{
-  const dropdowns=Array.from(document.getElementsByClassName('dropdown-accom__big'))
+  const dropdowns=Array.from(document.getElementsByClassName('js-dropdown-accom__big'))
   dropdowns.forEach(item => {
-    const dropdown=new DropdownAccom(item,'.dropdown-accom__ul',0)
+    const dropdown=new DropdownAccom(item,'.js-dropdown-accom__ul',0)
   });
-  // const dropAccom=new DropdownAccom('.dropdown-accom__big','.dropdown-accom__ul',0)
 })
 

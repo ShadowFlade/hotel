@@ -1,7 +1,7 @@
 include  ../rate-button/rate-button.pug
 mixin hotel-card(options)
   .hotel-card
-    .hotel-card__slider
+    .hotel-card__slider.js-hotel-card__slider
       each pic in options.pictures
         img(src=pic)
     .hotel-card__info

@@ -1,7 +1,7 @@
 import './date-picker.scss'
 import daterangepicker from 'daterangepicker'
 $(function() {
-  $('.datepicker').daterangepicker({
+  $('.js-date-picker').daterangepicker({
     maxSpan: {
       days: 60,
     },
@@ -46,7 +46,7 @@ $(function() {
     $('.end-date').removeClass('in-range')
   })
 
-  $('.card__datepicker').click()
+  $('.js-card__datepicker').click()
   $(document).mouseup(function() {
     $('.end-date').removeClass(
       'in-range'

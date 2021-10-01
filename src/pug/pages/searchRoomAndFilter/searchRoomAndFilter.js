@@ -13,7 +13,7 @@ import '../../includes/modules/navbar/navbar.js'
 import '../../includes/modules/date-picker/date-picker.js'
 import './searchRoomAndFilter.scss'
 $(function() {
-  $('.content__datepicker').daterangepicker({
+  $('.js-datepicker').daterangepicker({
     maxSpan: {
       days: 60,
     },

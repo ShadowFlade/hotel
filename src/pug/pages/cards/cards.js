@@ -16,6 +16,6 @@ setTimeout(()=>{
   datepicker.style.position='relative'
   datepicker.style.top='-6px'
   datepicker.style.left='0px'
-  const target=document.querySelector('.card__datepicker')
+  const target=document.querySelector('.js-card__datepicker')
   target.appendChild(datepicker)
 },0)

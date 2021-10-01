@@ -1,6 +1,6 @@
 import moment from 'moment'
 $(function() {
-  $('.card__datepicker').daterangepicker({
+  $('.js-card__datepicker').daterangepicker({
     maxSpan: {
       days: 7,
     },
@@ -35,7 +35,7 @@ $(function() {
     endDate: '02/11/2021',
   })
   $('.daterangepicker').addClass('moveup')
-  $('.card__datepicker').on('apply.daterangepicker', function(ev, picker) {
+  $('.js-card__datepicker').on('apply.daterangepicker', function(ev, picker) {
     var monthNames = [
       'Январь',
       'Февраль',

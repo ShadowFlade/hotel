@@ -1,10 +1,10 @@
 mixin dropdownSubmitAndClear(options)
-  div(class=`${options.nameofclass}__big`)
+  div(class=`${options.nameofclass}__big js-${options.nameofclass}__big`)
     label #{label}
     .input-box
       input(class=options.nameofclass,type='text',class='input',placeholder=options.placeholder)
       img(src='assets/img/arrow.svg',class='arrow')
-      ul(class=`${options.nameofclass}__ul`,style={display:'none'})
+      ul(class=`${options.nameofclass}__ul js-${options.nameofclass}__ul`,style={display:'none'})
         each val in options.array_of_arguments
           li 
             .dropdown-accom__variant #{val}

@@ -7,8 +7,8 @@ class Like {
     this.bindIncrement()
   }
   getElemenets(){
-    this.input=this.likeItem.getElementsByClassName('like__input')[0]
-    this.count=this.likeItem.getElementsByClassName('like__number')[0]
+    this.input=this.likeItem.getElementsByClassName('js-like__input')[0]
+    this.count=this.likeItem.getElementsByClassName('js-like__number')[0]
     this.countNumber=Number(this.count.textContent)
   }
   bindIncrement(){
@@ -28,7 +28,7 @@ class Like {
   }
 }
 const contentLoaded= () =>{
-  const likeItems=Array.from(document.getElementsByClassName('like__item'))
+  const likeItems=Array.from(document.getElementsByClassName('js-like__item'))
   likeItems.forEach(likeItem => {
     const like=new Like(likeItem)
   });

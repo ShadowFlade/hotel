@@ -1,6 +1,6 @@
 import './range-slider.scss'
 $(function() {
-  $('#slider').slider({
+  $('.js-range-slider__item').slider({
     range: true,
     step: 500,
     max: 30000,

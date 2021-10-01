@@ -4,7 +4,7 @@ mixin navbar(options)
       .navbar__item
         span(class='navbar__text') #{el.name}
         span(style={display:'flex',position: 'relative',
-    top: '5%'})
+    top: '5%'} class='navbar__arrow')
           img(src='assets/img/arrow.svg',class='arrow_class')
         if el.list
           .navbar__dd(class='dd')

@@ -5,19 +5,16 @@ include ../radio-buttons/radio-buttons.pug
   .card__title.registration__title Регистрация аккаунта
   .card__info
     .text-field
-      input.text-field__input(type='text',placeholder='Имя',class='input')
-      input.text-field__input(type='text',placeholder='Фамилия',class='input')
-
+      input.text-field__input(type='text',placeholder='Имя',class='input registration__input')
+      input.text-field__input(type='text',placeholder='Фамилия',class='input registration__input')
     +radio-buttons({array_of_arguments:['Мужчина','Женщина'],name:'gender'})    
     .text-field(id='birthday')
-      label Дата рождения
-      label 
+      label.registration__label Дата рождения
         input(type='text',placeholder='ДД.ММ.ГГГГ',class='input')
     .text-field
-      label Данные для входа в сервис
-      label 
-        input(type='text',placeholder='Email',class='input')
-        input(type='password',placeholder='Пароль',class='input')
+      label.registration__label Данные для входа в сервис
+        input(type='text',placeholder='Email',class='input registration__input')
+        input(type='password',placeholder='Пароль',class='input registration__input')
     +toggle({array_of_arguments:['Получать спецпредложения']})
     button(class='pay-button') перейти к оплате
   .card__footer 

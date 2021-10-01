@@ -1,21 +1,22 @@
 block variables
 mixin dropdown(options={label:'dropdown',number_of_options:7,option:'Сколько гостей'})
   -let n=0
-  if options.label
-    label #{options.label}
-      select
-        option #{options.option}
+  .dropdown
+    if options.label
+      label.dropdown__label #{options.label}
+        select.dropdown__select
+          option.dropdown__category #{options.option}
+          while n<=options.number_of_options
+            li=n++
+            option.dropdown__option(value=n) #{n}
+        img(src='assets/img/arrow.svg',class='arrow')
+    else
+      select.dropdown__select
+        option.dropdown__category #{options.option}
         while n<=options.number_of_options
           li=n++
-          option(value=n) #{n}
+          option.dropdown__option(value=n) #{n}
       img(src='assets/img/arrow.svg',class='arrow')
-  else
-    select
-      option #{options.option}
-      while n<=options.number_of_options
-        li=n++
-        option(value=n) #{n}
-    img(src='assets/img/arrow.svg',class='arrow')
 
 
 

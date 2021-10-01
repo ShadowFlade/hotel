@@ -1,7 +1,6 @@
 mixin defInput(options)
   div(class=options.nameofclass)
-    label #{options.label}
-    label 
+    label(class=`${options.nameofclass}__label`) #{options.label}
       input(class=options.nameofclass,type='text',placeholder=options.placeholder,class='input')
       
 +defInput({label:'masked text field',placeholder:'ДД.ММ.ГГГГ',nameofclass:'text-field'})

@@ -5,7 +5,6 @@ mixin pagination(number_of_first_pages)
       - let n=1
       while n<number_of_first_pages+1
         div(class='pagination__item js-pagination__item') #{n}
-          span 
         -n++
       div(class='pagination__intro pagination__item js-pagination__item') ...
       div(class='pagination__item pagination__item--last-page js-pagination__item') 15 

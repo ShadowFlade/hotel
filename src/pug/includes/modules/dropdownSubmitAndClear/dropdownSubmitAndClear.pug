@@ -1,6 +1,6 @@
 mixin dropdownSubmitAndClear(options)
   div(class=`${options.nameofclass}__big js-${options.nameofclass}__big`)
-    label #{label}
+    label(class=`${options.nameofclass}__label`) #{label}
     .input-box
       input(class=options.nameofclass,type='text',class='input',placeholder=options.placeholder)
       img(src='assets/img/arrow.svg',class='arrow')

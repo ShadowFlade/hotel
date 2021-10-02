@@ -1,6 +1,6 @@
 import './rate-button.scss'
 $(function () {
-  $('.js-star--active').on('click', function () {
+  const handleStarClicked = function () {
     $(this)
       .parent()
       .prevAll()
@@ -12,5 +12,6 @@ $(function () {
       .nextAll()
       .find('.star--active')
       .css('opacity', 0)
-  })
+  }
+  $('.js-star--active').on('click', handleStarClicked)
 })

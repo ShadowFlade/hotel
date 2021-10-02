@@ -3,5 +3,5 @@
 node_modules
 ./dist
 ./ts-src/testing
-./src/pug/daterangepicker-master
-./src/pug/slick
+src/pug/daterangepicker-master
+src/pug/slick

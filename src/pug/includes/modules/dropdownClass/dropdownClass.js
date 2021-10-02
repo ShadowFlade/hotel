@@ -62,7 +62,7 @@ class DropdownAccom {
       decrement.addEventListener('click', HandleDecrementClick)
     })
     const onSubmit = ()=>{
-      this.input.setAttribute('placeholder', this.total)
+      this.input.setAttribute('placeholder', `${this.total} гостей`)
     }
     const onClear = ()=>{
       this.returnToDefault()
@@ -84,6 +84,7 @@ class DropdownAccom {
         return false
       }
       this.count.get(item).set('value', 2)
+      return true
     })
   }
 
@@ -91,14 +92,13 @@ class DropdownAccom {
     if (category === undefined) {
       let categories = Array.from(this.count.keys())
       categories = categories.filter((item)=>item !== 'total')
-      console.log(categories)
       categories.forEach((item)=>{
         if (item === 'total') {
           return false
         }
         this.refresh(item)
+        return true
       })
-      return
     }
     let value = this.count.get(category).get('value')
     this.restrictDecrement(category, value)
@@ -117,6 +117,7 @@ class DropdownAccom {
         return false
       }
       total += Number(this.count.get(item).get('value'))
+      return true
     })
     return total
   }
@@ -128,6 +129,7 @@ class DropdownAccom {
       return false
     }
     decrement.disabled = false
+    return true
   }
 }
 

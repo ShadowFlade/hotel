@@ -1,4 +1,5 @@
-const isVisible = elem => !!elem && !!(elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length)
+const isVisible = elem => !!elem && !!(elem.offsetWidth || elem.offsetHeight
+  || elem.getClientRects().length)
 
 // +closes and opens a popelement on click on clickelement
 const BindOutsideClickDetection = (clickElementName, popElementName)=>{
@@ -12,12 +13,13 @@ const BindOutsideClickDetection = (clickElementName, popElementName)=>{
   popElement = clickElement.querySelector(popElementName)
 
   const cat = (e)=>{
-    const isClickInside = clickElement.contains(e.target) || clickElement.parentNode.contains(e.target);
+    const isClickInside = clickElement.contains(e.target)
+    || clickElement.parentNode.contains(e.target);
     if (!isClickInside) {
       popElement.style.display = 'none'
     }
   }
-  clickElement.addEventListener('click', (e)=>{
+  const handleElementClicked = (e)=>{
     const kidsHaveTarget = popElement.contains(e.target)
     if (!isVisible(popElement)) {
       popElement.style.display = 'block'
@@ -26,7 +28,8 @@ const BindOutsideClickDetection = (clickElementName, popElementName)=>{
       popElement.style.display = 'none'
       document.removeEventListener('click', cat)
     }
-  })
+  }
+  clickElement.addEventListener('click', handleElementClicked)
 }
 
 export { isVisible, BindOutsideClickDetection }

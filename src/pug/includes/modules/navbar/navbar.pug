@@ -6,7 +6,7 @@ mixin navbar(options)
         span( class='navbar__arrow')
           img(src='assets/img/arrow.svg',class='arrow_class')
         if el.list
-          .navbar__dd(class='dd')
+          .navbar__dd
             each val in el.list
               a(class='dd__item') #{val}
     else 

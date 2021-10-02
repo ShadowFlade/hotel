@@ -1,6 +1,6 @@
 import './graph.scss'
 import { Chart } from 'chart.js'
-$(function() {
+$(function () {
   var options = {
     events: [],
   }
@@ -29,7 +29,7 @@ $(function() {
   $('.js-myChart').css('width', '100%')
   $('.js-myChart').css('height', '100%')
   let i = 0
-  $('.js-graph__span').each(function(index) {
+  $('.js-graph__span').each(function (index) {
     $(this).css('background-color', data.datasets[0].backgroundColor[i])
     i += 1
   })

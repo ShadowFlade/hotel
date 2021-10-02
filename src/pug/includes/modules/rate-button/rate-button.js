@@ -1,6 +1,6 @@
 import './rate-button.scss'
-$(function() {
-  $('.js-star--active').on('click', function() {
+$(function () {
+  $('.js-star--active').on('click', function () {
     $(this)
       .parent()
       .prevAll()

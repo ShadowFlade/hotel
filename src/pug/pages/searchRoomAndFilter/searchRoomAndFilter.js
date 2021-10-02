@@ -12,7 +12,7 @@ import '../../includes/modules/checkbox-list/checkbox-list.js'
 import '../../includes/modules/navbar/navbar.js'
 import '../../includes/modules/date-picker/date-picker.js'
 import './searchRoomAndFilter.scss'
-$(function() {
+$(function () {
   $('.js-datepicker').daterangepicker({
     maxSpan: {
       days: 60,
@@ -54,10 +54,10 @@ $(function() {
     autoUpdateInput: true,
     autoApply: false,
   })
-  $('.card__datepicker').on('hide.daterangepicker', function(ev, picker) {
-    $('.card__datepicker').click()
-  })
-  $('td').on('click', function() {
+
+  const onClick = function () {
+    // eslint-disable-next-line fsd/jq-use-js-prefix-in-selector
     $('.end-date').removeClass('in-range')
-  })
+  }
+  $('td').on('click', onClick)
 })

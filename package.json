@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server  --open --watch  --config ./build/webpack.dev.conf.js",
     "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.build.conf.js",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint --debug src/",
+    "lint:write": "eslint --debug src/ --fix"
   },
   "browserslist": [
     "> 1%",
@@ -36,6 +38,7 @@
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "daterangepicker": "^3.1.0",
+    "eslint": "^7.32.0",
     "file-loader": "^4.2.0",
     "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
@@ -51,8 +54,6 @@
     "ts-loader": "^9.2.3",
     "typescript": "^4.3.4",
     "vue-loader": "^15.7.1",
-    "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.10",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0",
@@ -62,8 +63,10 @@
     "air-datepicker": "^2.2.3",
     "chartjs": "^0.3.24",
     "cross-env": "^7.0.3",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-fsd": "^1.0.1",
+    "eslint-webpack-plugin": "^3.0.1",
     "material-design-icons": "^3.0.1",
-    "slick": "^1.12.2",
-    "vue": "^2.6.10"
+    "slick": "^1.12.2"
   }
 }

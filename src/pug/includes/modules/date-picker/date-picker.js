@@ -1,6 +1,6 @@
 import './date-picker.scss'
 import daterangepicker from 'daterangepicker'
-$(function() {
+$(function () {
   $('.js-date-picker').daterangepicker({
     maxSpan: {
       days: 60,
@@ -41,20 +41,15 @@ $(function() {
     autoUpdateInput: true,
   })
 
-
-  $('td').on('click', function() {
+  $('td').on('click', function () {
     $('.end-date').removeClass('in-range')
   })
 
   $('.js-card__datepicker').click()
-  $(document).mouseup(function() {
+  $(document).mouseup(function () {
     $('.end-date').removeClass(
       'in-range'
     )
   }),
-    $('.ui-datepicker-calendar a.ui-state-default').css('width', '20px')
-
-
-
-}) 
-
+  $('.ui-datepicker-calendar a.ui-state-default').css('width', '20px')
+})

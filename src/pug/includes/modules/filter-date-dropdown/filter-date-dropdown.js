@@ -1,7 +1,8 @@
 import './filter-date-dropdown.scss'
 import moment from 'moment'
-$(function() {
-  $('.js-filter-date-dropdown').daterangepicker({
+$(function () {
+  const $filterDateDropdown = $('.js-filter-date-dropdown')
+  $filterDateDropdown.daterangepicker({
     maxSpan: {
       days: 7,
     },
@@ -35,41 +36,29 @@ $(function() {
     startDate: '02/04/2021',
     endDate: '02/11/2021',
   })
-  $('.js-filter-date-dropdown').on('apply.daterangepicker', function(ev, picker) {
-    var monthNames = [
-      'Январь',
-      'Февраль',
-      'Март',
-      'Апрель',
-      'Май',
-      'Июнь',
-      'Июль',
-      'Август',
-      'Сентябрь',
-      'Октябрь',
-      'Ноябрь',
-      'Декабрь',
-    ]
+  const onApply = function (ev, picker) {
     var thisMonth = moment()
       .locale('ru')
       .format('MMMM')
 
-    if (thisMonth[thisMonth.length - 1] == 'т') {
+    if (thisMonth[thisMonth.length - 1] === 'т') {
       thisMonth += 'а'
     } else if (thisMonth[thisMonth.length - 1] !== 'т') {
       thisMonth = thisMonth.slice(0, 6) + 'я'
     }
 
     $(this).val(
-      picker.startDate.format('D ' + thisMonth) +
-        ' - ' +
-        picker.endDate.format('D ' + thisMonth)
+      picker.startDate.format('D ' + thisMonth)
+        + ' - '
+        + picker.endDate.format('D ' + thisMonth)
     )
-  })
-  var thisMonth = moment()
-    .locale('ru')
-    .format('MMMM')
+  }
+  $filterDateDropdown.on('apply.daterangepicker', onApply)
 
+  // eslint-disable-next-line fsd/jq-use-js-prefix-in-selector
   $('.daterangepicker').css('top', '20%')
+  const onHide = function () {
+    $('.js-card__datepicker').click()
+  }
+  $('.js-card__datepicker').on('hide.daterangepicker', onHide)
 })
-

@@ -7,7 +7,16 @@
   position: relative;
   user-select: none;
   width: 100%;
+  &__big {
+    width: 320px;
 
+    &--small {
+      width: 266px;
+    }
+    .input-box {
+      position: relative;
+    }
+  }
   &__ul {
     position: absolute;
     bottom: 0;
@@ -44,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 35%;
+    width: 41%;
   }
   &__submit {
     float: right;
@@ -74,8 +83,10 @@
   &__button--next {
     margin-right: 0;
   }
-}
-
-.input-box {
-  position: relative;
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
 }

@@ -1,6 +1,8 @@
 include ../svg__arrow-right/svg__arrow-right.pug
-.subscription-field
-	label.subscription-field__label subscription text field
+
+mixin subs-text-field(options)
+	.subscription-field
+		label.subscription-field__label #{options.label}
 		input(type='text',placeholder='Email',class='subscription-text-field__input input')
-		+svg__arrow-right({color:'#BC9CFF',endColor:'#8BA4F9',className:'arrow-right__subs-field'})
+		+svg__arrow-right({color:'#BC9CFF',endColor:'#8BA4F9',className:'arrow-right arrow-right__subs-field '})
 		

@@ -4,7 +4,7 @@ include ../../includes/modules/date-picker/date-picker.pug
 include ../../includes/modules/dropdownSubmitAndClear/dropdownSubmitAndClear.pug
 include ../../includes/modules/header-w/header-w.pug
 include ../../includes/modules/range-slider/range-slider.pug
-
+include ../../includes/modules/checkbox-list/checkbox-list.pug
 
 block variables
   - var title = 'search room and filter';
@@ -17,9 +17,9 @@ block content
     .sidebar
       .sidebar__container 
         .sidebar__item 
-          +date-picker({label:'время пребывания в отеле',classname:'js-datepicker'})
+          +date-picker({label:'даты пребывания в отеле',classname:'js-datepicker'})
         .sidebar__item 
-          +dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
+          +dropdownSubmitAndClear({label:'гости',placeholder:'3 гостя',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
         .sidebar__item 
           +range-slider('Диапазон цены')
         .sidebar__item 
@@ -27,9 +27,9 @@ block content
         .sidebar__item 
           include ../../includes/modules/checkbox-rich/checkbox-rich.pug
         .sidebar__item 
-          +dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
+          +dropdownSubmitAndClear({label:'удобство номера',placeholder:'2 спальни, 2 кровати',array_of_arguments:['спальни','кровати','ванные комнаты'],option:'clear'})
         .sidebar__item 
-          include ../../includes/modules/checkbox-list/checkbox-list.pug
+          +checkboxlist({label:'дополнительные удобства',array_of_arguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 
     .content 
       .content__title Номера, которые мы для вас подобрали
       .content__items 

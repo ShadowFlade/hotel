@@ -12,9 +12,9 @@ mixin hotel-card(options)
           span(class='number-number') #{options.lux_number}
           if options.lux==true
             span(class='hotel-card__lux lux') ЛЮКС
-        span(class='hotel-card__price price')
-          b #{options.price}
-          span(class='day') в сутки
+        span(class='hotel-card__price price') 
+          b #{options.price} 
+          span.day в сутки
       .hotel-card__row
         span(class='hotel-card__stars') 
           +rate-button(4)

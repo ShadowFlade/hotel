@@ -19,6 +19,9 @@
   align-items: center;
   flex-wrap: wrap;
   cursor: pointer;
+  &__arrow {
+    top: 50%;
+  }
 }
 .pay-button:hover {
   opacity: 0.5;

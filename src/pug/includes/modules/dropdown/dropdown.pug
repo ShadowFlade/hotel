@@ -4,19 +4,21 @@ mixin dropdown(options={label:'dropdown',number_of_options:7,option:'Сколь�
   .dropdown
     if options.label
       label.dropdown__label #{options.label}
+        .dropdown__item
+          select.dropdown__select
+            option.dropdown__category #{options.option}
+            while n<=options.number_of_options
+              li=n++
+              option.dropdown__option(value=n) #{n}
+          img(src='assets/img/arrow.svg',class='arrow')
+    else
+      .dropdown__item
         select.dropdown__select
           option.dropdown__category #{options.option}
           while n<=options.number_of_options
             li=n++
             option.dropdown__option(value=n) #{n}
         img(src='assets/img/arrow.svg',class='arrow')
-    else
-      select.dropdown__select
-        option.dropdown__category #{options.option}
-        while n<=options.number_of_options
-          li=n++
-          option.dropdown__option(value=n) #{n}
-      img(src='assets/img/arrow.svg',class='arrow')
 
 
 

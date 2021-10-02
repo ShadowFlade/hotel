@@ -5,6 +5,11 @@ include ../../includes/modules/dropdown/dropdown.pug
 include ../../includes/modules/dropdownSubmitAndClear/dropdownSubmitAndClear.pug
 include ../../includes/modules/toggle/toggle.pug
 include ../../includes/modules/radio-buttons/radio-buttons.pug
+include ../../includes/modules/dropdownNoButtons/dropdownNoButtons.pug
+include ../../includes/modules/checkbox-list/checkbox-list.pug
+include ../../includes/modules/subscription-text-field/subscription-text-field.pug
+
+
 block variables
 	- let title = 'form-elements';
 	- let description = 'smth';
@@ -20,9 +25,9 @@ block content
 				+date-picker({label:'date dropdown'})
 				+date-picker({label:'date dropdown'})
 			include ../../includes/modules/filter-date-dropdown/filter-date-dropdown.pug
-			include ../../includes/modules/subscription-text-field/subscription-text-field.pug
-			+dropdownSubmitAndClear({label:'удобство',placeholder:'2 спальни, 2 кровати',array_of_arguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
-			include ../../includes/modules/checkbox-list/checkbox-list.pug
+			+subs-text-field({label:'subscription text field'})
+			+dropdownNoButtons({label:'dropdown',placeholder:'2 спальни, 2 кровати',array_of_arguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
+			+checkboxlist({label:'expandable checkbox list',array_of_arguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 
 			include ../../includes/modules/features/features.pug 
 
 		.form-elements__column

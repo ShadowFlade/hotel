@@ -1,9 +1,12 @@
 import '../../includes/modules/checkbox-list/checkbox-list.js'
 import '../../includes/modules/comment/comment.js'
 import '../../includes/modules/checkbox-buttons/checkbox-buttons.js'
+import '../../includes/modules/dropdownNoButtons/dropdownNoButtons.js'
 
 import '../../includes/modules/bullet-list/bullet-list.js'
 import '../../includes/modules/buttons/buttons.js'
+import '../../includes/modules/dropdown/dropdown.js'
+
 import '../../includes/modules/checkbox-rich/checkbox-rich.js'
 import '../../includes/modules/date-picker/date-picker.js'
 import '../../includes/modules/dropdownSubmitAndClear/dropdownSubmitAndClear.js'

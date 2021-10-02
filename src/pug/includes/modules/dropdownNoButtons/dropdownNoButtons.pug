@@ -1,0 +1,14 @@
+mixin dropdownNoButtons(options)
+  div(class='dropdown-accom__big dropdown-accom__big--small js-dropdown-accom__big')
+    label(class='dropdown-accom__label') #{options.label}
+    .input-box
+      input(class='dropdown-accom',type='text',class='input',placeholder=options.placeholder)
+      img(src='assets/img/arrow.svg',class='arrow')
+      ul(class='dropdown-accom__ul js-dropdown-accom__ul' style={'height':'123px'})
+        each val in options.array_of_arguments
+          li 
+            .dropdown-accom__variant #{val}
+            .dropdown-accom__btn-group
+              button(type='button',class='dropdown-accom__button--prev') -
+              div(class='dropdown-accom__span') 2
+              button(type='button',class='dropdown-accom__button--next') +

@@ -9,6 +9,14 @@
       font-size: 1.451429rem;
     }
   }
+  .picture {
+    height: 42.5rem;
+    background: url('./last-page.png');
+    img {
+      max-width: 100%;
+      height: 100%;
+    }
+  }
 }
 .radio-buttons {
   &__option {
@@ -17,13 +25,6 @@
   margin-bottom: 20px;
   &__box {
     margin-top: 0;
-  }
-}
-.picture {
-  height: 42.5rem;
-  img {
-    max-width: 100%;
-    height: 100%;
   }
 }
 

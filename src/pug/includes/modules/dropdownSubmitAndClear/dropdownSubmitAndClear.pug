@@ -1,6 +1,6 @@
 mixin dropdownSubmitAndClear(options)
   div(class='dropdown-accom__big js-dropdown-accom__big')
-    label(class='dropdown-accom__label') #{label}
+    label(class='dropdown-accom__label') #{options.label}
     .input-box
       input(class='dropdown-accom',type='text',class='input',placeholder=options.placeholder)
       img(src='assets/img/arrow.svg',class='arrow')
@@ -12,12 +12,13 @@ mixin dropdownSubmitAndClear(options)
               button(type='button',class='dropdown-accom__button--prev') -
               div(class='dropdown-accom__span') 2
               button(type='button',class='dropdown-accom__button--next') +
-        if(option=='submit')
-          button(class='dropdown-accom__submit inbox-button',type='submit') Применить
-        else if(option=='clear')
-          button(class='dropdown-accom__submit inbox-button',type='submit') Применить
-          button(type='button',class='dropdown-accom__clear inbox-button') очистить
-        else if(option=='none')
+        .dropdown-accom__footer
+          if (options.option=='submit')
+            button(class='dropdown-accom__submit inbox-button',type='submit') Применить
+          else if (options.option=='clear')
+            button(type='button',class='dropdown-accom__clear inbox-button') очистить
+            button(class='dropdown-accom__submit inbox-button',type='submit') Применить
+          else if (options.option=='none')
 
 
 

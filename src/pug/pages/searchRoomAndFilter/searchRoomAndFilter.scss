@@ -5,12 +5,13 @@
   .hotel-card {
     margin-bottom: 1.47143rem;
   }
+  .range-slider {
+    width: 88%;
+  }
   .sidebar {
     padding-left: 140/1440 * 100%;
     width: 456px;
-    .label {
-      width: rem(266);
-    }
+
     &__container {
       padding-right: 60/1440 * 100%;
     }
@@ -30,8 +31,8 @@
     display: flex;
   }
   .content {
-    padding-left: rem(25);
     padding-right: 7.07143rem;
+    padding-left: 0.58571rem;
     &__title {
       font-family: 'Montserrat';
       font-style: normal;

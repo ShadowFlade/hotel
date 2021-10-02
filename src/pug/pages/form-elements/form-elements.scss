@@ -14,10 +14,14 @@ html {
     flex-direction: column;
     flex: 1 1 30%;
     margin-right: 10.75%;
+
     & > div:not(.comment__box),
     & > button {
       width: 320px;
       margin-bottom: 1.15rem;
+      &:nth-child(6) {
+        margin-bottom: 96px;
+      }
     }
   }
   & > div,
@@ -72,4 +76,20 @@ html {
   position: absolute;
   top: 97.2rem;
   left: 50.5rem;
+}
+
+.form-elements .form-elements__column {
+  .date-picker-box {
+    margin-top: rem(18);
+    margin-bottom: 2.82rem;
+  }
+  .subscription-field {
+    margin-top: 20px;
+  }
+  .dropdown-accom__big--small {
+    width: 266px;
+  }
+  .checkbox-buttons {
+    margin-bottom: 35px;
+  }
 }

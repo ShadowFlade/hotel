@@ -1,3 +1,4 @@
+include ../pay-button/pay-button.pug
 .buttons
 	.buttons__box
 		button.button-default1 click me
@@ -8,3 +9,4 @@
 			button.button-default2 click me
 		button.button-inline click me
 		button.button-inline click me
+		+pay-button({label:'перейти к оплате',arrow:true})

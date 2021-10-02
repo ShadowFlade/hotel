@@ -1,7 +1,7 @@
-mixin checkboxlist(options={label:'дополнительные удобства',array_of_arguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']})
+mixin checkboxlist(options={label:'expandable checkbox list',array_of_arguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']})
   .checkbox-details
     details.checkbox-details__details
-      summary.checkbox-details__summary #{options.label}
+      summary.checkbox-details__summary.label #{options.label}
       .checkbox-details__group
         each val in options.array_of_arguments
           .checkbox-details__item
@@ -10,4 +10,4 @@ mixin checkboxlist(options={label:'дополнительные удобства
               input(type='checkbox',name=val,id=val,class='checkbox-details__input')
               span(class='checkbox-details__custom')
 
-+checkboxlist() 
+

@@ -1,5 +1,8 @@
 @import '../../../layout/vars.scss';
 @import '../../../layout/mixins.scss';
+.filter-date-dropdown {
+  max-width: 266px;
+}
 .daterangepicker {
   top: 20%;
 }

@@ -24,9 +24,20 @@
     &:hover .arrow_class {
       transform: rotate(-90deg);
     }
-    &:hover .dd {
+    &:hover .navbar__dd {
       display: block;
     }
+  }
+  &__dd {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 75%;
+    border: 1px solid #bc9cff, 100%;
+    border-top: 0;
+    border-radius: 4px;
+    z-index: 10;
   }
   &__arrow {
     display: flex;

@@ -9,7 +9,6 @@ include ../pay-button/pay-button.pug
     +date-picker({label:'Прибытие'})
     +date-picker({label:'Выезд'})  
   .card__guests
-    //- span.card__guest-label.label ГОСТИ
     +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
   .card__footer
     +pay-button({label:"подобрать номер",arrow:true})

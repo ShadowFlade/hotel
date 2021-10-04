@@ -20,9 +20,6 @@
 @function wid($size) {
   @return $size/$desktopWidth * 100%;
 }
-// @function height($size,$desktopWidth,$desktopHeight) {
-//   $size/$desktopHeight *100%
-// }
 
 @mixin placeholder {
   ::-webkit-input-placeholder {
@@ -68,4 +65,3 @@ $maxWidthContainer: 1170;
     );
   }
 }
-// width: calc(24px + 16 * ((100vw - 320px) / (1280 - 320))); /*24px это подходящее значение, 16 это макетное значение минус подходящее значение,320 это минимальное значение вьюпорта,1280 его максимальное значение*/

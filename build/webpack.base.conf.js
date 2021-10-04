@@ -47,7 +47,6 @@ let publicPath = () => {
 }
 
 module.exports = {
-  // BASE config
   externals: {
     paths: PATHS,
   },
@@ -137,7 +136,6 @@ module.exports = {
   },
   resolve: {
     alias: {
-      // ~Img: path.resolve(__dirname, '../src/assets/img'),
       Src: PATHS.src,
     },
     extensions: ['.tsx', '.ts', '.js'],
@@ -149,8 +147,9 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
+      // { from: `${PATHS.src}/pug/[0]`,to:`${PATHS.assets}img`,test:/.+\.(png)||(svg)/}
     ]),
-  ].concat(htmlPlugins),
+
+    ].concat(htmlPlugins),
 }

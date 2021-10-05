@@ -161,14 +161,12 @@ a.ui-state-default:hover {
     }
     & .ui-datepicker-prev {
       .ui-icon {
-        background: url('../../../../assets/img/arrow_back.png') center /
-          contain no-repeat;
+        background: url('arrow_back.png') center / contain no-repeat;
       }
     }
     & .ui-datepicker-next {
       .ui-icon {
-        background: url('../../../../assets/img/arrow_back.png') center /
-          contain no-repeat;
+        background: url('arrow_back.png') center / contain no-repeat;
         transform: rotate(180deg);
       }
     }

@@ -51,9 +51,8 @@
 }
 .daterangepicker .calendar-table .next span,
 .daterangepicker .calendar-table .prev span {
-  background-image: url('../../../../assets/img/arrow_back.png');
-  background: url('../../../../assets/img/arrow_back.png') center / contain
-    no-repeat;
+  background-image: url('arrow_back.png');
+  background: url('arrow_back.png') center / contain no-repeat;
   border: 0;
   transform: rotate(180deg);
   width: 24px;

@@ -21,7 +21,8 @@
   }
   .pictures {
     display: flex;
-    min-height: 500px;
+    max-height: 423px;
+    overflow: hidden;
     &__item {
       height: 50%;
       width: 100%;
@@ -32,8 +33,7 @@
         height: 100%;
       }
       &_big {
-        width: 100%;
-        height: 100%;
+        height: auto;
       }
     }
     &__column {
@@ -168,6 +168,8 @@
   }
   .room-details .pictures {
     flex-wrap: wrap;
+    max-height: none;
+    overflow: none;
   }
   .footer-main {
     display: none;

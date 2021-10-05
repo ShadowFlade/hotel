@@ -67,7 +67,7 @@ class DropdownAccom {
     const onClear = ()=>{
       this.returnToDefault()
       this.refresh()
-      this.input.setAttribute('placeholder', this.total)
+      this.input.setAttribute('placeholder', `${this.total} гостей`)
     }
     if (this.submit && this.count) {
       this.submit.addEventListener('click', onSubmit)
@@ -99,6 +99,7 @@ class DropdownAccom {
         this.refresh(item)
         return true
       })
+      return true
     }
     let value = this.count.get(category).get('value')
     this.restrictDecrement(category, value)

@@ -11,8 +11,8 @@
       position: absolute;
       top: 70px;
       left: 141px;
-      width: 30.1%;
       z-index: 100;
+      width: 26.1%;
     }
     &__caption {
       font-family: Montserrat;
@@ -71,7 +71,7 @@
   }
   .date-picker {
     max-width: 140px;
-    margin-right: 20px;
+    margin-right: rem(31);
     width: 44%;
     &:last-child {
       margin-right: 0;
@@ -79,6 +79,5 @@
   }
   .input-box {
     max-width: 320px;
-    width: 95%;
   }
 }

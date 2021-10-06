@@ -1,9 +1,9 @@
+/* eslint-disable linebreak-style */
 const path = require('path')
 const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const PATHS = {
@@ -11,8 +11,6 @@ const PATHS = {
   dist: path.join(__dirname, '../dist'),
   assets: 'assets/',
 }
-const modulesFolders=[]
-const PAGES_DIR = `${PATHS.src}/pug/pages/`
 const PAGES = []
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
@@ -21,22 +19,17 @@ fs.readdirSync(path.resolve(__dirname, '../', 'src', 'pug', 'pages')).forEach(
     PAGES.push(file)
   }
 )
-fs.readdirSync(path.resolve(__dirname, '../', 'src')).forEach(
-  (folder) => {
-    modulesFolders.push(folder)
-  }
-)
+
 const htmlPlugins = PAGES.map(
-  (fileName) =>
-    new HtmlWebpackPlugin({
-      filename: `${fileName}.html`,
-      template: `src/pug/pages/${fileName}/${fileName}.pug`,
-      chunks: [fileName, 'index'],
-      inject: 'body',
-      minify: {
-        collapseWhitespace: isProd,
-      },
-    })
+  (fileName) => new HtmlWebpackPlugin({
+    filename: `${fileName}.html`,
+    template: `src/pug/pages/${fileName}/${fileName}.pug`,
+    chunks: [fileName, 'index'],
+    inject: 'body',
+    minify: {
+      collapseWhitespace: isProd,
+    },
+  })
 )
 const entry = () => {
   const point = {}
@@ -46,7 +39,7 @@ const entry = () => {
 
   return point
 }
- 
+
 let publicPath = () => {
   return !isDev ? '/hotel/' : '/'
 }
@@ -152,13 +145,13 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/static`, to: '' },
-      { from: `${PATHS.src}/pug/includes/modules/**/*.png`,to:`${PATHS.assets}img/[name].[ext]`},
-      { from: `${PATHS.src}/pug/includes/modules/**/*.svg`,to:`${PATHS.assets}img/[name].[ext]`},
-      { from: `${PATHS.src}/pug/layout/*.svg`,to:`${PATHS.assets}img/[name].[ext]`},
-      { from: `${PATHS.src}/pug/pages/**/*.svg`,to:`${PATHS.assets}img/[name].[ext]`},
-      { from: `${PATHS.src}/pug/pages/**/*.png`,to:`${PATHS.assets}img/[name].[ext]`}
+      { from: `${PATHS.src}/pug/includes/modules/**/*.png`, to: `${PATHS.assets}img/[name].[ext]` },
+      { from: `${PATHS.src}/pug/includes/modules/**/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
+      { from: `${PATHS.src}/pug/layout/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
+      { from: `${PATHS.src}/pug/pages/**/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
+      { from: `${PATHS.src}/pug/pages/**/*.png`, to: `${PATHS.assets}img/[name].[ext]` }
 
     ]),
 
-    ].concat(htmlPlugins),
+  ].concat(htmlPlugins),
 }

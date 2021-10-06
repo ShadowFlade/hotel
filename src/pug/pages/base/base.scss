@@ -87,6 +87,12 @@ body {
       width: 6%;
     }
   }
+  .small {
+    .fonts {
+      letter-spacing: -1px;
+      font-weight: bold;
+    }
+  }
   .fonts {
     padding-left: 5.7%;
     text-align: left;

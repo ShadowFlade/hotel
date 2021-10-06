@@ -18,14 +18,14 @@
   }
   &__item {
     position: relative;
-    width: 150px;
+    width: 9.41429rem;
     &::last-child {
       margin-right: 0;
     }
   }
 }
 .datepicker {
-  width: 150px;
+  width: 100%;
 }
 .date-caption {
   margin-bottom: 5px;

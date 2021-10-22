@@ -1,6 +1,5 @@
 /* eslint-disable fsd/jq-use-js-prefix-in-selector */
 import './date-picker.scss'
-import daterangepicker from 'daterangepicker'
 $(function () {
   $('.js-date-picker').daterangepicker({
     maxSpan: {

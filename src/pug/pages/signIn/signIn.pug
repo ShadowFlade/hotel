@@ -1,5 +1,5 @@
 extends ../../layout/landing
-include  ../../includes/modules/header-w/header-w.pug
+include  ../../components/header-w/header-w.pug
 
 block variables
   - var title = 'sign-in';
@@ -10,8 +10,8 @@ block content
     +navigation({username:'',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
   main 
     .picture 
-      include ../../includes/modules/sign-in/sign-in.pug
+      include ../../components/sign-in/sign-in.pug
   footer(class='footer-main')
-    include ../../includes/modules/footer/footer.pug
+    include ../../components/footer/footer.pug
   footer(class='footer-secondary')
-    include ../../includes/modules/footer-mini/footer-mini.pug
+    include ../../components/footer-mini/footer-mini.pug

@@ -1,0 +1,28 @@
+@import '../../layout/vars.scss';
+@import '../../layout/mixins.scss';
+.pay-button {
+  width: 320px;
+  height: 44px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  position: relative;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(12);
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  &__arrow {
+    top: 50%;
+  }
+}
+.pay-button:hover {
+  opacity: 0.5;
+}

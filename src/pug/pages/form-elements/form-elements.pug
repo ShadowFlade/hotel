@@ -1,13 +1,13 @@
 extends ../../layout/main
-include ../../includes/modules/date-picker/date-picker.pug
-include ../../includes/modules/like/like.pug
-include ../../includes/modules/dropdown/dropdown.pug
-include ../../includes/modules/dropdownSubmitAndClear/dropdownSubmitAndClear.pug
-include ../../includes/modules/toggle/toggle.pug
-include ../../includes/modules/radio-buttons/radio-buttons.pug
-include ../../includes/modules/dropdownNoButtons/dropdownNoButtons.pug
-include ../../includes/modules/checkbox-list/checkbox-list.pug
-include ../../includes/modules/subscription-text-field/subscription-text-field.pug
+include ../../components/date-picker/date-picker.pug
+include ../../components/like/like.pug
+include ../../components/dropdown/dropdown.pug
+include ../../components/dropdownSubmitAndClear/dropdownSubmitAndClear.pug
+include ../../components/toggle/toggle.pug
+include ../../components/radio-buttons/radio-buttons.pug
+include ../../components/dropdownNoButtons/dropdownNoButtons.pug
+include ../../components/checkbox-list/checkbox-list.pug
+include ../../components/subscription-text-field/subscription-text-field.pug
 
 
 block variables
@@ -17,21 +17,21 @@ block variables
 block content 
 	.form-elements
 		.form-elements__column
-			include ../../includes/modules/text-field/text-field.pug 
+			include ../../components/text-field/text-field.pug 
 			.dropdown.js-dropdown
 				+dropdown()
-			include ../../includes/modules/masked-text-field/masked-text-field.pug
+			include ../../components/masked-text-field/masked-text-field.pug
 			.date-picker-box
 				+date-picker({label:'date dropdown'})
 				+date-picker({label:'date dropdown'})
-			include ../../includes/modules/filter-date-dropdown/filter-date-dropdown.pug
+			include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 			+subs-text-field({label:'subscription text field'})
 			+dropdownNoButtons({label:'dropdown',placeholder:'2 спальни, 2 кровати',array_of_arguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
 			+checkboxlist({label:'expandable checkbox list',array_of_arguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 
-			include ../../includes/modules/features/features.pug 
+			include ../../components/features/features.pug 
 
 		.form-elements__column
-			include ../../includes/modules/checkbox-buttons/checkbox-buttons.pug
+			include ../../components/checkbox-buttons/checkbox-buttons.pug
 			span.radio-buttons__label RADIO BUTTONS
 			+radio-buttons({array_of_arguments:['Мужчина','Женщина'],name:'gender'})    
 			+toggle({label:'toggle',array_of_arguments:['Получать спецпредложения','fish']})
@@ -43,27 +43,27 @@ block content
 			.rate__buttons
 				span.rate__label.label RATE BUTTON
 				.rate__items
-					include ../../includes/modules/rate-button/rate-button.pug
+					include ../../components/rate-button/rate-button.pug
 					+rate-button(5)
 			.dropdown
 				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
-			include ../../includes/modules/checkbox-rich/checkbox-rich.pug
+			include ../../components/checkbox-rich/checkbox-rich.pug
 			.comment__box
-				include ../../includes/modules/comment/comment.pug
+				include ../../components/comment/comment.pug
 
 		.form-elements__column
 			.range-slider__box
-				include ../../includes/modules/range-slider/range-slider.pug
+				include ../../components/range-slider/range-slider.pug
 			label.buttons__label buttons
-			include ../../includes/modules/buttons/buttons.pug
-			include ../../includes/modules/pay-button/pay-button.pug
+			include ../../components/buttons/buttons.pug
+			include ../../components/pay-button/pay-button.pug
 			.pagination(class='label') pagination
-				include ../../includes/modules/pagination/pagination.pug
+				include ../../components/pagination/pagination.pug
 			.dropdown
 				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',array_of_arguments:["взрослые","дети","младенцы"],option:'clear'})
 			.bullet-list
 				.label bullet list
-				include ../../includes/modules/bullet-list/bullet-list.pug
+				include ../../components/bullet-list/bullet-list.pug
 			
 
 

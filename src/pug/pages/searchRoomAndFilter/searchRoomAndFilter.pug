@@ -1,10 +1,10 @@
 extends ../../layout/landing
-include ../../includes/modules/hotel-card/hotel-card.pug
-include ../../includes/modules/date-picker/date-picker.pug
-include ../../includes/modules/dropdownSubmitAndClear/dropdownSubmitAndClear.pug
-include ../../includes/modules/header-w/header-w.pug
-include ../../includes/modules/range-slider/range-slider.pug
-include ../../includes/modules/checkbox-list/checkbox-list.pug
+include ../../components/hotel-card/hotel-card.pug
+include ../../components/date-picker/date-picker.pug
+include ../../components/dropdownSubmitAndClear/dropdownSubmitAndClear.pug
+include ../../components/header-w/header-w.pug
+include ../../components/range-slider/range-slider.pug
+include ../../components/checkbox-list/checkbox-list.pug
 
 block variables
   - var title = 'search room and filter';
@@ -23,9 +23,9 @@ block content
         .sidebar__item 
           +range-slider('Диапазон цены')
         .sidebar__item 
-          include ../../includes/modules/checkbox-buttons/checkbox-buttons.pug
+          include ../../components/checkbox-buttons/checkbox-buttons.pug
         .sidebar__item 
-          include ../../includes/modules/checkbox-rich/checkbox-rich.pug
+          include ../../components/checkbox-rich/checkbox-rich.pug
         .sidebar__item 
           +dropdownSubmitAndClear({label:'удобство номера',placeholder:'2 спальни, 2 кровати',array_of_arguments:['спальни','кровати','ванные комнаты'],option:'clear'})
         .sidebar__item 
@@ -70,9 +70,9 @@ block content
           +hotel-card({pictures:['assets/img/srchRoom11.png','assets/img/image1.png'],
                 lux_number:'450',price:'5300',stars:4,number_of_reviews:'39',lux:false})
       .content__pagination 
-        include ../../includes/modules/pagination/pagination.pug
+        include ../../components/pagination/pagination.pug
   footer(class='footer-main')
-    include ../../includes/modules/footer/footer.pug
+    include ../../components/footer/footer.pug
   footer(class='footer-secondary')
-    include ../../includes/modules/footer-mini/footer-mini.pug
+    include ../../components/footer-mini/footer-mini.pug
 

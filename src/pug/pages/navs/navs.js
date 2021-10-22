@@ -1,2 +1,2 @@
 import './navs.scss'
-import '../../includes/modules/navbar/navbar'
+import '../../components/navbar/navbar'

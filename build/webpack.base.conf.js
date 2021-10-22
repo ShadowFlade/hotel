@@ -145,8 +145,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/static`, to: '' },
-      { from: `${PATHS.src}/pug/includes/modules/**/*.png`, to: `${PATHS.assets}img/[name].[ext]` },
-      { from: `${PATHS.src}/pug/includes/modules/**/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
+      { from: `${PATHS.src}/pug/components/**/*.png`, to: `${PATHS.assets}img/[name].[ext]` },
+      { from: `${PATHS.src}/pug/components/**/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
       { from: `${PATHS.src}/pug/layout/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
       { from: `${PATHS.src}/pug/pages/**/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
       { from: `${PATHS.src}/pug/pages/**/*.png`, to: `${PATHS.assets}img/[name].[ext]` }

@@ -1,3 +1,3 @@
-import '../../includes/modules/navbar/navbar.js'
-import '../../includes/modules/registration/registration.js'
+import '../../components/navbar/navbar.js'
+import '../../components/registration/registration.js'
 import './registration.scss'

@@ -1,0 +1,199 @@
+@import '../../layout/vars.scss';
+@import '../../layout/mixins.scss';
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  min-width: 380px;
+  min-height: 374px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px 30px 30px 30px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  padding: 2.05714em 1.4286em 0;
+  .number {
+    font-size: rem(19);
+  }
+  .number__sign {
+    font-size: rem(11);
+  }
+  .number__number {
+    font-size: 1.61429rem;
+    margin-left: 4px;
+  }
+  .number__lux {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #bc9cff;
+    margin-left: rem(3);
+  }
+  &__destination {
+    display: flex;
+    margin-bottom: 0.85714rem;
+    margin-bottom: 1.9rem;
+  }
+  &__title {
+    @include big;
+    margin-bottom: 21px;
+  }
+
+  &__footer {
+    width: 100%;
+    margin: 10px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .text-field .input {
+    margin-bottom: 21px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__summary {
+    margin-bottom: 20px;
+    padding-top: rem(13);
+  }
+}
+
+.number {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(24);
+  line-height: 17px;
+  color: #1f2041;
+}
+.number-number {
+  font-size: rem(19);
+}
+.card__lux-price {
+  vertical-align: bottom;
+  padding-right: rem(12);
+  font-size: 0.5rem;
+  .day {
+    font-size: 1.5em;
+  }
+}
+.lux {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(12);
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #bc9cff;
+}
+.price {
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: rem(14);
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.card.bill {
+  padding: 2.05714em 1.4286em 0;
+  .card__guests {
+    width: 96%;
+  }
+  .dropdown-accom {
+    width: 100%;
+  }
+  .summary__sum {
+    font-size: 0.9rem;
+  }
+  .card__summary {
+    padding-top: 0.752857rem;
+  }
+  .card__credentials {
+    padding-top: rem(10);
+  }
+  .card__footer {
+    margin-top: 0;
+  }
+  .card__destination {
+    margin-bottom: 1.4rem;
+  }
+  .card__summary {
+    display: flex;
+    flex-direction: column;
+
+    .card__row {
+      @include mainfont;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .card__price {
+      font-size: rem(13);
+      word-spacing: -2px;
+      line-height: 1.6;
+    }
+    .card__money {
+      display: flex;
+      justify-content: space-between;
+      min-width: 30%;
+      padding-left: rem(27);
+    }
+    .card__all {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(19);
+      line-height: 23px;
+      color: #1f2041;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.41429rem;
+    }
+
+    .card__border {
+      flex-grow: 1;
+      position: relative;
+      top: -5px;
+      left: 5px;
+      border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+    }
+    .card__result {
+      float: left;
+      text-align: left;
+      font-size: rem(17);
+    }
+    .card__money {
+      float: right;
+      text-align: right;
+    }
+    .card__info-icon {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      /* identical to box height, or 117% */
+      color: rgba(31, 32, 65, 0.25);
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: 2px;
+    }
+    .card__row {
+      margin-bottom: 10px;
+    }
+    .card__row::last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+@import '../../layout/vars.scss';
+@import '../../layout/mixins.scss';
+.hotel-card {
+  width: 270px;
+  height: 257px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  margin-bottom: rem(36);
+  &__price {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: rem(14);
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 0.86rem;
+    word-spacing: 0px;
+    .day {
+      font-size: 13px;
+    }
+  }
+  &__slider {
+    height: 60%;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info {
+    padding: rem(19) rem(15);
+  }
+  &__number {
+    font-weight: bold;
+    font-size: rem(14);
+    line-height: 17px;
+  }
+  &__lux {
+    font-weight: bold;
+    font-size: rem(12);
+    line-height: 15px;
+  }
+}
+.credentials {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+.slider img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.slick-dots {
+  position: absolute;
+  left: 80%;
+  bottom: 7%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slick-dots li {
+  margin: 0 0.5rem;
+  border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #ffffff;
+  z-index: 77;
+}
+.slick-dots button {
+  color: transparent;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 7.5px;
+  height: 7.5px;
+  z-index: 75;
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+}
+.slick-arrow {
+  position: absolute;
+  top: 45%;
+  z-index: 10;
+  font-size: 0;
+  transform: translateY(-45%);
+}
+
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+  width: 17px;
+  height: 17px;
+  background: url('/assets/img/hotel-arrow.png') 0 0 / contain no-repeat;
+}
+.slick-arrow.slick-prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+.slick-arrow.slick-next {
+  right: 0;
+  top: 49%;
+}
+#card__datepicker {
+  padding: 0;
+}
+.hotel-card__footer {
+  width: 100%;
+  margin: 10px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+.number {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 17px;
+  color: #1f2041;
+}
+.number-number {
+  font-size: 1.15714rem;
+}
+.lux {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(12);
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #bc9cff;
+}
+.price {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: rem(14);
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  font-size: 0.87rem;
+}
+.hotel-card__applybtn {
+  float: right;
+}
+.hotel-card__cancelbtn {
+  float: left;
+}

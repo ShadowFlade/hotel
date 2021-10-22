@@ -1,0 +1,29 @@
+@import '../../layout/mixins.scss';
+.footer-mini {
+  max-width: 768px;
+  max-height: 367px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  margin: 0 auto;
+  &__container {
+    padding: 15.83333% 7.22222% 12.51852% 10%;
+  }
+  &__content {
+    text-align: center;
+    & > div {
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: rem(24);
+  }
+  &__logo {
+    position: relative;
+    left: -2.2%;
+  }
+}

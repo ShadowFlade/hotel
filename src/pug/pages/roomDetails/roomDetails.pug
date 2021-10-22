@@ -1,6 +1,6 @@
 extends ../../layout/landing
-include ../../includes/modules/navbar/navbar.pug
-include ../../includes/modules/header-w/header-w.pug
+include ../../components/navbar/navbar.pug
+include ../../components/header-w/header-w.pug
 
 block variables
   - var title = 'room details';
@@ -24,30 +24,30 @@ block content
         .content__column 
           .content__item 
             .content__title Сведения о номере
-            include ../../includes/modules/features/features.pug
+            include ../../components/features/features.pug
           .content__item 
-            include ../../includes/modules/graph/graph.pug
+            include ../../components/graph/graph.pug
           .content__item
             .content__comments 
               .content__title 
                 span.content__caption Отзывы посетителей номера
                 span.content__count 2 отзыва
               .content__comment 
-                include ../../includes/modules/comment/comment.pug
+                include ../../components/comment/comment.pug
               .content__comment 
                 +comment({img:'assets/img/avatar2.png',name:'Патрисия Стёелышкова',days_ago:'Неделю',text:'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
           .content__item 
             .content__card
               .content__title Правила
-              include ../../includes/modules/bullet-list/bullet-list.pug
+              include ../../components/bullet-list/bullet-list.pug
           .content__item 
             .content__card
               .content__title Отмена
               .content__cancelText Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полынй возврат за вычетом сбора за услуги.
         .content__side 
           .content__item 
-            include ../../includes/modules/bill/bill.pug
+            include ../../components/bill/bill.pug
     footer(class='footer-main')
-      include ../../includes/modules/footer/footer.pug
+      include ../../components/footer/footer.pug
     footer(class='footer-secondary')
-      include ../../includes/modules/footer-mini/footer-mini.pug
+      include ../../components/footer-mini/footer-mini.pug

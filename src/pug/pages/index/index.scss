@@ -1,7 +1,7 @@
-@import '../../layout/vars.scss';
-@import '../../layout/mixins.scss';
-@import '../../layout/fonts.scss';
-@import '../../layout/nullstyle.scss';
+@import '../../common/vars.scss';
+@import '../../common/mixins.scss';
+@import '../../common/fonts.scss';
+@import '../../common/nullstyle.scss';
 .index {
   padding: 39px 0 0 20px;
   display: flex;

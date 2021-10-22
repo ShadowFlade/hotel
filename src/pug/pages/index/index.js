@@ -1,10 +1,10 @@
-import '../../layout/fonts.scss'
-import '../../layout/default-input.scss'
+import '../../common/nullstyle.scss';
+import '../../common/mixins.scss';
+import '../../common/fonts.scss';
+import '../../common/default-input.scss';
 import '../../layout/landing.scss'
 import '../../layout/main.scss'
-import '../../layout/mixins.scss'
-import '../../layout/nullstyle.scss'
-import '../../layout/vars.scss'
+import '../../common/vars.scss'
 import './index.scss'
 import '../../components/header-w/header-w.js'
 import '../../components/footer/footer.js'

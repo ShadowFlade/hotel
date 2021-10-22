@@ -1,7 +1,6 @@
-@import '../../layout/vars.scss';
-@import '../../layout/mixins.scss';
-@import '../../layout/fonts.scss';
-@import '../../layout/nullstyle.scss';
+@import '../../common/nullstyle.scss';
+@import '../../common/mixins.scss';
+@import '../../common/fonts.scss';
 
 .mainfont {
   @include mainfont;

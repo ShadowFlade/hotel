@@ -2,8 +2,8 @@ import '../../common/nullstyle.scss';
 import '../../common/mixins.scss';
 import '../../common/fonts.scss';
 import '../../common/default-input.scss';
-import '../../layout/landing.scss'
-import '../../layout/main.scss'
+import '../../layout/landing/landing.scss'
+import '../../layout/main/main.scss'
 import '../../common/vars.scss'
 import './index.scss'
 import '../../components/header-w/header-w.js'

@@ -31,7 +31,6 @@
     "@babel/preset-env": "^7.6.3",
     "autoprefixer": "^9.7.0",
     "babel-loader": "^8.0.6",
-    "chart.js": "^2.9.4",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.2.0",
@@ -53,20 +52,17 @@
     "style-loader": "^1.0.0",
     "ts-loader": "^9.2.3",
     "typescript": "^4.3.4",
-    "vue-loader": "^15.7.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0",
-    "webpack-merge": "^4.2.2"
-  },
-  "dependencies": {
-    "air-datepicker": "^2.2.3",
-    "chartjs": "^0.3.24",
-    "cross-env": "^7.0.3",
+    "webpack-merge": "^4.2.2",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-fsd": "^1.0.1",
     "eslint-webpack-plugin": "^3.0.1",
-    "material-design-icons": "^3.0.1",
-    "slick": "^1.12.2"
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "chart.js": "^2.9.4",
+    "material-design-icons": "^3.0.1"
   }
 }

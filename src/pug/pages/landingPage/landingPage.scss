@@ -24,7 +24,7 @@
       text-align: right;
       color: rgba(31, 32, 65, 0.75);
       position: absolute;
-      top: 92%;
+      bottom: 0;
       right: 9%;
       width: 20%;
     }
@@ -33,14 +33,14 @@
     padding: 3.1714em 1.9em 0;
   }
 
-  .mini-footer {
+  .footer--small {
     display: none;
   }
   @media screen and (max-width: 834px) {
-    .footer-main {
+    .footer--main {
       display: none;
     }
-    .footer-secondary {
+    .footer--small {
       display: block;
     }
     .card__title {

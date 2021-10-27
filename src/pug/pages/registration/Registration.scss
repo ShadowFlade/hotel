@@ -1,5 +1,8 @@
 @import '../../common/mixins.scss';
 .registration {
+  .footer--small {
+    display: none;
+  }
   .card {
     position: absolute;
     top: 2.3%;
@@ -36,11 +39,11 @@
 }
 
 @media screen and (max-width: 834px) {
-  .footer-main {
-    display: none;
-  }
-  .mini-footer {
+  .footer--small {
     display: block;
+  }
+  .footer--main {
+    display: none;
   }
 }
 @media screen and (max-width: 765px) {

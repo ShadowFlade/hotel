@@ -40,22 +40,23 @@
     background: transparent;
   }
 
-  &__secondary-ul {
+  &__inner-menu {
     display: none;
     position: absolute;
   }
-}
-.first-ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  width: auto;
-  left: 0;
-  border: 1px solid #bc9cff, 100%;
-  border-top: 0;
-  border-radius: 4px;
-  z-index: 10;
-  &__item {
+
+  &__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: auto;
+    left: 0;
+    border: 1px solid #bc9cff, 100%;
+    border-top: 0;
+    border-radius: 4px;
+    z-index: 10;
+  }
+  &__option {
     position: relative;
     text-align: left;
     display: flex;

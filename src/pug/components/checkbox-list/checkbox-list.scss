@@ -95,6 +95,16 @@
   }
 
   &__summary {
+    position: relative;
+    user-select: none;
+    @include small;
+    margin-bottom: 5px;
+    font-size: rem(12);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75714rem;
+    color: black;
+
     text-transform: uppercase;
     list-style-type: none;
     width: 100%;

@@ -24,11 +24,11 @@
     &:hover .arrow_class {
       transform: rotate(-90deg);
     }
-    &:hover .navbar__dd {
+    &:hover .navbar__menu {
       display: block;
     }
   }
-  &__dd {
+  &__menu {
     display: none;
     position: absolute;
     top: 100%;
@@ -50,5 +50,28 @@
   }
   &__item:last-child {
     margin-right: 0;
+  }
+
+  &__option {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 17px;
+    color: rgba(31, 32, 65, 0.5);
+    width: auto;
+    background: #e5e5e5;
+    text-transform: capitalize;
+    padding: 1em;
+    text-align: left;
+    font-size: 0.8rem;
+    &:hover {
+      background-color: scale-color(#bc9cff, $lightness: 15%);
+      color: black;
+      transition: all 0.3s linear;
+    }
   }
 }

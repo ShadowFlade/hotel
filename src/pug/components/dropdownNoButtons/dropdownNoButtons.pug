@@ -3,7 +3,7 @@ mixin dropdownNoButtons(options)
     label(class='dropdown-accom__label') #{options.label}
     .input-box
       input(class='dropdown-accom',type='text',class='input',placeholder=options.placeholder)
-      img(src='assets/img/arrow.svg',class='arrow')
+      img(class='arrow',src='assets/img/arrow.svg')
       ul(class='dropdown-accom__ul js-dropdown-accom__ul' style={'height':'123px'})
         each val in options.array_of_arguments
           li 

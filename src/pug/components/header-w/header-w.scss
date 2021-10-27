@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
   }
-  &__icon-space {
+  &__logo {
     height: 40px;
     width: 12%;
   }
@@ -36,17 +36,7 @@
   &__items {
     display: flex;
   }
-  &__button-wrapper {
-    width: 6.45em;
-    height: 2.5em;
-    margin-right: 20/1440 * 100%;
-  }
-  &__bigbutton {
-    width: 196/12 * 1em;
-    height: 34/12 * 1em;
-    height: rem(34);
-    width: 12.5rem;
-  }
+
   &__user {
     display: flex;
   }
@@ -63,44 +53,35 @@
   &__divider {
     margin-right: 10px;
   }
+  &__auth {
+    display: flex;
+    align-items: center;
+    padding-right: 0.91429rem;
+    & > div:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
 }
 
 .body {
   background: #f4f4f6;
 }
-.btngroup-authorization {
-  display: flex;
-  align-items: center;
-  padding-right: 0.91429rem;
-  & > div:not(:last-child) {
-    margin-right: 10px;
-  }
-}
-.dd {
-  &__item {
-    text-align: left;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 17px;
-    color: rgba(31, 32, 65, 0.5);
-    width: auto;
-    background: #e5e5e5;
-    text-transform: capitalize;
-    padding: 1em;
-    text-align: left;
-    font-size: 0.8rem;
-    &:hover {
-      background-color: scale-color(#bc9cff, $lightness: 15%);
-      color: black;
-      transition: all 0.3s linear;
-    }
-  }
+
+//------------------------------------------------------MODIFICATORS
+.button-default2__wrapper--navigation {
+  width: 6.45em;
+  height: 2.5em;
+  margin-right: 20/1440 * 100%;
 }
 
+.pay-button--navigation {
+  width: 196/12 * 1em;
+  height: 34/12 * 1em;
+  height: rem(34);
+  width: 12.5rem;
+}
+
+//----------------------------------------------------ADAPTIVE
 @media screen and (max-width: 1193px) {
   .navigation__content {
     padding: 0 3%;

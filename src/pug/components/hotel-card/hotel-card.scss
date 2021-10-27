@@ -11,10 +11,10 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-size: rem(14);
-    line-height: 18px;
-    color: rgba(31, 32, 65, 0.5);
-    font-size: 0.86rem;
+    line-height: rem(18);
     word-spacing: 0px;
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 0.87rem;
     .day {
       font-size: 13px;
     }
@@ -26,26 +26,40 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 23px;
   }
+
   &__info {
     padding: rem(19) rem(15);
   }
   &__number {
+    font-family: 'Montserrat';
+    font-style: normal;
     font-weight: bold;
-    font-size: rem(14);
-    line-height: 17px;
+    font-size: rem(19);
+    line-height: rem(17);
+    color: #1f2041;
   }
+
   &__lux {
-    font-weight: bold;
+    font-family: 'Montserrat';
     font-size: rem(12);
-    line-height: 15px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: rem(15);
+    text-transform: uppercase;
+    color: #bc9cff;
+  }
+  &__roomNumber {
+    font-size: 1.15714rem;
+  }
+  &__reviews {
+    font-size: 1rem;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
   }
 }
-.credentials {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 23px;
-}
+
 .slider img {
   max-width: 100%;
   display: block;
@@ -119,34 +133,7 @@
   justify-content: space-between;
   padding: 0 1em;
 }
-.number {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 17px;
-  color: #1f2041;
-}
-.number-number {
-  font-size: 1.15714rem;
-}
-.lux {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: bold;
-  font-size: rem(12);
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #bc9cff;
-}
-.price {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-size: rem(14);
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.5);
-  font-size: 0.87rem;
-}
+
 .hotel-card__applybtn {
   float: right;
 }

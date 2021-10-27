@@ -5,7 +5,7 @@
   &__wrapper {
     display: flex;
   }
-  &__left {
+  &__avatar-like {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +23,7 @@
   &__like {
     margin-top: rem(-15);
   }
-  &__right {
+  &__body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,7 +38,7 @@
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
   }
-  &__days {
+  &__time-passed {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
@@ -47,7 +47,7 @@
     color: rgba(31, 32, 65, 0.75);
     text-transform: none;
   }
-  &__content {
+  &__text {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;

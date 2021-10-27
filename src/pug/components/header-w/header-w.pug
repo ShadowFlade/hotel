@@ -2,9 +2,9 @@ include ../navbar/navbar.pug
 mixin navigation(options)
   nav.navigation
     .navigation__content
-      .navigation__icon-space.brand-logo
+      .navigation__logo
         include ../burger-menu/burger-menu.pug   
-        img(src=`assets/img/fsdlogo.svg`,class='logo-img') 
+        img(class='logo-img',src=`assets/img/fsdlogo.svg`) 
       .navigation__interactive
         .navigation__navbar 
           .navigation__items
@@ -18,8 +18,8 @@ mixin navigation(options)
           .navigation__user 
             .navigation__username #{options.username}
         else
-          .btngroup-authorization 
-            .button-default2__wrapper(class='navigation__button-wrapper')
+          .navigation__auth
+            .button-default2__wrapper(class='button-default2__wrapper--navigation')
               button(class='button-default2') #{options.leftButtonLabel}
-            button(class='pay-button navigation__bigbutton') #{options.rightButtonLabel}
+            button(class='pay-button pay-button--navigation') #{options.rightButtonLabel}
           

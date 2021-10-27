@@ -2,15 +2,15 @@ include ../like/like.pug
 mixin comment(options)
   .comment
     .comment__wrapper
-      .comment__left
+      .comment__avatar-like
         .comment__pic
           img(src=options.img)
         .comment__like
           +like({number_of_likes:'12',id:'like__murad'})
-      .comment__right
+      .comment__body
         .comment__name #{options.name}
-        .comment__days #{options.days_ago}  назад
-        .comment__content #{options.text}
+        .comment__time-passed #{options.days_ago}  назад
+        .comment__text #{options.text}
 
 +comment({img:'assets/img/avatar.png',name:'Мурад Сарафанов',days_ago:'5 дней назад',
 text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})

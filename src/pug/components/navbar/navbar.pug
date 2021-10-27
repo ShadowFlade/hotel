@@ -4,11 +4,11 @@ mixin navbar(options)
       .navbar__item
         span(class='navbar__text') #{el.name}
         span( class='navbar__arrow')
-          img(src='assets/img/arrow.svg',class='arrow_class')
+          img(,class='arrow_class',src='assets/img/arrow.svg')
         if el.list
-          .navbar__dd
+          .navbar__menu
             each val in el.list
-              a(class='dd__item') #{val}
+              a(class='navbar__option') #{val}
     else 
       .navbar__item #{el.name}
 

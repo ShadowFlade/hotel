@@ -33,7 +33,7 @@ body {
   justify-content: space-between;
 }
 
-.first-half {
+.left-half {
   margin-bottom: 20px;
   margin-right: 0;
   &__column {
@@ -65,7 +65,7 @@ body {
     }
   }
 }
-.second-half {
+.right-half {
   width: 59%;
   display: flex;
   justify-content: flex-end;

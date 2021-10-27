@@ -4,8 +4,8 @@ mixin item(options)
   .item  
     .item__color(class='first-half__sqr',style={background:options.left_part})
     .item__desc 
-      .item_dark #{options.right_part[0]}
-      .item_code #{options.right_part[1]}
+      .item__dark #{options.right_part[0]}
+      .item__code #{options.right_part[1]}
 
 block variables
   - var title = '1st page';
@@ -16,8 +16,8 @@ block head
   link(rel="stylesheet",href="./vars.scss")
 block content
   .base
-    .first-half
-      .first-half__column
+    .left-half
+      .left-half__column
         +item({left_part:'hsla(238, 35%, 19%, 1)', right_part:['Dark Shade 100%','#1F2041']})
         +item({left_part:'#575870', right_part:['Dark Shade 75%','#1F2041']})
         +item({left_part:'#8F8FA0', right_part:['Dark Shade 50%','#1F2041']})
@@ -26,18 +26,18 @@ block content
         +item({left_part:' #BC9CFF'  , right_part:['Purple','#BC9CFF']})
         +item({left_part:' #6FCF97', right_part:['Green','#6FCF97']})
 
-    .second-half
-      .second-half__column
-        .second-half__item.big
+    .right-half
+      .right-half__column
+        .right-half__item.big
           span.h.big H1
           .fonts This one is the sub-section or widget title
-        .second-half__item.medium
+        .right-half__item.medium
           span.h.medium H2
           .fonts Next one is the item title inside widgets
-        .second-half__item.small
+        .right-half__item.small
           span.h.small H3
           .fonts This is a label or CTA text
-        .second-half__item.mainfont
+        .right-half__item.mainfont
           span.h.mainfont Body
           .fonts This is the body text which is used for most of the design, like paragraphs, lists, etc.
       

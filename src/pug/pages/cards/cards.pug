@@ -6,11 +6,15 @@ include ../../components/hotel-card/hotel-card.pug
 block content
   .cards
     .cards__column
-      include ../../components/rooms-for-you/rooms-for-you.pug
-      include ../../components/registration/registration.pug 
+      .cards__item
+        include ../../components/rooms-for-you/rooms-for-you.pug
+      .cards__item
+        include ../../components/registration/registration.pug
     .cards__column
-      include ../../components/bill/bill.pug
-      include ../../components/sign-in/sign-in.pug
+      .cards__item
+        include ../../components/bill/bill.pug
+      .cards__item 
+        include ../../components/sign-in/sign-in.pug
     .cards__column
       .card__datepicker.js-card__datepicker
       +hotel-card({pictures: ['assets/img/hotel1.png','assets/img/hotel2.png'],lux_number:888,price:'9900₽',stars:'5',number_of_reviews:145,lux:true})

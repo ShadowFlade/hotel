@@ -21,6 +21,8 @@
   &__logo {
     height: 40px;
     width: 12%;
+    display: flex;
+    align-items: center;
   }
   &__navbar {
     display: flex;

@@ -1,6 +1,6 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
-.card {
+.sign-in-card {
   display: flex;
   flex-direction: column;
   align-items: space-between;
@@ -10,43 +10,32 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 40px 30px 30px 30px;
-  margin-right: 40px;
+  margin-right: 40px; //TODO margin
   margin-bottom: 40px;
-  padding: em(40px) em(30px) 0 em(30px);
+  height: 22.5rem;
+  &__content {
+    padding: 2.6314em 1.9em 0;
+  }
   &__footer {
     width: 100%;
-    margin: 10px 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0;
+    padding-top: rem(16);
   }
-  .number {
-    font-size: rem(19);
-  }
-  .number-number {
-    font-size: rem(24);
-  }
+
   &__title {
     @include big;
     margin-bottom: 21px;
   }
-  .text-field {
-    margin-bottom: 21px;
+  &__item {
+    margin-bottom: rem(10);
+    &--pay-button {
+      margin-top: rem(18);
+    }
   }
-}
-
-.card.sign-in {
-  height: 22.5rem;
-  padding: 3.25em 1.7em;
   input {
     width: 100%;
-  }
-  .text-field {
-    margin-bottom: rem(10);
-  }
-  .card__footer {
-    margin: 0;
-    padding-top: rem(16);
   }
 }

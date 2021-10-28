@@ -15,29 +15,6 @@ $mainLineHeight: 1.4;
 $fh: 1440;
 $fw: 900;
 
-@mixin mainfont {
-  font-size: 1rem;
-  line-height: 24/14 * 1rem;
-  font-weight: 400;
-  color: $DarkShade75;
-}
-@mixin big {
-  font-size: 1.41429rem;
-  line-height: 2.07143rem;
-  font-weight: 900;
-}
-@mixin medium {
-  font-size: 19/14 * 1rem;
-  line-height: 23/14 * 1rem;
-  font-weight: 700;
-}
-@mixin small {
-  font-size: 12/14 * 1rem;
-  line-height: 14/14 * 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 $desktopWidth: 1440;
 $desktopHeight: 1350;
 $smDesktopWidth: 980px;

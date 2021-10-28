@@ -3,13 +3,14 @@ include ../svg__arrow-right/svg__arrow-right.pug
 include ../dropdownSubmitAndClear/dropdownSubmitAndClear.pug
 include ../pay-button/pay-button.pug
 
-.card.rooms-for-you
-  .card__title Найдём номера под ваши пожелания
-  .card__destination
-    +date-picker({label:'Прибытие'})
-    +date-picker({label:'Выезд'})  
-  .card__guests
-    +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
-  .card__footer
-    +pay-button({label:"подобрать номер",arrow:true})
-      +svg__arrow-right({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right'})
+.rooms-for-you
+  .rooms-for-you__content 
+    .rooms-for-you__title Найдём номера под ваши пожелания
+    .rooms-for-you__destination
+      +date-picker({label:'Прибытие'})
+      +date-picker({label:'Выезд'})  
+    .rooms-for-you__guests
+      +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
+    .rooms-for-you__footer
+      +pay-button({label:"подобрать номер",arrow:true})
+        +svg__arrow-right({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right'})

@@ -1,12 +1,16 @@
 include ../pay-button/pay-button.pug
-.card.sign-in
-  .card__title Войти
-  .text-field
-    input(,class='input',type='text',placeholder='Email')
-  .text-field
-    input(class='input',type='password',placeholder='Пароль')
-  +pay-button({label:'войти',arrow:true})
-  .card__footer 
-    span(class='card__account-availability') Нет аккаунта на Toxin?
-    .button-default2__wrapper(class='card__button')
-      button(class='button-default2') Создать
+.sign-in-card
+  .sign-in-card__content
+    .sign-in-card__title Войти
+    .sign-in-card__item
+      .text-field
+        input(,class='input',type='text',placeholder='Email')
+    .sign-in-card__item
+      .text-field
+        input(class='input',type='password',placeholder='Пароль')
+    .sign-in-card__item(class='sign-in-card__item--pay-button')
+      +pay-button({label:'войти',arrow:true})
+    .sign-in-card__footer 
+      span(class='card__account-availability') Нет аккаунта на Toxin?
+      .button-default2__wrapper(class='card__button')
+        button(class='button-default2') Создать

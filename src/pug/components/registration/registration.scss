@@ -1,6 +1,6 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
-.card {
+.registration-card {
   display: flex;
   flex-direction: column;
   align-items: space-between;
@@ -10,26 +10,16 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 40px 30px 30px 30px;
   margin-right: 40px;
   margin-bottom: 40px;
-  padding: em(40px) em(30px) 0 em(30px);
-  .number {
-    font-size: rem(19);
-  }
-  .number-number {
-    font-size: rem(24);
+  &__content {
+    padding: 2.2714em 1.9em 0;
   }
   &__title {
     @include big;
-    margin-bottom: 21px;
+    margin-bottom: 1.34286rem;
   }
-  &__destination {
-    display: flex;
-    margin-bottom: 20px;
-  }
-
-  &__for-button {
+  &__account-availability {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
@@ -50,23 +40,12 @@
     align-items: center;
     justify-content: space-between;
   }
-  .text-field .input {
+  &__item {
+    margin-bottom: rem(10);
+  }
+  &__input {
     width: 19.85714rem;
     margin-bottom: rem(11);
-  }
-
-  &__summary {
-    margin-bottom: 20px;
-  }
-}
-
-.card.registration {
-  padding: 2.6714em 1.9em 0;
-  .registration__title {
-    margin-bottom: 1.34286rem;
-  }
-  .text-field {
-    margin-bottom: rem(10);
   }
   .radio-buttons {
     margin-bottom: rem(18);

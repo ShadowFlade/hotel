@@ -2,7 +2,7 @@ mixin burger-menu(options)
   div(class=options.classname)
     button(class='burger__button')
       span(class='burger__item')
-    ul(class='burger__menu')
+    ul(class='burger__menu js-burger__menu')
       each val in options.array_of_arguments 
         if typeof val=='array'
           li(class='burger__option') #{val.name}

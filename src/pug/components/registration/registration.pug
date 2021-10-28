@@ -7,18 +7,21 @@ include ../radio-buttons/radio-buttons.pug
     .registration-card__info
       .registration-card__item
         input(class='input registration-card__input',type='text',placeholder='Имя')
-        input(class='input registration__input',type='text',placeholder='Фамилия')
-      +radio-buttons({array_of_arguments:['Мужчина','Женщина'],name:'gender'})
+        input(class='input registration-card__input',type='text',placeholder='Фамилия')
+        +radio-buttons({array_of_arguments:['Мужчина','Женщина'],name:'gender'})
       .registration-card__item
-        label.registration-card__label Дата рождения
+        label.registration-card__label 
+          span(class='registration-card__birthday') Дата рождения
           input(class='registration-card__input input',type='text',placeholder='ДД.ММ.ГГГГ')
       .registration-card__item
         label.registration-card__label Данные для входа в сервис
           input(class='input registration-card__input',type='text',placeholder='Email',)
           input(class='input registration-card__input',type='password',placeholder='Пароль')
-      +toggle({array_of_arguments:['Получать спецпредложения']})
-      button(class='pay-button') перейти к оплате
+        +toggle({array_of_arguments:['Получать спецпредложения']})
+      .registration-card__item
+        button(class='pay-button') перейти к оплате
     .registration-card__footer
       span(class='registration-card__account-availability') Уже есть аккаунт на Toxin
-      .button-default2__wrapper(class='card__button')
-        button(class='button-default2') Войти
+      .registration-card__button
+        .button-default2__wrapper(class='card__button')
+          button(class='button-default2') Войти

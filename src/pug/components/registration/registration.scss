@@ -10,8 +10,9 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
   &__content {
-    padding: 2.2714em 1.9em 0;
+    padding: 2.6714em 1.5em 0 2.8em;
   }
   &__title {
     @include big;
@@ -38,14 +39,23 @@
     align-items: center;
     justify-content: space-between;
   }
+  &__birthday {
+    margin-bottom: 0.28571rem;
+  }
   &__item {
-    margin-bottom: rem(10);
+    margin-bottom: rem(20);
   }
   &__input {
     width: 19.85714rem;
     margin-bottom: rem(11);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__button {
+    margin-left: 10px;
   }
   .radio-buttons {
-    margin-bottom: rem(18);
+    margin-bottom: 0.28571rem;
   }
 }

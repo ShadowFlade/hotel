@@ -1,4 +1,4 @@
-import '../buttons/buttons.js'
+import '../button--hollow/button--hollow.js'
 import '../burger-menu/burger-menu.js'
 import '../pay-button/pay-button.js'
 import '../footer/footer.js'

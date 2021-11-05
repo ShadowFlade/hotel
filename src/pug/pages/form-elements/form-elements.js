@@ -1,12 +1,15 @@
 import '../../components/checkbox-list/checkbox-list.js'
 import '../../components/comment/comment.js'
+import '../../components/button--full/button--full.js'
+import '../../components/button--inline/button--inline.js'
+import '../../components/button--hollow/button--hollow.js'
+
 import '../../components/masked-text-field/masked-text-field.js'
 
 import '../../components/checkbox-buttons/checkbox-buttons.js'
 import '../../components/dropdownNoButtons/dropdownNoButtons.js'
 
 import '../../components/bullet-list/bullet-list.js'
-import '../../components/buttons/buttons.js'
 import '../../components/dropdown/dropdown.js'
 
 import '../../components/checkbox-rich/checkbox-rich.js'

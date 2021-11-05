@@ -19,7 +19,7 @@ mixin navigation(options)
             .navigation__username #{options.username}
         else
           .navigation__auth
-            .button-default2__wrapper(class='button-default2__wrapper--navigation')
-              button(class='button-default2') #{options.leftButtonLabel}
+            .button--hollow__wrapper(class='button-default2__wrapper--navigation')
+              button(class='button--hollow') #{options.leftButtonLabel}
             button(class='pay-button pay-button--navigation') #{options.rightButtonLabel}
           

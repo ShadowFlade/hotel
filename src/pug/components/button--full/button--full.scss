@@ -1,0 +1,16 @@
+.button--full {
+  width: 7em;
+  height: 3em;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(12);
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #ffffff;
+  &:hover {
+    opacity: 0.5;
+  }
+}

@@ -12,6 +12,9 @@
   border-radius: 4px;
 
   height: 22.5rem;
+  &__input {
+    @include input();
+  }
   &__content {
     padding: 2.6314em 1.9em 0;
   }

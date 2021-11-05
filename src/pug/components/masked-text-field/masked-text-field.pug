@@ -1,7 +1,7 @@
 mixin defInput(options)
   div(class=options.nameofclass)
-    label(class=`${options.nameofclass}__label`) #{options.label}
-      input(class=options.nameofclass,type='text',placeholder=options.placeholder,class='input')
+    label(class=`${options.nameofclass}__label js-${options.nameofclass}__label`) #{options.label}
+      input(class=`${options.nameofclass}__input js-${options.nameofclass}__input`,type='text',placeholder=options.placeholder)
       if options.arrow 
         img(class='filter-date-dropdown__arrow',src='assets/img/arrow.svg')
 

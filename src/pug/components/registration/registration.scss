@@ -48,6 +48,7 @@
   &__input {
     width: 19.85714rem;
     margin-bottom: rem(11);
+    @include input();
     &:last-child {
       margin-bottom: 0;
     }

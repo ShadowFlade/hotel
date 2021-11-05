@@ -1,5 +1,7 @@
 import '../../components/checkbox-list/checkbox-list.js'
 import '../../components/comment/comment.js'
+import '../../components/masked-text-field/masked-text-field.js'
+
 import '../../components/checkbox-buttons/checkbox-buttons.js'
 import '../../components/dropdownNoButtons/dropdownNoButtons.js'
 

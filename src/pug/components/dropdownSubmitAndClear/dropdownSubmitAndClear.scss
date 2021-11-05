@@ -7,6 +7,7 @@
   position: relative;
   user-select: none;
   width: 100%;
+  @include input();
   &__big {
     width: 320px;
 

@@ -26,6 +26,7 @@
 }
 .datepicker {
   width: 100%;
+  @include input();
 }
 .date-caption {
   margin-bottom: 5px;

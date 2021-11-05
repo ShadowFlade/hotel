@@ -1,3 +1,5 @@
+@import '../../common/vars.scss';
+@import '../../common/mixins.scss';
 .subscription-field {
   max-width: 266px;
   position: relative;
@@ -8,4 +10,5 @@
 
 .subscription-text-field__input {
   width: 100%;
+  @include input();
 }

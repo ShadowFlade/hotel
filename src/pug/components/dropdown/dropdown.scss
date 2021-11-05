@@ -1,3 +1,5 @@
+@import '../../common/vars.scss';
+@import '../../common/mixins.scss';
 .dropdown__item {
   width: 100%;
   max-width: rem(320);
@@ -5,4 +7,5 @@
 }
 .dropdown__select {
   width: 100%;
+  @include input();
 }

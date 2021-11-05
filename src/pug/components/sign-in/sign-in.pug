@@ -4,10 +4,10 @@ include ../pay-button/pay-button.pug
     .sign-in-card__title Войти
     .sign-in-card__item
       .text-field
-        input(,class='input',type='text',placeholder='Email')
+        input(,class='sign-in-card__input',type='text',placeholder='Email')
     .sign-in-card__item
       .text-field
-        input(class='input',type='password',placeholder='Пароль')
+        input(class='sign-in-card__input',type='password',placeholder='Пароль')
     .sign-in-card__item(class='sign-in-card__item--pay-button')
       +pay-button({label:'войти',arrow:true})
     .sign-in-card__footer 

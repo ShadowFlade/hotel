@@ -22,8 +22,10 @@ block content
 				+dropdown()
 			include ../../components/masked-text-field/masked-text-field.pug
 			.date-picker-box
-				+date-picker({label:'date dropdown'})
-				+date-picker({label:'date dropdown'})
+				.form-elements__datepicker
+					+date-picker({label:'date dropdown'})
+				.form-elements__datepicker
+					+date-picker({label:'date dropdown'})
 			include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 			+subs-text-field({label:'subscription text field'})
 			+dropdownNoButtons({label:'dropdown',placeholder:'2 спальни, 2 кровати',array_of_arguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})

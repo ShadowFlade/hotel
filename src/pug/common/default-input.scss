@@ -1,19 +1,5 @@
 @import './vars.scss';
 @import './mixins.scss';
-
-// label,
-// .label {
-//   position: relative;
-//   user-select: none;
-//   @include small;
-//   margin-bottom: 5px;
-//   font-size: rem(12);
-//   display: flex;
-//   flex-direction: column;
-//   font-size: 0.75714rem;
-//   color: black;
-// }
-
 .arrow,
 .arrow_forward {
   position: absolute;

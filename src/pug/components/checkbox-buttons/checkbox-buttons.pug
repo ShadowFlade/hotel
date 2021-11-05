@@ -5,7 +5,7 @@ mixin checkboxlist__notexp(options={label:'Правила дома',array_of_arg
       each val in options.array_of_arguments
         .checkbox-buttons__item
           label(class='checkbox-buttons__btn',for=val) 
-            span(class='checkbox-buttons__text') #{val}
+            div(class='checkbox-buttons__text') #{val}
             input(class='checkbox-buttons__input',type='checkbox',name=val,id=val)
             span(class='checkbox-buttons__custom') 
             img(src='assets/img/ok.png' style={display:'none'})

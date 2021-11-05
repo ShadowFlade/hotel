@@ -36,12 +36,12 @@ block content
 			+radio-buttons({array_of_arguments:['Мужчина','Женщина'],name:'gender'})    
 			+toggle({label:'toggle',array_of_arguments:['Получать спецпредложения','fish']})
 			.like-buttons
-				.like-buttons__label.label LIKE BUTTON
+				.like-buttons__label LIKE BUTTON
 				.like-buttons__group
 					+like({number_of_likes:'12',id:'like'})
 					+like({number_of_likes:'12',id:'like'})
 			.rate__buttons
-				span.rate__label.label RATE BUTTON
+				span.rate__label RATE BUTTON
 				.rate__items
 					include ../../components/rate-button/rate-button.pug
 					+rate-button(5)
@@ -57,12 +57,12 @@ block content
 			label.buttons__label buttons
 			include ../../components/buttons/buttons.pug
 			include ../../components/pay-button/pay-button.pug
-			.pagination(class='label') pagination
+			.pagination__label pagination
 				include ../../components/pagination/pagination.pug
 			.dropdown
 				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',array_of_arguments:["взрослые","дети","младенцы"],option:'clear'})
 			.bullet-list
-				.label bullet list
+				.bullet-list__label bullet list
 				include ../../components/bullet-list/bullet-list.pug
 			
 

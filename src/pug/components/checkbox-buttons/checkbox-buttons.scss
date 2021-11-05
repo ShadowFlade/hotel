@@ -10,6 +10,8 @@
     width: 100%;
   }
   &__btn {
+    display: flex;
+    position: relative;
     font-family: 'Montserrat';
     font-weight: 400;
     font-style: normal;
@@ -18,7 +20,9 @@
     text-transform: capitalize;
     padding-left: rem(32);
   }
-
+  &__label {
+    @include label;
+  }
   &__text {
     line-height: 1.3;
   }

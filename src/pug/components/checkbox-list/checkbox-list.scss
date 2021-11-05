@@ -14,6 +14,9 @@
   position: relative;
   width: 222/12 * 1em;
   max-width: 266px;
+  &__label {
+    position: relative;
+  }
   &__group {
     top: 100%;
     left: 0;

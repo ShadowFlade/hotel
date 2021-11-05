@@ -42,6 +42,7 @@
     padding-left: rem(30);
     color: $DarkShade50;
     transition: all 0.3s ease-out;
+    @include label;
     &:before {
       content: '';
       width: 20px;

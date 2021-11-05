@@ -43,6 +43,7 @@ html {
       font-weight: 530;
       font-size: rem(12);
       margin-bottom: 1.21429rem;
+      @include label;
     }
   }
 
@@ -70,6 +71,7 @@ html {
 .buttons__label {
   margin-top: 1.6rem;
   margin-bottom: 0;
+  @include label;
 }
 
 .comment__box {
@@ -92,4 +94,10 @@ html {
   .checkbox-buttons {
     margin-bottom: 35px;
   }
+}
+
+.rate__label,
+.bullet-list__label,
+.pagination__label {
+  @include label;
 }

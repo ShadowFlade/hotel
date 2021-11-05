@@ -2,6 +2,9 @@
 @import '../../common/mixins.scss';
 .filter-date-dropdown {
   max-width: 266px;
+  &__label {
+    @include label;
+  }
   &__input {
     @include input();
   }

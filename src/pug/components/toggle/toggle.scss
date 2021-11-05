@@ -14,11 +14,14 @@
   padding-left: 13.5%;
   padding-top: rem(3);
   height: rem(27);
+  position: relative;
+  display: flex;
   &__text {
     padding-left: rem(9);
   }
   &__label {
     margin-bottom: 14/16 * 1rem;
+    @include label;
   }
   &__item {
     display: flex;

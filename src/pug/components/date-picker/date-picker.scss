@@ -15,6 +15,7 @@
   &__label {
     margin-bottom: rem(4);
     font-size: 0.75714rem;
+    @include label;
   }
   &__item {
     position: relative;

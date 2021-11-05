@@ -5,6 +5,7 @@
   position: relative;
   &__label {
     width: 267/14 * 1rem;
+    @include label;
   }
 }
 

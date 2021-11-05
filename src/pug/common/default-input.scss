@@ -1,36 +1,19 @@
 @import './vars.scss';
 @import './mixins.scss';
 
-label,
-.label {
-  position: relative;
-  user-select: none;
-  @include small;
-  margin-bottom: 5px;
-  font-size: rem(12);
-  display: flex;
-  flex-direction: column;
-  font-size: 0.75714rem;
-  color: black;
-}
-
-// .input,
-// select {
-//   background: rgba(0, 0, 0, 0);
-//   border: 1px solid rgba(31, 32, 65, 0.25);
-//   border-radius: 4px;
-//   font-size: 0.91rem;
-//   height: 44px;
-//   -moz-appearance: none;
-//   -webkit-appearance: none;
-//   appearance: none;
-//   padding: 0.5em 2.21429em 0.57143em 1.07143em;
-
-//   &:hover,
-//   &:focus {
-//     border-color: rgba(31, 32, 65, 0.5);
-//   }
+// label,
+// .label {
+//   position: relative;
+//   user-select: none;
+//   @include small;
+//   margin-bottom: 5px;
+//   font-size: rem(12);
+//   display: flex;
+//   flex-direction: column;
+//   font-size: 0.75714rem;
+//   color: black;
 // }
+
 .arrow,
 .arrow_forward {
   position: absolute;

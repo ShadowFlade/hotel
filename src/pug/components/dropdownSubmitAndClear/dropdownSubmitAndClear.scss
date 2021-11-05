@@ -8,6 +8,9 @@
   user-select: none;
   width: 100%;
   @include input();
+  &__label {
+    @include label;
+  }
   &__big {
     width: 320px;
 

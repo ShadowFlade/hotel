@@ -10,7 +10,9 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
+  &__label {
+    @include label;
+  }
   &__content {
     padding: 2.6714em 1.5em 0 2.8em;
   }

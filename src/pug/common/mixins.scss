@@ -103,3 +103,15 @@ $maxWidthContainer: 1170;
     border-color: rgba(31, 32, 65, 0.5);
   }
 }
+
+@mixin label {
+  position: relative;
+  user-select: none;
+  @include small;
+  margin-bottom: 5px;
+  font-size: rem(12);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75714rem;
+  color: black;
+}

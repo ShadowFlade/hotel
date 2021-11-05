@@ -3,3 +3,6 @@
 .text-field__input {
   @include input();
 }
+.text-field__label {
+  @include label;
+}

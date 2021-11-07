@@ -18,6 +18,10 @@
     width: fit-content;
     cursor: pointer;
     position: relative;
+    &--about-us {
+      font-family: 'MontserratBold', 'sans-serif';
+      color: rgba(31, 32, 65, 0.75);
+    }
     span img {
       transition: all 0.15s linear;
     }

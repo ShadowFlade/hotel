@@ -67,10 +67,13 @@ $maxWidthContainer: 1170;
 }
 
 @mixin mainfont {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 24/14 * 1rem;
   font-weight: 400;
   color: $DarkShade75;
+}
+@mixin mainFontBold {
 }
 @mixin big {
   font-size: 1.41429rem;
@@ -89,6 +92,7 @@ $maxWidthContainer: 1170;
   text-transform: uppercase;
 }
 @mixin input {
+  font-family: 'Montserrat', sans-serif;
   background: rgba(0, 0, 0, 0);
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -105,11 +109,11 @@ $maxWidthContainer: 1170;
 }
 
 @mixin label {
+  @include small;
+  font-family: 'MontserratBold', sans-serif;
   position: relative;
   user-select: none;
-  @include small;
   margin-bottom: 5px;
-  font-size: rem(12);
   display: flex;
   flex-direction: column;
   font-size: 0.75714rem;

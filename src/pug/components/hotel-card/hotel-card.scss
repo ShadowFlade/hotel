@@ -32,12 +32,13 @@
     padding: rem(19) rem(15);
   }
   &__number {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
+    font-family: 'MontserratBold', 'sans-serif';
     font-size: rem(19);
     line-height: rem(17);
     color: #1f2041;
+  }
+  &__sign {
+    font-size: rem(15);
   }
 
   &__lux {

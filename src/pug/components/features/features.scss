@@ -19,10 +19,11 @@
 }
 
 .feature__label {
-  @include mainfont;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   line-height: 1.61429rem;
   font-size: 0.9rem;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .feature__desc {

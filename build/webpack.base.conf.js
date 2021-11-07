@@ -145,6 +145,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/static`, to: '' },
+      { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
+
       { from: `${PATHS.src}/pug/components/**/*.png`, to: `${PATHS.assets}img/[name].[ext]` },
       { from: `${PATHS.src}/pug/components/**/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
       { from: `${PATHS.src}/pug/layout/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },

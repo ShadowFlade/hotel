@@ -34,9 +34,9 @@
     font-size: rem(11);
   }
   &__number-number {
-    font-size: 1.61429rem;
     margin-left: 4px;
     font-size: rem(19);
+    font-family: 'MontserratBold', 'sans-serif';
   }
   &__number-lux {
     font-family: 'Montserrat';
@@ -105,9 +105,7 @@
     text-align: right;
   }
   &__all {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
+    font-family: 'MontserratBold';
     font-size: rem(19);
     line-height: 23px;
     color: #1f2041;

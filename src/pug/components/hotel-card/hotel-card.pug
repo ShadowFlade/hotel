@@ -7,8 +7,7 @@ mixin hotel-card(options)
     .hotel-card__info
       .hotel-card__row
         span(class='hotel-card__number') 
-          span(class='hotel-card__sign')
-          |№
+          span(class='hotel-card__sign') №
           span(class='hotel-card__roomNumber') #{options.lux_number}
           if options.lux==true
             span(class='hotel-card__lux') ЛЮКС

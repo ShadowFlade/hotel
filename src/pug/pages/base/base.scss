@@ -4,9 +4,12 @@
 
 .mainfont {
   @include mainfont;
+  font-family: 'Montserrat', sans-serif;
+
   .fonts {
     width: 58%;
     word-spacing: 5px;
+    font-family: 'Montserrat', sans-serif;
   }
 }
 .big {
@@ -43,6 +46,7 @@ body {
     justify-content: space-between;
   }
   .item {
+    font-family: 'MontserratBold', sans-serif;
     margin-bottom: 20/16 * 1rem;
     display: flex;
     width: 241.61111%;
@@ -78,6 +82,7 @@ body {
     justify-content: space-between;
   }
   &__item {
+    font-family: 'MontserratBold', sans-serif;
     display: flex;
     margin-bottom: 3.54167%;
     width: 131%;

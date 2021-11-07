@@ -32,6 +32,9 @@
       opacity: 1;
       transform: translate(-50%, -50%) scale(1);
     }
+    &:checked + .radio-buttons__title:before {
+      border-color: #bc9cff;
+    }
     &:checked ~ .radio-buttons__title {
       color: $DarkShade75;
     }
@@ -48,7 +51,7 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      border: 1px solid #bc9cff;
+      border: 1px solid rgb(199, 199, 207);
       position: absolute;
       left: 0;
       top: -2px;

@@ -54,8 +54,12 @@ body {
   width: 59%;
   display: flex;
   justify-content: flex-end;
-  padding-left: 20%;
-
+  padding-left: 21%;
+  .fonts {
+    margin-left: 1.44286rem;
+    width: 66%;
+    word-spacing: 4px;
+  }
   &__column {
     display: flex;
     flex-direction: column;
@@ -65,41 +69,33 @@ body {
   &__item {
     font-family: 'MontserratBold', sans-serif;
     display: flex;
-    margin-bottom: 3.54167%;
     width: 131%;
+    margin-bottom: 10.54167%;
     &--big {
       @include big;
     }
     &--medium {
-      @include small;
+      @include medium;
     }
     &--small {
       @include small;
+      .fonts {
+        word-spacing: 0px;
+      }
     }
     &--mainfont {
       @include mainfont;
       font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
 
       .fonts {
         width: 58%;
-        word-spacing: 5px;
         font-family: 'Montserrat', sans-serif;
+        word-spacing: 1px;
       }
     }
     .h {
       width: 6%;
     }
-  }
-  .small {
-    .fonts {
-      letter-spacing: -1px;
-      font-weight: bold;
-    }
-  }
-  .fonts {
-    padding-left: 5.7%;
-    text-align: left;
-    width: 69%;
-    letter-spacing: -2px;
   }
 }

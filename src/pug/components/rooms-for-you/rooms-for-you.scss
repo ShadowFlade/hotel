@@ -20,6 +20,9 @@
   &__destination {
     display: flex;
     margin-bottom: 1.25714rem;
+    .date-picker {
+      margin-right: rem(15);
+    }
   }
   &__footer {
     width: 100%;

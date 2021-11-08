@@ -4,5 +4,5 @@ mixin radio-buttons(options)
       each val in options.array_of_arguments
         .radio-buttons__option
           input(class='radio-buttons__input',type='radio',name=options.name,value=val,id=val)
-          label(class='radio-buttons__title',for=val) #{val}
+          span(class='radio-buttons__title',for=val) #{val}
 

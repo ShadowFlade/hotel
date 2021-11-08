@@ -21,6 +21,9 @@
     display: flex;
     margin-bottom: 1.4rem;
     margin-top: 1.5rem;
+    .date-picker:not(:last-child) {
+      margin-right: rem(15);
+    }
   }
   &__number {
     font-family: 'Montserrat';

@@ -2,7 +2,7 @@ const isVisible = elem => !!elem && !!(elem.offsetWidth || elem.offsetHeight
   || elem.getClientRects().length)
 
 // +closes and opens a popelement on click on clickelement
-const BindOutsideClickDetection = (clickElementName, popElementName)=>{
+const bindOutsideClickDetection = (clickElementName, popElementName)=>{
   let clickElement
   let popElement
   if (typeof clickElementName === 'string') {
@@ -32,4 +32,4 @@ const BindOutsideClickDetection = (clickElementName, popElementName)=>{
   clickElement.addEventListener('click', handleElementClicked)
 }
 
-export { isVisible, BindOutsideClickDetection }
+export { isVisible, bindOutsideClickDetection }

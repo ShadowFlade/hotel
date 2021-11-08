@@ -1,6 +1,6 @@
 import './burger-menu.scss'
-import { BindOutsideClickDetection } from '../../../utils/utils'
+import { bindOutsideClickDetection } from '../../../utils/utils'
 const handleContentLoaded = (e)=>{
-  BindOutsideClickDetection('.js-burger', '.js-burger__menu')
+  bindOutsideClickDetection('.js-burger', '.js-burger__menu')
 }
 document.addEventListener('DOMContentLoaded', handleContentLoaded)

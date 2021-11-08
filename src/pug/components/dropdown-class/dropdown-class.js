@@ -1,4 +1,4 @@
-import { BindOutsideClickDetection } from '../../../utils/utils'
+import { bindOutsideClickDetection } from '../../../utils/utils'
 
 class DropdownAccom {
   constructor(element, list, limit) {
@@ -17,7 +17,7 @@ class DropdownAccom {
     this.list = this.element.querySelector(this.listName)
     this.input = this.element.getElementsByClassName('dropdown-accom input')[0]
 
-    BindOutsideClickDetection(elementName, listName)
+    bindOutsideClickDetection(elementName, listName)
     const submitButton = this.element.querySelector('.dropdown-accom__submit')
     this.submit = submitButton
     const clearButton = this.element.querySelector('.dropdown-accom__clear')

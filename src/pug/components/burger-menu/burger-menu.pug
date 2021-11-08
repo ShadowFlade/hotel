@@ -1,4 +1,4 @@
-mixin burger-menu(options) 
+mixin burgerMenu(options) 
   div(class=options.classname)
     button(class='burger__button')
       span(class='burger__item')
@@ -14,5 +14,5 @@ mixin burger-menu(options)
             li(class='burger__option') #{val.name}
               img(src='assets/img/arrow.svg',class='burger__arrow')
               
-+burger-menu({array_of_arguments:[{name:'О нас',arrow:'false'},{name:'Услуги',arrow:'true'},{name:'Вакансии',arrow:'false'},{name:'Новости',arrow:'false'},{name:'Соглашения',arrow:'true'}],classname:'burger js-burger'})
++burgerMenu({array_of_arguments:[{name:'О нас',arrow:'false'},{name:'Услуги',arrow:'true'},{name:'Вакансии',arrow:'false'},{name:'Новости',arrow:'false'},{name:'Соглашения',arrow:'true'}],classname:'burger js-burger'})
    

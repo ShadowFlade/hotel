@@ -1,4 +1,4 @@
-mixin svg__arrow-right(options)
+mixin svgArrowRight(options)
   - id = (options.color+options.endColor).split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0)
   - const fill = options.endColor!== undefined ?`url(#paint0_linear${id})`: color;
   svg(class=`${options.className}` width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")

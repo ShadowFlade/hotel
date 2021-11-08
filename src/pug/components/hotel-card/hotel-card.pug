@@ -1,5 +1,5 @@
 include  ../rate-button/rate-button.pug
-mixin hotel-card(options)
+mixin hotelCard(options)
   .hotel-card
     .hotel-card__slider.js-hotel-card__slider
       each pic in options.pictures
@@ -16,7 +16,7 @@ mixin hotel-card(options)
           span.day в сутки
       .hotel-card__row
         span(class='hotel-card__stars') 
-          +rate-button(4)
+          +rateButton(4)
         span(class='hotel-card__reviews')
           b #{options.number_of_reviews} 
           |Отзывов

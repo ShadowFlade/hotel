@@ -23,19 +23,19 @@ block content
 			include ../../components/masked-text-field/masked-text-field.pug
 			.date-picker-box
 				.form-elements__datepicker
-					+date-picker({label:'date dropdown'})
+					+datePicker({label:'date dropdown'})
 				.form-elements__datepicker
-					+date-picker({label:'date dropdown'})
+					+datePicker({label:'date dropdown'})
 			include ../../components/filter-date-dropdown/filter-date-dropdown.pug
-			+subs-text-field({label:'subscription text field'})
+			+subsTextField({label:'subscription text field'})
 			+dropdownNoButtons({label:'dropdown',placeholder:'2 спальни, 2 кровати',array_of_arguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
-			+checkboxlist({label:'expandable checkbox list',array_of_arguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 
+			+checkboxList({label:'expandable checkbox list',array_of_arguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 
 			include ../../components/features/features.pug 
 
 		.form-elements__column
 			include ../../components/checkbox-buttons/checkbox-buttons.pug
 			span.radio-buttons__label RADIO BUTTONS
-			+radio-buttons({array_of_arguments:['Мужчина','Женщина'],name:'gender'})    
+			+radioButtons({array_of_arguments:['Мужчина','Женщина'],name:'gender'})    
 			+toggle({label:'toggle',array_of_arguments:['Получать спецпредложения','fish']})
 			.like-buttons
 				.like-buttons__label LIKE BUTTON
@@ -46,7 +46,7 @@ block content
 				span.rate__label RATE BUTTON
 				.rate__items
 					include ../../components/rate-button/rate-button.pug
-					+rate-button(5)
+					+rateButton(5)
 			.dropdown
 				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',array_of_arguments:['взрослые','дети','младенцы'],option:'clear'})
 			include ../../components/checkbox-rich/checkbox-rich.pug

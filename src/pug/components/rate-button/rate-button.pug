@@ -1,4 +1,4 @@
-mixin svg__star(options)
+mixin svgStar(options)
 
 	- id = (options.color+options.endColor).split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0)
 	- const fill = options.endColor!== undefined ?`url(#paint0_linear${id})`: options.color;
@@ -10,7 +10,7 @@ mixin svg__star(options)
 				stop(stop-color=options.color)
 				stop(offset="1" stop-color=options.endColor)
 
-mixin svg__star--active(options)
+mixin svgStarActive(options)
 
 	- id = (options.color+options.endColor).split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0)
 	- const fill = options.endColor!== undefined ?`url(#paint0_linear${id})`: options.color;
@@ -22,25 +22,25 @@ mixin svg__star--active(options)
 				stop(stop-color=options.color)
 				stop(offset="1" stop-color=options.endColor)
 
-mixin rate-button(active_stars)
+mixin rateButton(active_stars)
 		.rate__item
 			.star__group 
 				- var n=active_stars
 				- var r=5-n
 				while n>0
 					.star__united
-						+svg__star--active({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active js-star--active'})
-						+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
+						+svgStarActive({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--active js-star--active'})
+						+svgStar({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
 					-n--
 				while r>0
 					.star__united--disabled
-						+svg__star({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
+						+svgStar({color:'#BC9CFF',endColor:'#8BA4F9',className:'star--inactive'})
 					-r--
 
 
 
 block content
-	+rate-button(5)
+	+rateButton(5)
 
 
 

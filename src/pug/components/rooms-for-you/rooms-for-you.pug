@@ -7,10 +7,10 @@ include ../pay-button/pay-button.pug
   .rooms-for-you__content 
     .rooms-for-you__title Найдём номера под ваши пожелания
     .rooms-for-you__destination
-      +date-picker({label:'Прибытие'})
-      +date-picker({label:'Выезд'})  
+      +datePicker({label:'Прибытие'})
+      +datePicker({label:'Выезд'})  
     .rooms-for-you__guests
       +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
     .rooms-for-you__footer
-      +pay-button({label:"подобрать номер",arrow:true})
-        +svg__arrow-right({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right'})
+      +payButton({label:"подобрать номер",arrow:true})
+        +svgArrowRight({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right'})

@@ -9,7 +9,7 @@ include ../pay-button/pay-button.pug
       .text-field
         input(class='sign-in-card__input',type='password',placeholder='Пароль')
     .sign-in-card__item(class='sign-in-card__item--pay-button')
-      +pay-button({label:'войти',arrow:true})
+      +payButton({label:'войти',arrow:true})
     .sign-in-card__footer 
       span(class='card__account-availability') Нет аккаунта на Toxin?
       .button--hollow__wrapper(class='card__button')

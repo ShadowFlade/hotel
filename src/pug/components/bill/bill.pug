@@ -17,8 +17,8 @@ include ../pay-button/pay-button.pug
           b 9990₽ 
         span(class='bill__day') в сутки
     .bill__destination
-      +date-picker({label:'Прибытие'})
-      +date-picker({label:'Выезд'})  
+      +datePicker({label:'Прибытие'})
+      +datePicker({label:'Выезд'})  
     .bill__guests
       +dropdownSubmitAndClear({label:'Гости',placeholder:'3 гостя',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
     .bill__summary
@@ -41,5 +41,5 @@ include ../pay-button/pay-button.pug
         .bill__border
         .bill__money 38 081₽
     .bill__footer
-      +pay-button({label:'Забронировать',arrow:true}) 
+      +payButton({label:'Забронировать',arrow:true}) 
 

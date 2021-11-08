@@ -9,7 +9,7 @@ mixin pagination(number_of_first_pages)
       div(class=' pagination__item pagination__item--intro js-pagination__item') ...
       div(class='pagination__item pagination__item--last-page js-pagination__item') 15 
       .pagination__arrow-item
-        +svg__arrow-right({color:'#FFFFFF',endColor:'#FFFFFF',className:'pagination__arrow-right'})
+        +svgArrowRight({color:'#FFFFFF',endColor:'#FFFFFF',className:'pagination__arrow-right'})
     .pagination__info 1 – 12 из 100+ вариантов аренды
 
 +pagination(3)

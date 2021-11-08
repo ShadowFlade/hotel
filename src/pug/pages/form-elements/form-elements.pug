@@ -8,6 +8,19 @@ include ../../components/radio-buttons/radio-buttons.pug
 include ../../components/dropdown-no-buttons/dropdown-no-buttons.pug
 include ../../components/checkbox-list/checkbox-list.pug
 include ../../components/subscription-text-field/subscription-text-field.pug
+include ../../components/bullet-list/bullet-list.pug
+include ../../components/checkbox-buttons/checkbox-buttons.pug
+include ../../components/checkbox-rich/checkbox-rich.pug
+include ../../components/comment/comment.pug
+include ../../components/features/features.pug 
+include ../../components/masked-text-field/masked-text-field.pug
+include ../../components/pagination/pagination.pug
+include ../../components/range-slider/range-slider.pug
+include ../../components/rate-button/rate-button.pug
+
+
+
+
 
 
 block variables
@@ -20,7 +33,7 @@ block content
 			include ../../components/text-field/text-field.pug 
 			.dropdown.js-dropdown
 				+dropdown()
-			include ../../components/masked-text-field/masked-text-field.pug
+			+defInput({label:'masked text field',placeholder:'ДД.ММ.ГГГГ',nameOfClass:'text-field'})
 			.date-picker-box
 				.form-elements__datepicker
 					+datePicker({label:'date dropdown'})
@@ -30,10 +43,13 @@ block content
 			+subsTextField({label:'subscription text field'})
 			+dropdownNoButtons({label:'dropdown',placeholder:'2 спальни, 2 кровати',arrayOfArguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
 			+checkboxList({label:'expandable checkbox list',arrayOfArguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 
-			include ../../components/features/features.pug 
+			.features__box
+				+features({pic:'assets/img/smile.png',feature:'Комфорт',desc:'Шумопоглощающие стены'})
+				+features({pic:'assets/img/comfort2.png',feature:'Удобство',desc:'Окно в каждой из спален'})
+				+features({pic:'assets/img/whatshot.png',feature:'Уют',desc:'Номер оснащен камином'})
 
 		.form-elements__column
-			include ../../components/checkbox-buttons/checkbox-buttons.pug
+			+checkboxListNotexp()
 			span.radio-buttons__label RADIO BUTTONS
 			+radioButtons({arrayOfArguments:['Мужчина','Женщина'],name:'gender'})    
 			+toggle({label:'toggle',arrayOfArguments:['Получать спецпредложения','fish']})
@@ -45,17 +61,20 @@ block content
 			.rate__buttons
 				span.rate__label RATE BUTTON
 				.rate__items
-					include ../../components/rate-button/rate-button.pug
+					+rateButton(5)
+
 					+rateButton(5)
 			.dropdown
 				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',arrayOfArguments:['взрослые','дети','младенцы'],option:'clear'})
-			include ../../components/checkbox-rich/checkbox-rich.pug
+			+checkboxRich()
+
 			.comment__box
-				include ../../components/comment/comment.pug
+				+comment({img:'assets/img/avatar.png',name:'Мурад Сарафанов',daysAgo:'5 дней назад',
+text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
 
 		.form-elements__column
 			.range-slider__box
-				include ../../components/range-slider/range-slider.pug
+				+rangeSlider('RANGE SLIDER')
 			label.buttons__label buttons
 			.buttons
 				.buttons__box
@@ -68,12 +87,13 @@ block content
 				
 			include ../../components/pay-button/pay-button.pug
 			.pagination__label pagination
-				include ../../components/pagination/pagination.pug
+				+pagination(3)
+
 			.dropdown
 				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',arrayOfArguments:["взрослые","дети","младенцы"],option:'clear'})
 			.bullet-list
 				.bullet-list__label bullet list
-				include ../../components/bullet-list/bullet-list.pug
+				+bulletList({arrayOfArguments:['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']})
 			
 
 

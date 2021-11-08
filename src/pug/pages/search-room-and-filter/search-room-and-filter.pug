@@ -5,6 +5,9 @@ include ../../components/dropdown-submit-and-clear/dropdown-submit-and-clear.pug
 include ../../components/header-w/header-w.pug
 include ../../components/range-slider/range-slider.pug
 include ../../components/checkbox-list/checkbox-list.pug
+include ../../components/checkbox-buttons/checkbox-buttons.pug
+include ../../components/checkbox-rich/checkbox-rich.pug
+include ../../components/pagination/pagination.pug
 
 block variables
   - var title = 'search room and filter';
@@ -23,9 +26,10 @@ block content
         .sidebar__item 
           +rangeSlider('Диапазон цены')
         .sidebar__item 
-          include ../../components/checkbox-buttons/checkbox-buttons.pug
+          +checkboxListNotexp()
         .sidebar__item 
-          include ../../components/checkbox-rich/checkbox-rich.pug
+          +checkboxRich()
+
         .sidebar__item 
           +dropdownSubmitAndClear({label:'удобство номера',placeholder:'2 спальни, 2 кровати',arrayOfArguments:['спальни','кровати','ванные комнаты'],option:'clear'})
         .sidebar__item 
@@ -70,7 +74,8 @@ block content
           +hotelCard({pictures:['assets/img/srchRoom11.png','assets/img/image1.png'],
                 luxNumber:'450',price:'5300',stars:4,numberOfReviews:'39',lux:false})
       .content__pagination 
-        include ../../components/pagination/pagination.pug
+        +pagination(3)
+
   footer(class='footer footer--main')
     include ../../components/footer/footer.pug
   footer(class='footer footer--small ')

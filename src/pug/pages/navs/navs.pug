@@ -5,7 +5,7 @@ block variables
   - var description = '';
 block content
   .navs 
-    include ../../components/header-wo/header-wo.pug 
+    +navigation({username:'',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
     +navigation({username:'Юлий Цезарь',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
     include ../../components/footer/footer.pug 
     include ../../components/footer-mini/footer-mini.pug 

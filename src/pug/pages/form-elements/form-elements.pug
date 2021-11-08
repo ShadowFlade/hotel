@@ -30,70 +30,91 @@ block variables
 block content 
 	.form-elements
 		.form-elements__column
-			include ../../components/text-field/text-field.pug 
-			.dropdown.js-dropdown
+			.form-elements__item
+				include ../../components/text-field/text-field.pug 
+			.form-elements__item
+				.dropdown.js-dropdown
+			.form-elements__item
 				+dropdown()
-			+defInput({label:'masked text field',placeholder:'ДД.ММ.ГГГГ',nameOfClass:'text-field'})
-			.date-picker-box
-				.form-elements__datepicker
-					+datePicker({label:'date dropdown'})
-				.form-elements__datepicker
-					+datePicker({label:'date dropdown'})
-			+datePicker({label:'filter date dropdown',placeholder:'19 авг- 23 авг',classname:'date-picker date-picker--single',arrow:true})
-			+subsTextField({label:'subscription text field'})
-			+dropdownNoButtons({label:'dropdown',placeholder:'2 спальни, 2 кровати',arrayOfArguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
-			+checkboxList({label:'expandable checkbox list',arrayOfArguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 
-			.features__box
-				+features({pic:'assets/img/smile.png',feature:'Комфорт',desc:'Шумопоглощающие стены'})
-				+features({pic:'assets/img/comfort2.png',feature:'Удобство',desc:'Окно в каждой из спален'})
-				+features({pic:'assets/img/whatshot.png',feature:'Уют',desc:'Номер оснащен камином'})
+			.form-elements__item
+				+defInput({label:'masked text field',placeholder:'ДД.ММ.ГГГГ',nameOfClass:'text-field'})
+			.form-elements__item
+				.date-picker-box
+					.form-elements__datepicker
+						+datePicker({label:'date dropdown',placeholder:'ДД.ММ.ГГГГ'})
+					.form-elements__datepicker
+						+datePicker({label:'date dropdown',placeholder:'19.08.2019'})
+			.form-elements__item
+				+datePicker({label:'filter date dropdown',placeholder:'19 авг- 23 авг',classname:'date-picker date-picker--single',modif:'single',arrow:true})
+			.form-elements__item
+				+subsTextField({label:'subscription text field'})
+			.form-elements__item
+				+dropdownNoButtons({label:'dropdown',placeholder:'2 спальни, 2 кровати',arrayOfArguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
+			.form-elements__item
+				+checkboxList({label:'expandable checkbox list',arrayOfArguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 
+			.form-elements__item
+				.features__box
+					+features({features:[{pic:'assets/img/smile.png',feature:'Комфорт',desc:'Шумопоглощающие стены'},{pic:'assets/img/comfort2.png',feature:'Удобство',desc:'Окно в каждой из спален'},{pic:'assets/img/whatshot.png',feature:'Уют',desc:'Номер оснащен камином'}]})
+
 
 		.form-elements__column
-			+checkboxListNotexp()
-			span.radio-buttons__label RADIO BUTTONS
-			+radioButtons({arrayOfArguments:['Мужчина','Женщина'],name:'gender'})    
-			+toggle({label:'toggle',arrayOfArguments:['Получать спецпредложения','fish']})
-			.like-buttons
-				.like-buttons__label LIKE BUTTON
-				.like-buttons__group
-					+like({numberOfLikes:'12',id:'like'})
-					+like({numberOfLikes:'12',id:'like'})
-			.rate__buttons
-				span.rate__label RATE BUTTON
-				.rate__items
-					+rateButton(5)
+			.form-elements__item
+				+checkboxListNotexp()
+			.form-elements__item
+				span.radio-buttons__label RADIO BUTTONS
+			.form-elements__item
+			
+				+radioButtons({arrayOfArguments:['Мужчина','Женщина'],name:'gender'})    
+			.form-elements__item
+				+toggle({label:'toggle',arrayOfArguments:['Получать спецпредложения','fish']})
+			.form-elements__item
+				.like-buttons
+					.like-buttons__label LIKE BUTTON
+					.like-buttons__group
+						+like({numberOfLikes:'12',id:'like'})
+						+like({numberOfLikes:'12',id:'like'})
+			.form-elements__item
+				.rate__buttons
+					span.rate__label RATE BUTTON
+					.rate__items
+						+rateButton(5)
 
-					+rateButton(5)
-			.dropdown
-				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',arrayOfArguments:['взрослые','дети','младенцы'],option:'clear'})
-			+checkboxRich()
-
-			.comment__box
-				+comment({img:'assets/img/avatar.png',name:'Мурад Сарафанов',daysAgo:'5 дней назад',
-text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+						+rateButton(5)
+			.form-elements__item
+				.dropdown
+					+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',arrayOfArguments:['взрослые','дети','младенцы'],option:'clear'})
+			.form-elements__item
+				+checkboxRich()
+			.form-elements__item
+				.comment__box
+					+comment({img:'assets/img/avatar.png',name:'Мурад Сарафанов',daysAgo:'5 дней назад',
+	text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
 
 		.form-elements__column
-			.range-slider__box
-				+rangeSlider('RANGE SLIDER')
+			.form-elements__item
+				.range-slider__box
+					+rangeSlider('RANGE SLIDER')
+			.form-elements__item
 			label.buttons__label buttons
-			.buttons
-				.buttons__box
-					include ../../components/button--hollow/button--hollow.pug
-					include ../../components/button--hollow/button--hollow.pug
-					include ../../components/button--full/button--full.pug
-					include ../../components/button--full/button--full.pug
-					include ../../components/button--inline/button--inline.pug
-					include ../../components/button--inline/button--inline.pug
-				
-			include ../../components/pay-button/pay-button.pug
-			.pagination__label pagination
-				+pagination(3)
-
-			.dropdown
-				+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',arrayOfArguments:["взрослые","дети","младенцы"],option:'clear'})
-			.bullet-list
-				.bullet-list__label bullet list
-				+bulletList({arrayOfArguments:['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']})
+				.buttons
+					.buttons__box
+						include ../../components/button--hollow/button--hollow.pug
+						include ../../components/button--hollow/button--hollow.pug
+						include ../../components/button--full/button--full.pug
+						include ../../components/button--full/button--full.pug
+						include ../../components/button--inline/button--inline.pug
+						include ../../components/button--inline/button--inline.pug
+						include ../../components/pay-button/pay-button.pug
+			.form-elements__item
+				.pagination__label pagination
+					+pagination(3)
+			.form-elements__item
+				.dropdown
+					+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',arrayOfArguments:["взрослые","дети","младенцы"],option:'clear'})
+			.form-elements__item
+				.bullet-list
+					.bullet-list__label bullet list
+					+bulletList({arrayOfArguments:['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']})
 			
 
 

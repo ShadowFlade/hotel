@@ -1,17 +1,14 @@
+import './form-elements.scss'
 import '../../components/checkbox-list/checkbox-list.js'
 import '../../components/comment/comment.js'
 import '../../components/button--full/button--full.js'
 import '../../components/button--inline/button--inline.js'
 import '../../components/button--hollow/button--hollow.js'
-
 import '../../components/masked-text-field/masked-text-field.js'
-
 import '../../components/checkbox-buttons/checkbox-buttons.js'
 import '../../components/dropdown-no-buttons/dropdown-no-buttons.js'
-
 import '../../components/bullet-list/bullet-list.js'
 import '../../components/dropdown/dropdown.js'
-
 import '../../components/checkbox-rich/checkbox-rich.js'
 import '../../components/date-picker/date-picker.js'
 import '../../components/dropdown-submit-and-clear/dropdown-submit-and-clear.js'
@@ -27,7 +24,6 @@ import '../../components/text-field/text-field.js'
 import '../../components/toggle/toggle.js'
 import '../../components/graph/graph.js'
 import '../../components/hotel-card/hotel-card.js'
-import './form-elements.scss'
 $(function () {
   const $filterDateDropdown = $('.date-picker--single')
   $filterDateDropdown.daterangepicker({

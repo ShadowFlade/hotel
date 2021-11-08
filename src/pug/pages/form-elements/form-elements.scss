@@ -19,15 +19,9 @@ html {
     flex-direction: column;
     flex: 1 1 30%;
     margin-right: 10.75%;
-
-    & > div:not(.comment__box),
-    & > button {
-      width: 320px;
-      margin-bottom: 1.15rem;
-      &:nth-child(6) {
-        margin-bottom: 96px;
-      }
-    }
+  }
+  &__item {
+    margin-bottom: 1.15rem;
   }
   & > div,
   & > label {

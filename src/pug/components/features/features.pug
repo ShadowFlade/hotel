@@ -1,8 +1,9 @@
 mixin features(options)
-  .feature__item
-    .feature__pic 
-      img(src=options.pic)
-    .feature__info
-      .feature__label #{options.feature}
-      .feature__desc #{options.desc}
+  each feature in options.features 
+    .feature__item
+      .feature__pic 
+        img(src=feature.pic)
+      .feature__info
+        .feature__label #{feature.feature}
+        .feature__desc #{feature.desc}
       

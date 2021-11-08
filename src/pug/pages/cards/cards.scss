@@ -13,6 +13,9 @@
     margin-right: rem(40);
     &:last-child {
       margin-right: 0;
+      .cards__item {
+        margin-right: 0;
+      }
     }
   }
   .moveup {

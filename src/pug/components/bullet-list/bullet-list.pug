@@ -1,5 +1,5 @@
 mixin bulletList (options)
-  .bullet__title #{options.title}
+  span.bullet-list__label #{options.title}
   .bullet-list__box
     each val in options.arrayOfArguments
       span(class='bullet-list__item') #{val}

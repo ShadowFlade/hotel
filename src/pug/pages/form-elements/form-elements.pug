@@ -17,6 +17,7 @@ include ../../components/masked-text-field/masked-text-field.pug
 include ../../components/pagination/pagination.pug
 include ../../components/range-slider/range-slider.pug
 include ../../components/rate-button/rate-button.pug
+include ../../components/pay-button/pay-button.pug
 
 
 
@@ -95,16 +96,17 @@ block content
 				.range-slider__box
 					+rangeSlider('RANGE SLIDER')
 			.form-elements__item
-			label.buttons__label buttons
+			span.buttons__label buttons
 				.buttons
 					.buttons__box
-						include ../../components/button--hollow/button--hollow.pug
-						include ../../components/button--hollow/button--hollow.pug
 						include ../../components/button--full/button--full.pug
 						include ../../components/button--full/button--full.pug
+						include ../../components/button--hollow/button--hollow.pug
+						include ../../components/button--hollow/button--hollow.pug
 						include ../../components/button--inline/button--inline.pug
 						include ../../components/button--inline/button--inline.pug
-						include ../../components/pay-button/pay-button.pug
+						+payButton({arrow:true,label:'перейти к оплате'})
+
 			.form-elements__item
 				.pagination__label pagination
 					+pagination(3)
@@ -113,8 +115,7 @@ block content
 					+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',arrayOfArguments:["взрослые","дети","младенцы"],option:'clear'})
 			.form-elements__item
 				.bullet-list
-					.bullet-list__label bullet list
-					+bulletList({arrayOfArguments:['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']})
+					+bulletList({title:'bullet list',arrayOfArguments:['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']})
 			
 
 

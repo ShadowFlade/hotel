@@ -20,7 +20,7 @@
   &__destination {
     display: flex;
     margin-bottom: 1.25714rem;
-    .date-picker {
+    .date-picker:not(:last-child) {
       margin-right: rem(15);
     }
   }

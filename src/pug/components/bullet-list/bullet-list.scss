@@ -27,3 +27,6 @@
   margin-top: 16px;
   text-transform: none;
 }
+.bullet-list__label {
+  @include label;
+}

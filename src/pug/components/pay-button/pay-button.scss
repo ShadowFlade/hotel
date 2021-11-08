@@ -22,6 +22,9 @@
   &__arrow {
     top: 50%;
   }
+  &__text {
+    text-transform: uppercase;
+  }
 }
 .pay-button:hover {
   opacity: 0.5;

@@ -18,13 +18,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
-  font-size: rem(12);
+  font-size: 12px;
   &__wrapper {
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-    width: 87/12 * 1em;
-    height: 3.26667em;
+    width: 7.9em;
+    height: 3.56667em;
     border-radius: 22px;
-    font-size: rem(12);
+    font-size: 12px;
     &:hover {
       opacity: 0.5;
     }

@@ -16,9 +16,12 @@ block content
       .cards__item 
         include ../../components/sign-in/sign-in.pug
     .cards__column
-      .card__datepicker.js-card__datepicker
-      +hotelCard({pictures: ['assets/img/hotel1.png','assets/img/hotel2.png'],luxNumber:888,price:'9900₽',stars:'5',numberOfReviews:145,lux:true})
-      +hotelCard({pictures: ['assets/img/hotel1.png','assets/img/hotel2.png'],luxNumber:840,price:'9900₽',stars:'4',numberOfReviews:65,lux:false})
+      .cards__item
+        .card__datepicker.js-card__datepicker
+      .cards__item
+        +hotelCard({pictures: ['assets/img/hotel1.png','assets/img/hotel2.png'],luxNumber:888,price:'9900₽',stars:'5',numberOfReviews:145,lux:true})
+      .cards__item
+        +hotelCard({pictures: ['assets/img/hotel1.png','assets/img/hotel2.png'],luxNumber:840,price:'9900₽',stars:'4',numberOfReviews:65,lux:false})
 
 
     

@@ -1,6 +1,6 @@
 mixin checkboxButtons(options={label:'Правила дома',arrayOfArguments:['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']})
   .checkbox-buttons
-    label.checkbox-buttons__label #{options.label}
+    span.checkbox-buttons__label #{options.label}
     .checkbox-buttons__group
       each val in options.arrayOfArguments
         .checkbox-buttons__item

@@ -7,7 +7,7 @@ html {
   justify-content: space-between;
   width: 100%;
   background: white;
-  padding: 6.48% 9.75%;
+  padding: 6.68% 9.75%;
   &__datepicker {
     margin-right: 20px;
     &:last-child {
@@ -21,7 +21,7 @@ html {
     margin-right: 10.75%;
   }
   &__item {
-    margin-bottom: 1.15rem;
+    margin-bottom: 0.65rem;
   }
   & > div,
   & > label {
@@ -96,7 +96,6 @@ html {
 }
 
 .rate__label,
-.bullet-list__label,
 .pagination__label {
   @include label;
 }

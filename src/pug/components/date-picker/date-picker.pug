@@ -1,4 +1,4 @@
-mixin datePicker(options={label:'',placeholder:'ДД.ММ.ГГГГ'})
+mixin datePicker(options={label:'',placeholder:'ДД.ММ.ГГГГ',modif:''})
   .date-picker.js-date-picker(class=`date-picker--${options.modif}`)
     label.date-picker__label #{options.label}
     div(class='date-picker__item')

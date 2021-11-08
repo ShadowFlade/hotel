@@ -30,7 +30,28 @@ block content
             .features__box
               +features({features:[{pic:'assets/img/smile.png',feature:'Комфорт',desc:'Шумопоглощающие стены'},{pic:'assets/img/comfort2.png',feature:'Удобство',desc:'Окно в каждой из спален'},{pic:'assets/img/whatshot.png',feature:'Уют',desc:'Номер оснащен камином'}]})
           .content__item 
-            include ../../components/graph/graph.pug
+            .graph
+              .graph__title Впечатления от номера
+              .graph__body
+                .graph__graph
+                  canvas(class="myChart js-myChart" width="120" height="120")
+                  .graph__capture
+                    span(class='graph__number') 260
+                      br
+                    span(class='graph__text') голосов
+                .graph__info  
+                  .graph__grade
+                    span(class='graph__span js-graph__span')
+                    span(class='graph__review') Великолепно  
+                  .graph__grade
+                    span(class='graph__span js-graph__span')
+                    span(class='graph__review') Хорошо
+                  .graph__grade
+                    span(class='graph__span js-graph__span')
+                    span(class='graph__review') Удовлетворительно
+                  .graph__grade
+                    span(class='graph__span js-graph__span')
+                    span(class='graph__review') Разочарован
           .content__item
             .content__comments 
               .content__title 

@@ -1,5 +1,9 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
+.datepicker {
+  width: 100%;
+  @include input();
+}
 .arrow-span {
   position: relative;
   right: 8%;
@@ -11,6 +15,9 @@
 .date-picker {
   width: 150px;
   font-size: rem(11);
+  &--single {
+    width: 266px;
+  }
   &__label {
     margin-bottom: rem(4);
     font-size: 0.75714rem;
@@ -24,10 +31,7 @@
     }
   }
 }
-.datepicker {
-  width: 100%;
-  @include input();
-}
+
 .date-caption {
   margin-bottom: 5px;
 }

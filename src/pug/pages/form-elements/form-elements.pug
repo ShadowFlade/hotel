@@ -39,7 +39,7 @@ block content
 					+datePicker({label:'date dropdown'})
 				.form-elements__datepicker
 					+datePicker({label:'date dropdown'})
-			include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+			+datePicker({label:'filter date dropdown',placeholder:'19 авг- 23 авг',classname:'date-picker date-picker--single',arrow:true})
 			+subsTextField({label:'subscription text field'})
 			+dropdownNoButtons({label:'dropdown',placeholder:'2 спальни, 2 кровати',arrayOfArguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
 			+checkboxList({label:'expandable checkbox list',arrayOfArguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 

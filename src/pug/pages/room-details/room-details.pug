@@ -1,5 +1,5 @@
 extends ../../layout/landing/landing
-include ../../components/header-w/header-w.pug
+include ../../components/header/header.pug
 include ../../components/bullet-list/bullet-list.pug
 include ../../components/comment/comment.pug
 include ../../components/features/features.pug
@@ -41,16 +41,16 @@ block content
                     span(class='graph__text') голосов
                 .graph__info  
                   .graph__grade
-                    span(class='graph__span js-graph__span')
+                    span(class='graph__bullet js-graph__bullet')
                     span(class='graph__review') Великолепно  
                   .graph__grade
-                    span(class='graph__span js-graph__span')
+                    span(class='graph__bullet js-graph__bullet')
                     span(class='graph__review') Хорошо
                   .graph__grade
-                    span(class='graph__span js-graph__span')
+                    span(class='graph__bullet js-graph__bullet')
                     span(class='graph__review') Удовлетворительно
                   .graph__grade
-                    span(class='graph__span js-graph__span')
+                    span(class='graph__bullet js-graph__bullet')
                     span(class='graph__review') Разочарован
           .content__item
             .content__comments 

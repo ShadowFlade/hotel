@@ -2,7 +2,7 @@ extends ../../layout/landing/landing
 include ../../components/hotel-card/hotel-card.pug
 include ../../components/date-picker/date-picker.pug
 include ../../components/dropdown-submit-and-clear/dropdown-submit-and-clear.pug
-include ../../components/header-w/header-w.pug
+include ../../components/header/header.pug
 include ../../components/range-slider/range-slider.pug
 include ../../components/checkbox-list/checkbox-list.pug
 include ../../components/checkbox-buttons/checkbox-buttons.pug
@@ -26,7 +26,7 @@ block content
         .sidebar__item 
           +rangeSlider('Диапазон цены')
         .sidebar__item 
-          +checkboxListNotexp()
+          +checkboxButtons
         .sidebar__item 
           +checkboxRich()
 

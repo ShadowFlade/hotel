@@ -2,25 +2,6 @@
 @import '../../common/mixins.scss';
 @import '../../common/fonts.scss';
 
-.mainfont {
-  @include mainfont;
-  font-family: 'Montserrat', sans-serif;
-
-  .fonts {
-    width: 58%;
-    word-spacing: 5px;
-    font-family: 'Montserrat', sans-serif;
-  }
-}
-.big {
-  @include big;
-}
-.medium {
-  @include medium;
-}
-.small {
-  @include small;
-}
 html {
   font-size: 16px;
   max-width: 1440px;
@@ -86,7 +67,25 @@ body {
     display: flex;
     margin-bottom: 3.54167%;
     width: 131%;
+    &--big {
+      @include big;
+    }
+    &--medium {
+      @include small;
+    }
+    &--small {
+      @include small;
+    }
+    &--mainfont {
+      @include mainfont;
+      font-family: 'Montserrat', sans-serif;
 
+      .fonts {
+        width: 58%;
+        word-spacing: 5px;
+        font-family: 'Montserrat', sans-serif;
+      }
+    }
     .h {
       width: 6%;
     }

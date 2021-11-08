@@ -37,15 +37,16 @@
     height: 100%;
     align-items: space-between;
     margin-right: 2.85714rem;
+    &--big {
+      width: 22%;
+      margin-right: rem(44);
+    }
     &:nth-child(5) {
       width: 19.07143rem;
       margin-right: 0;
     }
   }
-  .big-column {
-    width: 22%;
-    margin-right: rem(44);
-  }
+
   &__info {
     font-size: rem(12);
     font-weight: 600;

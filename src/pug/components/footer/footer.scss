@@ -16,6 +16,7 @@
     &--section {
       font-family: 'MontserratBold', 'sans-serif';
     }
+    margin-bottom: rem(20);
   }
   &__item:not(:first-child) {
     &:hover {
@@ -83,7 +84,7 @@
       height: 24px;
     }
   }
-  &__bottom-logo {
+  &__logo {
     margin-bottom: rem(15);
   }
   &__bottom-item {
@@ -95,7 +96,7 @@
 a {
   cursor: pointer;
 }
-.footer-secondary {
+.footer--small {
   display: none;
 }
 @media screen and (max-width: 1193px) {
@@ -127,5 +128,11 @@ a {
   }
   .footer__column {
     width: 50%;
+  }
+  .footer {
+    display: none;
+  }
+  .footer--small {
+    display: block;
   }
 }

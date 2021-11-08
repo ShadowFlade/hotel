@@ -10,7 +10,8 @@ block content
     +navigation({username:'',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
   main 
     .picture 
-      include ../../components/registration/registration.pug
+      .registration__register
+        include ../../components/registration/registration.pug
   footer(class='footer footer--main')
     include ../../components/footer/footer.pug
   footer(class='footer footer--small ')

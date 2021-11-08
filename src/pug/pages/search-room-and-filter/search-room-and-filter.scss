@@ -2,9 +2,7 @@
 @import '../../common/mixins.scss';
 .search-room {
   background: white;
-  .hotel-card {
-    margin-bottom: 1.47143rem;
-  }
+
   .range-slider {
     width: 88%;
   }
@@ -48,8 +46,8 @@
       margin-right: -12px;
     }
     &__item {
+      margin-bottom: 1.4rem;
       margin-right: 12px;
-      margin-bottom: 0.57143rem;
     }
     &__pagination {
       display: flex;

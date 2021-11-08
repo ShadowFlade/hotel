@@ -3,6 +3,13 @@
   .footer--small {
     display: none;
   }
+  .registration__register {
+    position: relative;
+    left: 37%;
+    top: 3%;
+    width: 380px;
+  }
+
   .card {
     position: absolute;
     top: 2.3%;
@@ -26,15 +33,6 @@
       max-width: 100%;
       height: 100%;
     }
-  }
-}
-.radio-buttons {
-  &__option {
-    width: 30%;
-  }
-  margin-bottom: 20px;
-  &__box {
-    margin-top: 0;
   }
 }
 

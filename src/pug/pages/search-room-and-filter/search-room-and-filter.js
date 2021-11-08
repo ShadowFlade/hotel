@@ -4,14 +4,14 @@ import '../../components/subscription-text-field/subscription-text-field.js'
 import '../../components/text-field/text-field.js'
 import '../../components/toggle/toggle.js'
 import '../../components/checkbox-rich/checkbox-rich.js'
-import '../../components/dropdownSubmitAndClear/dropdownSubmitAndClear.js'
+import '../../components/dropdown-submit-and-clear/dropdown-submit-and-clear.js'
 import '../../components/hotel-card/hotel-card.js'
 import '../../components/pagination/pagination.js'
 import '../../components/filter-date-dropdown/filter-date-dropdown.js'
 import '../../components/checkbox-list/checkbox-list.js'
 import '../../components/date-picker/date-picker.js'
 import '../../components/checkbox-buttons/checkbox-buttons.js'
-import './searchRoomAndFilter.scss'
+import './search-room-and-filter.scss'
 $(function () {
   $('.js-datepicker').daterangepicker({
     maxSpan: {

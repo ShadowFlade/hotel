@@ -1,5 +1,5 @@
-import './dropdownSubmitAndClear.scss'
-import DropdownAccom from '../dropdownClass/dropdownClass'
+import './dropdown-submit-and-clear.scss'
+import DropdownAccom from '../dropdown-class/dropdown-class'
 const handleContentLoaded = ()=>{
   const dropdowns = Array.from(document.getElementsByClassName('js-dropdown-accom__big'))
   dropdowns.forEach(item => {

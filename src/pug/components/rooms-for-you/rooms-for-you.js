@@ -1,2 +1,2 @@
 import './rooms-for-you.scss'
-import '../dropdownSubmitAndClear/dropdownSubmitAndClear.js'
+import '../dropdown-submit-and-clear/dropdown-submit-and-clear.js'

@@ -1,9 +1,9 @@
-mixin checkboxList(options={label:'expandable checkbox list',array_of_arguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']})
+mixin checkboxList(options={label:'expandable checkbox list',arrayOfArguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']})
   .checkbox-details
     details.checkbox-details__details
       summary.checkbox-details__summary #{options.label}
       .checkbox-details__group
-        each val in options.array_of_arguments
+        each val in options.arrayOfArguments
           .checkbox-details__item
             label(class='checkbox-details__label',for=val) 
               span(class='checkbox-details__span') #{val}

@@ -1,10 +1,10 @@
 mixin defInput(options)
-  div(class=`${options.nameofclass} js-${options.nameofclass}`)
-    label(class=`${options.nameofclass}__label js-${options.nameofclass}__label`) #{options.label}
-      input(class=`${options.nameofclass}__input js-${options.nameofclass}__input`,type='text',placeholder=options.placeholder)
+  div(class=`${options.nameOfClass} js-${options.nameOfClass}`)
+    label(class=`${options.nameOfClass}__label js-${options.nameOfClass}__label`) #{options.label}
+      input(class=`${options.nameOfClass}__input js-${options.nameOfClass}__input`,type='text',placeholder=options.placeholder)
       if options.arrow 
         img(class='filter-date-dropdown__arrow',src='assets/img/arrow.svg')
 
 
       
-+defInput({label:'masked text field',placeholder:'ДД.ММ.ГГГГ',nameofclass:'text-field'})
++defInput({label:'masked text field',placeholder:'ДД.ММ.ГГГГ',nameOfClass:'text-field'})

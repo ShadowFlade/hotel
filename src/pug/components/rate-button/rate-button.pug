@@ -22,10 +22,10 @@ mixin svgStarActive(options)
 				stop(stop-color=options.color)
 				stop(offset="1" stop-color=options.endColor)
 
-mixin rateButton(active_stars)
+mixin rateButton(activeStars)
 		.rate__item
 			.star__group 
-				- var n=active_stars
+				- var n=activeStars
 				- var r=5-n
 				while n>0
 					.star__united

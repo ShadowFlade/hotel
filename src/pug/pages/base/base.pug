@@ -2,10 +2,10 @@ extends ../../layout/main/main
 
 mixin item(options)
   .item  
-    .item__color(class='first-half__sqr',style={background:options.left_part})
+    .item__color(class='first-half__sqr',style={background:options.leftPart})
     .item__desc 
-      .item__dark #{options.right_part[0]}
-      .item__code #{options.right_part[1]}
+      .item__dark #{options.rightPart[0]}
+      .item__code #{options.rightPart[1]}
 
 block variables
   - var title = 'fonts and colors';
@@ -18,13 +18,13 @@ block content
   .base
     .left-half
       .left-half__column
-        +item({left_part:'hsla(238, 35%, 19%, 1)', right_part:['Dark Shade 100%','#1F2041']})
-        +item({left_part:'#575870', right_part:['Dark Shade 75%','#1F2041']})
-        +item({left_part:'#8F8FA0', right_part:['Dark Shade 50%','#1F2041']})
-        +item({left_part:'#C7C7CF', right_part:['Dark Shade 25%','#1F2041']})
-        +item({left_part:'#F4F4F5', right_part:['Dark Shade 5%','#1F2041']})
-        +item({left_part:' #BC9CFF'  , right_part:['Purple','#BC9CFF']})
-        +item({left_part:' #6FCF97', right_part:['Green','#6FCF97']})
+        +item({leftPart:'hsla(238, 35%, 19%, 1)', rightPart:['Dark Shade 100%','#1F2041']})
+        +item({leftPart:'#575870', rightPart:['Dark Shade 75%','#1F2041']})
+        +item({leftPart:'#8F8FA0', rightPart:['Dark Shade 50%','#1F2041']})
+        +item({leftPart:'#C7C7CF', rightPart:['Dark Shade 25%','#1F2041']})
+        +item({leftPart:'#F4F4F5', rightPart:['Dark Shade 5%','#1F2041']})
+        +item({leftPart:' #BC9CFF'  , rightPart:['Purple','#BC9CFF']})
+        +item({leftPart:' #6FCF97', rightPart:['Green','#6FCF97']})
 
     .right-half
       .right-half__column

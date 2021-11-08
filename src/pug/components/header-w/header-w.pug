@@ -1,5 +1,5 @@
 mixin navbar(options)
-  each el in options.array_of_elements 
+  each el in options.arrayOfElements 
     if el.arrow==true
       .navbar__item
         span(class='navbar__text') #{el.name}
@@ -20,7 +20,7 @@ mixin navigation(options)
       .navigation__interactive
         .navigation__navbar 
           .navigation__items
-            +navbar({array_of_elements:[{name:'О нас',arrow:false},
+            +navbar({arrayOfElements:[{name:'О нас',arrow:false},
             {name:'Услуги',arrow:true,list:['hire','me']},
             {name:'Вакансии',arrow:false},
             {name:'Новости',arrow:false},

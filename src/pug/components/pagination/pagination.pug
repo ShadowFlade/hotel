@@ -1,9 +1,9 @@
 include ../svg-arrow-right/svg-arrow-right.pug
-mixin pagination(number_of_first_pages)
+mixin pagination(numberOfFirstPages)
   .pagination
     .pagination__pages
       - let n=1
-      while n<number_of_first_pages+1
+      while n<numberOfFirstPages+1
         div(class='pagination__item js-pagination__item') #{n}
         -n++
       div(class=' pagination__item pagination__item--intro js-pagination__item') ...

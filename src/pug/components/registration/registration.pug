@@ -8,7 +8,7 @@ include ../radio-buttons/radio-buttons.pug
       .registration-card__item
         input(class='registration-card__input',type='text',placeholder='Имя')
         input(class='registration-card__input',type='text',placeholder='Фамилия')
-        +radioButtons({array_of_arguments:['Мужчина','Женщина'],name:'gender'})
+        +radioButtons({arrayOfArguments:['Мужчина','Женщина'],name:'gender'})
       .registration-card__item
         label.registration-card__label 
           span(class='registration-card__birthday') Дата рождения
@@ -17,7 +17,7 @@ include ../radio-buttons/radio-buttons.pug
         label.registration-card__label Данные для входа в сервис
           input(class='registration-card__input',type='text',placeholder='Email',)
           input(class='registration-card__input',type='password',placeholder='Пароль')
-        +toggle({array_of_arguments:['Получать спецпредложения']})
+        +toggle({arrayOfArguments:['Получать спецпредложения']})
       .registration-card__item
         button(class='pay-button') перейти к оплате
     .registration-card__footer

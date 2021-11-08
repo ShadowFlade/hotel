@@ -5,7 +5,7 @@ mixin dropdownNoButtons(options)
       input(class='dropdown-accom',type='text',placeholder=options.placeholder)
       img(class='arrow',src='assets/img/arrow.svg')
       ul(class='dropdown-accom__ul js-dropdown-accom__ul' style={'height':'123px'})
-        each val in options.array_of_arguments
+        each val in options.arrayOfArguments
           li 
             .dropdown-accom__variant #{val}
             .dropdown-accom__btn-group

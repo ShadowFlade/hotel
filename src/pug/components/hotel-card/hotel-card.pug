@@ -8,7 +8,7 @@ mixin hotelCard(options)
       .hotel-card__row
         span(class='hotel-card__number') 
           span(class='hotel-card__sign') №
-          span(class='hotel-card__roomNumber') #{options.lux_number}
+          span(class='hotel-card__roomNumber') #{options.luxNumber}
           if options.lux==true
             span(class='hotel-card__lux') ЛЮКС
         span(class='hotel-card__price') 
@@ -18,6 +18,6 @@ mixin hotelCard(options)
         span(class='hotel-card__stars') 
           +rateButton(4)
         span(class='hotel-card__reviews')
-          b #{options.number_of_reviews} 
+          b #{options.numberOfReviews} 
           |Отзывов
 

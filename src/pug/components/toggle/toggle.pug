@@ -3,7 +3,7 @@ mixin toggle(options)
     if options.label
       label.toggle__label #{options.label}
     .toggle-group
-      each val in options.array_of_arguments
+      each val in options.arrayOfArguments
         .toggle__item
           label(class='toggle',for=val) 
             span.toggle__text #{val}

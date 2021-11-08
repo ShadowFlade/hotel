@@ -10,7 +10,7 @@ include ../pay-button/pay-button.pug
       +datePicker({label:'Прибытие'})
       +datePicker({label:'Выезд'})  
     .rooms-for-you__guests
-      +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',array_of_arguments:['Взрослые','Дети','Младенцы'],option:'clear'})
+      +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',arrayOfArguments:['Взрослые','Дети','Младенцы'],option:'clear'})
     .rooms-for-you__footer
       +payButton({label:"подобрать номер",arrow:true})
         +svgArrowRight({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right'})

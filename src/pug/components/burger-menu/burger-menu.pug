@@ -3,7 +3,7 @@ mixin burgerMenu(options)
     button(class='burger__button')
       span(class='burger__item')
     ul(class='burger__menu js-burger__menu')
-      each val in options.array_of_arguments 
+      each val in options.arrayOfArguments
         if typeof val=='array'
           li(class='burger__option') #{val.name}
             ul(class='burger__inner-menu')
@@ -14,5 +14,5 @@ mixin burgerMenu(options)
             li(class='burger__option') #{val.name}
               img(src='assets/img/arrow.svg',class='burger__arrow')
               
-+burgerMenu({array_of_arguments:[{name:'О нас',arrow:'false'},{name:'Услуги',arrow:'true'},{name:'Вакансии',arrow:'false'},{name:'Новости',arrow:'false'},{name:'Соглашения',arrow:'true'}],classname:'burger js-burger'})
++burgerMenu({arrayOfArguments:[{name:'О нас',arrow:'false'},{name:'Услуги',arrow:'true'},{name:'Вакансии',arrow:'false'},{name:'Новости',arrow:'false'},{name:'Соглашения',arrow:'true'}],classname:'burger js-burger'})
    

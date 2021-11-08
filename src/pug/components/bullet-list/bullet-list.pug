@@ -1,7 +1,7 @@
 mixin bulletList (options)
   .bullet__title #{options.title}
   .bullet-list__box
-    each val in options.array_of_arguments
+    each val in options.arrayOfArguments
       span(class='bullet-list__item') #{val}
       
-+bulletList({array_of_arguments:['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']})
++bulletList({arrayOfArguments:['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']})

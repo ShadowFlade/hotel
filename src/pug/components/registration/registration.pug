@@ -1,27 +1,27 @@
 include ../toggle/toggle.pug
 include ../radio-buttons/radio-buttons.pug
-
-.registration-card
-  .registration-card__content
-    .registration-card__title Регистрация аккаунта
-    .registration-card__info
-      .registration-card__item
-        input(class='registration-card__input',type='text',placeholder='Имя')
-        input(class='registration-card__input',type='text',placeholder='Фамилия')
-        +radioButtons({arrayOfArguments:['Мужчина','Женщина'],name:'gender'})
-      .registration-card__item
-        label.registration-card__label 
-          span(class='registration-card__birthday') Дата рождения
-          input(class='registration-card__input',type='text',placeholder='ДД.ММ.ГГГГ')
-      .registration-card__item
-        label.registration-card__label Данные для входа в сервис
-          input(class='registration-card__input',type='text',placeholder='Email',)
-          input(class='registration-card__input',type='password',placeholder='Пароль')
-        +toggle({arrayOfArguments:['Получать спецпредложения']})
-      .registration-card__item
-        button(class='pay-button') перейти к оплате
-    .registration-card__footer
-      span(class='registration-card__account-availability') Уже есть аккаунт на Toxin
-      .registration-card__button
-        .button--hollow__wrapper
-          button(class='button--hollow') Войти
+mixin registrationCard
+  .registration-card
+    .registration-card__content
+      .registration-card__title Регистрация аккаунта
+      .registration-card__info
+        .registration-card__item
+          input(class='registration-card__input',type='text',placeholder='Имя')
+          input(class='registration-card__input',type='text',placeholder='Фамилия')
+          +radioButtons({arrayOfArguments:['Мужчина','Женщина'],name:'gender'})
+        .registration-card__item
+          label.registration-card__label 
+            span(class='registration-card__birthday') Дата рождения
+            input(class='registration-card__input',type='text',placeholder='ДД.ММ.ГГГГ')
+        .registration-card__item
+          label.registration-card__label Данные для входа в сервис
+            input(class='registration-card__input',type='text',placeholder='Email',)
+            input(class='registration-card__input',type='password',placeholder='Пароль')
+          +toggle({arrayOfArguments:['Получать спецпредложения']})
+        .registration-card__item
+          button(class='pay-button') перейти к оплате
+      .registration-card__footer
+        span(class='registration-card__account-availability') Уже есть аккаунт на Toxin
+        .registration-card__button
+          .button--hollow__wrapper
+            button(class='button--hollow') Войти

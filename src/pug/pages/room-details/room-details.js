@@ -1,6 +1,5 @@
 import '../../components/hotel-card/hotel-card.js'
 import '../../components/bullet-list/bullet-list.js'
-import '../../components/graph/graph.js'
 import '../../components/comment/comment.js'
 import '../../components/bill/bill.js'
 import '../../components/features/features.js'

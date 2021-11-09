@@ -22,7 +22,6 @@ import '../../components/rate-button/rate-button.js'
 import '../../components/subscription-text-field/subscription-text-field.js'
 import '../../components/text-field/text-field.js'
 import '../../components/toggle/toggle.js'
-import '../../components/graph/graph.js'
 import '../../components/hotel-card/hotel-card.js'
 $(function () {
   const $filterDateDropdown = $('.date-picker--single')

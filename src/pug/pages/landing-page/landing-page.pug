@@ -1,5 +1,9 @@
 extends ../../layout/landing/landing
 include ../../components/header/header.pug
+include ../../components/footer/footer.pug
+include ../../components/footer-mini/footer-mini.pug
+include ../../components/rooms-for-you/rooms-for-you.pug
+
 block variables
   - var title = 'landing page';
   - var description = '';
@@ -9,10 +13,10 @@ block content
     +navigation({username:'',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
   main 
     .picture 
-      include ../../components/rooms-for-you/rooms-for-you.pug
+      +roomsForYouCard 
       span.picture__caption Лучшие номера для вашей работы, отдыха и просто вдохновения
   footer(class='footer footer--main')
-    include ../../components/footer/footer.pug
+    +footer
   footer(class='footer footer--small ')
-    include ../../components/footer-mini/footer-mini.pug
+    +footerMini
 

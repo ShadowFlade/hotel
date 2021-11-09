@@ -1,16 +1,17 @@
 include ../pay-button/pay-button.pug
-.sign-in-card
-  .sign-in-card__content
-    .sign-in-card__title Войти
-    .sign-in-card__item
-      .text-field
-        input(,class='sign-in-card__input',type='text',placeholder='Email')
-    .sign-in-card__item
-      .text-field
-        input(class='sign-in-card__input',type='password',placeholder='Пароль')
-    .sign-in-card__item(class='sign-in-card__item--pay-button')
-      +payButton({label:'войти',arrow:true})
-    .sign-in-card__footer 
-      span(class='card__account-availability') Нет аккаунта на Toxin?
-      .button--hollow__wrapper(class='card__button')
-        button(class='button--hollow') Создать
+mixin signInCard
+  .sign-in-card
+    .sign-in-card__content
+      .sign-in-card__title Войти
+      .sign-in-card__item
+        .text-field
+          input(,class='sign-in-card__input',type='text',placeholder='Email')
+      .sign-in-card__item
+        .text-field
+          input(class='sign-in-card__input',type='password',placeholder='Пароль')
+      .sign-in-card__item(class='sign-in-card__item--pay-button')
+        +payButton({label:'войти',arrow:true})
+      .sign-in-card__footer 
+        span(class='card__account-availability') Нет аккаунта на Toxin?
+        .button--hollow__wrapper(class='card__button')
+          button(class='button--hollow') Создать

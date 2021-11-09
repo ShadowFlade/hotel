@@ -2,15 +2,15 @@ include ../date-picker/date-picker.pug
 include ../svg-arrow-right/svg-arrow-right.pug
 include ../dropdown-submit-and-clear/dropdown-submit-and-clear.pug
 include ../pay-button/pay-button.pug
-
-.rooms-for-you
-  .rooms-for-you__content 
-    .rooms-for-you__title Найдём номера под ваши пожелания
-    .rooms-for-you__destination
-      +datePicker({label:'Прибытие',placeholder:'ДД.ММ.ГГГГ'})
-      +datePicker({label:'Выезд',placeholder:'ДД.ММ.ГГГГ'})  
-    .rooms-for-you__guests
-      +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',arrayOfArguments:['Взрослые','Дети','Младенцы'],option:'clear'})
-    .rooms-for-you__footer
-      +payButton({label:"подобрать номер",arrow:true})
-        +svgArrowRight({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right'})
+mixin roomsForYouCard
+  .rooms-for-you
+    .rooms-for-you__content 
+      .rooms-for-you__title Найдём номера под ваши пожелания
+      .rooms-for-you__destination
+        +datePicker({label:'Прибытие',placeholder:'ДД.ММ.ГГГГ'})
+        +datePicker({label:'Выезд',placeholder:'ДД.ММ.ГГГГ'})  
+      .rooms-for-you__guests
+        +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',arrayOfArguments:['Взрослые','Дети','Младенцы'],option:'clear'})
+      .rooms-for-you__footer
+        +payButton({label:"подобрать номер",arrow:true})
+          +svgArrowRight({color:'#FFFFFF',endColor:'#FFFFFF',className:'arrow-right'})

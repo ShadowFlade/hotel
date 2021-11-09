@@ -1,44 +1,44 @@
 include ../svg-arrow-right/svg-arrow-right.pug
 include ../subscription-text-field/subscription-text-field.pug
-
-footer(class='footer')
-  .footer__container
-    .footer__top 
-      .footer__column.footer__column--big
-        .footer__logo
-          img(src='assets/img/fsdlogo.svg')
-        .footer__info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-      .footer__column 
-        .footer__item.footer__item--section Навигация
-        a.footer__item О нас
-        a.footer__item Новости
-        a.footer__item Служба поддержки
-        a.footer__item Услуги
-      .footer__column 
-        .footer__item.footer__item--section О нас
-        a.footer__item О сервисе
-        a.footer__item Наша команда
-        a.footer__item Вакансии
-        a.footer__item Инвесторы
-      .footer__column 
-        .footer__item.footer__item--section Служба поддержки
-        a.footer__item Соглашения
-        a.footer__item Сообщества
-        a.footer__item Связь с нами
-      .footer__column 
-        .footer__item.footer__item--section Подписка
-        .footer__item Получайте специальные предложения и новости сервиса
-        .footer__item
-          +subsTextField({label:''})
-  .footer__bottom
-    .footer__bottom-container
+mixin footer 
+  footer(class='footer')
+    .footer__container
+      .footer__top 
+        .footer__column.footer__column--big
+          .footer__logo
+            img(src='assets/img/fsdlogo.svg')
+          .footer__info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        .footer__column 
+          .footer__item.footer__item--section Навигация
+          a.footer__item О нас
+          a.footer__item Новости
+          a.footer__item Служба поддержки
+          a.footer__item Услуги
+        .footer__column 
+          .footer__item.footer__item--section О нас
+          a.footer__item О сервисе
+          a.footer__item Наша команда
+          a.footer__item Вакансии
+          a.footer__item Инвесторы
+        .footer__column 
+          .footer__item.footer__item--section Служба поддержки
+          a.footer__item Соглашения
+          a.footer__item Сообщества
+          a.footer__item Связь с нами
+        .footer__column 
+          .footer__item.footer__item--section Подписка
+          .footer__item Получайте специальные предложения и новости сервиса
+          .footer__item
+            +subsTextField({label:''})
+    .footer__bottom
+      .footer__bottom-container
+        
+        .footer__copyright Copyright © 2018 Toxin отель. Все права зачищены.
       
-      .footer__copyright Copyright © 2018 Toxin отель. Все права зачищены.
-     
-      .footer__socials(class='socials')
-        .footer__social
-          img(src='assets/img/twitter.svg')
-        .footer__social
-          img(src='assets/img/instagram.svg')
-        .footer__social
-          img(src='assets/img/facebook.svg')
+        .footer__socials(class='socials')
+          .footer__social
+            img(src='assets/img/twitter.svg')
+          .footer__social
+            img(src='assets/img/instagram.svg')
+          .footer__social
+            img(src='assets/img/facebook.svg')

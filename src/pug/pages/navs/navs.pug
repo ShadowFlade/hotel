@@ -1,5 +1,8 @@
 extends ../../layout/main/main
+include ../../components/footer/footer.pug 
 include ../../components/header/header.pug
+include ../../components/footer-mini/footer-mini.pug 
+
 block variables
   - var title = 'headers&footers';
   - var description = '';
@@ -7,5 +10,5 @@ block content
   .navs 
     +navigation({username:'',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
     +navigation({username:'Юлий Цезарь',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
-    include ../../components/footer/footer.pug 
-    include ../../components/footer-mini/footer-mini.pug 
+    +footer
+    +footerMini

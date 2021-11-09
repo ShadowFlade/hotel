@@ -3,6 +3,9 @@ include ../../components/header/header.pug
 include ../../components/bullet-list/bullet-list.pug
 include ../../components/comment/comment.pug
 include ../../components/features/features.pug
+include ../../components/bill/bill.pug
+include ../../components/footer/footer.pug
+include ../../components/footer-mini/footer-mini.pug
 
 
 block variables
@@ -73,8 +76,8 @@ text:'Великолепный матрас на кровати в основн�
               .content__cancelText Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полынй возврат за вычетом сбора за услуги.
         .content__side 
           .content__item 
-            include ../../components/bill/bill.pug
+            +bill
     footer(class='footer footer--main')
-      include ../../components/footer/footer.pug
+      +footer
     footer(class='footer footer--small ')
-      include ../../components/footer-mini/footer-mini.pug
+      +footerMini

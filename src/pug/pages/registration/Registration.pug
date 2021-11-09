@@ -1,5 +1,6 @@
 extends ../../layout/landing/landing
 include  ../../components/header/header.pug
+include ../../components/registration/registration.pug
 
 block variables
   - var title = 'Registration';
@@ -11,7 +12,7 @@ block content
   main 
     .picture 
       .registration__register
-        include ../../components/registration/registration.pug
+        +registrationCard
   footer(class='footer footer--main')
     include ../../components/footer/footer.pug
   footer(class='footer footer--small ')

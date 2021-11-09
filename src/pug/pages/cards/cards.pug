@@ -3,18 +3,23 @@ block variables
   - var title = 'Cards';
   - var pageclass='cards';
 include ../../components/hotel-card/hotel-card.pug 
+include ../../components/bill/bill.pug
+include ../../components/registration/registration.pug
+include ../../components/rooms-for-you/rooms-for-you.pug
+include ../../components/sign-in/sign-in.pug
+
 block content
   .cards
     .cards__column
       .cards__item
-        include ../../components/rooms-for-you/rooms-for-you.pug
+        +roomsForYouCard
       .cards__item
-        include ../../components/registration/registration.pug
+        +registrationCard
     .cards__column
       .cards__item
-        include ../../components/bill/bill.pug
+        +bill
       .cards__item 
-        include ../../components/sign-in/sign-in.pug
+        +signInCard
     .cards__column
       .cards__item
         .card__datepicker.js-card__datepicker

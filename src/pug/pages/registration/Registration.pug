@@ -1,7 +1,8 @@
 extends ../../layout/landing/landing
 include  ../../components/header/header.pug
 include ../../components/registration/registration.pug
-
+include ../../components/footer/footer.pug
+include ../../components/footer-mini/footer-mini.pug
 block variables
   - var title = 'Registration';
   - var description = '';
@@ -14,6 +15,6 @@ block content
       .registration__register
         +registrationCard
   footer(class='footer footer--main')
-    include ../../components/footer/footer.pug
+    +footer 
   footer(class='footer footer--small ')
-    include ../../components/footer-mini/footer-mini.pug
+    +footerMini

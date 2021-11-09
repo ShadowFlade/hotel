@@ -6,7 +6,7 @@ mixin checkboxList(options={label:'expandable checkbox list',arrayOfArguments:['
         each val in options.arrayOfArguments
           .checkbox-details__item
             label(class='checkbox-details__label',for=val) 
-              span(class='checkbox-details__span') #{val}
+              span(class='checkbox-details__option') #{val}
               input(type='checkbox',name=val,id=val,class='checkbox-details__input')
               span(class='checkbox-details__custom')
               img(src='assets/img/ok.png' style={'display':'none'})

@@ -26,7 +26,9 @@
     width: 100%;
     padding-top: 1rem;
   }
-  &__span {
+  &__option {
+    cursor: pointer;
+    user-select: none;
     line-height: 1.3;
     padding-left: 2.14286rem;
     font-family: Montserrat;
@@ -36,13 +38,15 @@
     color: rgba(31, 32, 65, 0.5);
     text-transform: none;
   }
-  &__item:not(:last-child) {
+  &__item {
     display: flex;
     margin-bottom: rem(10);
     position: relative;
   }
 
   &__custom {
+    cursor: pointer;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -72,13 +76,13 @@
     }
   }
   &__input {
+    cursor: pointer;
     opacity: 0;
     width: 20px;
     height: 20px;
     background: transparent;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
-    cursor: pointer;
     position: absolute;
     left: 0;
     top: 0;

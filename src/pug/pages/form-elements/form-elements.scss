@@ -21,7 +21,10 @@ html {
     margin-right: 10.75%;
   }
   &__item {
-    margin-bottom: 0.65rem;
+    margin-bottom: 20px;
+    &--text-field {
+      margin-bottom: 40px;
+    }
   }
   & > div,
   & > label {

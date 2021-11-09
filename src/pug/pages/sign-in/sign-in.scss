@@ -1,6 +1,7 @@
 @import '../../common/mixins.scss';
 .sign-in {
-  .card {
+  &__auth {
+    width: 380px;
     position: absolute;
     top: 24%;
     left: 36.5%;

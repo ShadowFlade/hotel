@@ -39,10 +39,8 @@ block content
 			.form-elements__item
 				+textField
 			.form-elements__item
-				.dropdown.js-dropdown
-			.form-elements__item
 				+dropdown()
-			.form-elements__item
+			.form-elements__item.form-elements__item--text-field
 				+defInput({label:'masked text field',placeholder:'ДД.ММ.ГГГГ',nameOfClass:'text-field'})
 			.form-elements__item
 				.date-picker-box
@@ -84,7 +82,6 @@ block content
 					span.rate__label RATE BUTTON
 					.rate__items
 						+rateButton(5)
-
 						+rateButton(5)
 			.form-elements__item
 				.dropdown
@@ -101,16 +98,16 @@ block content
 				.range-slider__box
 					+rangeSlider('RANGE SLIDER')
 			.form-elements__item
-			span.buttons__label buttons
-				.buttons
-					.buttons__box
-						+buttonFull
-						+buttonFull
-						+buttonHollow
-						+buttonHollow
-						+buttonInline
-						+buttonInline
-						+payButton({arrow:true,label:'перейти к оплате'})
+				span.buttons__label buttons
+					.buttons
+						.buttons__box
+							+buttonFull
+							+buttonFull
+							+buttonHollow
+							+buttonHollow
+							+buttonInline
+							+buttonInline
+							+payButton({arrow:true,label:'перейти к оплате'})
 
 			.form-elements__item
 				.pagination__label pagination

@@ -3,7 +3,7 @@
   .card__destination {
     margin-bottom: 0.55714rem;
   }
-  .picture {
+  &__bgp {
     position: relative;
     background-image: url('picture.jpg');
     height: 51.91429rem;
@@ -15,19 +15,19 @@
       width: 26.1%;
       min-width: 356px;
     }
-    &__caption {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 24px;
-      text-align: right;
-      color: rgba(31, 32, 65, 0.75);
-      position: absolute;
-      bottom: 0;
-      right: 9%;
-      width: 20%;
-    }
+  }
+  &__caption {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    color: rgba(31, 32, 65, 0.75);
+    position: absolute;
+    bottom: 0;
+    right: 9%;
+    width: 20%;
   }
   .rooms-for-you {
     padding: 3.1714em 1.9em 0;

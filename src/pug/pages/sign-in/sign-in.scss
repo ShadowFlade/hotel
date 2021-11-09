@@ -6,10 +6,10 @@
     top: 24%;
     left: 36.5%;
   }
-}
-.picture {
-  background: url('./last-page.png');
-  height: 42.5rem;
+  &__bgp {
+    background: url('./last-page.png');
+    height: 42.5rem;
+  }
 }
 
 @media screen and (max-width: 834px) {

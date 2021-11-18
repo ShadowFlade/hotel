@@ -1,1 +1,0 @@
-import './button--inline.scss'

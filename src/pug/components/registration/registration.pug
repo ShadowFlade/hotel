@@ -1,5 +1,6 @@
 include ../toggle/toggle.pug
 include ../radio-buttons/radio-buttons.pug
+include ../button/button.pug
 mixin registrationCard
   .registration-card
     .registration-card__content
@@ -23,5 +24,4 @@ mixin registrationCard
       .registration-card__footer
         span(class='registration-card__account-availability') Уже есть аккаунт на Toxin
         .registration-card__button
-          .button--hollow__wrapper
-            button(class='button--hollow') Войти
+          +button({text:"Войти",modif:'hollow'})

@@ -18,10 +18,7 @@ include ../../components/pagination/pagination.pug
 include ../../components/range-slider/range-slider.pug
 include ../../components/rate-button/rate-button.pug
 include ../../components/pay-button/pay-button.pug
-include ../../components/button--full/button--full.pug
-include ../../components/button--full/button--full.pug
-include ../../components/button--hollow/button--hollow.pug
-include ../../components/button--inline/button--inline.pug
+include ../../components/button/button.pug
 include ../../components/text-field/text-field.pug 
 
 
@@ -101,12 +98,14 @@ block content
 				span.buttons__label buttons
 					.buttons
 						.buttons__box
-							+buttonFull
-							+buttonFull
-							+buttonHollow
-							+buttonHollow
-							+buttonInline
-							+buttonInline
+							+button({modif:'full',text:'click me'})
+							+button({modif:'full',text:'click me'})
+							+button({modif:'hollow',text:'click me'})
+							+button({modif:'hollow',text:'click me'})
+							+button({modif:'inline',text:'click me'})
+							+button({modif:'inline',text:'click me'})
+
+
 							+payButton({arrow:true,label:'перейти к оплате'})
 
 			.form-elements__item

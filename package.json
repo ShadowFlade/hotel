@@ -4,28 +4,19 @@
   "description": "My template + pug",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server  --open --watch  --config ./build/webpack.dev.conf.js",
+    "dev": "cross-env NODE_ENV=development webpack serve --open   --config ./build/webpack.dev.conf.js",
     "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.build.conf.js",
     "deploy": "gh-pages -d dist",
     "lint": "eslint --debug src/",
     "lint:write": "eslint --debug src/ --fix"
   },
-  "browserslist": [
-    "> 1%",
-    "last 3 version"
-  ],
-  "author": "Vladimir Drugov <Wolffdrugov@yandex.ru>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ShadowFlade/metalamp"
+    "url": "git+https://github.com/ShadowFlade/hotel.git"
   },
-  "keywords": [
-    "webpack",
-    "webpack4",
-    "scss",
-    "pug"
-  ],
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
@@ -33,14 +24,16 @@
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
+    "cross-env": "^7.0.3",
     "css-loader": "^3.2.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "eslint": "^7.32.0",
-    "file-loader": "^4.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-webpack-plugin": "^3.0.1",
     "gh-pages": "^3.1.0",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.8.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.4",
     "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",
     "pug": "^2.0.4",
@@ -48,21 +41,23 @@
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
+    "svgo-loader": "^3.0.0",
     "ts-loader": "^9.2.3",
     "typescript": "^4.3.4",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^3.9.0",
-    "webpack-merge": "^4.2.2",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-fsd": "^1.0.1",
-    "eslint-webpack-plugin": "^3.0.1",
-    "cross-env": "^7.0.3"
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "chart.js": "^2.9.4",
-    "material-design-icons": "^3.0.1",
+    "core-js": "^3.19.1",
     "daterangepicker": "^3.1.0",
+    "material-design-icons": "^3.0.1",
     "moment": "^2.29.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ShadowFlade/hotel/issues"
+  },
+  "homepage": "https://github.com/ShadowFlade/hotel#readme"
 }

@@ -49,11 +49,12 @@ module.exports = {
     paths: PATHS,
   },
   entry: entry(),
-  devtool: 'inline-source-map',
+  devtool: 'eval-cheap-source-map',
   output: {
     filename: `[name].js`,
     path: PATHS.dist,
     publicPath: publicPath(),
+    assetModuleFilename: '[name].[ext]'
   },
 
   module: {
@@ -78,27 +79,28 @@ module.exports = {
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-        },
+        type:'asset/inline',
+
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-        },
+        type:'asset/resource',
       },
       {
         test: /\.scss$/,
         use: [
           'style-loader',
-          MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
-            options: { sourceMap: true },
+            loader:          MiniCssExtractPlugin.loader,
+            options:{
+              esModule:false
+            }
           },
+         'css-loader',
+          // {
+            
+          //   options: { sourceMap: true },
+          // },
           {
             loader: 'postcss-loader',
             options: {

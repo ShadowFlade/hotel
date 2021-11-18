@@ -13,5 +13,5 @@ mixin signInCard
         +payButton({label:'войти',arrow:true})
       .sign-in-card__footer 
         span(class='card__account-availability') Нет аккаунта на Toxin?
-        .button--hollow__wrapper(class='card__button')
-          button(class='button--hollow') Создать
+ 
+        +button({text:'Создать',modif:'hollow'})

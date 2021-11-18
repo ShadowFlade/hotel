@@ -1,0 +1,7 @@
+mixin button(options)
+  case options.modif 
+    when 'hollow' 
+      .button--hollow-wrapper
+        button.button--hollow  #{options.text}
+    default 
+      button(class=`button--${options.modif}`) #{options.text}

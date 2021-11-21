@@ -99,14 +99,7 @@
     word-spacing: -2px;
     line-height: 1.6;
   }
-  &__money {
-    display: flex;
-    justify-content: space-between;
-    min-width: 30%;
-    padding-left: rem(27);
-    float: right;
-    text-align: right;
-  }
+
   &__all {
     font-family: 'MontserratBold';
     font-size: rem(19);
@@ -115,19 +108,40 @@
     display: flex;
     justify-content: space-between;
     margin-top: 0.41429rem;
-  }
-  &__border {
-    flex-grow: 1;
+    overflow: hidden;
     position: relative;
-    top: -5px;
-    left: 5px;
-    border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+    &:after {
+      color: rgba(31, 32, 65, 0.25);
+      float: left;
+      white-space: nowrap;
+      content: '...................................... ';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__money {
+    display: flex;
+    justify-content: space-between;
+    min-width: 30%;
+    // padding-left: rem(27);
+    float: right;
+    text-align: right;
+    background-color: #ffff;
+    z-index: 2;
+    padding-left: 4px;
   }
   &__result {
     float: left;
     text-align: left;
     font-size: rem(17);
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    z-index: 2;
+    padding-right: 4px;
   }
+
   &__footer {
     margin-top: 0;
   }

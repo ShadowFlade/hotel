@@ -57,16 +57,6 @@
 
 .ui-datepicker {
   background: #ffff; /* Old browsers */
-  background: #ffff -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* FF3.6+ */
-  background: #ffff -webkit-gradient(linear, left top, left bottom, color-
-          stop(0%, #ffff)),
-    color-stop(100%, #34495e); /* Chrome,Safari4+ */
-  background: #ffff -webkit-linear-gradient(top, #ffff 0%, #34495e 100%); /*
-Chrome10+,Safari5.1+ */
-  background: #ffff -o-linear-gradient(top, #ffff 0%, #34495e 100%); /* Opera11.10+
-*/
-  background: #ffff -ms-linear-gradient(top, #ffff 0%, #34495e 100%); /* IE10+ */
-  background: #ffff linear-gradient(top, #ffff 0%, #34495e 100%); /* W3C */
   background: linear-gradient(180deg, #bc9cff, #8ba4f9);
   font-size: 11px;
   padding: 10px;

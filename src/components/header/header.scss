@@ -66,10 +66,10 @@
 }
 
 .navbar {
-  background-color: red;
+  display: flex;
   &__item {
     margin-right: 1.5em;
-    display: -webkit-box;
+    display: flex;
     position: relative;
     align-items: center;
     justify-content: center;

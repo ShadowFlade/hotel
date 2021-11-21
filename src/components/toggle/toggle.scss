@@ -1,9 +1,5 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
-
-::-webkit-details-marker {
-  display: none;
-}
 .toggle {
   font-family: 'Montserrat';
   font-weight: 400;
@@ -53,10 +49,7 @@
     background: transparent;
     border-radius: 10px;
     transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
+
     &__helper {
       background: rgba(31, 32, 65, 0.25);
       opacity: 1;
@@ -69,17 +62,11 @@
       left: 23%;
       transform: translate(-50%, -50%) scale(1);
       transition: all 0.3s ease-out;
-      -webkit-transition: all 0.3s ease-out;
-      -moz-transition: all 0.3s ease-out;
-      -ms-transition: all 0.3s ease-out;
-      -o-transition: all 0.3s ease-out;
     }
   }
 }
 
 .toggle__input:checked + .toggle-custom .toggle-custom__helper {
-  -webkit-transform: translate(120%, -50%);
-  -ms-transform: translate(120%, -50%);
   transform: translate(120%, -50%);
   transition: all 0.3s ease-out;
   opacity: 0;
@@ -95,16 +82,12 @@
   left: 23%;
   transform: translate(-50%, -50%) scale(1);
   transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 }
 .toggle__input:checked + .toggle-custom .toggle-custom__helper2 {
   opacity: 1;
-  -webkit-transform: translate(120%, -50%);
-  -ms-transform: translate(120%, -50%);
+
   transform: translate(120%, -50%);
 }
 

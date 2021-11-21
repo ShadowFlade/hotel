@@ -21,21 +21,6 @@
   @return $size/$desktopWidth * 100%;
 }
 
-@mixin placeholder {
-  ::-webkit-input-placeholder {
-    @content;
-  }
-  :-moz-placeholder {
-    @content;
-  }
-  ::-moz-placeholder {
-    @content;
-  }
-  :-ms-input-placeholder {
-    @content;
-  }
-}
-
 @use 'sass:color';
 $maxWidth: 1920;
 $maxWidthContainer: 1170;
@@ -98,8 +83,7 @@ $maxWidthContainer: 1170;
   border-radius: 4px;
   font-size: 0.91rem;
   height: 44px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+
   appearance: none;
   padding: 0.5em 2.21429em 0.57143em 1.07143em;
   &:hover,

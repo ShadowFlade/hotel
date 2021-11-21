@@ -2,18 +2,19 @@ include ../burger-menu/burger-menu.pug
 include ../button/button.pug
 
 mixin navbar(options)
-  each el in options.arrayOfElements 
-    if el.arrow==true
-      .navbar__item
-        span.navbar__text #{el.name}
-        span.navbar__arrow
-          img.arrow_class(src='assets/img/arrow.svg')
-        if el.list
-          .navbar__menu
-            each val in el.list
-              a.navbar__option #{val}
-    else 
-      .navbar__item #{el.name}
+  .navbar
+    each el in options.arrayOfElements 
+      if el.arrow==true
+        .navbar__item
+          span.navbar__text #{el.name}
+          span.navbar__arrow
+            img.arrow_class(src='assets/img/arrow.svg')
+          if el.list
+            .navbar__menu
+              each val in el.list
+                a.navbar__option #{val}
+      else 
+        .navbar__item #{el.name}
 
 mixin navigation(options)
   nav.navigation

@@ -1,5 +1,5 @@
 mixin datePicker(options={label:'',placeholder:'ДД.ММ.ГГГГ',modif:''})
-  .date-picker.js-date-picker(class=`date-picker--${options.modif}`)
+  .date-picker.js-date-picker(class=(options.modif ? `date-picker--${options.modif}`:false))
     label.date-picker__label #{options.label}
     .date-picker__item
       input.date-picker__input(type='text',placeholder=options.placeholder)

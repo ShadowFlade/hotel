@@ -1,15 +1,17 @@
 .button {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  text-transform: uppercase;
   &--full {
     width: 7.9em;
     height: 3.56667em;
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     border-radius: 22px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    text-transform: uppercase;
     color: #ffffff;
     &:hover {
       opacity: 0.5;
@@ -21,15 +23,10 @@
     height: 88%;
     border-radius: 22px;
     background: #fff;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
     font-size: rem(12);
     line-height: 15px;
     z-index: 10;
-    text-transform: uppercase;
     color: #bc9cff;
-    position: relative;
     z-index: 10;
     top: 50%;
     left: 50%;
@@ -50,12 +47,9 @@
   &--inline {
     width: 61/12 * 1em;
     height: 15/12 * 1em;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
+
     font-size: rem(12);
     line-height: 15px;
-    text-transform: uppercase;
     color: #bc9cff;
     background: transparent;
     &:hover {

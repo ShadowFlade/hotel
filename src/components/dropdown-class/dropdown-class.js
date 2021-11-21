@@ -1,4 +1,4 @@
-import { bindOutsideClickDetection } from '../../../utils/utils'
+import { bindOutsideClickDetection } from '../../utils/utils'
 
 class DropdownAccom {
   constructor(element, list, limit) {

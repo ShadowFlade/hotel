@@ -14,7 +14,7 @@ const PATHS = {
 const PAGES = []
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
-fs.readdirSync(path.resolve(__dirname, '../', 'src', 'pug', 'pages')).forEach(
+fs.readdirSync(path.resolve(__dirname, '../', 'src','pages')).forEach(
   (file) => {
     PAGES.push(file)
   }
@@ -23,7 +23,7 @@ fs.readdirSync(path.resolve(__dirname, '../', 'src', 'pug', 'pages')).forEach(
 const htmlPlugins = PAGES.map(
   (fileName) => new HtmlWebpackPlugin({
     filename: `${fileName}.html`,
-    template: `src/pug/pages/${fileName}/${fileName}.pug`,
+    template: `src/pages/${fileName}/${fileName}.pug`,
     chunks: [fileName, 'index'],
     inject: 'body',
     minify: {
@@ -34,7 +34,7 @@ const htmlPlugins = PAGES.map(
 const entry = () => {
   const point = {}
   PAGES.forEach((page) => {
-    point[page] = path.resolve(__dirname, `../src/pug/pages/${page}/${page}.js`)
+    point[page] = path.resolve(__dirname, `../src/pages/${page}/${page}.js`)
   })
 
   return point
@@ -149,11 +149,11 @@ module.exports = {
       { from: `${PATHS.src}/static`, to: '' },
       { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
 
-      { from: `${PATHS.src}/pug/components/**/*.png`, to: `${PATHS.assets}img/[name].[ext]` },
-      { from: `${PATHS.src}/pug/components/**/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
-      { from: `${PATHS.src}/pug/layout/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
-      { from: `${PATHS.src}/pug/pages/**/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
-      { from: `${PATHS.src}/pug/pages/**/*.png`, to: `${PATHS.assets}img/[name].[ext]` }
+      { from: `${PATHS.src}/components/**/*.png`, to: `${PATHS.assets}img/[name].[ext]` },
+      { from: `${PATHS.src}/components/**/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
+      { from: `${PATHS.src}/layout/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
+      { from: `${PATHS.src}/pages/**/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
+      { from: `${PATHS.src}/pages/**/*.png`, to: `${PATHS.assets}img/[name].[ext]` }
 
     ]),
 

@@ -23,6 +23,12 @@
     display: flex;
     position: relative;
   }
+  &-group {
+    top: 100%;
+    left: 0;
+    background-color: transparent;
+    z-index: 2;
+  }
   &__input {
     opacity: 0;
     width: 20px;
@@ -31,12 +37,18 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     cursor: default;
-  }
-  &-group {
-    top: 100%;
-    left: 0;
-    background-color: transparent;
-    z-index: 2;
+    &:checked + .toggle-custom .toggle-custom__helper--passive {
+      transform: translate(120%, -50%);
+      transition: all 0.3s ease-out;
+      opacity: 0;
+    }
+    &:checked + .toggle-custom .toggle-custom__helper--active {
+      opacity: 1;
+      transform: translate(120%, -50%);
+    }
+    &:checked ~ .toggle-custom {
+      border-color: #bc9cff;
+    }
   }
   &-custom {
     top: 0;
@@ -49,50 +61,26 @@
     background: transparent;
     border-radius: 10px;
     transition: all 0.3s ease-out;
-
     &__helper {
-      background: rgba(31, 32, 65, 0.25);
-      opacity: 1;
-      border-radius: 10px;
       width: 12px;
       height: 12px;
+      border-radius: 10px;
       border-radius: 50%;
       position: absolute;
       top: 52%;
       left: 23%;
       transform: translate(-50%, -50%) scale(1);
       transition: all 0.3s ease-out;
+      &--passive {
+        background: rgba(31, 32, 65, 0.25);
+        opacity: 1;
+      }
+      &--active {
+        opacity: 0;
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      }
     }
   }
-}
-
-.toggle__input:checked + .toggle-custom .toggle-custom__helper {
-  transform: translate(120%, -50%);
-  transition: all 0.3s ease-out;
-  opacity: 0;
-}
-.toggle-custom__helper2 {
-  opacity: 0;
-  border-radius: 10px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  position: absolute;
-  top: 52%;
-  left: 23%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: all 0.3s ease-out;
-
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-}
-.toggle__input:checked + .toggle-custom .toggle-custom__helper2 {
-  opacity: 1;
-
-  transform: translate(120%, -50%);
-}
-
-.toggle__input:checked ~ .toggle-custom {
-  border-color: #bc9cff;
 }
 
 .toggle-details {

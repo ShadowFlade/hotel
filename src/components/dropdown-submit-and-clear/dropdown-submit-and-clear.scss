@@ -60,10 +60,7 @@
     justify-content: space-between;
     width: 41%;
   }
-  &__submit {
-    float: right;
-    padding: rem(19) rem(13);
-  }
+
   &__footer {
     width: 100%;
     height: 20%;
@@ -71,6 +68,10 @@
     background: white;
   }
   &__clear {
+    padding: rem(19) rem(13);
+  }
+  &__submit {
+    float: right;
     padding: rem(19) rem(13);
   }
   &__button {
@@ -93,5 +94,11 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    .button {
+      padding: 0 7px;
+    }
+  }
+  &__arrow {
+    @include input-arrow();
   }
 }

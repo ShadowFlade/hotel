@@ -2,97 +2,101 @@
 @import '../../common/mixins.scss';
 .room-details {
   overflow: hidden;
-  .graph {
-    padding-left: 3.81429rem;
-  }
-  .gallery {
-    width: 102%;
-  }
+  main {
+    .graph {
+      padding-left: 3.81429rem;
+    }
+    .gallery {
+      width: 102%;
+      &__pictures {
+        display: flex;
+        max-height: 487px;
+        overflow: hidden;
+      }
+    }
 
-  .comment {
-    margin-left: -20px;
-  }
-  .bullet-list__box {
-    max-width: rem(292);
-  }
-  .card {
-    max-width: 380px;
-    margin-right: 0;
-  }
-  .pictures {
-    display: flex;
-    max-height: 487px;
-    overflow: hidden;
-    &__item {
-      height: 50%;
-      width: 100%;
-      img {
-        display: block;
-        max-width: 100%;
-        max-height: 100%;
+    .comment {
+      margin-left: -20px;
+    }
+    .bullet-list__box {
+      max-width: rem(292);
+    }
+    .card {
+      max-width: 380px;
+      margin-right: 0;
+    }
+    .pictures {
+      &__item {
+        height: 50%;
+        width: 100%;
+        img {
+          display: block;
+          max-width: 100%;
+          max-height: 100%;
+          height: 100%;
+        }
+        &--big {
+          height: auto;
+        }
+      }
+      &__column {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
         height: 100%;
       }
-      &_big {
-        height: auto;
-      }
     }
-    &__column {
+    .content {
       display: flex;
-      flex-wrap: wrap;
-      width: 50%;
-      height: 100%;
-    }
-  }
-  .content {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    padding-right: 9.7%;
-    padding: 4.41429rem 9.7% 2% 10%;
-    &__card {
-      max-width: 22.35714rem;
-      .content__title {
-        margin-bottom: rem(16);
-        padding-left: 1.27143rem;
-      }
-    }
-    &__comment {
-      margin-bottom: rem(7);
-    }
-    &__count {
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-    &__item {
-      margin-bottom: 20px;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-    &__column {
-      display: flex;
-      flex-wrap: wrap;
       width: 100%;
-      margin-right: 70/1440 * 100%;
-      height: 100%;
-      & > div {
+      justify-content: center;
+      padding-right: 9.7%;
+      padding: 4.41429rem 9.7% 2% 10%;
+      &__card {
+        max-width: 22.35714rem;
+        .content__title {
+          margin-bottom: rem(16);
+          padding-left: 1.27143rem;
+        }
+      }
+      &__comment {
+        margin-bottom: rem(7);
+      }
+      &__count {
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+      &__item {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      &__column {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-right: 70/1440 * 100%;
         height: 100%;
-        margin-bottom: rem(9);
+        & > div {
+          height: 100%;
+          margin-bottom: rem(9);
+        }
+      }
+      &__side {
+        .content__item {
+          padding-left: 0;
+        }
       }
     }
-    &__side {
-      .content__item {
-        padding-left: 0;
-      }
+    .bullet__title {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem (19);
+      line-height: 23px;
+      color: #1f2041;
     }
-  }
-  .bullet__title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: rem (19);
-    line-height: 23px;
-    color: #1f2041;
   }
 }
 

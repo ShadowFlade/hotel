@@ -12,3 +12,7 @@
 .dropdown__label {
   @include label;
 }
+
+.dropdown__arrow {
+  @include input-arrow();
+}

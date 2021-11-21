@@ -41,6 +41,13 @@
     text-transform: uppercase;
     color: rgba(31, 32, 65, 0.5);
   }
+  &__start {
+    &:after {
+      content: '-';
+      position: relative;
+      left: 1px;
+    }
+  }
 }
 
 .ui-slider-handle {

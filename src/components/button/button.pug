@@ -2,6 +2,6 @@ mixin button(options)
   case options.modif 
     when 'hollow' 
       .button--hollow-wrapper
-        button.button.button--hollow  #{options.text}
+        button.button.button--hollow(type=(options.type ? options.type : 'button'))  #{options.text}
     default 
-      button.button(class=(options.modif ? `button--${options.modif}`  :false)) #{options.text}
+      button.button(class=(options.modif ? `button--${options.modif}`  :false),type=(options.type ? options.type : 'button')) #{options.text}

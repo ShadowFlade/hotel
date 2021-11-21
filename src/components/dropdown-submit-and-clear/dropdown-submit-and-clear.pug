@@ -1,9 +1,10 @@
+include ../button/button.pug
 mixin dropdownSubmitAndClear(options)
   .dropdown-accom__big.js-dropdown-accom__big
     label.dropdown-accom__label #{options.label}
     .input-box
       input.dropdown-accom(type='text',placeholder=options.placeholder)
-      img.arrow(src='assets/img/arrow.svg')
+      img.dropdown-accom__arrow(src='assets/img/arrow.svg')
       ul.dropdown-accom__ul.js-dropdown-accom__ul
         each val in options.arrayOfArguments
           li 
@@ -14,10 +15,10 @@ mixin dropdownSubmitAndClear(options)
               button.dropdown-accom__button.dropdown-accom__button--next(type='button') +
         .dropdown-accom__footer
           if (options.option=='submit')
-            button.dropdown-accom__submit.inbox-button(type='submit') Применить
+            +button({modif:'inline',type:'submit',text:'Применить'})
           else if (options.option=='clear')
-            button.dropdown-accom__clear.inbox-button(type='button') очистить
-            button.dropdown-accom__submit.inbox-button(type='submit') Применить
+            +button({modif:'inline',text:'Очистить'})
+            +button({modif:'inline',type:'submit',text:'Применить'})
           else if (options.option=='none')
 
 

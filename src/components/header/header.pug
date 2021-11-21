@@ -8,7 +8,7 @@ mixin navbar(options)
         .navbar__item
           span.navbar__text #{el.name}
           span.navbar__arrow
-            img.arrow_class(src='assets/img/arrow.svg')
+            img.arrow(src='assets/img/arrow.svg')
           if el.list
             .navbar__menu
               each val in el.list
@@ -21,7 +21,7 @@ mixin navigation(options)
     .navigation__content
       .navigation__logo
         +burgerMenu({arrayOfArguments:[{name:'О с',arrow:'false'},{name:'Услуги',arrow:'true'},{name:'Вакансии',arrow:'false'},{name:'Новости',arrow:'false'},{name:'Соглашения',arrow:'true'}]})
-        img.logo-img(src=`assets/img/fsdlogo.svg`) 
+        img.logo(src=`assets/img/fsdlogo.svg`) 
       .navigation__interactive
         .navigation__navbar 
           .navigation__items

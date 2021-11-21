@@ -13,5 +13,5 @@ $(function () {
       .find('.star--active')
       .css('opacity', 0)
   }
-  $('.js-star--active').on('click', handleStarClicked)
+  $('.js-star').on('click', handleStarClicked)
 })

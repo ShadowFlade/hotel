@@ -31,6 +31,9 @@
     width: 100%;
     @include input();
   }
+  &__arrow {
+    @include input-arrow();
+  }
 }
 
 .date-caption {

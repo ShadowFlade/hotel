@@ -10,7 +10,7 @@ mixin dropdown(options={label:'dropdown',numberOfOptions:7,option:'Скольк�
             while n<=options.numberOfOptions
               li=n++
               option.dropdown__option(value=n) #{n}
-          img.arrow(src='assets/img/arrow.svg')
+          img.dropdown__arrow(src='assets/img/arrow.svg')
     else
       .dropdown__item
         select.dropdown__select
@@ -18,7 +18,7 @@ mixin dropdown(options={label:'dropdown',numberOfOptions:7,option:'Скольк�
           while n<=options.numberOfOptions
             li=n++
             option.dropdown__option(value=n) #{n}
-        img.arrow(src='assets/img/arrow.svg')
+        img.dropdown__arrow(src='assets/img/arrow.svg')
 
 
 

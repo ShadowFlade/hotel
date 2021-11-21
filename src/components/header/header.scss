@@ -92,7 +92,7 @@
     span img {
       transition: all 0.15s linear;
     }
-    &:hover .arrow_class {
+    &:hover .arrow {
       transform: rotate(-90deg);
     }
     &:hover .navbar__menu {
@@ -201,7 +201,7 @@
   }
 }
 @media screen and (max-width: 457px) {
-  .logo-img {
+  .logo {
     display: none;
   }
 }

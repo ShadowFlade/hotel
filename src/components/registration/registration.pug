@@ -1,6 +1,7 @@
 include ../toggle/toggle.pug
 include ../radio-buttons/radio-buttons.pug
 include ../button/button.pug
+include ../pay-button/pay-button.pug
 mixin registrationCard
   .registration-card
     .registration-card__content
@@ -20,7 +21,7 @@ mixin registrationCard
             input.registration-card__input(type='password',placeholder='Пароль')
           +toggle({arrayOfArguments:['Получать спецпредложения']})
         .registration-card__item
-          button.pay-button перейти к оплате
+          +payButton({label:'Перейти к оплате',arrow:true})
       .registration-card__footer
         span.registration-card__account-availability Уже есть аккаунт на Toxin
         .registration-card__button

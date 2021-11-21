@@ -3,12 +3,12 @@ mixin dropdownNoButtons(options)
     label.dropdown-accom__label #{options.label}
     .input-box
       input.dropdown-accom(type='text',placeholder=options.placeholder)
-      img.arrow(src='assets/img/arrow.svg')
+      img.dropdown-accom__arrow(src='assets/img/arrow.svg')
       ul.dropdown-accom__ul.js-dropdown-accom__ul(style={'height':'123px'})
         each val in options.arrayOfArguments
           li 
             .dropdown-accom__variant #{val}
             .dropdown-accom__btn-group
-              button.dropdown-accom__button--prev(type='button') -
+              button.dropdown-accom__button.dropdown-accom__button--prev(type='button') -
               .dropdown-accom__span 2
-              button.dropdown-accom__button--next(type='button') +
+              button.dropdown-accom__button.dropdown-accom__button--next(type='button') +

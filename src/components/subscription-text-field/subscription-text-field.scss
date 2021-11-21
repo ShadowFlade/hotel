@@ -7,6 +7,10 @@
     width: 267/14 * 1rem;
     @include label;
   }
+  .arrow-right {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .subscription-text-field__input {

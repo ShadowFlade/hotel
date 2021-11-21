@@ -13,13 +13,12 @@ block variables
   - var description = ''; 
   - var pageclass='room-details'; 
 block content
-  .room-details
     header
       +navigation({username:'',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
     main 
       .gallery 
-        .gallery__pitures.pictures
-          .pictures__item.pictures__item_big
+        .gallery__pictures
+          .pictures__item.pictures__item--big
             img.pictures__pic(src='assets/img/image1.png')
           .pictures__column
             .pictures__item

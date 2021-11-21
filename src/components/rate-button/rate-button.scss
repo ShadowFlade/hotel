@@ -1,13 +1,5 @@
 @import '../../common/mixins.scss';
-.star__group {
-  display: flex;
-}
-.star--active {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
+
 .star {
   width: rem(20);
   height: rem(20);
@@ -18,5 +10,14 @@
     &--disabled {
       opacity: 0.5;
     }
+  }
+  &--active {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &__group {
+    display: flex;
   }
 }

@@ -1,13 +1,9 @@
+include ../checkbox-button/checkbox-button.pug
 mixin checkboxRich(options={label:'Доступность',name:'facilities',arrayOfArguments:[['Широкий коридор','Ширина коридоров в номере не менее 91 см.'],['Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.']]})
   .checkbox-rich #{options.label}
     .checkbox-rich__group
       each val in options.arrayOfArguments
         .checkbox-rich__item
-          input(class='checkbox-rich__input',type='checkbox',name=name,id=name,,val=val[0])
-          span(class='checkbox-rich__custom')
-          label(class='checkbox-rich__info')
-            div(class='checkbox-rich__label',for=options.name) #{val[0]}  
-            div(class='checkbox-rich__desc') #{val[1]}
-            img(src='assets/img/ok.png' style={display:'none'})
+          +checkbox-button({desc:val[1],text:val[0],})
 
 

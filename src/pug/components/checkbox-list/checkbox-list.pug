@@ -1,3 +1,4 @@
+include ../checkbox-button/checkbox-button.pug
 mixin checkboxList(options={label:'expandable checkbox list',arrayOfArguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']})
   .checkbox-details
     details.checkbox-details__details
@@ -5,11 +6,7 @@ mixin checkboxList(options={label:'expandable checkbox list',arrayOfArguments:['
       .checkbox-details__group
         each val in options.arrayOfArguments
           .checkbox-details__item
-            label(class='checkbox-details__label',for=val) 
-              span(class='checkbox-details__option') #{val}
-              input(type='checkbox',name=val,id=val,class='checkbox-details__input')
-              span(class='checkbox-details__custom')
-              img(src='assets/img/ok.png' style={'display':'none'})
+            +checkbox-button({text:val})
 
 
 

@@ -14,9 +14,7 @@
   position: relative;
   width: 222/12 * 1em;
   max-width: 266px;
-  &__label {
-    position: relative;
-  }
+
   &__group {
     top: 100%;
     left: 0;
@@ -42,63 +40,6 @@
     display: flex;
     margin-bottom: rem(10);
     position: relative;
-  }
-
-  &__custom {
-    cursor: pointer;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 4px;
-    &:after {
-      position: absolute;
-      content: url('/assets/img/ok.png');
-      left: 0;
-      top: 0;
-      height: 0px;
-      width: 0px;
-      border-radius: 5px;
-      -webkit-transform: rotate(0deg) scale(0);
-      -ms-transform: rotate(0deg) scale(0);
-      transform: rotate(0deg) scale(0);
-      opacity: 0;
-      transition: all 0.3s ease-out;
-      -webkit-transition: all 0.3s ease-out;
-      -moz-transition: all 0.3s ease-out;
-      -ms-transition: all 0.3s ease-out;
-      -o-transition: all 0.3s ease-out;
-    }
-  }
-  &__input {
-    cursor: pointer;
-    opacity: 0;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 4px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    &:checked ~ .checkbox-details__custom {
-      border: 1px solid #bc9cff;
-    }
-    &:checked ~ .checkbox-details__custom::after {
-      -webkit-transform: rotate(0deg) scale(1);
-      -ms-transform: rotate(0deg) scale(1);
-      transform: rotate(0deg) scale(1);
-      opacity: 1;
-      left: 4px;
-      top: 1px;
-      background-color: transparent;
-    }
   }
 
   &__summary {
@@ -132,7 +73,7 @@
     position: relative;
   }
   &__details[open] > summary::before {
-    transform: scaleY(-0.5);
+    transform: scaleY(-1);
     width: 20px;
   }
 }

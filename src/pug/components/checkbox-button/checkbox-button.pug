@@ -1,7 +1,12 @@
 mixin checkbox-button(options)
-  .checkbox-button
-    label(class='checkbox-button__btn',for=val) 
-      div(class='checkbox-button__text') #{options.text}
-      input(class='checkbox-button__input',type='checkbox',name=val,id=val)
-      span(class='checkbox-button__custom') 
-      img(src='assets/img/ok.png' style={display:'none'})
+  label.checkbox-button
+      if options.desc 
+        .checkbox-button__info
+          div(class='checkbox-button__text checkbox-button__text--rich') #{options.text}
+          .checkbox-button__desc #{options.desc}
+          input(class='checkbox-button__input',type='checkbox')
+          span(class='checkbox-button__custom') 
+      else 
+        div(class='checkbox-button__text') #{options.text}
+        input(class='checkbox-button__input',type='checkbox')
+        span(class='checkbox-button__custom') 

@@ -4,10 +4,10 @@ mixin pagination(numberOfFirstPages)
     .pagination__pages
       - let n=1
       while n<numberOfFirstPages+1
-        div(class='pagination__item js-pagination__item') #{n}
+        div.pagination__item.js-pagination__item #{n}
         -n++
-      div(class=' pagination__item pagination__item--intro js-pagination__item') ...
-      div(class='pagination__item pagination__item--last-page js-pagination__item') 15 
+      .pagination__item.pagination__item--intro.js-pagination__item ...
+      .pagination__item.pagination__item--last-page.js-pagination__item 15 
       .pagination__arrow-item
         +svgArrowRight({color:'#FFFFFF',endColor:'#FFFFFF',className:'pagination__arrow-right'})
     .pagination__info 1 – 12 из 100+ вариантов аренды

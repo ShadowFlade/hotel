@@ -5,10 +5,10 @@ mixin toggle(options)
     .toggle-group
       each val in options.arrayOfArguments
         .toggle__item
-          label(class='toggle',for=val) 
+          label.toggle(for=val) 
             span.toggle__text #{val}
-            input(type='checkbox',name=val,id=val,class='toggle__input')
-            span(class='toggle-custom')
-              span(class='toggle-custom__helper')
-              span(class='toggle-custom__helper2')
+            input.toggle__input(type='checkbox',name=val,id=val)
+            span.toggle-custom
+              span.toggle-custom__helper
+              span.toggle-custom__helper2
 

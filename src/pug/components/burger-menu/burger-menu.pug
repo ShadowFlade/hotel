@@ -1,17 +1,15 @@
 mixin burgerMenu(options) 
   .burger.js-burger
-    button(class='burger__button')
-      span(class='burger__item')
-    ul(class='burger__menu js-burger__menu')
+    button.burger__button
+      span.burger__item
+    ul.burger__menu.js-burger__menu
       each val in options.arrayOfArguments
         if typeof val=='array'
-          li(class='burger__option') #{val.name}
-            ul(class='burger__inner-menu')
+          li.burger__option #{val.name}
+            ul.burger__inner-menu
               each el in val 
-                li(class='burger__inner-option') #{el}
+                li.burger__inner-option #{el}
         else   
           if val.arrow=='true'
-            li(class='burger__option') #{val.name}
-              img(src='assets/img/arrow.svg',class='burger__arrow')
-
-   
+            li.burger__option #{val.name}
+              img.burger__arrow(src='assets/img/arrow.svg')

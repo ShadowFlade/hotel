@@ -1,7 +1,7 @@
 mixin datePicker(options={label:'',placeholder:'ДД.ММ.ГГГГ',modif:''})
   .date-picker.js-date-picker(class=`date-picker--${options.modif}`)
     label.date-picker__label #{options.label}
-    div(class='date-picker__item')
-      input(class='date-picker__input ',type='text',placeholder=options.placeholder)
-      img(src='assets/img/arrow.svg',class='arrow')
+    .date-picker__item
+      input.date-picker__input(type='text',placeholder=options.placeholder)
+      img.arrow(src='assets/img/arrow.svg')
 

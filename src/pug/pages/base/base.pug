@@ -2,7 +2,7 @@ extends ../../layout/main/main
 
 mixin item(options)
   .item  
-    .item__color(class='first-half__sqr',style={background:options.leftPart})
+    .item__color.first-half__sqr(style={background:options.leftPart})
     .item__desc 
       .item__dark #{options.rightPart[0]}
       .item__code #{options.rightPart[1]}

@@ -1,23 +1,23 @@
 mixin dropdownSubmitAndClear(options)
-  div(class='dropdown-accom__big js-dropdown-accom__big')
-    label(class='dropdown-accom__label') #{options.label}
+  .dropdown-accom__big.js-dropdown-accom__big
+    label.dropdown-accom__label #{options.label}
     .input-box
-      input(class='dropdown-accom',type='text',placeholder=options.placeholder)
-      img(src='assets/img/arrow.svg',class='arrow')
-      ul(class='dropdown-accom__ul js-dropdown-accom__ul')
+      input.dropdown-accom(type='text',placeholder=options.placeholder)
+      img.arrow(src='assets/img/arrow.svg')
+      ul.dropdown-accom__ul.js-dropdown-accom__ul
         each val in options.arrayOfArguments
           li 
             .dropdown-accom__variant #{val}
             .dropdown-accom__btn-group
-              button(type='button',class='dropdown-accom__button--prev') -
-              div(class='dropdown-accom__span') 2
-              button(type='button',class='dropdown-accom__button--next') +
+              button.dropdown-accom__button.dropdown-accom__button--prev(type='button') -
+              .dropdown-accom__span 2
+              button.dropdown-accom__button.dropdown-accom__button--next(type='button') +
         .dropdown-accom__footer
           if (options.option=='submit')
-            button(class='dropdown-accom__submit inbox-button',type='submit') Применить
+            button.dropdown-accom__submit.inbox-button(type='submit') Применить
           else if (options.option=='clear')
-            button(type='button',class='dropdown-accom__clear inbox-button') очистить
-            button(class='dropdown-accom__submit inbox-button',type='submit') Применить
+            button.dropdown-accom__clear.inbox-button(type='button') очистить
+            button.dropdown-accom__submit.inbox-button(type='submit') Применить
           else if (options.option=='none')
 
 

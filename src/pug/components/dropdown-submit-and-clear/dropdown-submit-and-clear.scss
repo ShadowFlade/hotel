@@ -73,8 +73,7 @@
   &__clear {
     padding: rem(19) rem(13);
   }
-  &__button--prev,
-  &__button--next {
+  &__button {
     width: 10%;
     background-color: transparent;
     border: 1px solid rgba(31, 32, 65, 0.5);
@@ -84,10 +83,11 @@
     margin: 0 15px;
     font-size: 1.4rem;
     color: rgba(31, 32, 65, 0.5);
+    &--next {
+      margin-right: 0;
+    }
   }
-  &__button--next {
-    margin-right: 0;
-  }
+
   &__footer {
     display: flex;
     justify-content: space-between;

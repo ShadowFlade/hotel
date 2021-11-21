@@ -6,18 +6,18 @@ mixin hotelCard(options)
         img(src=pic)
     .hotel-card__info
       .hotel-card__row
-        span(class='hotel-card__number') 
-          span(class='hotel-card__sign') №
-          span(class='hotel-card__roomNumber') #{options.luxNumber}
+        span.hotel-card__number
+          span.hotel-card__sign №
+          span.hotel-card__roomNumber #{options.luxNumber}
           if options.lux==true
-            span(class='hotel-card__lux') ЛЮКС
-        span(class='hotel-card__price') 
+            span.hotel-card__lux ЛЮКС
+        span.hotel-card__price 
           b #{options.price} 
           span.day в сутки
       .hotel-card__row
-        span(class='hotel-card__stars') 
+        span.hotel-card__stars
           +rateButton(4)
-        span(class='hotel-card__reviews')
+        span.hotel-card__reviews
           b #{options.numberOfReviews} 
           |Отзывов
 

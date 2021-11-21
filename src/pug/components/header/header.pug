@@ -5,21 +5,22 @@ mixin navbar(options)
   each el in options.arrayOfElements 
     if el.arrow==true
       .navbar__item
-        span(class='navbar__text') #{el.name}
-        span( class='navbar__arrow')
-          img(class='arrow_class',src='assets/img/arrow.svg')
+        span.navbar__text #{el.name}
+        span.navbar__arrow
+          img.arrow_class(src='assets/img/arrow.svg')
         if el.list
           .navbar__menu
             each val in el.list
-              a(class='navbar__option') #{val}
+              a.navbar__option #{val}
     else 
       .navbar__item #{el.name}
+
 mixin navigation(options)
   nav.navigation
     .navigation__content
       .navigation__logo
         +burgerMenu({arrayOfArguments:[{name:'О с',arrow:'false'},{name:'Услуги',arrow:'true'},{name:'Вакансии',arrow:'false'},{name:'Новости',arrow:'false'},{name:'Соглашения',arrow:'true'}]})
-        img(class='logo-img',src=`assets/img/fsdlogo.svg`) 
+        img.logo-img(src=`assets/img/fsdlogo.svg`) 
       .navigation__interactive
         .navigation__navbar 
           .navigation__items
@@ -36,5 +37,5 @@ mixin navigation(options)
           .navigation__auth
    
             +button({modif:'hollow',text:options.leftButtonLabel})
-            button(class='pay-button pay-button--navigation') #{options.rightButtonLabel}
+            button.pay-button.pay-button--navigation #{options.rightButtonLabel}
           

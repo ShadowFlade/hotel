@@ -1,5 +1,5 @@
 include ../button/button.pug
-mixin dropdownSubmitAndClear(options)
+mixin dropdownSubmitAndClear(options={label:'dropdown',placeholder:'3 гостя',arrayOfArguments:['взрослые','дети','младенцы'],option:'clear'})
   .dropdown-accom.js-dropdown-accom(class=options.modif ? `dropdown-accom--${options.modif}` : false)
     label.dropdown-accom__label #{options.label}
       .dropdown-accom__input-box

@@ -1,7 +1,7 @@
 include ../burger-menu/burger-menu.pug   
 include ../button/button.pug
 
-mixin navbar(options)
+mixin navbar(options={arrayOfElements:[{name:'О нас',arrow:false},{name:'Услуги',arrow:true,list:['hire','me']},{name:'Вакансии',arrow:false},{name:'Новости',arrow:false},{name:'Соглашения',arrow:true,list:['something','anything','whatever']}],arrow_class:'navigation__arrow'})
   .navbar
     each el in options.arrayOfElements 
       if el.arrow==true
@@ -16,7 +16,7 @@ mixin navbar(options)
       else 
         .navbar__item #{el.name}
 
-mixin navigation(options)
+mixin navigation(options={username:'Юлий Цезарь',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
   nav.navigation
     .navigation__content
       .navigation__logo

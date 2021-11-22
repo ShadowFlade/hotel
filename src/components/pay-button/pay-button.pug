@@ -1,5 +1,5 @@
 include ../svg-arrow-right/svg-arrow-right.pug
-mixin payButton(options)
+mixin payButton(options={label:'Buy!'})
 	.pay-button 
 		span.pay-button__text #{options.label}
 		if options.arrow

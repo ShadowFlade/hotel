@@ -1,4 +1,4 @@
-mixin svgStar(options)
+mixin svgStar(options={color:'#BC9CFF',endColor:'#8BA4F9'})
 
 	- id = (options.color+options.endColor).split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0)
 	- const fill = options.endColor!== undefined ?`url(#paint0_linear${id})`: options.color;
@@ -10,7 +10,7 @@ mixin svgStar(options)
 				stop(stop-color=options.color)
 				stop(offset="1" stop-color=options.endColor)
 
-mixin svgStarActive(options)
+mixin svgStarActive(options={color:'#BC9CFF',endColor:'#8BA4F9'})
 
 	- id = (options.color+options.endColor).split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0)
 	- const fill = options.endColor!== undefined ?`url(#paint0_linear${id})`: options.color;
@@ -22,7 +22,7 @@ mixin svgStarActive(options)
 				stop(stop-color=options.color)
 				stop(offset="1" stop-color=options.endColor)
 
-mixin rateButton(activeStars)
+mixin rateButton(activeStars=5)
 		.rate__item
 			.star__group 
 				- var n=activeStars

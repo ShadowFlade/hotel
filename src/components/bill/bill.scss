@@ -25,6 +25,9 @@
       margin-right: rem(15);
     }
   }
+  &__guests {
+    margin-top: 2rem;
+  }
   &__number {
     font-family: 'Montserrat';
     font-style: normal;
@@ -79,7 +82,7 @@
 
   &__summary {
     margin-bottom: 20px;
-    padding-top: 0.752857rem;
+    padding-top: 1.2rem;
     display: flex;
     flex-direction: column;
   }
@@ -102,21 +105,21 @@
   }
 
   &__all {
+    display: flex;
+    justify-content: space-between;
     font-family: 'Montserrat';
     font-weight: bold;
     font-size: rem(19);
-    line-height: 23px;
     color: #1f2041;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.41429rem;
+    line-height: 23px;
     overflow: hidden;
     position: relative;
+    margin-top: 2.41429rem;
     &:after {
       color: rgba(31, 32, 65, 0.25);
       float: left;
       white-space: nowrap;
-      content: '...................................... ';
+      content: '............................................................................................................';
       position: absolute;
       bottom: 0;
       left: 0;
@@ -132,7 +135,8 @@
     z-index: 2;
     padding-left: 4px;
     &--single {
-      justify-content: flex-end;
+      display: inline;
+      min-width: 0;
     }
   }
   &__result {
@@ -149,16 +153,13 @@
   &__footer {
     margin-top: 0;
   }
-  &__guests {
-    width: 96%;
-  }
+
   &__info-icon {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 14px;
-    /* identical to box height, or 117% */
     color: rgba(31, 32, 65, 0.25);
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 50%;

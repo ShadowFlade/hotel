@@ -1,8 +1,5 @@
 @import '../../common/mixins.scss';
 .landing-page {
-  .card__destination {
-    margin-bottom: 0.55714rem;
-  }
   &__bgp {
     position: relative;
     background-image: url('picture.jpg');
@@ -30,7 +27,6 @@
     width: 20%;
   }
   .rooms-for-you {
-    width: 380px;
     position: relative;
     left: 10%;
     top: 8%;
@@ -39,42 +35,21 @@
   .footer--small {
     display: none;
   }
-  @media screen and (max-width: 834px) {
-    .footer--main {
-      display: none;
-    }
-    .footer--small {
-      display: block;
-    }
-    .card__title {
-      font-size: 1rem;
-    }
-    .card {
-      padding: 1em;
-    }
-    .card__footer {
-      margin: 5px 0 10px;
-    }
-    .card__title,
-    .card__destination {
-      margin-bottom: 5px;
-    }
+}
+@media screen and (max-width: 834px) {
+  .footer--main {
+    display: none;
   }
-  @media screen and (max-width: 700px) {
-    .picture .card {
-      top: 10px;
-      left: 10px;
-    }
+  .footer--small {
+    display: block;
   }
-  @media screen and (max-width: 600px) {
-    .picture .card {
-      top: 2%;
-      left: 2%;
-      width: 60%;
-    }
+}
+@media screen and (max-width: 400px) {
+  .landing-page .rooms-for-you {
+    left: 0;
+    top: 15%;
   }
-
-  .input-box {
-    max-width: 320px;
+  .landing-page {
+    overflow: hidden;
   }
 }

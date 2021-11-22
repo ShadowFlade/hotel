@@ -1,17 +1,13 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
 
-.arrow-span {
-  position: relative;
-  right: 8%;
-  width: auto;
-  height: 100%;
-  translate: transformY(-50%);
-  transform: translate(6px, 4px);
-}
 .date-picker {
-  width: 150px;
+  min-width: 150px;
   font-size: rem(11);
+  width: 100%;
+  &--small {
+    width: 150px;
+  }
   &--single {
     width: 266px;
   }
@@ -35,7 +31,14 @@
     @include input-arrow();
   }
 }
-
+.arrow-span {
+  position: relative;
+  right: 8%;
+  width: auto;
+  height: 100%;
+  translate: transformY(-50%);
+  transform: translate(6px, 4px);
+}
 .date-caption {
   margin-bottom: 5px;
 }

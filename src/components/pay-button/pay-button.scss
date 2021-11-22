@@ -19,13 +19,13 @@
   align-items: center;
   flex-wrap: wrap;
   cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
   &__arrow {
     top: 50%;
   }
   &__text {
     text-transform: uppercase;
   }
-}
-.pay-button:hover {
-  opacity: 0.5;
 }

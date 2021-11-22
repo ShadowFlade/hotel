@@ -1,9 +1,13 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
 .dropdown-accom {
-  width: 320px;
+  max-width: 320px;
+  width: 100%;
   &--small {
     width: 266px;
+  }
+  &--big {
+    width: 320px;
   }
   &__label {
     @include label();

@@ -23,13 +23,12 @@ npm run build
 
 ## Project Structure:
 
-- `src/pug/layout` - put custom layout for pages
-- `src/pug/includes` - all app includes
-- `src/pug/pages` - put custom app pages. Don't forget to import them in `index.js`
-- `src/assets/img` - put images here. Don't forget to use correct path: `assets/img/some.jpg`
-- `src/js` - put custom app scripts here
+- `src/layout` - put custom layout for pages
+- `src/components` - all app includes
+- `src/pages` - put custom app pages. Don't forget to import them in `index.js`
 - `src/index.js` - main app file where you include/import all required libs and init app
-- `static/` - folder with extra static assets that will be copied into output folder
+- `src/static/` - folder with extra static assets that will be copied into output folder
+- `src/font` - put your fonts here. Don't forget to use them in `src/common/fonts.scss`
 
 ## Dependencies:
 

@@ -1,5 +1,5 @@
-import './like.scss'
 import Like from '../like-class/like-class'
+import './like.scss'
 const contentLoaded = () =>{
   const likeItems = Array.from(document.getElementsByClassName('js-like__item'))
   likeItems.forEach(likeItem => {

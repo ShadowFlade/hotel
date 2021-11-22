@@ -1,4 +1,3 @@
-import './form-elements.scss'
 import '../../components/checkbox-list/checkbox-list.js'
 import '../../components/comment/comment.js'
 import '../../components/button/button.js'
@@ -22,6 +21,7 @@ import '../../components/subscription-text-field/subscription-text-field.js'
 import '../../components/text-field/text-field.js'
 import '../../components/toggle/toggle.js'
 import '../../components/hotel-card/hotel-card.js'
+import './form-elements.scss'
 $(function () {
   const $filterDateDropdown = $('.date-picker--single')
   $filterDateDropdown.daterangepicker({

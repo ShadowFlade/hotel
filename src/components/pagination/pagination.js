@@ -1,6 +1,5 @@
-import './pagination.scss'
 import '../svg-arrow-right/svg-arrow-right'
-
+import './pagination.scss'
 $(function () {
   const handlePaginationClick = function () {
     if (!$(this).hasClass('page-active')) {

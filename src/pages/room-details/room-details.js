@@ -1,4 +1,4 @@
-import './room-details.scss'
+import { Chart } from 'chart.js'
 import '../../components/hotel-card/hotel-card.js'
 import '../../components/bullet-list/bullet-list.js'
 import '../../components/comment/comment.js'
@@ -6,7 +6,8 @@ import '../../components/bill/bill.js'
 import '../../components/features/features.js'
 import '../../components/date-picker/date-picker.js'
 import '../../components/dropdown-submit-and-clear/dropdown-submit-and-clear.js'
-import { Chart } from 'chart.js'
+import './room-details.scss'
+
 $(function () {
   var options = {
     events: [],

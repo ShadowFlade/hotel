@@ -1,12 +1,12 @@
+import '../../layout/landing/landing.scss'
+import '../../layout/main/main.scss'
 import '../../common/nullstyle.scss';
 import '../../common/mixins.scss';
 import '../../common/fonts.scss';
-import '../../layout/landing/landing.scss'
-import '../../layout/main/main.scss'
 import '../../common/vars.scss'
-import './index.scss'
 import '../../components/header/header.js'
 import '../../components/footer/footer.js'
 import '../../components/footer-mini/footer-mini.js'
 import '../../components/burger-menu/burger-menu.js'
 import '../base/base.scss'
+import './index.scss'

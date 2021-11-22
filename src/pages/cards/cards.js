@@ -1,5 +1,3 @@
-import './hotel-card.js'
-import './cards.scss'
 import '../../components/bill/bill.js'
 import '../../components/sign-in/sign-in.js'
 import '../../components/registration/registration.js'
@@ -9,6 +7,8 @@ import '../../components/pay-button/pay-button.js'
 import '../../components/hotel-card/hotel-card.js'
 import '../../components/toggle/toggle.js'
 import '../../components/date-picker/date-picker.js'
+import './hotel-card.js'
+import './cards.scss'
 const DOMContentLoaded = ()=>{
   setTimeout(()=>{
     const datepicker = document.getElementsByClassName('daterangepicker ltr show-calendar opensright moveup')[0]

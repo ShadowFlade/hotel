@@ -4,16 +4,16 @@
   max-width: 266px;
   position: relative;
   &__label {
-    width: 267/14 * 1rem;
     @include label;
   }
-  .arrow-right {
-    top: 50%;
-    transform: translateY(-50%);
+  &__input {
+    width: 100%;
+    @include input();
   }
-}
-
-.subscription-text-field__input {
-  width: 100%;
-  @include input();
+  .arrow-right {
+    top: 33%;
+  }
+  &__input-box {
+    position: relative;
+  }
 }

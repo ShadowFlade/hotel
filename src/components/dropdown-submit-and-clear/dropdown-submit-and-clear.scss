@@ -1,25 +1,25 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
 .dropdown-accom {
-  border-bottom-width: 0.5px;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  position: relative;
-  user-select: none;
-  width: 100%;
-  @include input();
-  &__label {
-    @include label;
+  width: 320px;
+  &--small {
+    width: 266px;
   }
-  &__big {
-    width: 320px;
-
-    &--small {
-      width: 266px;
-    }
-    .input-box {
-      position: relative;
-    }
+  &__label {
+    @include label();
+    position: relative;
+  }
+  &__input-box {
+    position: relative;
+  }
+  &__input {
+    border-bottom-width: 0.5px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    position: relative;
+    user-select: none;
+    width: 100%;
+    @include input();
   }
   &__ul {
     position: absolute;
@@ -36,8 +36,10 @@
     z-index: 10;
     height: 163px;
     display: none;
+
     li {
-      font-family: 'MontserratBold', sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
       display: flex;
       justify-content: space-between;
       height: 40px;
@@ -45,7 +47,7 @@
       padding: 5px 10px;
     }
   }
-  &__span {
+  &__value {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;

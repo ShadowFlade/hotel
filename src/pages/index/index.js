@@ -1,7 +1,6 @@
 import '../../common/nullstyle.scss';
 import '../../common/mixins.scss';
 import '../../common/fonts.scss';
-import '../../common/default-input.scss';
 import '../../layout/landing/landing.scss'
 import '../../layout/main/main.scss'
 import '../../common/vars.scss'

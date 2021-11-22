@@ -18,7 +18,8 @@
   }
   &__title {
     @include big;
-    font-family: 'MontserratBold', 'sans-serif';
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: bold;
     margin-bottom: 1.34286rem;
   }
   &__account-availability {

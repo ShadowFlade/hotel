@@ -30,7 +30,6 @@
     width: 20%;
   }
   .rooms-for-you {
-    padding: 3.1714em 1.9em 0;
     width: 380px;
     position: relative;
     left: 10%;
@@ -74,14 +73,7 @@
       width: 60%;
     }
   }
-  .date-picker {
-    max-width: 140px;
-    margin-right: rem(31);
-    width: 44%;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+
   .input-box {
     max-width: 320px;
   }

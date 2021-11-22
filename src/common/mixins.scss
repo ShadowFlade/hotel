@@ -66,7 +66,8 @@ $maxWidthContainer: 1170;
 
 @mixin label {
   @include small;
-  font-family: 'MontserratBold', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   position: relative;
   user-select: none;
   margin-bottom: 5px;
@@ -78,7 +79,7 @@ $maxWidthContainer: 1170;
 
 @mixin input-arrow {
   position: absolute;
-  transform: translate(-50%, -2.5%);
-  top: 43%;
+  transform: translate(-50%, 50.5%);
+  top: 34%;
   right: 0.6429rem;
 }

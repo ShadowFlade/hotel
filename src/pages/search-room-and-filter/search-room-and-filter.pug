@@ -24,7 +24,7 @@ block content
         .sidebar__item 
           +datePicker({label:'даты пребывания в отеле',placeholder:'19 авг - 23 авг'})
         .sidebar__item 
-          +dropdownSubmitAndClear({label:'гости',placeholder:'3 гостя',arrayOfArguments:['взрослые','дети','младенцы'],option:'clear'})
+          +dropdownSubmitAndClear({label:'гости',placeholder:'3 гостя',arrayOfArguments:['взрослые','дети','младенцы'],option:'clear',modif:'small'})
         .sidebar__item 
           +rangeSlider('Диапазон цены')
         .sidebar__item 
@@ -33,7 +33,7 @@ block content
           +checkboxRich()
 
         .sidebar__item 
-          +dropdownSubmitAndClear({label:'удобство номера',placeholder:'2 спальни, 2 кровати',arrayOfArguments:['спальни','кровати','ванные комнаты'],option:'clear'})
+          +dropdownSubmitAndClear({label:'удобство номера',placeholder:'2 спальни, 2 кровати',arrayOfArguments:['спальни','кровати','ванные комнаты'],option:'clear',modif:'small'})
         .sidebar__item 
           +checkboxList({label:'дополнительные удобства',arrayOfArguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 
     .content 

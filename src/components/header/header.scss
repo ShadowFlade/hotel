@@ -86,7 +86,8 @@
     cursor: pointer;
     position: relative;
     &--about-us {
-      font-family: 'MontserratBold', 'sans-serif';
+      font-family: 'Montserrat', 'sans-serif';
+      font-weight: bold;
       color: rgba(31, 32, 65, 0.75);
     }
     span img {

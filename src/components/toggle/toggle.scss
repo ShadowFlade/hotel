@@ -8,7 +8,7 @@
   color: $DarkShade50;
   text-transform: capitalize;
   padding-left: 13.5%;
-  padding-top: rem(3);
+  padding-top: 0.11429rem;
   height: rem(27);
   position: relative;
   display: flex;
@@ -37,6 +37,7 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     cursor: default;
+    position: absolute;
     &:checked + .toggle-custom .toggle-custom__helper--passive {
       transform: translate(120%, -50%);
       transition: all 0.3s ease-out;
@@ -85,4 +86,5 @@
 
 .toggle-details {
   position: relative;
+  @include small;
 }

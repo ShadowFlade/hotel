@@ -24,7 +24,7 @@ mixin bill
       .bill__summary
         .bill__row 
           .bill__calculating-sum 9 990₽ х 4 суток
-          .bill__money 
+          .bill__money.bill__money--single 
             .bill__sum 39 960₽
         .bill__row 
           .bill__calculating-sum Сбор за услуги: скидка 2 179₽
@@ -38,7 +38,6 @@ mixin bill
             .bill__sum 300₽
         .bill__all
           .bill__result Итого
-          //- .bill__border
           .bill__money 38 081₽
       .bill__footer
         +payButton({label:'Забронировать',arrow:true}) 

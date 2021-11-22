@@ -97,10 +97,6 @@ module.exports = {
             }
           },
          'css-loader',
-          // {
-            
-          //   options: { sourceMap: true },
-          // },
           {
             loader: 'postcss-loader',
             options: {

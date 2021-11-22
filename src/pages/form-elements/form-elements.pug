@@ -5,7 +5,6 @@ include ../../components/dropdown/dropdown.pug
 include ../../components/dropdown-submit-and-clear/dropdown-submit-and-clear.pug
 include ../../components/toggle/toggle.pug
 include ../../components/radio-buttons/radio-buttons.pug
-include ../../components/dropdown-no-buttons/dropdown-no-buttons.pug
 include ../../components/checkbox-list/checkbox-list.pug
 include ../../components/subscription-text-field/subscription-text-field.pug
 include ../../components/bullet-list/bullet-list.pug
@@ -45,7 +44,7 @@ block content
 			.form-elements__item
 				+subsTextField({label:'subscription text field'})
 			.form-elements__item
-				+dropdownNoButtons({label:'dropdown',placeholder:'2 спальни, 2 кровати',arrayOfArguments:['Спальни','Кровати','Ванные комнаты'],option:'none'})
+				+dropdownSubmitAndClear({label:'dropdown',placeholder:'2 спальни, 2 кровати',arrayOfArguments:['Спальни','Кровати','Ванные комнаты'],option:'none',modif:'small'})
 			.form-elements__item
 				+checkboxList({label:'expandable checkbox list',arrayOfArguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 
 			.form-elements__item

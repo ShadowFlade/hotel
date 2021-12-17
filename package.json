@@ -45,15 +45,15 @@
     "webpack": "^5.64.1",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.6.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "copy-webpack-plugin": "^5.1.2",
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "chart.js": "^2.9.4",
-    "copy-webpack-plugin": "^10.2.0",
     "daterangepicker": "^3.1.0",
     "material-design-icons": "^3.0.1",
-    "moment": "^2.29.1",
-    "node-sass": "^7.0.0"
+    "moment": "^2.29.1"
   },
   "bugs": {
     "url": "https://github.com/ShadowFlade/hotel/issues"

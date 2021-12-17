@@ -1,17 +1,23 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
+const WebpackDevServer=require('webpack-dev-server')
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: 'development',
   devtool: 'eval-cheap-source-map',
   devServer: {
-    contentBase: baseWebpackConfig.externals.paths.dist,
-    port: 8081,
-    overlay: {
-      warnings: true,
-      errors: true,
+    open: true,
+    static:{
+      directory:baseWebpackConfig.externals.paths.dist
     },
+    port: 8081,
+    client: {
+      overlay: true,
+      progress: true,
+      reconnect: 5,
+    },
+
   },
   plugins: [
     new webpack.SourceMapDevToolPlugin({

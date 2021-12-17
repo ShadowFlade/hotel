@@ -101,7 +101,6 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              config: { path: `./postcss.config.js` },
             },
           },
           {
@@ -123,7 +122,6 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              config: { path: `./postcss.config.js` },
             },
           },
         ],
@@ -141,17 +139,15 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),
-    new CopyWebpackPlugin([
+    new CopyWebpackPlugin({patterns:[
       { from: `${PATHS.src}/static`, to: '' },
       { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
-
-      { from: `${PATHS.src}/components/**/*.png`, to: `${PATHS.assets}img/[name].[ext]` },
-      { from: `${PATHS.src}/components/**/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
-      { from: `${PATHS.src}/layout/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
-      { from: `${PATHS.src}/pages/**/*.svg`, to: `${PATHS.assets}img/[name].[ext]` },
-      { from: `${PATHS.src}/pages/**/*.png`, to: `${PATHS.assets}img/[name].[ext]` }
-
-    ]),
+      { from: `${PATHS.src}/components/**/*.png`, to: `${PATHS.assets}img/[name].png` },
+      { from: `${PATHS.src}/components/**/*.svg`, to: `${PATHS.assets}img/[name].svg` },
+      { from: `${PATHS.src}/layout/*.svg`, to: `${PATHS.assets}img/[name].svg` },
+      { from: `${PATHS.src}/pages/**/*.svg`, to: `${PATHS.assets}img/[name].svg` },
+      { from: `${PATHS.src}/pages/**/*.png`, to: `${PATHS.assets}img/[name].png` }
+    ]}),
 
   ].concat(htmlPlugins),
 }

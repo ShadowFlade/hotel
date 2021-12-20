@@ -9,7 +9,7 @@
   @if (unitless($context)) {
     $context: $context * 1px;
   }
-  @return $pixels / $context * 1rem;
+  @return calc($pixels / $context) * 1rem;
 }
 @function em($size) {
   @return $size/$mainFontSize * 1em;
@@ -28,7 +28,7 @@ $maxWidthContainer: 1170;
 @mixin mainfont {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
-  line-height: 24/14 * 1rem;
+  line-height: calc(24 / 14) * 1rem;
   font-weight: 400;
   color: $DarkShade75;
 }
@@ -38,13 +38,13 @@ $maxWidthContainer: 1170;
   font-weight: 900;
 }
 @mixin medium {
-  font-size: 19/14 * 1rem;
-  line-height: 23/14 * 1rem;
+  font-size: calc(19 / 14) * 1rem;
+  line-height: calc(23 / 14) * 1rem;
   font-weight: 700;
 }
 @mixin small {
-  font-size: 12/14 * 1rem;
-  line-height: 14/14 * 1rem;
+  font-size: calc(12 / 14) * 1rem;
+  line-height: calc(14 / 14) * 1rem;
   font-weight: 700;
   text-transform: uppercase;
 }

@@ -14,7 +14,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     port: 8081,
     client: {
       overlay: true,
-      progress: true,
       reconnect: 5,
     },
 

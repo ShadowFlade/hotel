@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0 9% 0 9.72222%;
+    padding: 0 11% 0 9.72222%;
   }
   &__interactive {
     display: flex;
@@ -29,7 +29,7 @@
     justify-content: flex-end;
     align-items: center;
     width: auto;
-    margin-right: 0.25714rem;
+    margin-right: 2.25714rem;
   }
   &__navbar > div {
     margin-right: 20px;
@@ -58,7 +58,6 @@
   &__auth {
     display: flex;
     align-items: center;
-    padding-right: 0.91429rem;
     & > div:not(:last-child) {
       margin-right: 10px;
     }
@@ -156,12 +155,12 @@
 .button-default2__wrapper--navigation {
   width: 6.45em;
   height: 2.5em;
-  margin-right: 20/1440 * 100%;
+  margin-right: calc(20 / 1440) * 100%;
 }
 
 .pay-button--navigation {
-  width: 196/12 * 1em;
-  height: 34/12 * 1em;
+  width: calc(196 / 12) * 1em;
+  height: calc(34 / 12) * 1em;
   height: rem(34);
   width: 12.5rem;
 }

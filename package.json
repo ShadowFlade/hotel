@@ -20,6 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
+    "@webdiscus/pug-loader": "^1.5.1",
     "autoprefixer": "^10.4.0",
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
@@ -36,7 +37,6 @@
     "postcss": "^8.4.5",
     "postcss-loader": "^6.2.1",
     "pug": "^3.0.2",
-    "pug-loader": "^2.4.0",
     "sass": "^1.45.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",

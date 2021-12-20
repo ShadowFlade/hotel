@@ -63,7 +63,7 @@ module.exports = {
         test: /\.pug$/,
         oneOf: [
           {
-            use: ['pug-loader'],
+            use: ['@webdiscus/pug-loader'],
           },
         ],
       },

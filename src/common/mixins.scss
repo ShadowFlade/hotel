@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import './vars.scss';
 
 // px to rem
@@ -21,7 +22,6 @@
   @return $size/$desktopWidth * 100%;
 }
 
-@use 'sass:color';
 $maxWidth: 1920;
 $maxWidthContainer: 1170;
 

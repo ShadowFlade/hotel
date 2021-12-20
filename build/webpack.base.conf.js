@@ -78,14 +78,15 @@ module.exports = {
         exclude: '/node_modules/',
       },
       {
+        test: /\.(png|jpg|gif|svg)$/,
+        type:'asset/resource',
+      },
+      {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         type:'asset/inline',
 
       },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        type:'asset/resource',
-      },
+
       {
         test: /\.scss$/,
         use: [
@@ -141,7 +142,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/static`, to: '' },
-      { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts/` },
+      { from: `${PATHS.src}/fonts/`, to: `${PATHS.assets}fonts/` },
       { from: `${PATHS.src}/components/**/*.png`, to: `${PATHS.assets}img/[name].png` },
       { from: `${PATHS.src}/components/**/*.svg`, to: `${PATHS.assets}img/[name].svg` },
       { from: `${PATHS.src}/layout/*.svg`, to: `${PATHS.assets}img/[name].svg` },

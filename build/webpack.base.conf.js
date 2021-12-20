@@ -79,24 +79,18 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        type:'asset/resource',
+        type:'asset',
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        type:'asset/inline',
+        type:'asset',
 
       },
 
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
-          {
-            loader:          MiniCssExtractPlugin.loader,
-            options:{
-              esModule:false
-            }
-          },
+          isDev ? "style-loader" : MiniCssExtractPlugin.loader,
          'css-loader',
           {
             loader: 'postcss-loader',
@@ -113,8 +107,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
-          MiniCssExtractPlugin.loader,
+          isDev ? "style-loader" : MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: { sourceMap: true },

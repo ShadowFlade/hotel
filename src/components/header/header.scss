@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0 11% 0 9.72222%;
+    padding: 0 9.5% 0 9.72222%;
   }
   &__interactive {
     display: flex;
@@ -29,10 +29,7 @@
     justify-content: flex-end;
     align-items: center;
     width: auto;
-    margin-right: 2.25714rem;
-  }
-  &__navbar > div {
-    margin-right: 20px;
+    padding-right: 2.45rem;
   }
 
   &__items {
@@ -59,7 +56,11 @@
     display: flex;
     align-items: center;
     & > div:not(:last-child) {
-      margin-right: 10px;
+      margin-right: 20px;
+    }
+    .button--hollow-wrapper {
+      width: 87px;
+      height: 34px;
     }
   }
 }
@@ -67,7 +68,6 @@
 .navbar {
   display: flex;
   &__item {
-    margin-right: 1.5em;
     display: flex;
     position: relative;
     align-items: center;
@@ -84,6 +84,7 @@
     width: fit-content;
     cursor: pointer;
     position: relative;
+    margin-right: 2.1em;
     &--about-us {
       font-family: 'Montserrat', 'sans-serif';
       font-weight: bold;
@@ -162,7 +163,7 @@
   width: calc(196 / 12) * 1em;
   height: calc(34 / 12) * 1em;
   height: rem(34);
-  width: 12.5rem;
+  width: 14rem;
 }
 
 //----------------------------------------------------ADAPTIVE

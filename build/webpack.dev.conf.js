@@ -8,6 +8,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   devtool: 'eval-cheap-source-map',
   devServer: {
     open: true,
+    hot:true,
+    watchFiles:['../dist'],
     static:{
       directory:baseWebpackConfig.externals.paths.dist
     },
@@ -27,7 +29,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 const mod = new Promise((resolve, reject) => {
   resolve(baseWebpackConfig)
 })
-mod.then((v) => console.log(v))
+mod.then((v) => {
+  console.log(v)
+  console.log(baseWebpackConfig.externals.paths.dist)
+})
 module.exports = new Promise((resolve, reject) => {
   resolve(devWebpackConfig)
 })
+
+

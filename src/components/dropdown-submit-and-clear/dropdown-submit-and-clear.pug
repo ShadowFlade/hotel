@@ -2,24 +2,24 @@ include ../button/button.pug
 mixin dropdownSubmitAndClear(options={label:'dropdown',placeholder:'3 гостя',arrayOfArguments:['взрослые','дети','младенцы'],option:'clear'})
   .dropdown-accom.js-dropdown-accom(class=options.modif ? `dropdown-accom--${options.modif}` : false)
     label.dropdown-accom__label #{options.label}
-      .dropdown-accom__input-box
-        input.dropdown-accom__input(type='text',placeholder=options.placeholder)
-        img.dropdown-accom__arrow(src='assets/img/arrow.svg')
-      ul.dropdown-accom__ul.js-dropdown-accom__ul(style=options.option ==='none' ? {'height':'123px'}: false)
-        each val in options.arrayOfArguments
-          li 
-            .dropdown-accom__variant #{val}
-            .dropdown-accom__btn-group
-              button.dropdown-accom__button.dropdown-accom__button--prev(type='button') -
-              .dropdown-accom__span 2
-              button.dropdown-accom__button.dropdown-accom__button--next(type='button') +
-        if (options.option!=='none')
-          .dropdown-accom__footer
-            if (options.option=='submit')
-              +button({modif:'inline',type:'submit',text:'Применить'})
-            else if (options.option=='clear')
-              +button({modif:'inline',text:'Очистить'})
-              +button({modif:'inline',type:'submit',text:'Применить'})
+    .dropdown-accom__input-box
+      input.dropdown-accom__input(type='text',placeholder=options.placeholder)
+      img.dropdown-accom__arrow(src='assets/img/arrow.svg')
+    ul.dropdown-accom__ul.js-dropdown-accom__ul(style=options.option ==='none' ? {'height':'123px'}: false)
+      each val in options.arrayOfArguments
+        li 
+          .dropdown-accom__variant #{val}
+          .dropdown-accom__btn-group
+            button.dropdown-accom__button.dropdown-accom__button--prev(type='button') -
+            .dropdown-accom__span 2
+            button.dropdown-accom__button.dropdown-accom__button--next(type='button') +
+      if (options.option!=='none')
+        .dropdown-accom__footer
+          if (options.option=='submit')
+            +button({modif:'inline',type:'submit',text:'Применить'})
+          else if (options.option=='clear')
+            +button({modif:'inline',text:'Очистить'})
+            +button({modif:'inline',type:'submit',text:'Применить'})
 
 
 

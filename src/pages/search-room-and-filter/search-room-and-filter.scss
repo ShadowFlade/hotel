@@ -4,27 +4,31 @@
   background: white;
 
   .range-slider {
-    width: 88%;
+    width: 100%;
   }
   .sidebar {
     padding-left: 140/1440 * 100%;
     width: 456px;
 
     &__container {
-      padding-right: 60/1440 * 100%;
+      padding-right: calc(60 / 1440) * 100%;
     }
     &__item {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2.2rem;
       width: 266px;
+      &--input {
+        margin-bottom: 1.5rem;
+      }
     }
   }
   main {
     padding: 30px 0;
     display: flex;
+    padding-bottom: 85px;
   }
   .content {
     padding-right: 7.07143rem;
-    padding-left: 3.58571rem;
+    padding-left: 4.59rem;
 
     &__title {
       font-family: 'Montserrat';
@@ -49,7 +53,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: rem(12);
+      margin-top: 1.857143rem;
     }
   }
   @media screen and (max-width: 1044px) {

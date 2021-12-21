@@ -21,9 +21,9 @@ block content
   main 
     .sidebar
       .sidebar__container 
-        .sidebar__item 
+        .sidebar__item.sidebar__item--input 
           +datePicker({label:'даты пребывания в отеле',placeholder:'19 авг - 23 авг'})
-        .sidebar__item 
+        .sidebar__item
           +dropdownSubmitAndClear({label:'гости',placeholder:'3 гостя',arrayOfArguments:['взрослые','дети','младенцы'],option:'clear',modif:'small'})
         .sidebar__item 
           +rangeSlider('Диапазон цены')
@@ -76,7 +76,7 @@ block content
           +hotelCard({pictures:['assets/img/srchRoom11.png','assets/img/image1.png'],
                 luxNumber:'450',price:'5300',stars:4,numberOfReviews:'39',lux:false})
       .content__pagination 
-        +pagination(3)
+        +pagination({numberOfFirstPages:3,lastPage:15})
 
   footer.footer.footer--main
     +footer

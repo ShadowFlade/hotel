@@ -1,14 +1,14 @@
 @import '../../common/mixins.scss';
 .sign-in {
   &__auth {
-    width: 380px;
-    position: absolute;
-    top: 45%;
     left: 37.5%;
+    position: absolute;
+    top: 30%;
+    width: 380px;
   }
   &__bgp {
     background: url('./last-page.png');
-    height: 48rem;
+    height: 49rem;
   }
 }
 

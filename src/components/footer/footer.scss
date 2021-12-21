@@ -1,7 +1,7 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
 .footer {
-  height: 443 / 1350 * 100%;
+  height: calc(443 / 1350) * 100%;
   background: white;
   display: flex;
   flex-direction: column;
@@ -13,11 +13,15 @@
   color: rgba(31, 32, 65, 0.75);
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   &__item {
+    margin-bottom: 1rem;
+    width: 106%;
     &--section {
       font-family: 'Montserrat', 'sans-serif';
       font-weight: bold;
     }
-    margin-bottom: rem(20);
+    &--subscription-field {
+      margin-top: 10px;
+    }
   }
   &__item:not(:first-child) {
     &:hover {
@@ -28,7 +32,7 @@
   &__container {
     border-bottom: 1px solid rgba(31, 32, 65, 0.25);
     border-top: 1px solid rgba(31, 32, 65, 0.25);
-    padding: 7% 9.72222% 9%;
+    padding: 7% 9.72222% 5.5% 9.6%;
   }
   &__top {
     display: flex;
@@ -38,7 +42,7 @@
     flex-direction: column;
     height: 100%;
     align-items: space-between;
-    margin-right: 2.85714rem;
+    margin-right: 4.857139999999999rem;
     &--big {
       width: 22%;
       margin-right: rem(44);
@@ -68,7 +72,7 @@
     padding: 1.5% 9.72222%;
   }
   &__copyright {
-    font-size: 0.89rem;
+    font-size: 1rem;
   }
   &__socials {
     display: flex;

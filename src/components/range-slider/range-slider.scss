@@ -3,7 +3,7 @@
 .range-slider {
   width: rem(266);
   &__values {
-    width: 64%;
+    width: 100%;
     text-align: right;
   }
   &__caption {
@@ -27,7 +27,7 @@
     display: flex;
     justify-content: space-between;
     font-size: rem(12);
-    margin-bottom: rem(13);
+    margin-bottom: 1.3rem;
   }
   &__start,
   &__end {

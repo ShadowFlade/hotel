@@ -4,13 +4,13 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: normal;
-  font-size: 0.87rem;
+  font-size: 1rem;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
   margin-bottom: 10px;
   position: relative;
   display: block;
-  padding-left: rem(16);
+  padding-left: 1.4rem;
   &::before {
     content: '';
     background: rgba(31, 32, 65, 0.25);
@@ -18,15 +18,18 @@
     height: 10px;
     border-radius: 50%;
     position: absolute;
-    left: rem(-6);
+    left: 0;
     top: 0.7rem;
     transform: translateY(-27%);
   }
 }
 .bullet-list__box {
-  margin-top: 16px;
+  margin-top: 13px;
   text-transform: none;
 }
 .bullet-list__label {
   @include label;
+  letter-spacing: 1px;
+  padding-left: 1.3em;
+  margin-bottom: 1.7571rem;
 }

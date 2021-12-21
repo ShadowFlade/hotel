@@ -2,11 +2,10 @@
 @import '../../common/mixins.scss';
 .checkbox-buttons {
   &__group {
-    margin-top: $mainFontSize/18px * 1rem;
+    margin-top: calc($mainFontSize/18px) * 1rem;
     top: 100%;
     left: 0;
     background: white;
-    z-index: 10;
     width: 100%;
   }
 

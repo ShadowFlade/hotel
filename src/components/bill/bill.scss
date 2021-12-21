@@ -99,8 +99,7 @@
     }
   }
   &__calculating-sum {
-    font-size: rem(13);
-    word-spacing: -2px;
+    font-size: 1rem;
     line-height: 1.6;
   }
 
@@ -114,7 +113,7 @@
     line-height: 23px;
     overflow: hidden;
     position: relative;
-    margin-top: 2.41429rem;
+    margin-top: 0.9rem;
     &:after {
       color: rgba(31, 32, 65, 0.25);
       float: left;
@@ -134,6 +133,7 @@
     background-color: #ffff;
     z-index: 2;
     padding-left: 4px;
+    width: 34%;
     &--single {
       display: inline;
       min-width: 0;

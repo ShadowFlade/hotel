@@ -1,6 +1,6 @@
 mixin bulletList (options={title:'bullet list',arrayOfArguments:['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']})
-  span.bullet-list__label #{options.title}
-  .bullet-list__box
-    each val in options.arrayOfArguments
-      span.bullet-list__item #{val}
+  .bullet-list
+    .bullet-list__box
+      each val in options.arrayOfArguments
+        span.bullet-list__item #{val}
       

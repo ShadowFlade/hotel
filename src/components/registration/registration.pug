@@ -12,13 +12,12 @@ mixin registrationCard
           input.registration-card__input(type='text',placeholder='Фамилия')
           +radioButtons({arrayOfArguments:['Мужчина','Женщина'],name:'gender'})
         .registration-card__item
-          label.registration-card__label 
-            span.registration-card__birthday Дата рождения
-            input.registration-card__input(type='text',placeholder='ДД.ММ.ГГГГ')
+          label.registration-card__label Дата рождения
+          input.registration-card__input(type='text',placeholder='ДД.ММ.ГГГГ')
         .registration-card__item
           label.registration-card__label Данные для входа в сервис
-            input.registration-card__input(type='text',placeholder='Email',)
-            input.registration-card__input(type='password',placeholder='Пароль')
+          input.registration-card__input(type='text',placeholder='Email',)
+          input.registration-card__input(type='password',placeholder='Пароль')
           +toggle({arrayOfArguments:['Получать спецпредложения']})
         .registration-card__item
           +payButton({label:'Перейти к оплате',arrow:true})

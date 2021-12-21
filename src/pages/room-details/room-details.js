@@ -1,4 +1,4 @@
-import { Chart } from 'chart.js'
+import Chart  from 'chart.js/auto'
 import '../../components/hotel-card/hotel-card.js'
 import '../../components/bullet-list/bullet-list.js'
 import '../../components/comment/comment.js'

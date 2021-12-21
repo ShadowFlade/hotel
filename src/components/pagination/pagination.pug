@@ -1,13 +1,13 @@
 include ../svg-arrow-right/svg-arrow-right.pug
-mixin pagination(numberOfFirstPages=3)
+mixin pagination(options={numberOfFirstPages:3,lastPage:15})
   .pagination
     .pagination__pages
       - let n=1
-      while n<numberOfFirstPages+1
-        div.pagination__item.js-pagination__item #{n}
+      while n<options.numberOfFirstPages+1
+        .pagination__item.js-pagination__item #{n}
         -n++
       .pagination__item.pagination__item--intro.js-pagination__item ...
-      .pagination__item.pagination__item--last-page.js-pagination__item 15 
+      .pagination__item.pagination__item--last-page.js-pagination__item #{options.lastPage}
       .pagination__arrow-item
         +svgArrowRight({color:'#FFFFFF',endColor:'#FFFFFF',modif:'pagination'})
     .pagination__info 1 – 12 из 100+ вариантов аренды

@@ -1,5 +1,6 @@
 include ../burger-menu/burger-menu.pug   
 include ../button/button.pug
+include ../link/link.pug
 
 mixin navbar(options={arrayOfElements:[{name:'О нас',arrow:false},{name:'Услуги',arrow:true,list:['hire','me']},{name:'Вакансии',arrow:false},{name:'Новости',arrow:false},{name:'Соглашения',arrow:true,list:['something','anything','whatever']}],arrow_class:'navigation__arrow'})
   .navbar
@@ -12,7 +13,7 @@ mixin navbar(options={arrayOfElements:[{name:'О нас',arrow:false},{name:'У�
           if el.list
             .navbar__menu
               each val in el.list
-                a.navbar__option #{val}
+                +link({mockAddress:'/',className:'navbar__option',text:`${val}`})
       else 
         .navbar__item #{el.name}
 

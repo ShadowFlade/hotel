@@ -16,7 +16,7 @@
     padding-left: rem(9);
   }
   &__label {
-    margin-bottom: 14/16 * 1rem;
+    margin-bottom: calc(14 / 16) * 1rem;
     @include label;
   }
   &__item {

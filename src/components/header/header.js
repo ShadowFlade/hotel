@@ -6,7 +6,7 @@ import '../footer-mini/footer-mini.js';
 import '../subscription-text-field/subscription-text-field.js';
 import './header.scss';
 
-const DOMContentLoaded = ()=>{
+const handleContentLoaded = ()=>{
   const navbarItems = Array.from(document.getElementsByClassName('navbar__item'));
   navbarItems.map((item)=>{
     if (item.textContent.toLowerCase().trim() === 'о нас' || item.textContent.toLowerCase() === 'about us') {
@@ -14,4 +14,4 @@ const DOMContentLoaded = ()=>{
     }
   });
 };
-document.addEventListener('DOMContentLoaded', DOMContentLoaded);
+document.addEventListener('DOMContentLoaded', handleContentLoaded);

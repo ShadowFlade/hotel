@@ -4,13 +4,10 @@
     position: relative;
     background-image: url('picture.jpg');
     height: 58.91429rem;
-    .card {
-      position: absolute;
-      top: 70px;
-      left: 141px;
-      z-index: 100;
-      width: 26.1%;
-      min-width: 356px;
+    .rooms-for-you {
+      position: relative;
+      left: 10%;
+      top: 8%;
     }
   }
   &__caption {
@@ -25,11 +22,6 @@
     bottom: 2%;
     right: 9%;
     width: 20%;
-  }
-  .rooms-for-you {
-    position: relative;
-    left: 10%;
-    top: 8%;
   }
 
   .footer--small {

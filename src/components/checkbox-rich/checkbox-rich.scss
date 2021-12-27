@@ -12,12 +12,12 @@
 
   &__item {
     display: flex;
-    margin-bottom: $mainFontSize/13px * 1rem;
+    margin-bottom: calc($mainFontSize/13px) * 1rem;
     position: relative;
   }
 
   &__group {
-    margin-top: $mainFontSize/18px * 1rem;
+    margin-top: calc($mainFontSize/18px) * 1rem;
     top: 100%;
     left: 0;
     background-color: transparent;

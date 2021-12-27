@@ -12,7 +12,7 @@
   color: $DarkShade50;
   text-transform: capitalize;
   position: relative;
-  width: 222/12 * 1em;
+  width: calc(222 / 12) * 1em;
   max-width: 266px;
 
   &__group {

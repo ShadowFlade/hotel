@@ -9,7 +9,7 @@ import '../../components/toggle/toggle.js';
 import '../../components/date-picker/date-picker.js';
 import './hotel-card.js';
 import './cards.scss';
-const DOMContentLoaded = ()=>{
+const handleContentLoaded = ()=>{
   setTimeout(()=>{
     const datepicker = document.getElementsByClassName('daterangepicker ltr show-calendar opensright moveup')[0];
     datepicker.style.position = 'relative';
@@ -19,4 +19,4 @@ const DOMContentLoaded = ()=>{
     target.appendChild(datepicker);
   }, 0);
 };
-document.addEventListener('DOMContentLoaded', DOMContentLoaded);
+document.addEventListener('DOMContentLoaded', handleContentLoaded);

@@ -1,1 +1,1 @@
-import './navs.scss'
+import './navs.scss';

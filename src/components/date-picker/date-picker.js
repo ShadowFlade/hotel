@@ -1,5 +1,5 @@
 /* eslint-disable fsd/jq-use-js-prefix-in-selector */
-import './date-picker.scss'
+import './date-picker.scss';
 $(function () {
   $('.js-date-picker').daterangepicker({
     maxSpan: {
@@ -39,15 +39,15 @@ $(function () {
     startDate: '02/04/2021',
     endDate: '02/11/2021',
     autoUpdateInput: true,
-  })
+  });
   const handleTdClicked = function () {
-    $('.end-date').removeClass('in-range')
-  }
-  $('td').on('click', handleTdClicked)
+    $('.end-date').removeClass('in-range');
+  };
+  $('td').on('click', handleTdClicked);
 
-  $('.js-card__datepicker').click()
+  $('.js-card__datepicker').click();
   $(document).mouseup(function () {
-    $('.end-date').removeClass('in-range')
-  })
-  $('.ui-datepicker-calendar a.ui-state-default').css('width', '20px')
-})
+    $('.end-date').removeClass('in-range');
+  });
+  $('.ui-datepicker-calendar a.ui-state-default').css('width', '20px');
+});

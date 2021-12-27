@@ -1,1 +1,1 @@
-import './footer-mini.scss'
+import './footer-mini.scss';

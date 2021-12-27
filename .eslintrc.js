@@ -7,13 +7,11 @@ module.exports = {
   },
   extends: [
     'airbnb-base/legacy',
-    'plugin:fsd/all'
   ],
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['fsd'],
   rules: {
     'prettier/prettier': [0, { singleQuote: true, parser: 'flow' }],
     'class-methods-use-this': 0,
@@ -21,7 +19,7 @@ module.exports = {
     'comma-dangle': 0,
     'no-prototype-builtins': 0,
     'no-underscore-dangle': 0,
-    semi: 0,
+    "semi": [2, "always"],
     quotes: 0,
     'func-names': 0,
     'no-unused-vars': 0

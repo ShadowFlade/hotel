@@ -1,35 +1,35 @@
 const isVisible = elem => !!elem && !!(elem.offsetWidth || elem.offsetHeight
-  || elem.getClientRects().length)
+  || elem.getClientRects().length);
 
 // +closes and opens a popelement on click on clickelement
 const bindOutsideClickDetection = (clickElementName, popElementName)=>{
-  let clickElement
-  let popElement
+  let clickElement;
+  let popElement;
   if (typeof clickElementName === 'string') {
-    clickElement = document.querySelector(clickElementName)
+    clickElement = document.querySelector(clickElementName);
   } else if (typeof clickElementName === 'object') {
-    clickElement = clickElementName
+    clickElement = clickElementName;
   }
-  popElement = clickElement.querySelector(popElementName)
+  popElement = clickElement.querySelector(popElementName);
 
   const cat = (e)=>{
     const isClickInside = clickElement.contains(e.target)
     || clickElement.parentNode.contains(e.target);
     if (!isClickInside) {
-      popElement.style.display = 'none'
+      popElement.style.display = 'none';
     }
-  }
+  };
   const handleElementClicked = (e)=>{
-    const kidsHaveTarget = popElement.contains(e.target)
+    const kidsHaveTarget = popElement.contains(e.target);
     if (!isVisible(popElement)) {
-      popElement.style.display = 'block'
-      document.addEventListener('click', cat)
+      popElement.style.display = 'block';
+      document.addEventListener('click', cat);
     } else if (isVisible(popElement) && !kidsHaveTarget) {
-      popElement.style.display = 'none'
-      document.removeEventListener('click', cat)
+      popElement.style.display = 'none';
+      document.removeEventListener('click', cat);
     }
-  }
-  clickElement.addEventListener('click', handleElementClicked)
-}
+  };
+  clickElement.addEventListener('click', handleElementClicked);
+};
 
-export { isVisible, bindOutsideClickDetection }
+export { isVisible, bindOutsideClickDetection };

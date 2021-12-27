@@ -1,5 +1,5 @@
-import '../rate-button/rate-button.js'
-import './hotel-card.scss'
+import '../rate-button/rate-button.js';
+import './hotel-card.scss';
 $(function () {
   $('.js-hotel-card__slider').slick({
     slidesToShow: 1,
@@ -7,5 +7,5 @@ $(function () {
     fade: false,
     arrows: true,
     dots: true,
-  })
-})
+  });
+});

@@ -1,2 +1,2 @@
-import '../../components/registration/registration.js'
-import './registration.scss'
+import '../../components/registration/registration.js';
+import './registration.scss';

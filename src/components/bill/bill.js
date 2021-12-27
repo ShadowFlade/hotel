@@ -1,1 +1,1 @@
-import './bill.scss'
+import './bill.scss';

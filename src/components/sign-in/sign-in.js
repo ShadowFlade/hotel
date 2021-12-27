@@ -1,3 +1,2 @@
-import '../button/button.js'
-import './sign-in.scss'
-
+import '../button/button.js';
+import './sign-in.scss';

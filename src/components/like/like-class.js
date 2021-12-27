@@ -1,4 +1,4 @@
-class Like {
+ class Like {
   constructor(likeItem,) {
     this.likeItem = likeItem
     this.getElemenets()

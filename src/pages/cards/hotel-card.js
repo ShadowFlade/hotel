@@ -36,7 +36,7 @@ $(function () {
     endDate: '02/11/2021',
   });
   // eslint-disable-next-line fsd/jq-use-js-prefix-in-selector
-  $('.daterangepicker').addClass('moveup');
+  $('.daterangepicker').addClass('move-up');
   const onApply = function (ev, picker) {
     var thisMonth = moment()
       .locale('ru')

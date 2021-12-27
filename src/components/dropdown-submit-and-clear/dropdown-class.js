@@ -15,17 +15,18 @@ class DropdownAccom {
       this.element = elementName
     }
     this.list = this.element.querySelector(this.listName)
-    this.input = this.element.getElementsByClassName('dropdown-accom input')[0]
+    this.input = this.element.getElementsByClassName('js-dropdown-accom__input')[0]
 
     bindOutsideClickDetection(elementName, listName)
-    const submitButton = this.element.querySelector('.dropdown-accom__submit')
+    const submitButton = this.element.querySelector('.js-dropdown-accom__submit')
     this.submit = submitButton
-    const clearButton = this.element.querySelector('.dropdown-accom__clear')
+    const clearButton = this.element.querySelector('.js-dropdown-accom__clear')
     this.clear = clearButton
   }
 
   bindIncrement() {
-    const listChidlren = Array.from(this.element.querySelectorAll(`${this.listName} li`))
+    const listChidlren = Array.from(this.element.querySelectorAll('.js-dropdown-accom__option'))
+    console.log('🚀 ~ DropdownAccom ~ bindIncrement ~ listChidlren', listChidlren)
     this.count = new Map()
     const HandleIncrementClick = (e)=>{
       const target = e.target

@@ -1,7 +1,7 @@
-mixin button(options={modif:'full',text:'click me'})
-  case options.modif 
-    when 'hollow' 
-      .button--hollow-wrapper
-        button.button.button--hollow(type=(options.type ? options.type : 'button'))  #{options.text}
-    default 
-      button.button(class=(options.modif ? `button--${options.modif}`  :false),type=(options.type ? options.type : 'button')) #{options.text}
+mixin button(options={modifs:['full','submit'],text:'click me'})
+  - const count = 1
+  if options.modifs[0]=='hollow' 
+    .button--hollow-wrapper
+      button.button.button--hollow(class=`${options.modifs[1]}`,type=(options.type ? options.type : 'button'))  #{options.text}
+  else 
+    button.button(class=( `button--${options.modifs[0]} js-button--${options.modifs[0]} button--${options.modifs[1]} js-button--${options.modifs[1]}`),type=(options.type ? options.type : 'button')) #{options.text}

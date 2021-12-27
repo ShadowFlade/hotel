@@ -1,11 +1,11 @@
 class Like {
   constructor(likeItem,) {
     this.likeItem = likeItem;
-    this.getElemenets();
+    this.getElements();
     this.bindIncrement();
   }
 
-  getElemenets() {
+  getElements() {
     this.input = this.likeItem.getElementsByClassName('js-like__input')[0];
     this.count = this.likeItem.getElementsByClassName('js-like__number')[0];
     this.countNumber = Number(this.count.textContent);

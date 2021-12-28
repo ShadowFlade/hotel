@@ -1,8 +1,8 @@
 include ../checkbox-button/checkbox-button.pug
-mixin checkboxRich(options={label:'Доступность',name:'facilities',arrayOfArguments:[['Широкий коридор','Ширина коридоров в номере не менее 91 см.'],['Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.']]})
+mixin checkboxRich(options={label:'Доступность',name:'facilities',list:[['Широкий коридор','Ширина коридоров в номере не менее 91 см.'],['Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.']]})
   .checkbox-rich #{options.label}
     .checkbox-rich__group
-      each val in options.arrayOfArguments
+      each val in options.list
         .checkbox-rich__item
           +checkbox-button({desc:val[1],text:val[0],})
 

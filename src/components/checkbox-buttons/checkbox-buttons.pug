@@ -1,8 +1,8 @@
 include ../checkbox-button/checkbox-button.pug
-mixin checkboxButtons(options={label:'Правила дома',arrayOfArguments:['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']})
+mixin checkboxButtons(options={label:'Правила дома',list:['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']})
   .checkbox-buttons
     span.checkbox-buttons__label #{options.label}
     .checkbox-buttons__group
-      each val in options.arrayOfArguments
+      each val in options.list
         +checkbox-button({text:val})
 

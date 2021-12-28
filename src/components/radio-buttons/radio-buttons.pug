@@ -1,7 +1,7 @@
-mixin radioButtons(options={arrayOfArguments:['hello','darkness','my','old','friend'],name:'top mood songs'})
+mixin radioButtons(options={list:['hello','darkness','my','old','friend'],name:'top mood songs'})
   .radio-buttons
     .radio-buttons__box
-      each val in options.arrayOfArguments
+      each val in options.list
         .radio-buttons__option
           input.radio-buttons__input(type='radio',name=options.name,value=val,id=val)
           span.radio-buttons__title(for=val) #{val}

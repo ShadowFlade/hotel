@@ -10,6 +10,6 @@ mixin roomsForYouCard
         +datePicker({label:'Прибытие',placeholder:'ДД.ММ.ГГГГ',modif:'small'})
         +datePicker({label:'Выезд',placeholder:'ДД.ММ.ГГГГ',modif:'small'})  
       .rooms-for-you__guests
-        +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',arrayOfArguments:['Взрослые','Дети','Младенцы'],option:'clear'})
+        +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',list:['Взрослые','Дети','Младенцы'],option:'clear'})
       .rooms-for-you__footer
         +payButton({label:"подобрать номер",arrow:true})

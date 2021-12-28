@@ -10,7 +10,7 @@ mixin registrationCard
         .registration-card__item
           input.registration-card__input(type='text',placeholder='Имя')
           input.registration-card__input(type='text',placeholder='Фамилия')
-          +radioButtons({arrayOfArguments:['Мужчина','Женщина'],name:'gender'})
+          +radioButtons({list:['Мужчина','Женщина'],name:'gender'})
         .registration-card__item
           label.registration-card__label Дата рождения
           input.registration-card__input(type='text',placeholder='ДД.ММ.ГГГГ')
@@ -18,7 +18,7 @@ mixin registrationCard
           label.registration-card__label Данные для входа в сервис
           input.registration-card__input(type='text',placeholder='Email',)
           input.registration-card__input(type='password',placeholder='Пароль')
-          +toggle({arrayOfArguments:['Получать спецпредложения']})
+          +toggle({list:['Получать спецпредложения']})
         .registration-card__item
           +payButton({label:'Перейти к оплате',arrow:true})
       .registration-card__footer

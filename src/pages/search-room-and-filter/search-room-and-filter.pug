@@ -23,7 +23,7 @@ block content
         .sidebar__item.sidebar__item--input 
           +datePicker({label:'даты пребывания в отеле',placeholder:'19 авг - 23 авг'})
         .sidebar__item
-          +dropdownSubmitAndClear({label:'гости',placeholder:'3 гостя',arrayOfArguments:['взрослые','дети','младенцы'],option:'clear',modif:'small'})
+          +dropdownSubmitAndClear({label:'гости',placeholder:'3 гостя',list:['взрослые','дети','младенцы'],option:'clear',modif:'small'})
         .sidebar__item 
           +rangeSlider('Диапазон цены')
         .sidebar__item 
@@ -32,9 +32,9 @@ block content
           +checkboxRich()
 
         .sidebar__item 
-          +dropdownSubmitAndClear({label:'удобство номера',placeholder:'2 спальни, 2 кровати',arrayOfArguments:['спальни','кровати','ванные комнаты'],option:'clear',modif:'small'})
+          +dropdownSubmitAndClear({label:'удобство номера',placeholder:'2 спальни, 2 кровати',list:['спальни','кровати','ванные комнаты'],option:'clear',modif:'small'})
         .sidebar__item 
-          +checkboxList({label:'дополнительные удобства',arrayOfArguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 
+          +checkboxList({label:'дополнительные удобства',list:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 
     .content 
       .content__title Номера, которые мы для вас подобрали
       .content__items 

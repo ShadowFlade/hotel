@@ -1,9 +1,9 @@
-mixin toggle(options={label:'toggle',arrayOfArguments:['Получать спецпредложения','fish']})
+mixin toggle(options={label:'toggle',list:['Получать спецпредложения','fish']})
   .toggle-details 
     if options.label
       label.toggle__label #{options.label}
     .toggle-group
-      each val in options.arrayOfArguments
+      each val in options.list
         .toggle__item
           label.toggle(for=val) 
             span.toggle__text #{val}

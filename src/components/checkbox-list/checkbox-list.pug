@@ -1,10 +1,10 @@
 include ../checkbox-button/checkbox-button.pug
-mixin checkboxList(options={label:'expandable checkbox list',arrayOfArguments:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']})
+mixin checkboxList(options={label:'expandable checkbox list',list:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']})
   .checkbox-details
     details.checkbox-details__details
       summary.checkbox-details__summary #{options.label}
       .checkbox-details__group
-        each val in options.arrayOfArguments
+        each val in options.list
           .checkbox-details__item
             +checkbox-button({text:val})
 

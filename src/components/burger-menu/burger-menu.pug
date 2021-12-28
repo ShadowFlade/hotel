@@ -1,9 +1,9 @@
-mixin burgerMenu(options={arrayOfArguments:[{name:'О с',arrow:'false'},{name:'Услуги',arrow:'true'},{name:'Вакансии',arrow:'false'},{name:'Новости',arrow:'false'},{name:'Соглашения',arrow:'true'}]}) 
+mixin burgerMenu(options={list:[{name:'О с',arrow:'false'},{name:'Услуги',arrow:'true'},{name:'Вакансии',arrow:'false'},{name:'Новости',arrow:'false'},{name:'Соглашения',arrow:'true'}]}) 
   .burger.js-burger
     button.burger__button
       span.burger__item
     ul.burger__menu.js-burger__menu
-      each val in options.arrayOfArguments
+      each val in options.list
         if typeof val=='array'
           li.burger__option #{val.name}
             ul.burger__inner-menu

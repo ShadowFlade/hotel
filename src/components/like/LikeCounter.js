@@ -1,4 +1,4 @@
-class Like {
+class LikeCounter {
   constructor(likeItem,) {
     this.likeItem = likeItem;
     this.getElements();
@@ -26,4 +26,4 @@ class Like {
     this.input.addEventListener('click', bindLike);
   }
 }
-export default Like;
+export default LikeCounter;

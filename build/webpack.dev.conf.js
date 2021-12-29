@@ -5,11 +5,12 @@ const WebpackDevServer=require('webpack-dev-server')
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: 'development',
+  target:'web',
   devtool: 'eval-cheap-source-map',
   devServer: {
     open: true,
     hot:true,
-    watchFiles:['../dist'],
+    watchFiles:['../src/components'],
     static:{
       directory:baseWebpackConfig.externals.paths.dist
     },

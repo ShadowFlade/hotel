@@ -9,18 +9,16 @@
   flex-direction: column;
   font-size: 0.75714rem;
   color: black;
-
-  &__item {
-    display: flex;
-    margin-bottom: calc($mainFontSize/13px) * 1rem;
-    position: relative;
-  }
-
-  &__group {
+  &__list {
     margin-top: calc($mainFontSize/18px) * 1rem;
     top: 100%;
     left: 0;
     background-color: transparent;
     z-index: 2;
+  }
+  &__item {
+    display: flex;
+    margin-bottom: calc($mainFontSize/13px) * 1rem;
+    position: relative;
   }
 }

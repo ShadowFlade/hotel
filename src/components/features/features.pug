@@ -1,9 +1,11 @@
 mixin features(options={features:[{pic:'assets/img/smile.png',feature:'Комфорт',desc:'Шумопоглощающие стены'},{pic:'assets/img/comfort2.png',feature:'Удобство',desc:'Окно в каждой из спален'},{pic:'assets/img/whatshot.png',feature:'Уют',desc:'Номер оснащен камином'}]})
-  each feature in options.features 
-    .feature__item
-      .feature__pic 
-        img(src=feature.pic)
-      .feature__info
-        .feature__label #{feature.feature}
-        .feature__desc #{feature.desc}
+  .features
+    ul.features__list
+      each feature in options.features 
+        .features__item
+          .features__pic 
+            img(src=feature.pic)
+          .features__info
+            .features__label #{feature.feature}
+            .features__desc #{feature.desc}
       

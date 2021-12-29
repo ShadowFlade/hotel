@@ -5,14 +5,14 @@ include ../pay-button/pay-button.pug
 mixin bill
   .bill
     .bill__content
-      .bill__credentials
+      .bill__header
         .bill__lux-number
           span.bill__number
             span.bill__number-sign
               |№
             span.bill__room-number 888
-            span.bill__number-lux люкс
-        .bill__lux-price
+            span.bill__isLux люкс
+        .bill__room-price
           span.bill__price
             b 9990₽ 
           span.bill__day в сутки
@@ -21,22 +21,22 @@ mixin bill
         +datePicker({label:'Выезд',placeholder:'23.08.2019'})  
       .bill__guests
         +dropdownSubmitAndClear({label:'Гости',placeholder:'3 гостя',list:['Взрослые','Дети','Младенцы'],option:'clear'})
-      .bill__summary
-        .bill__row 
+      ul.bill__list
+        li.bill__row 
           .bill__calculating-sum 9 990₽ х 4 суток
           .bill__money.bill__money--single 
             .bill__sum 39 960₽
-        .bill__row 
+        li.bill__row 
           .bill__calculating-sum Сбор за услуги: скидка 2 179₽
           .bill__money
             .bill__info-icon i
             .bill__sum 0₽
-        .bill__row 
+        li.bill__row 
           .bill__calculating-sum Сбор за дополнительные услуги
           .bill__money
             .bill__info-icon i
             .bill__sum 300₽
-        .bill__all
+        li.bill__all
           .bill__result Итого
           span.bill__money.bill__money--single 38 081₽
       .bill__footer

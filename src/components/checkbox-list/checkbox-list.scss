@@ -4,7 +4,7 @@
   display: none;
 }
 
-.checkbox-details {
+.checkbox-ul {
   font-family: 'Montserrat';
   font-weight: 400;
   font-style: normal;
@@ -15,7 +15,7 @@
   width: calc(222 / 12) * 1em;
   max-width: 266px;
 
-  &__group {
+  &__list {
     top: 100%;
     left: 0;
     background: white;
@@ -42,7 +42,7 @@
     position: relative;
   }
 
-  &__summary {
+  &__label {
     position: relative;
     user-select: none;
     @include small;
@@ -69,10 +69,10 @@
     }
   }
 
-  &__details {
+  &__content {
     position: relative;
   }
-  &__details[open] > summary::before {
+  &__content[open] > .checkbox-details__label::before {
     transform: scaleY(-1);
     width: 20px;
   }

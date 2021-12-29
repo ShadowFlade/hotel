@@ -1,5 +1,4 @@
 mixin button(options={modifs:['full','submit'],text:'click me'})
-  - const count = 1
   if options.modifs[0]=='hollow' 
     .button--hollow-wrapper
       button.button.button--hollow(class=`${options.modifs[1]}`,type=(options.type ? options.type : 'button'))  #{options.text}

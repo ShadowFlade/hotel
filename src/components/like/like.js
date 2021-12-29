@@ -1,12 +1,11 @@
 import './like.scss';
-import Like from './like-class.js';
+import LikeCounter from './LikeCounter.js';
 
 const handleContentLoaded = () =>{
   const likeItems = Array.from(document.getElementsByClassName('js-like'));
   likeItems.forEach(likeItem => {
     // eslint-disable-next-line no-new
-    new Like(likeItem);
+    new LikeCounter(likeItem);
   });
 };
 document.addEventListener('DOMContentLoaded', handleContentLoaded);
-export default Like;

@@ -1,7 +1,7 @@
 mixin burgerMenu(options={list:[{name:'О с',arrow:'false'},{name:'Услуги',arrow:'true'},{name:'Вакансии',arrow:'false'},{name:'Новости',arrow:'false'},{name:'Соглашения',arrow:'true'}]}) 
   .burger.js-burger
     button.burger__button
-      span.burger__item
+      span.burger__base
     ul.burger__menu.js-burger__menu
       each val in options.list
         if typeof val=='array'

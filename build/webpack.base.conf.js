@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const webpack= require('webpack')
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -133,6 +134,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),
+    new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/static`, to: '' },
       { from: `${PATHS.src}/fonts/`, to: `${PATHS.assets}fonts/` },

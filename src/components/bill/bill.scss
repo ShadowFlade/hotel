@@ -12,7 +12,7 @@
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
   padding: 3.05714em 1.9286em 0;
-  &__credentials {
+  &__header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -45,7 +45,7 @@
     font-family: 'Montserrat', 'sans-serif';
     font-weight: bold;
   }
-  &__number-lux {
+  &__isLux {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
@@ -55,7 +55,7 @@
     color: #bc9cff;
     margin-left: rem(3);
   }
-  &__lux-price {
+  &__room-price {
     vertical-align: bottom;
     font-size: 0.5rem;
   }
@@ -80,7 +80,7 @@
     justify-content: space-between;
   }
 
-  &__summary {
+  &__list {
     margin-bottom: 20px;
     padding-top: 1.2rem;
     display: flex;
@@ -133,7 +133,6 @@
     background-color: #ffff;
     z-index: 2;
     padding-left: 4px;
-    width: 34%;
     &--single {
       display: inline;
       min-width: 0;

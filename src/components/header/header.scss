@@ -14,16 +14,17 @@
     width: 100%;
     padding: 0 9.5% 0 9.72222%;
   }
-  &__interactive {
-    display: flex;
-    justify-content: space-between;
-  }
   &__logo {
     height: 40px;
     width: 12%;
     display: flex;
     align-items: center;
   }
+  &__interactive {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__navbar {
     display: flex;
     justify-content: flex-end;
@@ -49,13 +50,11 @@
     border-left: 1px solid rgba(31, 32, 65, 0.1);
     padding: rem(5) 0 0 rem(24);
   }
-  &__divider {
-    margin-right: 10px;
-  }
   &__auth {
     display: flex;
     align-items: center;
     & > div:not(:last-child) {
+      //TODO styles on tags
       margin-right: 20px;
     }
     .button--hollow-wrapper {
@@ -69,21 +68,21 @@
   display: flex;
   &__item {
     display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
+    position: relative; //TODO repeating styles
+    align-items: center; //TODO repeating styles
+    justify-content: center; //TODO repeating styles
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
     font-size: 0.9rem;
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
-    align-items: center;
-    justify-content: center;
+    align-items: center; //TODO repeating styles
+    justify-content: center; //TODO repeating styles
     min-width: 42px;
     width: fit-content;
     cursor: pointer;
-    position: relative;
+    position: relative; //TODO repeating styles
     margin-right: 2.1em;
     &--about-us {
       font-family: 'Montserrat', 'sans-serif';
@@ -91,6 +90,7 @@
       color: rgba(31, 32, 65, 0.75);
     }
     span img {
+      //TODO styles on tags
       transition: all 0.15s linear;
     }
     &:hover .arrow {
@@ -99,33 +99,34 @@
     &:hover .navbar__menu {
       display: block;
     }
+    & > span {
+      //TODO styles on tags
+      margin-right: 5px;
+    }
+    :last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    position: relative;
+    top: 5%;
   }
   &__menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 75%;
+    width: 75%; //TODO repeating styles
     border: 1px solid #bc9cff, 100%;
     border-top: 0;
     border-radius: 4px;
     z-index: 10;
-    width: 86%;
+    width: 86%; //TODO repeating styles
   }
-  &__arrow {
-    display: flex;
-    position: relative;
-    top: 5%;
-  }
-  &__item > span {
-    margin-right: 5px;
-  }
-  &__item:last-child {
-    margin-right: 0;
-  }
-
   &__option {
-    text-align: left;
+    text-align: left; //TODO repeating styles
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -138,7 +139,7 @@
     background: #e5e5e5;
     text-transform: capitalize;
     padding: 1em;
-    text-align: left;
+    text-align: left; //TODO repeating styles
     font-size: 0.8rem;
     &:hover {
       background-color: scale-color(#bc9cff, $lightness: 15%);
@@ -149,21 +150,8 @@
 }
 
 .body {
+  //TODO what if delete it?
   background: #f4f4f6;
-}
-
-//------------------------------------------------------MODIFICATORS
-.button-default2__wrapper--navigation {
-  width: 6.45em;
-  height: 2.5em;
-  margin-right: calc(20 / 1440) * 100%;
-}
-
-.pay-button--navigation {
-  width: calc(196 / 12) * 1em;
-  height: calc(34 / 12) * 1em;
-  height: rem(34);
-  width: 14rem;
 }
 
 //----------------------------------------------------ADAPTIVE
@@ -176,6 +164,10 @@
   html {
     font-size: rem(12);
   }
+  .navigation__content {
+    justify-content: space-between;
+    padding: 0 1%;
+  }
   .navigation__navbar {
     display: none;
   }
@@ -183,22 +175,9 @@
     display: block;
     margin-right: 10px;
   }
-  .navigation__icon-space {
-    order: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 20%;
-  }
-  .btngroup-authorization {
-    order: 2;
-  }
+
   .navigation__user {
     order: 2;
-  }
-  .navigation__content {
-    justify-content: space-between;
-    padding: 0 1%;
   }
 }
 @media screen and (max-width: 457px) {

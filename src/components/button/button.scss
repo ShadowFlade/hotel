@@ -2,9 +2,9 @@
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: uppercase; //TODO repeating styles
   position: relative;
-  text-transform: uppercase;
+  text-transform: uppercase; //TODO repeating styles
   &--full {
     width: 7.9em;
     height: 3.56667em;
@@ -25,9 +25,9 @@
     background: #fff;
     font-size: rem(12);
     line-height: 15px;
-    z-index: 10;
+    z-index: 10; //TODO repeating styles
     color: #bc9cff;
-    z-index: 10;
+    z-index: 10; //TODO repeating styles
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

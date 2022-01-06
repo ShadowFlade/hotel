@@ -1,11 +1,10 @@
 .burger {
   display: none;
   position: relative;
-  &__arrow {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
+  &__button {
+    z-index: 100;
+    height: 20px;
+    background: transparent;
   }
   &__base {
     width: 20px;
@@ -33,15 +32,6 @@
       bottom: -8px;
     }
   }
-  &__button {
-    z-index: 100;
-    height: 20px;
-    background: transparent;
-  }
-  &__inner-menu {
-    display: none;
-    position: absolute;
-  }
   &__menu {
     display: none;
     position: absolute;
@@ -55,7 +45,7 @@
   }
   &__option {
     position: relative;
-    text-align: left;
+    text-align: left; //TODO repeating styles
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -69,14 +59,21 @@
     text-transform: capitalize;
     padding: 1em 20px 1em 0.5em;
     width: 100%;
-    text-align: left;
+    text-align: left; //TODO repeating styles
     &:hover {
       background-color: scale-color(#bc9cff, $lightness: 15%);
       color: black;
       transition: all 0.3s linear;
     }
   }
-}
-.show {
-  display: block;
+  &__inner-menu {
+    display: none;
+    position: absolute;
+  }
+  &__arrow {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }

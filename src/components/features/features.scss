@@ -5,8 +5,8 @@
   &__item {
     display: flex;
     position: relative;
-    width: 100%;
-    width: 291px;
+    width: 100%; //TODO repeating styles
+    width: 291px; //TODO repeating styles
     padding-bottom: 17px;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
     margin-bottom: 1.65714rem;

@@ -4,10 +4,10 @@
   position: relative;
   user-select: none;
   @include small;
-  font-size: rem(12);
+  font-size: rem(12); //TODO repeating styles
   display: flex;
   flex-direction: column;
-  font-size: 0.75714rem;
+  font-size: 0.75714rem; //TODO repeating styles
   color: black;
   &__list {
     margin-top: calc($mainFontSize/18px) * 1rem;

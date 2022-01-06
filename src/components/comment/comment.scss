@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
     img {
+      //TODO dont put styles onto tags
       position: relative;
       top: 10%;
     }
@@ -58,8 +59,5 @@
     color: rgba(31, 32, 65, 0.75);
     text-transform: none;
     padding-top: 1rem;
-  }
-  &__lower {
-    display: flex;
   }
 }

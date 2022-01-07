@@ -9,10 +9,9 @@
     margin-bottom: 1.3rem;
   }
   &__title {
-    width: 37%; //TODO repeating styles
     display: flex;
     text-align: left;
-    width: 100%; //TODO repeating styles
+    width: 100%;
     font-size: 0.75714rem;
     @include label;
   }
@@ -22,11 +21,10 @@
   }
   &__start,
   &__end {
-    font-size: rem(14); //TODO repeating styles
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: rem(12); //TODO repeating styles
+    font-size: rem(12);
     line-height: 15px;
     text-align: right;
     text-transform: uppercase;

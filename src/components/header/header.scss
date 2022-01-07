@@ -68,21 +68,19 @@
   display: flex;
   &__item {
     display: flex;
-    position: relative; //TODO repeating styles
-    align-items: center; //TODO repeating styles
-    justify-content: center; //TODO repeating styles
+    align-items: center;
+    justify-content: center;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
     font-size: 0.9rem;
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
-    align-items: center; //TODO repeating styles
-    justify-content: center; //TODO repeating styles
+
     min-width: 42px;
     width: fit-content;
     cursor: pointer;
-    position: relative; //TODO repeating styles
+    position: relative;
     margin-right: 2.1em;
     &--about-us {
       font-family: 'Montserrat', 'sans-serif';
@@ -118,15 +116,13 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 75%; //TODO repeating styles
     border: 1px solid #bc9cff, 100%;
     border-top: 0;
     border-radius: 4px;
     z-index: 10;
-    width: 86%; //TODO repeating styles
+    width: 86%;
   }
   &__option {
-    text-align: left; //TODO repeating styles
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -139,7 +135,7 @@
     background: #e5e5e5;
     text-transform: capitalize;
     padding: 1em;
-    text-align: left; //TODO repeating styles
+    text-align: left;
     font-size: 0.8rem;
     &:hover {
       background-color: scale-color(#bc9cff, $lightness: 15%);

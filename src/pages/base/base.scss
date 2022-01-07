@@ -19,10 +19,7 @@ body {
     margin-bottom: 20px;
     margin-right: 0;
     &__column {
-      display: flex; //TODO repeating styles
-      display: block; //TODO repeating styles
-      flex-direction: column;
-      justify-content: space-between;
+      display: block;
     }
   }
   .item {

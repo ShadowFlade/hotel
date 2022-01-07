@@ -26,10 +26,9 @@
     user-select: none;
     @include small;
     margin-bottom: 5px;
-    font-size: rem(12); //TODO repeating styles
     display: flex;
     flex-direction: column;
-    font-size: 0.75714rem; //TODO repeating styles
+    font-size: 0.75714rem;
     color: black;
     text-transform: uppercase;
     list-style-type: none;

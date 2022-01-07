@@ -4,18 +4,19 @@
   width: rem(20);
   height: rem(20);
   margin-right: 0.1rem;
+
+  &--active {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
   &__united {
     position: relative;
     opacity: 1;
     &--disabled {
       opacity: 0.5;
     }
-  }
-  &--active {
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
   }
   &__group {
     display: flex;

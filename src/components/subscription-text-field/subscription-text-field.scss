@@ -6,14 +6,14 @@
   &__label {
     @include label;
   }
+  &__input-box {
+    position: relative;
+  }
   &__input {
     width: 100%;
     @include input();
   }
   .arrow-right {
     top: 33%;
-  }
-  &__input-box {
-    position: relative;
   }
 }

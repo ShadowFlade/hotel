@@ -55,6 +55,10 @@ html {
       margin-right: 1.25rem;
     }
   }
+  .radio-buttons__label {
+    @include small;
+    margin-bottom: rem(16);
+  }
 }
 
 body,

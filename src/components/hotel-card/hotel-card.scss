@@ -6,30 +6,17 @@
   background: #ffffff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
-  &__price {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-size: rem(14);
-    line-height: rem(18);
-    word-spacing: 0px;
-    color: rgba(31, 32, 65, 0.5);
-    font-size: 0.87rem;
-    .day {
-      font-size: 13px;
-    }
-  }
   &__slider {
     height: 60%;
+  }
+  &__info {
+    padding: rem(19) rem(15);
   }
   &__row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 23px;
-  }
-
-  &__info {
-    padding: rem(19) rem(15);
   }
   &__number {
     font-family: 'Montserrat', 'sans-serif';
@@ -41,7 +28,9 @@
   &__sign {
     font-size: rem(15);
   }
-
+  &__room-number {
+    font-size: 1.15714rem;
+  }
   &__lux {
     font-family: 'Montserrat';
     font-size: rem(12);
@@ -51,8 +40,17 @@
     text-transform: uppercase;
     color: #bc9cff;
   }
-  &__roomNumber {
-    font-size: 1.15714rem;
+  &__price {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: rem(14); //TODO repeating styles
+    line-height: rem(18);
+    word-spacing: 0px;
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 0.87rem; //TODO repeating styles
+    .day {
+      font-size: 13px;
+    }
   }
   &__reviews {
     font-size: 1rem;
@@ -62,6 +60,7 @@
 }
 
 .slider img {
+  //TODO styles on tags
   max-width: 100%;
   display: block;
   margin: 0 auto;

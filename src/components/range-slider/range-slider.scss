@@ -2,40 +2,31 @@
 
 .range-slider {
   width: rem(266);
-  &__values {
-    width: 100%;
-    text-align: right;
-  }
-  &__caption {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
-    color: rgba(31, 32, 65, 0.5);
-    margin-top: rem(14);
-  }
-  &__title {
-    width: 37%;
-    display: flex;
-    text-align: left;
-    width: 100%;
-    font-size: 0.75714rem;
-    @include label;
-  }
   &__info {
     display: flex;
     justify-content: space-between;
     font-size: rem(12);
     margin-bottom: 1.3rem;
   }
+  &__title {
+    width: 37%; //TODO repeating styles
+    display: flex;
+    text-align: left;
+    width: 100%; //TODO repeating styles
+    font-size: 0.75714rem;
+    @include label;
+  }
+  &__values {
+    width: 100%;
+    text-align: right;
+  }
   &__start,
   &__end {
-    font-size: rem(14);
+    font-size: rem(14); //TODO repeating styles
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: rem(12);
+    font-size: rem(12); //TODO repeating styles
     line-height: 15px;
     text-align: right;
     text-transform: uppercase;
@@ -47,6 +38,15 @@
       position: relative;
       left: 1px;
     }
+  }
+  &__caption {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(31, 32, 65, 0.5);
+    margin-top: rem(14);
   }
 }
 

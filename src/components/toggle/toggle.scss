@@ -1,33 +1,34 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
-.toggle {
-  font-family: 'Montserrat';
-  font-weight: 400;
-  font-style: normal;
-  font-size: $mainFontSize;
-  color: $DarkShade50;
-  text-transform: capitalize;
-  padding-left: 13.5%;
-  padding-top: 0.11429rem;
-  height: rem(27);
+.toggles {
   position: relative;
-  display: flex;
-  &__text {
-    padding-left: rem(9);
-  }
-  &__label {
-    margin-bottom: calc(14 / 16) * 1rem;
-    @include label;
-  }
-  &__item {
-    display: flex;
-    position: relative;
-  }
+  @include small;
   &-group {
     top: 100%;
     left: 0;
     background-color: transparent;
     z-index: 2;
+  }
+  &__item {
+    display: flex;
+    position: relative;
+  }
+  &__title {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+    font-size: $mainFontSize;
+    color: $DarkShade50;
+    text-transform: capitalize;
+    padding-left: 13.5%;
+    padding-top: 0.11429rem;
+    height: rem(27);
+    position: relative;
+    display: flex;
+  }
+
+  &__text {
+    padding-left: rem(9);
   }
   &__input {
     opacity: 0;
@@ -38,16 +39,16 @@
     border-radius: 4px;
     cursor: default;
     position: absolute;
-    &:checked + .toggle-custom .toggle-custom__helper--passive {
+    &:checked + .toggles-custom .toggles-custom__helper--passive {
       transform: translate(120%, -50%);
       transition: all 0.3s ease-out;
       opacity: 0;
     }
-    &:checked + .toggle-custom .toggle-custom__helper--active {
+    &:checked + .toggles-custom .toggles-custom__helper--active {
       opacity: 1;
       transform: translate(120%, -50%);
     }
-    &:checked ~ .toggle-custom {
+    &:checked ~ .toggles-custom {
       border-color: #bc9cff;
     }
   }
@@ -57,16 +58,17 @@
     position: absolute;
     width: 40px;
     height: 20px;
-    background: #ffffff;
+    background: #ffffff; //TODO repeating styles
     border: 1px solid rgba(31, 32, 65, 0.25);
-    background: transparent;
     border-radius: 10px;
+
+    background: transparent; //TODO repeating styles
     transition: all 0.3s ease-out;
     &__helper {
       width: 12px;
       height: 12px;
-      border-radius: 10px;
-      border-radius: 50%;
+      border-radius: 10px; //TODO repeating styles
+      border-radius: 50%; //TODO repeating styles
       position: absolute;
       top: 52%;
       left: 23%;
@@ -82,9 +84,4 @@
       }
     }
   }
-}
-
-.toggle-details {
-  position: relative;
-  @include small;
 }

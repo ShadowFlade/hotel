@@ -1,9 +1,10 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
-.text-field__input {
-  @include input();
-}
-
-.text-field__label {
-  @include label;
+.text-field {
+  &__input {
+    @include input();
+  }
+  &__label {
+    @include label;
+  }
 }

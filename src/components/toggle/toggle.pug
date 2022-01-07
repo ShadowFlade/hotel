@@ -1,14 +1,12 @@
-mixin toggle(options={label:'toggle',list:['Получать спецпредложения','fish']})
-  .toggle-details 
-    if options.label
-      label.toggle__label #{options.label}
-    .toggle-group
+mixin toggle(options={list:['Получать спецпредложения','fish']})
+  .toggles
+    .toggles-group
       each val in options.list
-        .toggle__item
-          label.toggle(for=val) 
-            span.toggle__text #{val}
-            input.toggle__input(type='checkbox',name=val,id=val)
-            span.toggle-custom
-              span.toggle-custom__helper.toggle-custom__helper--passive
-              span.toggle-custom__helper.toggle-custom__helper--active
+        .toggles__item
+          label.toggles__title(for=val) 
+            span.toggles__text #{val}
+            input.toggles__input(type='checkbox',name=val,id=val)
+            span.toggles-custom
+              span.toggles-custom__helper.toggles-custom__helper--passive
+              span.toggles-custom__helper.toggles-custom__helper--active
 

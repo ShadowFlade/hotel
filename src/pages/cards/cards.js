@@ -11,11 +11,11 @@ import './hotel-card.js';
 import './cards.scss';
 const handleContentLoaded = ()=>{
   setTimeout(()=>{
-    const datepicker = document.getElementsByClassName('daterangepicker ltr show-calendar opensright moveup')[0];
+    const datepicker = document.getElementsByClassName('daterangepicker ltr show-calendar opensright move-up')[0];
     datepicker.style.position = 'relative';
     datepicker.style.top = '-6px';
     datepicker.style.left = '0px';
-    const target = document.querySelector('.js-card__datepicker');
+    const target = document.querySelector('.js-cards__datepicker');
     target.appendChild(datepicker);
   }, 0);
 };

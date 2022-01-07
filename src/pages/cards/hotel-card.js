@@ -1,6 +1,7 @@
 import moment from 'moment';
 $(function () {
-  const $cardDatepicker = $('.js-card__datepicker');
+  const $cardDatepicker = $('.js-cards__datepicker');
+  console.log($cardDatepicker)
   $cardDatepicker.daterangepicker({
     maxSpan: {
       days: 7,
@@ -35,6 +36,7 @@ $(function () {
     startDate: '02/04/2021',
     endDate: '02/11/2021',
   });
+  $cardDatepicker.click()
   // eslint-disable-next-line fsd/jq-use-js-prefix-in-selector
   $('.daterangepicker').addClass('move-up');
   const onApply = function (ev, picker) {

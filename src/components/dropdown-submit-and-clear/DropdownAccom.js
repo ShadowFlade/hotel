@@ -49,7 +49,7 @@ class DropdownAccom {
       this.refresh(category);
     };
     listChildren.forEach((child)=>{
-      const textElement = child.getElementsByClassName('dropdown-accom__span')[0];
+      const textElement = child.getElementsByClassName('dropdown-accom__info')[0];
       const increment = child.getElementsByClassName('dropdown-accom__button--next')[0];
       const decrement = child.getElementsByClassName('dropdown-accom__button--prev')[0];
       const category = child.getElementsByClassName('dropdown-accom__variant')[0];

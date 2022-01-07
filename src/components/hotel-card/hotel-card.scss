@@ -9,6 +9,12 @@
   &__slider {
     height: 60%;
   }
+  &__pic {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
   &__info {
     padding: rem(19) rem(15);
   }
@@ -56,14 +62,6 @@
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
   }
-}
-
-.slider img {
-  //TODO styles on tags
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-  object-fit: contain;
 }
 
 .slick-dots {

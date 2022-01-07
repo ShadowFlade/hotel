@@ -52,10 +52,7 @@ html {
   .like-buttons {
     display: flex;
     flex-direction: column;
-    & > div {
-      //TODO no styles on tags
-      margin-right: 10px;
-    }
+
     &__group {
       display: flex;
     }
@@ -68,10 +65,9 @@ html {
   }
   .rate__items {
     display: flex;
-    & > div:not(:last-child) {
-      //TODO no styles on tags
-      margin-right: 1.25rem;
-    }
+  }
+  .rate__item:not(:last-child) {
+    margin-right: 1.25rem;
   }
   .comment__box {
     position: absolute;
@@ -101,10 +97,5 @@ html {
   .rate__label,
   .pagination__label {
     @include label;
-  }
-
-  & > div, //TODO no styles on tags
-  & > label {
-    margin-bottom: 20px;
   }
 }

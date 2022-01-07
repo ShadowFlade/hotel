@@ -15,11 +15,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
-      //TODO dont put styles onto tags
-      position: relative;
-      top: 10%;
-    }
+  }
+  &__img {
+    position: relative;
+    top: 10%;
   }
   &__like {
     position: relative;

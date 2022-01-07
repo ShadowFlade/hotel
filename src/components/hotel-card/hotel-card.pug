@@ -3,7 +3,7 @@ mixin hotelCard(options={pictures: ['assets/img/hotel1.png','assets/img/hotel2.p
   .hotel-card
     .hotel-card__slider.js-hotel-card__slider
       each pic in options.pictures
-        img(src=pic)
+        img.hotel-card__pic(src=pic)
     .hotel-card__info
       .hotel-card__row
         span.hotel-card__number

@@ -37,6 +37,7 @@ mixin navigation(options={username:'Юлий Цезарь',leftButtonLabel:'Во
             .navigation__username #{options.username}
         else
           .navigation__auth
-            +button({modifs:['hollow'],text:options.leftButtonLabel})
+            .navigation__small-button
+              +button({modifs:['hollow'],text:options.leftButtonLabel})
             button.pay-button.pay-button--navigation #{options.rightButtonLabel}
           

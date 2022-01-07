@@ -53,14 +53,14 @@
   &__auth {
     display: flex;
     align-items: center;
-    & > div:not(:last-child) {
-      //TODO styles on tags
-      margin-right: 20px;
-    }
+
     .button--hollow-wrapper {
       width: 87px;
       height: 34px;
     }
+  }
+  &__small-button {
+    margin-right: 20px;
   }
 }
 
@@ -76,7 +76,6 @@
     font-size: 0.9rem;
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
-
     min-width: 42px;
     width: fit-content;
     cursor: pointer;
@@ -87,8 +86,7 @@
       font-weight: bold;
       color: rgba(31, 32, 65, 0.75);
     }
-    span img {
-      //TODO styles on tags
+    .arrow {
       transition: all 0.15s linear;
     }
     &:hover .arrow {
@@ -98,7 +96,6 @@
       display: block;
     }
     & > span {
-      //TODO styles on tags
       margin-right: 5px;
     }
     :last-child {

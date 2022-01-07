@@ -30,12 +30,12 @@ $(function () {
     ],
   };
   // eslint-disable-next-line no-unused-vars
-  var myChart = new Chart($('.js-myChart'), {
+  var myChart = new Chart($('.js-my-chart'), {
     type: 'pie',
     options: options,
     data: data,
   });
-  const $chart = $('.js-myChart');
+  const $chart = $('.js-my-chart');
   $chart.css('width', '100%');
   $chart.css('height', '100%');
   let i = 0;

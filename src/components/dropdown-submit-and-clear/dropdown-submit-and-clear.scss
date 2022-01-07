@@ -44,17 +44,15 @@
     z-index: 10;
     height: 163px;
     display: none;
-
-    li {
-      //TODO dont put styles onto tags
-      font-family: 'Montserrat', sans-serif;
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-      height: 40px;
-      align-items: center;
-      padding: 5px 10px;
-    }
+  }
+  &__option {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    padding: 5px 10px;
   }
   &__btn-group {
     display: flex;

@@ -1,13 +1,22 @@
 @import '../../common/mixins.scss';
 .registration {
-  .footer--small {
-    display: none;
+  &__bgp {
+    height: 49rem;
+    background: url('./last-page.png');
+    img {
+      //TODO styles on tags
+      max-width: 100%;
+      height: 100%;
+    }
   }
-  .registration__register {
+  &__register {
     position: relative;
     left: 37%;
     top: 3%;
     width: 380px;
+  }
+  &__footer {
+    margin: rem(38) 0 rem(20);
   }
 
   .card {
@@ -22,24 +31,10 @@
     .text-field {
       margin-bottom: 0;
     }
-    &__footer {
-      margin: rem(38) 0 rem(20);
-    }
-  }
-  &__bgp {
-    height: 49rem;
-    background: url('./last-page.png');
-    img {
-      max-width: 100%;
-      height: 100%;
-    }
   }
 }
 
 @media screen and (max-width: 834px) {
-  .footer--small {
-    display: block;
-  }
   .footer--main {
     display: none;
   }

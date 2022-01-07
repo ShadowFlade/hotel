@@ -1,5 +1,9 @@
 @import '../../common/mixins.scss';
+
+body,
 html {
+  max-width: 1440px;
+  margin: 0 auto;
   font-size: 16px;
 }
 .form-elements {
@@ -8,85 +12,25 @@ html {
   width: 100%;
   background: white;
   padding: 6.68% 9.75%;
-  &__datepicker {
-    margin-right: 20px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
   &__column {
     display: flex;
     flex-direction: column;
     flex: 1 1 30%;
     margin-right: 10.75%;
   }
+
   &__item {
     margin-bottom: 20px;
     &--text-field {
       margin-bottom: 40px;
     }
   }
-  & > div,
-  & > label {
-    margin-bottom: 20px;
-  }
-
-  .rate__buttons,
-  .like-buttons {
-    display: flex;
-    flex-direction: column;
-    & > div {
-      margin-right: 10px;
-    }
-    &__group {
-      display: flex;
-    }
-    &__label {
-      font-weight: 530;
-      font-size: rem(12);
-      margin-bottom: 1.21429rem;
-      @include label;
+  &__datepicker {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
     }
   }
-
-  .rate__items {
-    display: flex;
-    & > div:not(:last-child) {
-      margin-right: 1.25rem;
-    }
-  }
-  .radio-buttons__label {
-    @include small;
-    margin-bottom: rem(16);
-  }
-}
-
-body,
-html {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-.container {
-  padding: 141/1440 * 100% 141/1440 * 100%;
-}
-
-.range-slider__box {
-  margin-bottom: 2rem;
-}
-
-.buttons__label {
-  margin-top: 1.6rem;
-  margin-bottom: 0;
-  @include label;
-}
-
-.comment__box {
-  position: absolute;
-  top: 97.2rem;
-  left: 35.5rem;
-}
-
-.form-elements .form-elements__column {
   .date-picker-box {
     margin-top: rem(18);
     margin-bottom: 2.82rem;
@@ -100,21 +44,67 @@ html {
   .checkbox-buttons {
     margin-bottom: 35px;
   }
-}
-
-.rate__label,
-.pagination__label {
-  @include label;
-}
-
-.buttons {
-  &__box {
-    margin-top: 0.9571rem;
+  .radio-buttons__label {
+    @include small;
+    margin-bottom: rem(16);
+  }
+  .rate__buttons,
+  .like-buttons {
     display: flex;
-    flex-wrap: wrap;
-    & > *:not(:last-child) {
-      margin-right: rem(22);
-      margin-bottom: rem(31);
+    flex-direction: column;
+    & > div {
+      //TODO no styles on tags
+      margin-right: 10px;
     }
+    &__group {
+      display: flex;
+    }
+    &__label {
+      font-weight: 530;
+      font-size: rem(12);
+      margin-bottom: 1.21429rem;
+      @include label;
+    }
+  }
+  .rate__items {
+    display: flex;
+    & > div:not(:last-child) {
+      //TODO no styles on tags
+      margin-right: 1.25rem;
+    }
+  }
+  .comment__box {
+    position: absolute;
+    top: 97.2rem;
+    left: 35.5rem;
+  }
+
+  .range-slider__box {
+    margin-bottom: 2rem;
+  }
+  .buttons__label {
+    margin-top: 1.6rem;
+    margin-bottom: 0;
+    @include label;
+  }
+  .buttons {
+    &__box {
+      margin-top: 0.9571rem;
+      display: flex;
+      flex-wrap: wrap;
+      & > *:not(:last-child) {
+        margin-right: rem(22);
+        margin-bottom: rem(31);
+      }
+    }
+  }
+  .rate__label,
+  .pagination__label {
+    @include label;
+  }
+
+  & > div, //TODO no styles on tags
+  & > label {
+    margin-bottom: 20px;
   }
 }

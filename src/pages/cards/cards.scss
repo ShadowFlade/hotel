@@ -4,10 +4,6 @@
   display: flex;
   justify-content: space-between;
   padding: 7.1% 9.9%;
-  &__item {
-    margin-right: 40px;
-    margin-bottom: 40px;
-  }
   &__column {
     margin-right: rem(40);
     &:last-child {
@@ -17,52 +13,13 @@
       }
     }
   }
-  .move-up {
-    top: 14%;
+  &__item {
+    margin-right: 40px;
+    margin-bottom: 40px;
   }
-  .container {
-    justify-content: normal;
-    display: flex;
-
-    max-width: 1440px;
-  }
-
-  .number {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: rem(14);
-    line-height: 17px;
-    color: #1f2041;
-  }
-  .number-number {
-    font-size: rem(19);
-  }
-  .lux {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: rem(12);
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #bc9cff;
-  }
-  .price {
-    font-family: Montserrat;
-    font-style: normal;
-    font-size: rem(14);
-    line-height: 18px;
-    color: rgba(31, 32, 65, 0.5);
-  }
-
-  .card__datepicker {
+  &__datepicker {
     margin-bottom: rem(40);
     height: 358px;
   }
-  .radio-buttons {
-    margin-bottom: 10px;
-  }
-  #birthday {
-    margin-bottom: 20px;
-  }
+  //TODO datepicker not appearing ?
 }

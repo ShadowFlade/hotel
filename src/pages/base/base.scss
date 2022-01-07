@@ -15,16 +15,15 @@ body {
   padding: 6.79% 10.35%;
   display: flex;
   justify-content: space-between;
-}
-
-.left-half {
-  margin-bottom: 20px;
-  margin-right: 0;
-  &__column {
-    display: flex;
-    display: block;
-    flex-direction: column;
-    justify-content: space-between;
+  .left-half {
+    margin-bottom: 20px;
+    margin-right: 0;
+    &__column {
+      display: flex; //TODO repeating styles
+      display: block; //TODO repeating styles
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
   .item {
     font-family: 'Montserrat', sans-serif;
@@ -50,54 +49,55 @@ body {
       letter-spacing: -1.1px;
     }
   }
-}
-.right-half {
-  width: 59%;
-  display: flex;
-  justify-content: flex-end;
-  padding-left: 21%;
-  .right-half__text {
-    margin-left: 1.44286rem;
-    width: 66%;
-    word-spacing: 4px;
-  }
-  &__column {
-    display: flex;
-    flex-direction: column;
-    height: calc(321 / 610) * 100%;
-    justify-content: space-between;
-  }
-  &__item {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    display: flex;
-    width: 131%;
-    margin-bottom: 10.54167%;
-    &--big {
-      @include big;
-    }
-    &--medium {
-      @include medium;
-    }
-    &--small {
-      @include small;
-      .right-half__text {
-        word-spacing: 0px;
-      }
-    }
-    &--mainfont {
-      @include mainfont;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.85rem;
 
-      .right-half__text {
-        width: 58%;
+  .right-half {
+    width: 59%;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 21%;
+    .right-half__text {
+      margin-left: 1.44286rem;
+      width: 66%;
+      word-spacing: 4px;
+    }
+    &__column {
+      display: flex;
+      flex-direction: column;
+      height: calc(321 / 610) * 100%;
+      justify-content: space-between;
+    }
+    &__item {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      display: flex;
+      width: 131%;
+      margin-bottom: 10.54167%;
+      &--big {
+        @include big;
+      }
+      &--medium {
+        @include medium;
+      }
+      &--small {
+        @include small;
+        .right-half__text {
+          word-spacing: 0px;
+        }
+      }
+      &--mainfont {
+        @include mainfont;
         font-family: 'Montserrat', sans-serif;
-        word-spacing: 1px;
+        font-size: 0.85rem;
+
+        .right-half__text {
+          width: 58%;
+          font-family: 'Montserrat', sans-serif;
+          word-spacing: 1px;
+        }
       }
     }
-  }
-  &__header {
-    width: 6%;
+    &__header {
+      width: 6%;
+    }
   }
 }

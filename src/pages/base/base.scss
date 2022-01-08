@@ -12,7 +12,7 @@ body {
   margin: 0 auto;
 }
 .base {
-  padding: 6.79% 10.35%;
+  padding: 6.74% 10.35%;
   display: flex;
   justify-content: space-between;
   .left-half {
@@ -25,7 +25,7 @@ body {
   .item {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    margin-bottom: calc(20 / 16) * 1rem;
+    margin-bottom: 1.4rem;
     display: flex;
     width: 241.61111%;
     &:last-child {
@@ -68,7 +68,7 @@ body {
       font-weight: bold;
       display: flex;
       width: 131%;
-      margin-bottom: 10.54167%;
+      margin-bottom: 2%;
       &--big {
         @include big;
       }

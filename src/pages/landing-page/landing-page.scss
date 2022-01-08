@@ -23,16 +23,8 @@
     right: 9%;
     width: 20%;
   }
+}
 
-  .footer--small {
-    display: none;
-  }
-}
-@media screen and (max-width: 834px) {
-  .footer--main {
-    display: none;
-  }
-}
 @media screen and (max-width: 400px) {
   .landing-page .rooms-for-you {
     left: 0;

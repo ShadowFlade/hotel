@@ -1,4 +1,6 @@
 block variables
+include  ../../components/header/header.pug
+include ../../components/footer/footer.pug
 doctype html
 html(lang='en')
   head
@@ -24,5 +26,9 @@ html(lang='en')
     script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
     block head  
   body
+
     div(class=pageСlass)
+      header 
+        +navigation()
       block content
+      +footer

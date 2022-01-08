@@ -33,9 +33,10 @@ $maxWidthContainer: 1170;
   color: $DarkShade75;
 }
 @mixin big {
-  font-size: 1.41429rem;
+  font-size: 1.7rem;
   line-height: 2.07143rem;
-  font-weight: 900;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 @mixin medium {
   font-size: calc(19 / 14) * 1rem;

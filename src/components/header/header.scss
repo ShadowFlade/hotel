@@ -1,6 +1,6 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
-.navigation {
+.header {
   width: 100%;
   background-color: white;
   height: 70px;
@@ -30,7 +30,7 @@
     justify-content: flex-end;
     align-items: center;
     width: auto;
-    padding-right: 2.45rem;
+    padding-right: 0.45rem;
   }
 
   &__items {
@@ -64,7 +64,7 @@
   }
 }
 
-.navbar {
+.navigation {
   display: flex;
   &__item {
     display: flex;
@@ -92,7 +92,7 @@
     &:hover .arrow {
       transform: rotate(-90deg);
     }
-    &:hover .navbar__menu {
+    &:hover .navigation__menu {
       display: block;
     }
     & > span {
@@ -144,7 +144,7 @@
 
 //----------------------------------------------------ADAPTIVE
 @media screen and (max-width: 1193px) {
-  .navigation__content {
+  .header__content {
     padding: 0 3%;
   }
 }
@@ -152,20 +152,25 @@
   html {
     font-size: rem(12);
   }
-  .navigation__content {
-    justify-content: space-between;
-    padding: 0 1%;
+  .header {
+    &__content {
+      justify-content: space-between;
+      padding: 0 1%;
+    }
+    &__navbar {
+      display: none;
+    }
+    &__user {
+      order: 2;
+    }
+    &__username {
+      padding: 0;
+    }
   }
-  .navigation__navbar {
-    display: none;
-  }
+
   .burger {
     display: block;
     margin-right: 10px;
-  }
-
-  .navigation__user {
-    order: 2;
   }
 }
 @media screen and (max-width: 457px) {

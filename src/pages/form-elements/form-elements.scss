@@ -48,6 +48,10 @@ html {
     @include small;
     margin-bottom: rem(16);
   }
+  .toggle__label {
+    @include label;
+    font-size: 12px;
+  }
   .rate__buttons,
   .like-buttons {
     display: flex;

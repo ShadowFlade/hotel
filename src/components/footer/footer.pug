@@ -10,26 +10,26 @@ mixin footer
             img(src='assets/img/fsdlogo.svg')
           .footer__info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
         .footer__list
-          +link({mockAddress:'/',className:'footer__item footer__item--section',text:'Навигация'})
-          +link({mockAddress:'/',className:'footer__item',text:'О нас'})
-          +link({mockAddress:'/',className:'footer__item',text:'Новости'})
-          +link({mockAddress:'/',className:'footer__item',text:'Служба поддержки'})
-          +link({mockAddress:'/',className:'footer__item',text:'Услуги'})
+          +link({className:'footer__item footer__item--section',text:'Навигация'})
+          +link({className:'footer__item',text:'О нас',link:'about-us.com'})
+          +link({className:'footer__item',text:'Новости'})
+          +link({className:'footer__item',text:'Служба поддержки'})
+          +link({className:'footer__item',text:'Услуги'})
         .footer__list 
-          +link({mockAddress:'/',className:'footer__item footer__item--section',text:'О нас'})
-          +link({mockAddress:'/',className:'footer__item',text:'О сервисе'})
-          +link({mockAddress:'/',className:'footer__item',text:'Наша команда'})
-          +link({mockAddress:'/',className:'footer__item',text:'Вакансии'})
-          +link({mockAddress:'/',className:'footer__item',text:'Инвесторы'})
+          +link({className:'footer__item footer__item--section',text:'О нас'})
+          +link({className:'footer__item',text:'О сервисе'})
+          +link({className:'footer__item',text:'Наша команда'})
+          +link({className:'footer__item',text:'Вакансии'})
+          +link({className:'footer__item',text:'Инвесторы'})
         .footer__list 
-          +link({mockAddress:'/',className:'footer__item footer__item--section',text:'Служба поддержки'})
-          +link({mockAddress:'/',className:'footer__item',text:'Соглашения'})
-          +link({mockAddress:'/',className:'footer__item',text:'Сообщества'})
-          +link({mockAddress:'/',className:'footer__item',text:'Связь с нами'})
+          +link({className:'footer__item footer__item--section',text:'Служба поддержки'})
+          +link({className:'footer__item',text:'Соглашения'})
+          +link({className:'footer__item',text:'Сообщества'})
+          +link({className:'footer__item',text:'Связь с нами'})
         .footer__list 
-          +link({mockAddress:'/',className:'footer__item footer__item--section',text:'Подписка'})
-          +link({mockAddress:'/',className:'footer__item',text:'Получайте специальные предложения и новости сервиса'})
-          +link({mockAddress:'/',className:'footer__item footer__item--subscription-field',text:'Сообщества'})
+          +link({className:'footer__item footer__item--section',text:'Подписка'})
+          +link({className:'footer__item',text:'Получайте специальные предложения и новости сервиса'})
+          +link({className:'footer__item footer__item--subscription-field',text:'Сообщества'})
             +subsTextField({label:''})
     .footer__bottom
       .footer__bottom-container

@@ -2,9 +2,9 @@ include ../burger-menu/burger-menu.pug
 include ../button/button.pug
 include ../link/link.pug
 
-mixin navbar(options={arrayOfElements:[{name:'О нас',arrow:false},{name:'Услуги',arrow:true,list:['hire','me']},{name:'Вакансии',arrow:false},{name:'Новости',arrow:false},{name:'Соглашения',arrow:true,list:['something','anything','whatever']}],arrow_class:'navigation__arrow'})
+mixin navbar(options={list:[{name:'О нас',arrow:false},{name:'Услуги',arrow:true,list:['hire','me']},{name:'Вакансии',arrow:false},{name:'Новости',arrow:false},{name:'Соглашения',arrow:true,list:['something','anything','whatever']}],arrow_class:'navigation__arrow'})
   .navigation 
-    each el in options.arrayOfElements 
+    each el in options.list 
       if el.arrow==true
         .navigation__item
           span.navigation__text #{el.name}
@@ -26,7 +26,7 @@ mixin navigation(options={username:'Юлий Цезарь',leftButtonLabel:'Во
       .header__interactive
         .header__navbar 
           .header__items
-            +navbar({arrayOfElements:[{name:'О нас',arrow:false},
+            +navbar({list:[{name:'О нас',arrow:false},
             {name:'Услуги',arrow:true,list:['hire','me']},
             {name:'Вакансии',arrow:false},
             {name:'Новости',arrow:false},

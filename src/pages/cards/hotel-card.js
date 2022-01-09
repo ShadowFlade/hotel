@@ -1,7 +1,6 @@
 import moment from 'moment';
 $(function () {
   const $cardDatepicker = $('.js-cards__datepicker');
-  console.log($cardDatepicker)
   $cardDatepicker.daterangepicker({
     maxSpan: {
       days: 7,

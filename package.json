@@ -50,6 +50,7 @@
   "dependencies": {
     "chart.js": "^3.6.2",
     "daterangepicker": "^3.1.0",
+    "imask": "^6.2.2",
     "moment": "^2.29.1"
   },
   "bugs": {

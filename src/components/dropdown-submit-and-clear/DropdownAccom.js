@@ -26,7 +26,6 @@ class DropdownAccom {
 
   bindIncrement() {
     const listChildren = Array.from(this.element.querySelectorAll('.js-dropdown-accom__option'));
-    console.log('🚀 ~ DropdownAccom ~ bindIncrement ~ listChildren', listChildren);
     this.count = new Map();
     const handleIncrementClick = (e)=>{
       const target = e.target;

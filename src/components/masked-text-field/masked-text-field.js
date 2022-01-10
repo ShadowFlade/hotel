@@ -1,11 +1,9 @@
 import IMask from 'imask';
 import './masked-text-field.scss';
 const maskOptions= {
-  mask: Date,  // enable date mask
+  mask: Date,  
 
-  // other options are optional
-  pattern: 'd.`m.`Y',  // Pattern mask with defined blocks, default is 'd{.}`m{.}`Y'
-  // you can provide your own blocks definitions, default blocks for date mask are:
+  pattern: 'd.`m.`Y', 
   blocks: {
     d: {
       mask: IMask.MaskedRange,

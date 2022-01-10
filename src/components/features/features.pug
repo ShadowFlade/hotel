@@ -2,9 +2,9 @@ mixin features(options={features:[{pic:'assets/img/smile.png',feature:'Комф�
   .features
     ul.features__list
       each feature in options.features 
-        .features__item
+        li.features__item
           .features__pic 
-            img(src=feature.pic)
+            img(src=feature.pic,alt='')
           .features__info
             .features__label #{feature.feature}
             .features__desc #{feature.desc}

@@ -3,13 +3,13 @@ mixin dropdown(options={label:'dropdown',numberOfOptions:7,option:'Скольк�
   .dropdown
     if options.label
       label.dropdown__label #{options.label}
-        .dropdown__item
-          select.dropdown__select
-            option.dropdown__category #{options.option}
-            while n<=options.numberOfOptions
-              li=n++
-              option.dropdown__option(value=n) #{n}
-          img.dropdown__arrow(src='assets/img/arrow.svg')
+      .dropdown__item
+        select.dropdown__select
+          option.dropdown__category #{options.option}
+          while n<=options.numberOfOptions
+            -n++
+            option.dropdown__option(value=n) #{n}
+        img.dropdown__arrow(src='assets/img/arrow.svg',alt='')
     else
       .dropdown__item
         select.dropdown__select
@@ -17,7 +17,7 @@ mixin dropdown(options={label:'dropdown',numberOfOptions:7,option:'Скольк�
           while n<=options.numberOfOptions
             li=n++
             option.dropdown__option(value=n) #{n}
-        img.dropdown__arrow(src='assets/img/arrow.svg')
+        img.dropdown__arrow(src='assets/img/arrow.svg',alt='')
 
 
 

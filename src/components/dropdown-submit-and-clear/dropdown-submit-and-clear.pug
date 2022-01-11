@@ -14,7 +14,7 @@ mixin dropdownSubmitAndClear(options={label:'dropdown',placeholder:'3 гостя
             .dropdown-accom__info 2 
             button.dropdown-accom__button.dropdown-accom__button--next(type='button') +
       if (options.option!=='none')
-        .dropdown-accom__footer
+        li.dropdown-accom__footer
           if (options.option=='submit')
             .dropdown-accom__submit
               +button({modifs:['inline'],type:'submit',text:'Применить'})

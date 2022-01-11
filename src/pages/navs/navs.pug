@@ -1,6 +1,8 @@
 extends ../../layout/main/main
 include ../../components/footer/footer.pug 
 include ../../components/header/header.pug
+include ../../components/subscription-text-field/subscription-text-field.pug
+
 
 block variables
   - var title = 'headers&footers';
@@ -9,5 +11,5 @@ block content
   .navs 
     +navigation({username:'',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
     +navigation({username:'Юлий Цезарь',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
-    +footer
-    +footer
+    +footer()
+    +footer()

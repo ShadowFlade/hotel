@@ -50,4 +50,8 @@ $(function () {
     $('.end-date').removeClass('in-range');
   });
   $('.ui-datepicker-calendar a.ui-state-default').css('width', '20px');
+  const prohibitTyping=(event)=>{
+    event.preventDefault()
+  }
+  $('.js-date-picker__input').on('keydown',prohibitTyping)
 });

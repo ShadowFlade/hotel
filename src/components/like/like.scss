@@ -40,6 +40,7 @@
     font-weight: 400;
     color: rgba(31, 32, 65, 0.25);
     transition: all 0.3s linear;
+    user-select: none;
   }
   &__icon {
     position: absolute;

@@ -1,0 +1,7 @@
+
+mixin color-item(options={leftPart:'#575870', rightPart:['Dark Shade 75%','#1F2041']})
+  .item  
+    .item__color(style={background:options.leftPart})
+    .item__desc 
+      .item__dark #{options.rightPart[0]}
+      .item__code #{options.rightPart[1]}

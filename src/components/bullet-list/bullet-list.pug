@@ -1,6 +1,5 @@
 mixin bulletList (options={title:'bullet list',list:['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']})
-  .bullet-ul
-    ul.bullet-ul__list
+    ul.bullet-ul
       each val in options.list
         li.bullet-ul__item #{val}
       

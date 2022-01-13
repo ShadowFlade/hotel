@@ -1,7 +1,9 @@
 /* eslint-disable fsd/jq-use-js-prefix-in-selector */
 import './date-picker.scss';
+import 'daterangepicker';
 $(function () {
-  $('.js-date-picker').daterangepicker({
+  const datePicker=  $('.js-date-picker').daterangepicker({
+    // parentEl:$('.js-date-picker'),
     maxSpan: {
       days: 60,
     },
@@ -17,7 +19,7 @@ $(function () {
       toLabel: 'To',
       customRangeLabel: 'Custom',
       weekLabel: 'W',
-      daysOfWeek: ['Воскр', 'Пон', 'Вт', 'Ср', 'Чт', 'Пятн', 'Суб'],
+      daysOfWeek: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Суб'],
       monthNames: [
         'Январь',
         'Февраль',
@@ -40,6 +42,8 @@ $(function () {
     endDate: '02/11/2021',
     autoUpdateInput: true,
   });
+  console.log(datePicker.data('daterangepicker').element)
+
   const handleTdClicked = function () {
     $('.end-date').removeClass('in-range');
   };

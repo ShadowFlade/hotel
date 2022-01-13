@@ -1,8 +1,6 @@
 import '../../components/checkbox-list/checkbox-list.js';
 import '../../components/comment/comment.js';
 import '../../components/button/button.js';
-import '../../components/button/button.js';
-import '../../components/button/button.js';
 import '../../components/masked-text-field/masked-text-field.js';
 import '../../components/checkbox-buttons/checkbox-buttons.js';
 import '../../components/bullet-list/bullet-list.js';
@@ -20,67 +18,71 @@ import '../../components/rate-button/rate-button.js';
 import '../../components/subscription-text-field/subscription-text-field.js';
 import '../../components/text-field/text-field.js';
 import '../../components/toggle/toggle.js';
+import '../../components/air-datepicker/air-datepicker.js';
+
 import '../../components/hotel-card/hotel-card.js';
+
 import './form-elements.scss';
-$(function () {
-  const $filterDateDropdown = $('.date-picker--single');
-  $filterDateDropdown.daterangepicker({
-    maxSpan: {
-      days: 7,
-    },
-    locale: {
-      format: 'MM/DD/YYYY',
-      separator: ' - ',
-      applyLabel: 'применить',
-      cancelLabel: 'очистить',
-      fromLabel: 'From',
-      toLabel: 'To',
-      customRangeLabel: 'Custom',
-      weekLabel: 'W',
-      daysOfWeek: ['Воскр', 'Пон', 'Вт', 'Ср', 'Чт', 'Пятн', 'Суб'],
-      monthNames: [
-        'Январь',
-        'Февраль',
-        'Март',
-        'Апрель',
-        'Май',
-        'Июнь',
-        'Июль',
-        'Август',
-        'Сентябрь',
-        'Октябрь',
-        'Ноябрь',
-        'Декабрь',
-      ],
-      firstDay: 1,
-    },
-    linkedCalendars: false,
-    startDate: '02/04/2021',
-    endDate: '02/11/2021',
-  });
-  const onApply = function (ev, picker) {
-    var thisMonth = moment()
-      .locale('ru')
-      .format('MMMM');
+// $(function () {
+//   const $filterDateDropdown = $('.date-picker--single').find('.date-picker__item');
+//   $filterDateDropdown.daterangepicker({
+//     parentEl:$filterDateDropdown.parent(),
+//     maxSpan: {
+//       days: 7,
+//     },
+//     locale: {
+//       format: 'MM/DD/YYYY',
+//       separator: ' - ',
+//       applyLabel: 'применить',
+//       cancelLabel: 'очистить',
+//       fromLabel: 'From',
+//       toLabel: 'To',
+//       customRangeLabel: 'Custom',
+//       weekLabel: 'W',
+//       daysOfWeek: ['Вс', 'Пон', 'Вт', 'Ср', 'Чт', 'Пятн', 'Суб'],
+//       monthNames: [
+//         'Январь',
+//         'Февраль',
+//         'Март',
+//         'Апрель',
+//         'Май',
+//         'Июнь',
+//         'Июль',
+//         'Август',
+//         'Сентябрь',
+//         'Октябрь',
+//         'Ноябрь',
+//         'Декабрь',
+//       ],
+//       firstDay: 1,
+//     },
+//     linkedCalendars: false,
+//     startDate: '02/04/2021',
+//     endDate: '02/11/2021',
+//   });
+//   const onApply = function (ev, picker) {
+//     var thisMonth = moment()
+//       .locale('ru')
+//       .format('MMMM');
 
-    if (thisMonth[thisMonth.length - 1] === 'т') {
-      thisMonth += 'а';
-    } else if (thisMonth[thisMonth.length - 1] !== 'т') {
-      thisMonth = thisMonth.slice(0, 6) + 'я';
-    }
+//     if (thisMonth[thisMonth.length - 1] === 'т') {
+//       thisMonth += 'а';
+//     } else if (thisMonth[thisMonth.length - 1] !== 'т') {
+//       thisMonth = thisMonth.slice(0, 6) + 'я';
+//     }
 
-    $(this).val(
-      picker.startDate.format('D ' + thisMonth)
-        + ' - '
-        + picker.endDate.format('D ' + thisMonth)
-    );
-  };
-  $filterDateDropdown.on('apply.daterangepicker', onApply);
+//     $(this).val(
+//       picker.startDate.format('D ' + thisMonth)
+//         + ' - '
+//         + picker.endDate.format('D ' + thisMonth)
+//     );
+//   };
+//   $filterDateDropdown.on('apply.daterangepicker', onApply);
 
-  // eslint-disable-next-line fsd/jq-use-js-prefix-in-selector
-  $('.daterangepicker').css('top', '20%');
-  const onHide = function () {
-    $('.js-card__datepicker').click();
-  };
-  $('.js-card__datepicker').on('hide.daterangepicker', onHide);
-});
+//   // eslint-disable-next-line fsd/jq-use-js-prefix-in-selector
+//   $('.daterangepicker').css('top', '20%');
+//   const onHide = function () {
+//     $('.js-card__datepicker').click();
+//   };
+//   $('.js-card__datepicker').on('hide.daterangepicker', onHide);
+// });

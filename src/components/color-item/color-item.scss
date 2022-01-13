@@ -1,6 +1,5 @@
 .item {
   font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
   margin-bottom: 1.4rem;
   display: flex;
   width: 241.61111%;
@@ -12,6 +11,9 @@
     $sqr: 70px;
     width: $sqr;
     height: $sqr;
+  }
+  &__dark {
+    font-weight: bold;
   }
   &__desc {
     padding: 1.1% 6.6%;

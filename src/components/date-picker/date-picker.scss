@@ -1,6 +1,5 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
-
 .date-picker {
   min-width: 150px;
   font-size: rem(11);
@@ -51,6 +50,37 @@
   height: 80%;
 }
 
+.daterangepicker {
+  display: none;
+  background-color: white;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  position: absolute;
+  .drp-calendar {
+    padding-left: 21px;
+    .calendar-table {
+      width: 282px;
+      position: relative;
+      top: -11px;
+    }
+  }
+  thead {
+    height: 103px;
+    tr:nth-child(1) {
+      height: 80px;
+      .next {
+        position: relative;
+        left: 10px;
+      }
+    }
+    tr:nth-child(2) {
+      height: 40px;
+    }
+  }
+}
+
+.daterangepicker .drop-calendar .left .calendar-table {
+  padding-right: 15px;
+}
 .ui-datepicker td span,
 .ui-datepicker td a {
   padding: 0 0.2em 0 0;
@@ -224,6 +254,9 @@ a.ui-state-default:hover {
 
 .daterangepicker {
   top: 20%;
+  tbody tr:nth-child(6) {
+    display: none;
+  }
 }
 .daterangepicker .calendar-table .next span,
 .daterangepicker .calendar-table .prev span {
@@ -239,14 +272,12 @@ a.ui-state-default:hover {
   width: 320px;
   position: relative;
 }
-.daterangepicker .drp-calendar .calendar-table {
-  width: 310px;
-  position: relative;
-}
+
 .daterangepicker {
   width: 320px;
   height: 359px;
   overflow: hidden;
+  margin-top: 5px;
 }
 
 .daterangepicker .calendar-table .table-condensed thead tr:nth-child(2) th {
@@ -258,15 +289,16 @@ a.ui-state-default:hover {
   align-items: center;
   text-align: center;
   color: #bc9cff;
+  height: 42px;
 }
 .daterangepicker .calendar-table .table-condensed thead tr:nth-child(1) .month {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
-  font-size: rem(19);
   line-height: 23px;
   text-align: center;
   color: #1f2041;
+  font-size: 1.2rem;
 }
 .daterangepicker .calendar-table .next span,
 .daterangepicker .calendar-table .prev span {
@@ -286,11 +318,8 @@ a.ui-state-default:hover {
   text-align: center;
   color: #bc9cff;
   position: relative;
-  right: -25%;
 }
-.daterangepicker thead tr:nth-child(1) {
-  margin-bottom: 20px;
-}
+
 .daterangepicker .calendar-table .prev span {
   transform: rotate(0);
 }
@@ -305,12 +334,16 @@ a.ui-state-default:hover {
   text-align: center;
   color: rgba(31, 32, 65, 0.5);
 }
+
 .daterangepicker.show-calendar .drp-buttons {
   display: flex;
   justify-content: space-between;
   padding: 0;
   border: 0;
-  padding-top: 5%;
+
+  width: 87%;
+
+  margin: 0 auto;
 }
 .daterangepicker td.active {
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
@@ -354,4 +387,9 @@ td .weekend .active end-date in-range .available {
 .daterangepicker .calendar-table td {
   width: 40px;
   height: 40px;
+}
+.daterangepicker .calendar-table th {
+  $length: 20px;
+  width: $length;
+  height: $length;
 }

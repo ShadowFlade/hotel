@@ -19,6 +19,7 @@ include ../../components/rate-button/rate-button.pug
 include ../../components/pay-button/pay-button.pug
 include ../../components/button/button.pug
 include ../../components/text-field/text-field.pug
+include ../../components/air-datepicker/air-datepicker.pug
 
 
 block variables
@@ -28,7 +29,7 @@ block variables
 block content 
 	.form-elements
 		.form-elements__column
-			.air-datepicker-item
+			+air-datepicker
 			.form-elements__item
 				+textField
 			.form-elements__item
@@ -59,9 +60,9 @@ block content
 			.form-elements__item
 				span.radio-buttons__label RADIO BUTTONS
 			.form-elements__item
-			
+				+air-datepicker
 				+radioButtons({list:['Мужчина','Женщина'],name:'gender'})    
-			.air-datepicker-item
+	
 			.form-elements__item
 				.toggle__label TOGGLE
 				+toggle({list:['Получать спецпредложения','fish']})

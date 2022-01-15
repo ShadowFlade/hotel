@@ -1,0 +1,101 @@
+$cell-length: 40px;
+.air-datepicker {
+  width: 320px;
+  height: 369px;
+  &:not(.-custom-position-) {
+    opacity: 1;
+  }
+  .inline {
+    width: 320px;
+    height: 369px;
+  }
+  &-cell {
+    width: $cell-length;
+    height: $cell-length;
+    border-radius: 50%;
+    &.-day-.-selected- {
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+      color: white;
+    }
+    &.-in-range- {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      opacity: 0.25;
+    }
+    &.-range-to-,
+    &.-range-from- {
+      position: relative;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      border-radius: 50%;
+      color: white;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 50%;
+        z-index: -1;
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        height: 100%;
+        opacity: 0.25;
+      }
+    }
+    &.-range-to-::before {
+      left: 0;
+    }
+    &.-range-from-::before {
+      right: 0;
+    }
+    // &.-day-.-selected-.-range-from-,&.-day-.-selected-.-range-to-{
+
+    // }
+  }
+  &-nav {
+    border-bottom: 0;
+    padding: 0;
+    margin-bottom: 2rem;
+    &--action[data-action='next'],
+    &--action[data-action='prev'] {
+      svg {
+        display: none;
+      }
+      background: url('./arrow_back.png') center no-repeat;
+    }
+    &--action[data-action='next'] {
+      background: url('./arrow_forward.svg') center no-repeat;
+    }
+  }
+  &-nav--title {
+    color: black;
+  }
+  &--content {
+    padding: 0;
+  }
+  &-body {
+    &--cells.-days- {
+      grid-template-columns: repeat(7, 1fr);
+      grid-auto-rows: $cell-length;
+      padding: 0 1.4rem;
+    }
+    &--day {
+      &-name {
+        color: rgba(188, 156, 255, 1);
+        width: $cell-length;
+        height: $cell-length;
+      }
+      &-names {
+        grid-template-columns: repeat(7, $cell-length);
+      }
+    }
+  }
+
+  &.-day-.-other-month- {
+    color: rgba(31, 32, 65, 0.25);
+  }
+  &-cell.-day- {
+    color: rgba(31, 32, 65, 0.5);
+  }
+  // &-cell.-day-.-current- {
+  //   color: white;
+  //   background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  //   border-radius: 22px;
+  // }
+}

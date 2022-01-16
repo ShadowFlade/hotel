@@ -2,9 +2,6 @@ $cell-length: 40px;
 .air-datepicker {
   min-width: 320px;
   min-height: 369px;
-  // .selected {
-  //   background-position: none;
-  // }
   &.-inline- {
     min-width: 320px;
     min-height: 369px;
@@ -22,51 +19,36 @@ $cell-length: 40px;
       &.-other-month- {
         color: rgba(31, 32, 65, 0.25);
       }
+      &.-selected- {
+        background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+      }
     }
     &.-in-range- {
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
       opacity: 0.25;
     }
-    &.-range-to-,
-    &.-range-from- {
+    &.-range-to-:not(.selected),
+    &.-range-from-:not(.selected) {
       background: 0;
       position: relative;
       background-image: linear-gradient(180deg, #bc9cff, #8ba4f9);
       background-position: center;
-      background-size: 60%;
       background-repeat: no-repeat;
       color: white;
       border: 0;
       z-index: 2;
-      opacity: 0.25;
+      opacity: 1;
+      border-radius: 50%;
       &::before {
-        content: attr(data-date);
+        content: '';
         position: absolute;
         top: 0;
-        width: 100%;
+        width: 50%;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         color: white;
-        border-radius: 50%;
         background: linear-gradient(180deg, #bc9cff, #8ba4f9);
-        clip-path: circle(32% at 0% 0%);
         opacity: 0.25;
-      }
-      &::after {
-        content: attr(data-date);
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        border-radius: 50%;
-        background: green;
-        z-index: 3;
+        z-index: -1;
       }
     }
     &.-range-to- {
@@ -75,17 +57,11 @@ $cell-length: 40px;
       &::before {
         left: 0;
       }
-      &::after {
-        left: 0;
-      }
     }
     &.-range-from- {
       background-position: 100%;
 
       &::before {
-        right: 0;
-      }
-      &::after {
         right: 0;
       }
     }

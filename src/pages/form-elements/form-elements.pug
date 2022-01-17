@@ -44,7 +44,8 @@ block content
 			.form-elements__item
 				+datePicker({label:'filter date dropdown',placeholder:'19 авг- 23 авг',modif:'single',arrow:true})
 			.form-elements__item
-				+subsTextField({label:'subscription text field'})
+				h6.subscription-field__label subscription text field
+				+subsTextField({})
 			.form-elements__item
 				+dropdownSubmitAndClear({label:'dropdown',placeholder:'2 спальни, 2 кровати',list:['Спальни','Кровати','Ванные комнаты'],option:'none',modif:'small'})
 			.form-elements__item
@@ -103,8 +104,8 @@ block content
 						+button({modifs:['inline'],text:'click me'})
 						+payButton({arrow:true,label:'перейти к оплате'})
 			.form-elements__item
-				.pagination__label pagination
-					+pagination({numberOfFirstPages:3,lastPage:15})
+				h6.pagination__label pagination
+				+pagination({numberOfFirstPages:3,lastPage:15})
 			.form-elements__item
 				.dropdown
 					+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',list:["взрослые","дети","младенцы"],option:'clear',modif:'big'})

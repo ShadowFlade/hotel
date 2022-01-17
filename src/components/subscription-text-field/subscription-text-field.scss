@@ -1,7 +1,7 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
 .subscription-field {
-  max-width: 266px;
+  max-width: 260px;
   position: relative;
   &__label {
     @include label;
@@ -14,6 +14,15 @@
     @include input();
   }
   .arrow-right {
-    top: 33%;
+    top: 26%;
+  }
+  &--footer {
+    margin-top: 0.5rem;
+    .arrow-right {
+      width: 18px;
+      height: 18px;
+      top: 32%;
+      right: 16px;
+    }
   }
 }

@@ -28,7 +28,6 @@ html(lang='en')
   body
 
     div(class=pageСlass)
-      header 
-        +header()
+      +header({username:'',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
       block content
       +footer()

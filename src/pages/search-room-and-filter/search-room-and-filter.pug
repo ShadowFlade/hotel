@@ -27,10 +27,10 @@ block content
             +rangeSlider('Диапазон цены')
           .sidebar__item 
             +checkboxButtons
-          .sidebar__item 
+          .sidebar__item.sidebar__item--gap
             +checkboxRich()
 
-          .sidebar__item 
+          .sidebar__item
             +dropdownSubmitAndClear({label:'удобство номера',placeholder:'2 спальни, 2 кровати',list:['спальни','кровати','ванные комнаты'],option:'clear',modif:'small'})
           .sidebar__item 
             +checkboxList({label:'дополнительные удобства',list:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Плед','Тумбочка']}) 

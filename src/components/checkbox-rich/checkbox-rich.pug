@@ -1,9 +1,9 @@
 include ../checkbox-button/checkbox-button.pug
 mixin checkboxRich(options={label:'Доступность',name:'facilities',list:[['Широкий коридор','Ширина коридоров в номере не менее 91 см.'],['Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.']]})
-  .checkbox-rich #{options.label}
+  h6.checkbox-rich__label #{options.label}
+  .checkbox-rich 
     .checkbox-rich__list
       each val in options.list
-        .checkbox-rich__item
-          +checkbox-button({desc:val[1],text:val[0],})
+        +checkbox-button({desc:val[1],text:val[0],})
 
 

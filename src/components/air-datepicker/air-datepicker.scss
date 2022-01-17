@@ -16,6 +16,8 @@ $cell-length: 40px;
     height: $cell-length;
     border-radius: 50%;
     &.-day- {
+      color: rgba(31, 32, 65, 0.5);
+
       &.-other-month- {
         color: rgba(31, 32, 65, 0.25);
       }
@@ -87,6 +89,7 @@ $cell-length: 40px;
   &-nav--title {
     color: black;
     font-size: 1.4rem;
+    font-weight: bold;
     i {
       color: inherit;
       margin-right: 1px;
@@ -111,10 +114,6 @@ $cell-length: 40px;
         margin: 0;
       }
     }
-  }
-
-  &-cell.-day- {
-    color: rgba(31, 32, 65, 0.5);
   }
   &-buttons {
     display: flex;

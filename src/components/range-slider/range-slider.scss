@@ -9,10 +9,9 @@
     margin-bottom: 1.3rem;
   }
   &__title {
-    display: flex;
     text-align: left;
     width: 100%;
-    font-size: 0.75714rem;
+    font-size: 0.85rem;
     @include label;
   }
   &__values {

@@ -1,5 +1,6 @@
 .navigation {
   display: flex;
+  margin-right: 1.5rem;
   &__item {
     display: flex;
     align-items: center;
@@ -7,18 +8,21 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
     min-width: 42px;
     width: fit-content;
     cursor: pointer;
     position: relative;
-    margin-right: 2.1em;
+    margin-right: 1.5rem;
     &--about-us {
       font-family: 'Montserrat', 'sans-serif';
       font-weight: bold;
       color: rgba(31, 32, 65, 0.75);
+    }
+    &:last-child {
+      margin-right: 0px;
     }
     .arrow {
       transition: all 0.15s linear;

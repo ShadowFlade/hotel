@@ -11,13 +11,13 @@ mixin hotelCard(options={pictures: ['assets/img/hotel1.png','assets/img/hotel2.p
           span.hotel-card__room-number #{options.luxNumber}
           if options.lux==true
             span.hotel-card__lux ЛЮКС
-        span.hotel-card__price 
-          b #{options.price} 
-          span.day в сутки
+        span.hotel-card__numerical-info
+          b #{options.price}Р
+          span.day  в сутки
       .hotel-card__row
         span.hotel-card__stars
           +rateButton(4)
-        span.hotel-card__reviews
+        span.hotel-card__numerical-info
           b #{options.numberOfReviews} 
           |Отзывов
 

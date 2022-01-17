@@ -1,7 +1,7 @@
 include ../svg-arrow-right/svg-arrow-right.pug
 include ../subscription-text-field/subscription-text-field.pug
 include ../link/link.pug
-mixin footer (options={specialElementPosition:3,lists:[[{text:'Навигация','mock-address':'mock/mock.com',modif:'section',title:'this link leads nowhere'},{text:'О нас','mock-address':'mock/mock/mock.com',title:'this link leads nowhere'},{text:'Новости','mock-address':'mock/mock.com',title:'this link leads nowhere'},{text:'Служба поддержки','mock-address':'mock/mock.com',title:'this link leads nowhere'},{text:'Услуги','mock-address':'mock/mock.com',title:'this link leads nowhere'}],[{text:'О нас','mock-address':'mock/mock.com',modif:'section',title:'this link leads nowhere'},{text:'о сервисе','mock-address':'mock/mock/mock.com',title:'this link leads nowhere'},{text:'Наша команда','mock-address':'mock/mock.com',title:'this link leads nowhere'},{text:'Инвесторы','mock-address':'mock/mock.com',title:'this link leads nowhere'},{text:'Вакансии','mock-address':'mock/mock.com',title:'this link leads nowhere'}],    [{text:'Служба поддержки','mock-address':'mock/mock.com',modif:'section',title:'this link leads nowhere'},{text:'Соглашения','mock-address':'mock/mock/mock.com',title:'this link leads nowhere'},{text:'Сообщества','mock-address':'mock/mock.com',title:'this link leads nowhere'},{text:'Связь с нами','mock-address':'mock/mock.com',title:'this link leads nowhere'}],[{text:'Подписка','mock-address':'mock/mock.com',modif:'section',title:'this link leads nowhere'},{text:'Получайте специальные предложения и новости сервиса','mock-address':'mock/mock/mock.com',title:'this link leads nowhere'},{text:'Сообщества','mock-address':'mock/mock.com',title:'this link leads nowhere'},]]})
+mixin footer (options={specialElementPosition:3,lists:[[{text:'Навигация','mock-address':'mock/mock.com',modif:'section',title:'this link leads nowhere'},{text:'О нас','mock-address':'mock/mock/mock.com',title:'this link leads nowhere'},{text:'Новости','mock-address':'mock/mock.com',title:'this link leads nowhere'},{text:'Служба поддержки','mock-address':'mock/mock.com',title:'this link leads nowhere'},{text:'Услуги','mock-address':'mock/mock.com',title:'this link leads nowhere'}],[{text:'О нас','mock-address':'mock/mock.com',modif:'section',title:'this link leads nowhere'},{text:'о сервисе','mock-address':'mock/mock/mock.com',title:'this link leads nowhere'},{text:'Наша команда','mock-address':'mock/mock.com',title:'this link leads nowhere'},{text:'Инвесторы','mock-address':'mock/mock.com',title:'this link leads nowhere'},{text:'Вакансии','mock-address':'mock/mock.com',title:'this link leads nowhere'}],    [{text:'Служба поддержки','mock-address':'mock/mock.com',modif:'section',title:'this link leads nowhere'},{text:'Соглашения','mock-address':'mock/mock/mock.com',title:'this link leads nowhere'},{text:'Сообщества','mock-address':'mock/mock.com',title:'this link leads nowhere'},{text:'Связь с нами','mock-address':'mock/mock.com',title:'this link leads nowhere'}],[{text:'Подписка','mock-address':'mock/mock.com',modif:'section',title:'this link leads nowhere'},{text:'Получайте специальные предложения и новости сервиса','mock-address':'mock/mock/mock.com',title:'this link leads nowhere'}]]})
   - n = 0
   footer.footer
     .footer__container
@@ -9,13 +9,14 @@ mixin footer (options={specialElementPosition:3,lists:[[{text:'Навигаци�
         .footer__list.footer__list--big
           .footer__logo
             img(src='assets/img/fsdlogo.svg',alt="company's logo")
-          .footer__info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+          .footer__info 
+          p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
         each list in options.lists
           .footer__list
             each link in list 
               a.footer__item(href=link['mock-address'],title=link.title,class=`footer__item--${link.modif}`) #{link.text}
             if n===options.specialElementPosition  
-              +subsTextField({label:''})
+              +subsTextField({modif:'footer'})
           - n++
     .footer__bottom
       .footer__bottom-container

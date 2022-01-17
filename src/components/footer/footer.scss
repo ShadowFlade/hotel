@@ -15,7 +15,7 @@
   &__container {
     border-bottom: 1px solid rgba(31, 32, 65, 0.25);
     border-top: 1px solid rgba(31, 32, 65, 0.25);
-    padding: 7% 9.72222% 5.5% 9.6%;
+    padding: 6.8% 7% 5.8% 9.6%;
   }
   &__top {
     display: flex;
@@ -25,23 +25,27 @@
     flex-direction: column;
     height: 100%;
     align-items: space-between;
-    margin-right: 4.857139999999999rem;
+    margin-right: 3.8rem;
     &--big {
       width: 22%;
-      margin-right: rem(44);
+      margin-right: 2.8rem;
     }
+
     &:nth-child(5) {
       width: 19.07143rem;
       margin-right: 0;
     }
+    &:nth-child(4) {
+      padding-left: 3rem;
+    }
   }
   &__info {
-    font-size: rem(12);
+    font-size: 1rem;
     font-weight: 600;
     width: 100%;
   }
   &__logo {
-    margin-bottom: rem(15);
+    margin-bottom: 1.5rem;
   }
   &__item {
     margin-bottom: 1rem;

@@ -1,7 +1,6 @@
 include ../svg-arrow-right/svg-arrow-right.pug
-mixin subsTextField(options={label:'Text field'})
-	.subscription-field
-		label.subscription-field__label #{options.label}
+mixin subsTextField(options)
+	.subscription-field(class=options.modif ? `subscription-field--${options.modif}` : false)
 		.subscription-field__input-box
 			input.subscription-field__input(type='text',placeholder='Email',)
 			+svgArrowRight({color:'#BC9CFF',endColor:'#8BA4F9'})

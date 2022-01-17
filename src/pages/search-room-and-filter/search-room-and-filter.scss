@@ -4,7 +4,7 @@
   background: white;
   .main {
     display: flex;
-    padding: 30px 0 75px;
+    padding: 30px 0 68px;
   }
   .sidebar {
     padding-left: 140/1440 * 100%;
@@ -19,6 +19,9 @@
       &--input {
         margin-bottom: 1.5rem;
       }
+      &--gap {
+        margin-bottom: 2.6rem;
+      }
     }
   }
   .range-slider {
@@ -26,8 +29,7 @@
   }
 
   .content {
-    padding-right: 7.07143rem;
-    padding-left: 4.59rem;
+    padding-left: 4.29rem;
 
     &__title {
       font-family: 'Montserrat';
@@ -43,7 +45,7 @@
       flex-wrap: wrap;
     }
     &__item {
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.5rem;
       margin-right: 12px;
     }
     &__pagination {
@@ -52,6 +54,11 @@
       justify-content: center;
       align-items: center;
       margin-top: 1.857143rem;
+      .pagination {
+        position: relative;
+        left: -8%;
+        top: -3px;
+      }
     }
   }
   @media screen and (max-width: 1044px) {

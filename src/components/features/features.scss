@@ -2,6 +2,9 @@
 @import '../../common/mixins.scss';
 
 .features {
+  &__list {
+    padding-left: 6px;
+  }
   &__item {
     display: flex;
     position: relative;

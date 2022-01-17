@@ -35,7 +35,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    padding: 5rem 9.7% 3.5% 10%;
+    padding: 5rem 9.7% 3.5% 9.6%;
     &__column {
       display: flex;
       flex-wrap: wrap;
@@ -44,22 +44,21 @@
       height: 100%;
     }
     &__item {
-      margin-bottom: 20px;
       height: 100%;
       margin-bottom: rem(9);
+      margin-right: 8px;
       &:last-child {
         margin-right: 0;
       }
       &--rules {
-        margin-right: 4.6rem;
+        margin-right: 3.6rem;
       }
     }
     &__title {
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      font-size: 1.15714rem;
-
+      font-size: 1.35rem;
       line-height: 23px;
       color: #1f2041;
       margin-bottom: 1.7571rem;
@@ -76,12 +75,17 @@
         margin-bottom: 0.26rem;
       }
     }
+    &__comment {
+      width: 105%;
+      margin-bottom: 6px;
+    }
     .comment {
       margin-left: -20px;
     }
     &__count {
       font-size: 1rem;
       font-weight: 500;
+      padding-right: 1rem;
     }
     .info-card {
       max-width: 22.35714rem;
@@ -132,7 +136,7 @@
 
 //---------------------------GRAPH ELEMENT
 .graph {
-  padding-left: 3.81429rem;
+  padding-left: 3.5rem;
   .my-chart {
     position: relative;
     width: 105px;
@@ -182,13 +186,13 @@
     display: flex;
   }
   &__info {
-    padding: 2.7rem 0 0 1.7em;
+    padding: 3rem 0 0 1.9em;
   }
   &__grade {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: rem(9);
+    margin-bottom: 0.7rem;
   }
   &__bullet {
     width: 10px;

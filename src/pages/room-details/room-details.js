@@ -39,7 +39,7 @@ $(function () {
   $chart.css('width', '100%');
   $chart.css('height', '100%');
   let i = 0;
-  $('.js-graph__span').each(function () {
+  $('.js-graph__bullet').each(function () {
     $(this).css('background-color', data.datasets[0].backgroundColor[i]);
     i += 1;
   });

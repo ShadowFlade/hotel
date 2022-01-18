@@ -5,14 +5,12 @@
   flex-direction: column;
   align-items: space-between;
   min-width: 380px;
-  min-height: 374px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  height: 22.5rem;
   &__content {
-    padding: 2.6314em 1.9em 0;
+    padding: 2.7314em 2em 0;
   }
   &__title {
     @include big;
@@ -35,6 +33,9 @@
     align-items: center;
     justify-content: space-between;
     margin: 0;
-    padding-top: 2.14286rem;
+    padding-top: 1.6rem;
+    padding-right: 2px;
+    padding-bottom: 2.3rem;
+    padding: 1.6rem 2px 2.3rem 0;
   }
 }

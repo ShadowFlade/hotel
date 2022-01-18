@@ -10,8 +10,10 @@ const submitButton={
 const options={
   range:true,
   navTitles:{
-    days:'<i>MMMM</i> yyyy '
+    days:'MMMM  yyyy '
   },
+  prevHtml:'<img src="./assets/img/arrow_back.png"/>',
+  nextHtml:'<img src="./assets/img/arrow_forward.png"/>',
   buttons:[clearButton,submitButton],
   visible:false,
   inline:false,

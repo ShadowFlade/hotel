@@ -194,12 +194,12 @@ a.ui-state-default:hover {
     }
     & .ui-datepicker-prev {
       .ui-icon {
-        background: url('arrow_back.png') center / contain no-repeat;
+        background: url('expand_more.png') center / contain no-repeat;
       }
     }
     & .ui-datepicker-next {
       .ui-icon {
-        background: url('arrow_back.png') center / contain no-repeat;
+        background: url('expand_more.png') center / contain no-repeat;
         transform: rotate(180deg);
       }
     }
@@ -303,8 +303,8 @@ a.ui-state-default:hover {
 }
 .daterangepicker .calendar-table .next span,
 .daterangepicker .calendar-table .prev span {
-  background-image: url('arrow_back.png');
-  background: url('arrow_back.png') center / contain no-repeat;
+  background-image: url('expand_more.png');
+  background: url('expand_more.png') center / contain no-repeat;
   border: 0;
   transform: rotate(180deg);
   width: 24px;

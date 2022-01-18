@@ -5,7 +5,7 @@ $cell-length: 40px;
   &.-inline- {
     min-width: 320px;
     min-height: 369px;
-    padding: 1rem 1.4rem 0.4rem;
+    padding: 1rem 1.4rem 1rem 1.1rem;
     position: absolute;
     top: 158%;
     display: none;
@@ -71,19 +71,6 @@ $cell-length: 40px;
     border-bottom: 0;
     padding: 0;
     margin-bottom: 2rem;
-    &--action[data-action='next'],
-    &--action[data-action='prev'] {
-      svg {
-        display: none;
-      }
-      background: url('./arrow_back.png') center no-repeat;
-    }
-    &--action[data-action='next'] {
-      background: url('./arrow_forward.svg') 90% no-repeat;
-    }
-    &--action[data-action='prev'] {
-      background-position: 42%;
-    }
   }
   &-nav--title {
     color: black;

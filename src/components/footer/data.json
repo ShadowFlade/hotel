@@ -1,0 +1,97 @@
+{
+  "specialElementPosition": 3,
+  "lists": [
+    [
+      {
+        "text": "Навигация",
+        "mock-address": "mock/mock.com",
+        "modif": "section",
+        "title": "this link leads nowhere"
+      },
+      {
+        "text": "О нас",
+        "mock-address": "mock/mock/mock.com",
+        "title": "this link leads nowhere"
+      },
+      {
+        "text": "Новости",
+        "mock-address": "mock/mock.com",
+        "title": "this link leads nowhere"
+      },
+      {
+        "text": "Служба поддержки",
+        "mock-address": "mock/mock.com",
+        "title": "this link leads nowhere"
+      },
+      {
+        "text": "Услуги",
+        "mock-address": "mock/mock.com",
+        "title": "this link leads nowhere"
+      }
+    ],
+    [
+      {
+        "text": "О нас",
+        "mock-address": "mock/mock.com",
+        "modif": "section",
+        "title": "this link leads nowhere"
+      },
+      {
+        "text": "о сервисе",
+        "mock-address": "mock/mock/mock.com",
+        "title": "this link leads nowhere"
+      },
+      {
+        "text": "Наша команда",
+        "mock-address": "mock/mock.com",
+        "title": "this link leads nowhere"
+      },
+      {
+        "text": "Инвесторы",
+        "mock-address": "mock/mock.com",
+        "title": "this link leads nowhere"
+      },
+      {
+        "text": "Вакансии",
+        "mock-address": "mock/mock.com",
+        "title": "this link leads nowhere"
+      }
+    ],
+    [
+      {
+        "text": "Служба поддержки",
+        "mock-address": "mock/mock.com",
+        "modif": "section",
+        "title": "this link leads nowhere"
+      },
+      {
+        "text": "Соглашения",
+        "mock-address": "mock/mock/mock.com",
+        "title": "this link leads nowhere"
+      },
+      {
+        "text": "Сообщества",
+        "mock-address": "mock/mock.com",
+        "title": "this link leads nowhere"
+      },
+      {
+        "text": "Связь с нами",
+        "mock-address": "mock/mock.com",
+        "title": "this link leads nowhere"
+      }
+    ],
+    [
+      {
+        "text": "Подписка",
+        "mock-address": "mock/mock.com",
+        "modif": "section",
+        "title": "this link leads nowhere"
+      },
+      {
+        "text": "Получайте специальные предложения и новости сервиса",
+        "mock-address": "mock/mock/mock.com",
+        "title": "this link leads nowhere"
+      }
+    ]
+  ]
+}

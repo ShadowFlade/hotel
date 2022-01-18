@@ -8,7 +8,7 @@ const submitButton={
   content:'<button class="button button--inline js-button--inline button--undefined js-button--undefined" type="button">Применить</button>'
 }
 const options={
-  range:false,
+  range:true,
   navTitles:{
     days:'<i>MMMM</i> yyyy '
   },

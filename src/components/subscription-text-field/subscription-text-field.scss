@@ -13,9 +13,12 @@
     width: 100%;
     @include input();
   }
-  .arrow-right {
+  &__arrow-right {
+    position: absolute;
     top: 26%;
+    right: 0;
   }
+
   &--footer {
     margin-top: 0.5rem;
     .arrow-right {

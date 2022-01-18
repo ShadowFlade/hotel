@@ -25,6 +25,7 @@
     height: rem(27);
     position: relative;
     display: flex;
+    cursor: pointer;
   }
 
   &__text {
@@ -37,7 +38,7 @@
     background: #ffffff;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
-    cursor: default;
+    cursor: pointer;
     position: absolute;
     &:checked + .toggles-custom .toggles-custom__helper--passive {
       transform: translate(120%, -50%);

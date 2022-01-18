@@ -21,6 +21,7 @@
     width: 50%;
     position: relative;
     left: -10%;
+    cursor: pointer;
     &:checked ~ .like__icon {
       opacity: 0;
       transition: all 0.3s ease-out;

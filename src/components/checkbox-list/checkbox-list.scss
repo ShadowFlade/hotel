@@ -32,6 +32,7 @@
     text-transform: uppercase;
     list-style-type: none;
     width: 100%;
+    cursor: pointer;
     &::before {
       content: url('./expand_more.jpg');
       width: 20px;

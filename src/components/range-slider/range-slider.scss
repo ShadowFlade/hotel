@@ -45,6 +45,12 @@
     color: rgba(31, 32, 65, 0.5);
     margin-top: rem(14);
   }
+  &__item {
+    cursor: pointer;
+    .ui-slider-handle {
+      cursor: pointer;
+    }
+  }
 }
 
 .ui-slider-handle {

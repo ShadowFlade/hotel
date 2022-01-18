@@ -12,8 +12,8 @@ const options={
   navTitles:{
     days:'MMMM  yyyy '
   },
-  prevHtml:'<img src="./assets/img/arrow_back.png"/>',
-  nextHtml:'<img src="./assets/img/arrow_forward.png"/>',
+  prevHtml:'<img src="./assets/img/arrow_back.jpg"/>',
+  nextHtml:'<img src="./assets/img/arrow_forward.jpg"/>',
   buttons:[clearButton,submitButton],
   visible:false,
   inline:false,

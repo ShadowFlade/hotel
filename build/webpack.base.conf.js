@@ -140,9 +140,13 @@ module.exports = {
       { from: `${PATHS.src}/fonts/`, to: `${PATHS.assets}fonts/` },
       { from: `${PATHS.src}/components/**/*.png`, to: `${PATHS.assets}img/[name].png` },
       { from: `${PATHS.src}/components/**/*.svg`, to: `${PATHS.assets}img/[name].svg` },
+      { from: `${PATHS.src}/components/**/*.jpg`, to: `${PATHS.assets}img/[name].jpg` },
+      { from: `${PATHS.src}/components/**/*.jpg`, to: `${PATHS.assets}img/[name].jpg` },
       { from: `${PATHS.src}/layout/*.svg`, to: `${PATHS.assets}img/[name].svg` },
       { from: `${PATHS.src}/pages/**/*.svg`, to: `${PATHS.assets}img/[name].svg` },
-      { from: `${PATHS.src}/pages/**/*.png`, to: `${PATHS.assets}img/[name].png` }
+      { from: `${PATHS.src}/pages/**/*.png`, to: `${PATHS.assets}img/[name].png` },
+      { from: `${PATHS.src}/pages/**/*.jpg`, to: `${PATHS.assets}img/[name].jpg` },
+      { from: `${PATHS.src}/pages/**/*.jpg`, to: `${PATHS.assets}img/[name].jpg` }
     ]),
 
   ].concat(htmlPlugins),

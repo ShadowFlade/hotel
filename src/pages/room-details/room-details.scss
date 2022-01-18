@@ -51,7 +51,9 @@
         margin-right: 0;
       }
       &--rules {
-        margin-right: 3.6rem;
+        display: flex;
+        padding-top: 1.3rem;
+        width: 100%;
       }
     }
     &__title {
@@ -69,7 +71,6 @@
     &__comments {
       max-width: rem(711);
       width: 98%;
-      margin-bottom: 1.95714rem;
       margin-top: 5px;
       .content__title {
         margin-bottom: 0.26rem;
@@ -88,7 +89,11 @@
       padding-right: 1rem;
     }
     .info-card {
-      max-width: 22.35714rem;
+      max-width: 24.35rem;
+      margin-right: 5rem;
+      &:last-child {
+        margin-right: 0;
+      }
       &__title {
         font-family: Montserrat;
         font-style: normal;

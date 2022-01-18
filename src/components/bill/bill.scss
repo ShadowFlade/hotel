@@ -25,7 +25,6 @@
   }
   &__number-sign {
     font-size: 1rem;
-    margin-right: 0.5rem;
   }
   &__room-number {
     margin-left: 4px;
@@ -53,24 +52,23 @@
     color: rgba(31, 32, 65, 0.5);
   }
   &__day {
-    font-size: 1.5em;
+    font-size: 0.85rem;
   }
   &__destination {
     display: flex;
-    margin-bottom: 1.4rem;
     margin-top: 1.5rem;
     .date-picker:not(:last-child) {
       margin-right: rem(15);
     }
   }
   &__guests {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   &__list {
     margin-bottom: 20px;
-    padding-top: 1.2rem;
     display: flex;
     flex-direction: column;
+    padding-top: 1.6rem;
   }
 
   &__row {
@@ -84,7 +82,7 @@
   }
   &__calculating-sum {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.28rem;
   }
 
   &__money {
@@ -128,7 +126,8 @@
     line-height: 23px;
     overflow: hidden;
     position: relative;
-    margin-top: 0.9rem;
+    margin-top: 1.4rem;
+    padding: 0 3px;
     &:after {
       color: rgba(31, 32, 65, 0.25);
       float: left;

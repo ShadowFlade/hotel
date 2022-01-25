@@ -37,7 +37,9 @@
     }
   }
   &__number {
-    font-size: rem(12);
+    position: absolute;
+    right: 27%;
+    font-size: 10px;
     font-weight: 400;
     color: rgba(31, 32, 65, 0.25);
     transition: all 0.3s linear;
@@ -45,11 +47,11 @@
   }
   &__icon {
     position: absolute;
-    top: 16%;
-    left: 8%;
+    left: 9%;
     color: rgba(31, 32, 65, 0.25);
     font-size: rem(12);
     opacity: 1;
+    top: 20%;
     &--active {
       opacity: 0;
       transition: 0.3s ease-out;
@@ -60,4 +62,11 @@
       font-size: rem(12);
     }
   }
+  .material-icons {
+    font-size: 10px;
+  }
 }
+
+// .like .like__icon {
+//   font-size: 10px;
+// }

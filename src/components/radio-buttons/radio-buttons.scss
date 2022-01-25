@@ -45,6 +45,7 @@
     color: $DarkShade50;
     transition: all 0.3s ease-out;
     cursor: pointer;
+    word-break: break-all;
     &:before {
       content: '';
       width: 20px;

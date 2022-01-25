@@ -12,6 +12,10 @@
   &__item {
     display: flex;
     position: relative;
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: none;
+    }
   }
   &__title {
     font-family: 'Montserrat';
@@ -20,9 +24,9 @@
     font-size: $mainFontSize;
     color: $DarkShade50;
     text-transform: capitalize;
-    padding-left: 13.5%;
+    // padding-left: 13.5%;
     padding-top: 0.11429rem;
-    height: rem(27);
+    // height: rem(27);
     position: relative;
     display: flex;
     cursor: pointer;
@@ -30,6 +34,7 @@
 
   &__text {
     padding-left: rem(9);
+    word-break: break-all;
   }
   &__input {
     opacity: 0;
@@ -56,7 +61,7 @@
   &-custom {
     top: 0;
     left: 0;
-    position: absolute;
+    position: relative;
     width: 40px;
     height: 20px;
     border: 1px solid rgba(31, 32, 65, 0.25);

@@ -52,6 +52,7 @@
       }
       &--rules {
         display: flex;
+        flex-wrap: wrap;
         padding-top: 1.3rem;
         width: 100%;
       }
@@ -91,6 +92,8 @@
     .info-card {
       max-width: 24.35rem;
       margin-right: 5rem;
+      flex: 1 1 40%;
+      margin-bottom: 1.5rem;
       &:last-child {
         margin-right: 0;
       }

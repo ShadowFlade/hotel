@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   width: 380px;
-  height: 512px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -68,7 +67,7 @@
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    padding-top: 1.6rem;
+    padding-top: 1.3rem;
   }
 
   &__row {
@@ -88,6 +87,7 @@
   &__money {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     min-width: 30%;
     float: right;
     text-align: right;
@@ -155,5 +155,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 29px;
   }
 }

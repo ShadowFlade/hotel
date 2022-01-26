@@ -17,7 +17,8 @@ mixin footer (options={specialElementPosition:3,lists:[{listTitle:'Навига�
             each link in list.list
               a.footer__item(href=link['mock-address'],title=link.title,class=`footer__item--${link.modif}`) #{link.text}
             if n===options.specialElementPosition  
-              +subsTextField({modif:'footer'})
+              form.footer__form
+                +subsTextField({modif:'footer'})
           - n++
     .footer__bottom
       .footer__bottom-container

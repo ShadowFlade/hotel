@@ -4,7 +4,7 @@ include ../dropdown/dropdown.pug
 include ../pay-button/pay-button.pug
 mixin bill
   .bill
-    .bill__content
+    form.bill__content
       .bill__header
         .bill__lux-number
           span.bill__number
@@ -40,5 +40,5 @@ mixin bill
           .bill__result Итого
           span.bill__money.bill__money--single 38 081₽
       .bill__footer
-        +payButton({label:'Забронировать',arrow:true}) 
+        +payButton({label:'Забронировать',arrow:true,type:'submit'}) 
 

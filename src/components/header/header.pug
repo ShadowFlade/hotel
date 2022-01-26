@@ -21,7 +21,7 @@ mixin header(options={username:'Юлий Цезарь',leftButtonLabel:'Войт
           .header__user 
             .header__username #{options.username}
         else
-          .header__auth
+          form.header__auth
             .header__small-button
               +button({modifs:['hollow'],text:options.leftButtonLabel})
             button.pay-button.pay-button--navigation #{options.rightButtonLabel}

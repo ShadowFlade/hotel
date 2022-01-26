@@ -37,6 +37,9 @@
     &:checked ~ .radio-buttons__title {
       color: $DarkShade75;
     }
+    &:focus + .radio-buttons__title {
+      color: #bc9cff;
+    }
   }
   &__title {
     /*скрыаем дефолтный радио и делаем кастомный сверху*/

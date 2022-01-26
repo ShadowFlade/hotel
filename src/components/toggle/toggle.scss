@@ -57,6 +57,9 @@
     &:checked ~ .toggles-custom {
       border-color: #bc9cff;
     }
+    &:focus ~ .toggles__text {
+      color: #bc9cff;
+    }
   }
   &-custom {
     top: 0;

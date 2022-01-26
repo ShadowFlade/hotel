@@ -2,11 +2,11 @@ mixin checkbox-button(options={text:'Можно курить'})
   label.checkbox-button
     if options.desc 
       .checkbox-button__info
-        input.checkbox-button__input(type='checkbox',tabindex='0')
+        input.checkbox-button__input(type="checkbox",tabindex="0")
         .checkbox-button__text.checkbox-button__text--rich #{options.text}
         .checkbox-button__desc #{options.desc}
         span.checkbox-button__custom
     else 
-      input.checkbox-button__input(type='checkbox')
+      input.checkbox-button__input(type="checkbox")
       .checkbox-button__text #{options.text}
       span.checkbox-button__custom

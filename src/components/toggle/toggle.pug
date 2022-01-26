@@ -4,7 +4,7 @@ mixin toggle(options={list:['Получать спецпредложения','f
       each val in options.list
         .toggles__item
           label.toggles__title(for=val) 
-            input.toggles__input(type='checkbox',name=val,id=val)
+            input.toggles__input(type="checkbox",name=val,id=val)
             span.toggles-custom
               span.toggles-custom__helper.toggles-custom__helper--passive
               span.toggles-custom__helper.toggles-custom__helper--active

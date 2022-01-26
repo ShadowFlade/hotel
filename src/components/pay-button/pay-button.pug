@@ -1,6 +1,6 @@
 include ../svg-arrow-right/svg-arrow-right.pug
 mixin payButton(options={label:'Buy!',type:'submit',arrow:true})
-	button.pay-button(type=options.type,tabindex='0') 
+	button.pay-button(type=options.type,tabindex="0") 
 		span.pay-button__text #{options.label}
 		if options.arrow
 			+svgArrowRight({color:'#FFFFFF',endColor:'#FFFFFF',modif:'pay-button'})

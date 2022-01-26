@@ -1,6 +1,6 @@
 mixin button(options={modifs:['full','submit'],text:'click me'})
   if options.modifs[0]=='hollow' 
-    .button--hollow-wrapper(tabindex='0')
-      button.button.button--hollow(class=`${options.modifs[1]}`,type=(options.type ? options.type : 'button'),tabindex='-1')  #{options.text}
+    .button--hollow-wrapper(tabindex="0")
+      button.button.button--hollow(class=`${options.modifs[1]}`,type=(options.type ? options.type : "button"),tabindex="-1")  #{options.text}
   else 
-    button.button(class=( `button--${options.modifs[0]} js-button--${options.modifs[0]} button--${options.modifs[1]} js-button--${options.modifs[1]}`),type=(options.type ? options.type : 'button')) #{options.text}
+    button.button(class=( `button--${options.modifs[0]} js-button--${options.modifs[0]} button--${options.modifs[1]} js-button--${options.modifs[1]}`),type=(options.type ? options.type : "button")) #{options.text}

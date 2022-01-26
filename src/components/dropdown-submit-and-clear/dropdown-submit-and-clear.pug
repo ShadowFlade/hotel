@@ -3,16 +3,16 @@ mixin dropdownSubmitAndClear(options={label:'dropdown',placeholder:'3 гостя
   .dropdown-accom.js-dropdown-accom(class=options.modif ? `dropdown-accom--${options.modif}` : false)
     label.dropdown-accom__label #{options.label}
     .dropdown-accom__input-box
-      input.dropdown-accom__input.js-dropdown-accom__input(type='text',placeholder=options.placeholder)
-      img.dropdown-accom__arrow(src='assets/img/expand_more.jpg',alt='')
+      input.dropdown-accom__input.js-dropdown-accom__input(type="text",placeholder=options.placeholder)
+      img.dropdown-accom__arrow(src="assets/img/expand_more.jpg",alt="")
     ul.dropdown-accom__ul.js-dropdown-accom__ul(style=options.option ==='none' ? {'height':'123px'}: false)
       each val in options.list
         li.dropdown-accom__option.js-dropdown-accom__option
           .dropdown-accom__variant #{val}
           .dropdown-accom__btn-group
-            button.dropdown-accom__button.dropdown-accom__button--prev(type='button') -
+            button.dropdown-accom__button.dropdown-accom__button--prev(type="button") -
             .dropdown-accom__info 2 
-            button.dropdown-accom__button.dropdown-accom__button--next(type='button') +
+            button.dropdown-accom__button.dropdown-accom__button--next(type="button") +
       if (options.option!=='none')
         li.dropdown-accom__footer
           if (options.option=='submit')

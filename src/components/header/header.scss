@@ -13,12 +13,28 @@
     justify-content: space-between;
     width: 100%;
     padding: 0 9.5% 0 9.72222%;
+    @media screen and (max-width: 1193px) {
+      & {
+        padding: 0 3%;
+      }
+    }
+    @media screen and (max-width: 1021px) {
+      & {
+        justify-content: space-between;
+        padding: 0 1%;
+      }
+    }
   }
   &__logo {
     height: 40px;
     width: 12%;
     display: flex;
     align-items: center;
+    @media screen and (max-width: 457px) {
+      & {
+        display: none;
+      }
+    }
   }
   &__interactive {
     display: flex;
@@ -31,6 +47,11 @@
     align-items: center;
     width: auto;
     padding-right: 0.45rem;
+    @media screen and (max-width: 1021px) {
+      & {
+        display: none;
+      }
+    }
   }
 
   &__items {
@@ -39,6 +60,11 @@
 
   &__user {
     display: flex;
+    @media screen and (max-width: 1021px) {
+      & {
+        order: 2;
+      }
+    }
   }
   &__username {
     font-family: 'Montserrat';
@@ -49,6 +75,11 @@
     color: rgba(31, 32, 65, 0.5);
     border-left: 1px solid rgba(31, 32, 65, 0.1);
     padding: rem(5) 0 0 rem(24);
+    @media screen and (max-width: 1021px) {
+      & {
+        padding: 0;
+      }
+    }
   }
   &__auth {
     display: flex;
@@ -65,38 +96,9 @@
 }
 
 //----------------------------------------------------ADAPTIVE
-@media screen and (max-width: 1193px) {
-  .header__content {
-    padding: 0 3%;
-  }
-}
+
 @media screen and (max-width: 1021px) {
   html {
     font-size: rem(12);
-  }
-  .header {
-    &__content {
-      justify-content: space-between;
-      padding: 0 1%;
-    }
-    &__navbar {
-      display: none;
-    }
-    &__user {
-      order: 2;
-    }
-    &__username {
-      padding: 0;
-    }
-  }
-
-  .burger {
-    display: block;
-    margin-right: 10px;
-  }
-}
-@media screen and (max-width: 457px) {
-  .logo {
-    display: none;
   }
 }

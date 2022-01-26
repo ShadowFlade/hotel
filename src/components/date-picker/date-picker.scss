@@ -5,6 +5,11 @@
   font-size: rem(11);
   width: 100%;
   position: relative;
+  @media screen and (max-width: 625px) {
+    & {
+      width: auto;
+    }
+  }
   &--small {
     width: 150px;
   }
@@ -19,6 +24,11 @@
   &__item {
     position: relative;
     width: 100%;
+    @media screen and (max-width: 625px) {
+      & {
+        width: auto;
+      }
+    }
     &::last-child {
       margin-right: 0;
     }

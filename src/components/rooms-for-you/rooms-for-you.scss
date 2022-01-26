@@ -11,6 +11,23 @@
   padding: 2.6714em 2.2em 0;
   max-width: 380px;
   min-height: 373px;
+  &--on-landing-page {
+    left: 9.7%;
+    position: relative;
+    top: 8.6%;
+    @media screen and (max-width: 400px) {
+      & {
+        left: 0;
+        top: 15%;
+      }
+    }
+    @media screen and (max-width: 350px) {
+      & {
+        left: 0;
+        top: 13%;
+      }
+    }
+  }
 
   &__title {
     @include big;
@@ -31,20 +48,5 @@
     align-items: center;
     justify-content: space-between;
     margin: 2.5rem 0 1.42857rem;
-  }
-}
-
-@media screen and (max-width: 1012px) {
-  .rooms-for-you {
-    .arrow-right {
-      display: none;
-    }
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .rooms-for-you {
-    left: 0;
-    top: 13%;
   }
 }

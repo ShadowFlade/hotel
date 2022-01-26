@@ -2,6 +2,11 @@
 
 .range-slider {
   width: rem(266);
+  @media screen and (max-width: 625px) {
+    & {
+      width: 100%;
+    }
+  }
   &__info {
     display: flex;
     justify-content: space-between;

@@ -2,8 +2,8 @@ include ../date-picker/date-picker.pug
 include ../svg-arrow-right/svg-arrow-right.pug
 include ../dropdown-submit-and-clear/dropdown-submit-and-clear.pug
 include ../pay-button/pay-button.pug
-mixin roomsForYouCard
-  .rooms-for-you
+mixin roomsForYouCard(options)
+  .rooms-for-you(class=(options.modif ? `rooms-for-you--${options.modif}` : false ))
     .rooms-for-you__content 
       .rooms-for-you__title Найдём номера под ваши пожелания
       form.rooms-for-you__form(action='')

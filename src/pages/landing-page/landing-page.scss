@@ -1,15 +1,14 @@
 @import '../../common/mixins.scss';
 .landing-page {
+  @media screen and (max-width: 400px) {
+    & {
+      overflow: hidden;
+    }
+  }
   &__bgp {
     position: relative;
     background-image: url('picture.jpg');
     height: 59.3rem;
-
-    .rooms-for-you {
-      left: 9.7%;
-      position: relative;
-      top: 8.6%;
-    }
   }
   &__caption {
     font-family: 'Montserrat';
@@ -23,15 +22,5 @@
     bottom: 2%;
     right: 9%;
     width: 20%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .landing-page .rooms-for-you {
-    left: 0;
-    top: 15%;
-  }
-  .landing-page {
-    overflow: hidden;
   }
 }

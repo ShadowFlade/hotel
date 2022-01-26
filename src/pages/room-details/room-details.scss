@@ -57,7 +57,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    padding: 5rem 9.7% 3.5% 9.6%;
+    padding: 5rem 9.7% 2% 9.6%;
     @media screen and (max-width: 1100px) {
       & {
         flex-wrap: wrap;
@@ -124,9 +124,9 @@
       padding-right: 1rem;
     }
     .info-card {
-      max-width: 24.35rem;
-      margin-right: 5rem;
       flex: 1 1 40%;
+      max-width: 24.35rem;
+      margin-right: 1.7rem;
       margin-bottom: 1.5rem;
       &:last-child {
         margin-right: 0;
@@ -211,6 +211,7 @@
     line-height: 23px;
     color: #1f2041;
     margin-bottom: rem(10);
+    padding-left: 6px;
   }
   &__capture {
     display: flex;

@@ -37,7 +37,7 @@
     line-height: 15px;
     text-transform: uppercase;
     color: #bc9cff;
-    margin-left: rem(3);
+    margin-left: 0.7rem;
   }
   &__room-price {
     vertical-align: bottom;
@@ -67,16 +67,16 @@
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    padding-top: 1.3rem;
+    padding-top: 1.5rem;
   }
 
   &__row {
     @include mainfont;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-    &:last-child {
-      margin-bottom: 0;
+    margin-top: 10px;
+    &:first-child {
+      margin-top: 0;
     }
   }
   &__calculating-sum {
@@ -126,7 +126,7 @@
     line-height: 23px;
     overflow: hidden;
     position: relative;
-    margin-top: 1.4rem;
+    margin-top: 2.2rem;
     padding: 0 3px;
     &:after {
       color: rgba(31, 32, 65, 0.25);

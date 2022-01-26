@@ -109,6 +109,7 @@ class DropdownAccom {
       const total = this.countTotal();
       this.total = total;
     }
+    return true;
   }
 
   countTotal() {

@@ -1,4 +1,3 @@
-/* eslint-disable fsd/jq-use-js-prefix-in-selector */
 import './range-slider.scss';
 $(function () {
   $('.js-range-slider__item').slider({

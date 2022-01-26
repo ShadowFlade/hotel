@@ -1,9 +1,9 @@
 import IMask from 'imask';
 import './masked-text-field.scss';
-const maskOptions= {
-  mask: Date,  
+const maskOptions = {
+  mask: Date,
 
-  pattern: 'd.`m.`Y', 
+  pattern: 'd.`m.`Y',
   blocks: {
     d: {
       mask: IMask.MaskedRange,
@@ -21,12 +21,14 @@ const maskOptions= {
       mask: IMask.MaskedRange,
       from: 1900,
       to: 2022,
-    }}}
-const handleContentLoaded=()=>{
-  const inputs=Array.from(document.getElementsByClassName('text-field__input'))
-  inputs.map(input=>{
-    const mask=IMask(input,maskOptions)
-  })
-}
+    }
+  }
+};
+const handleContentLoaded = ()=>{
+  const inputs = Array.from(document.getElementsByClassName('text-field__input'));
+  inputs.forEach(input=>{
+    const mask = IMask(input, maskOptions);
+  });
+};
 
-document.addEventListener('DOMContentLoaded',handleContentLoaded)
+document.addEventListener('DOMContentLoaded', handleContentLoaded);

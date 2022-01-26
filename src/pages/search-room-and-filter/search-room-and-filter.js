@@ -55,7 +55,6 @@ $(function () {
   });
 
   const onClick = function () {
-    // eslint-disable-next-line fsd/jq-use-js-prefix-in-selector
     $('.end-date').removeClass('in-range');
   };
   $('td').on('click', onClick);

@@ -63,6 +63,10 @@
       color: black;
       text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
     }
+    &:focus {
+      color: black;
+      text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+    }
   }
   &__bottom {
     display: flex;
@@ -87,6 +91,17 @@
   &__social {
     margin-right: 20px;
     cursor: pointer;
+    svg {
+      &:focus {
+        fill: red;
+      }
+    }
+    img {
+      &:focus {
+        fill: red;
+      }
+    }
+
     &:last-child {
       margin-right: 0;
     }

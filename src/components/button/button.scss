@@ -37,7 +37,8 @@
       height: 3.56667em;
       border-radius: 22px;
       font-size: 12px;
-      &:hover {
+      &:hover,
+      &:focus {
         opacity: 0.5;
       }
     }

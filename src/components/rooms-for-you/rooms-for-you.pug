@@ -6,10 +6,11 @@ mixin roomsForYouCard
   .rooms-for-you
     .rooms-for-you__content 
       .rooms-for-you__title Найдём номера под ваши пожелания
-      .rooms-for-you__destination
-        +datePicker({label:'Прибытие',placeholder:'ДД.ММ.ГГГГ',modif:'small'})
-        +datePicker({label:'Выезд',placeholder:'ДД.ММ.ГГГГ',modif:'small'})  
-      .rooms-for-you__guests
-        +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',list:['Взрослые','Дети','Младенцы'],option:'clear'})
-      .rooms-for-you__footer
-        +payButton({label:"подобрать номер",arrow:true})
+      form.rooms-for-you__form(action='')
+        .rooms-for-you__destination
+          +datePicker({label:'Прибытие',placeholder:'ДД.ММ.ГГГГ',modif:'small',tabIndex:'0'})
+          +datePicker({label:'Выезд',placeholder:'ДД.ММ.ГГГГ',modif:'small',tabIndex:'0'})  
+        .rooms-for-you__guests
+          +dropdownSubmitAndClear({label:'Гости',placeholder:'Сколько гостей',list:['Взрослые','Дети','Младенцы'],option:'clear'})
+        .rooms-for-you__footer
+          +payButton({label:"подобрать номер",type:'submit',arrow:true})

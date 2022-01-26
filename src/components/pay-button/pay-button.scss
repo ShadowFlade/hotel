@@ -19,9 +19,13 @@
   align-items: center;
   flex-wrap: wrap;
   cursor: pointer;
+  &:focus {
+    opacity: 0.5;
+  }
   &:hover {
     opacity: 0.5;
   }
+
   &--navigation {
     height: rem(34);
     width: 14rem;

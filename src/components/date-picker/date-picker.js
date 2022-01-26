@@ -1,6 +1,7 @@
 /* eslint-disable fsd/jq-use-js-prefix-in-selector */
 import './date-picker.scss';
 import 'daterangepicker';
+import '../air-datepicker/air-datepicker'
 $(function () {
 
   $('.js-card__datepicker').click();
@@ -9,7 +10,13 @@ $(function () {
   });
   $('.ui-datepicker-calendar a.ui-state-default').css('width', '20px');
   const prohibitTyping=(event)=>{
-    event.preventDefault()
+    console.log(event,event.char)
+    if(event.key==='Tab'){
+      return true
+    } else {
+      event.preventDefault()
+    }
+
   }
   $('.js-date-picker__input').on('keydown',prohibitTyping)
 });

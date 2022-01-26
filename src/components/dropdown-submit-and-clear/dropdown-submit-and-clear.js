@@ -1,7 +1,11 @@
 import DropdownAccom from './DropdownAccom';
 import './dropdown-submit-and-clear.scss';
 const prohibitTyping=(event)=>{
-  event.preventDefault()
+  if(event.key==='Tab'){
+    return true
+  } else {
+    event.preventDefault()
+  }
 }
 const handleContentLoaded = ()=>{
   const dropdowns = Array.from(document.getElementsByClassName('js-dropdown-accom'));

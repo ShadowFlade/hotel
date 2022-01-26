@@ -1,3 +1,4 @@
+import AirDatepicker from 'air-datepicker';
 import '../../components/bill/bill.js';
 import '../../components/sign-in/sign-in.js';
 import '../../components/registration/registration.js';
@@ -10,13 +11,13 @@ import '../../components/date-picker/date-picker.js';
 import './hotel-card.js';
 import './cards.scss';
 const handleContentLoaded = ()=>{
-  setTimeout(()=>{
-    const datepicker = document.getElementsByClassName('daterangepicker ltr show-calendar opensright move-up')[0];
-    datepicker.style.position = 'relative';
-    datepicker.style.top = '-6px';
-    datepicker.style.left = '0px';
-    const target = document.querySelector('.js-cards__datepicker');
-    target.appendChild(datepicker);
-  }, 0);
+  const datepickerItem=document.querySelector('.js-cards__datepicker')
+  const datepicker=new AirDatepicker(datepickerItem,{
+    inline:true,
+    visible:true,
+    position:'center'
+  })
+  datepicker.$datepicker.style.display='block'
+  datepicker.$datepicker.style.top='0%'
 };
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

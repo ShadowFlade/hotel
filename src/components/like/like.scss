@@ -47,19 +47,15 @@
   }
   &__icon {
     position: absolute;
-    left: 9%;
+    left: 5%;
+    top: 28%;
     color: rgba(31, 32, 65, 0.25);
     font-size: rem(12);
     opacity: 1;
-    top: 20%;
     &--active {
       opacity: 0;
       transition: 0.3s ease-out;
-      position: absolute;
-      top: 16%;
-      left: 8%;
       color: #bc9cff;
-      font-size: rem(12);
     }
   }
   .material-icons {

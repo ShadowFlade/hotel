@@ -5,6 +5,16 @@
     position: absolute;
     top: 30.5%;
     width: 380px;
+    @media screen and (max-width: 625px) {
+      & {
+        left: 17%;
+      }
+    }
+    @media screen and (max-width: 465px) {
+      & {
+        left: 1%;
+      }
+    }
   }
   &__bgp {
     background: url('./last-page.jpg');

@@ -9,6 +9,16 @@
     left: 37%;
     top: 3%;
     width: 380px;
+    @media screen and (max-width: 625px) {
+      & {
+        left: 17%;
+      }
+    }
+    @media screen and (max-width: 465px) {
+      & {
+        left: 1%;
+      }
+    }
   }
   &__footer {
     margin: rem(38) 0 rem(20);

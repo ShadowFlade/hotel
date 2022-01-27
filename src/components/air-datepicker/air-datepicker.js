@@ -8,32 +8,48 @@ const submitButton = {
   content: '<button class="button button--inline js-button--inline button--undefined js-button--undefined" type="button">Применить</button>'
 };
 const options = {
-  range: true,
+  range: false,
   navTitles: {
     days: 'MMMM  yyyy '
   },
   prevHtml: '<img src="./assets/img/arrow_back.jpg"/>',
   nextHtml: '<img src="./assets/img/arrow_forward.jpg"/>',
   buttons: [clearButton, submitButton],
-  visible: false,
-  inline: false,
+  inline: true,
 };
 
 const toggleDPVisibility = (datepicker)=>{
   if (datepicker.style.display === 'block') {
     datepicker.style.display = 'none';
+    return false
   } else {
     datepicker.style.display = 'block';
+    return true
   }
+
 };
-const handleContentLoaded = ()=>{
-  Array.from(document.getElementsByClassName('js-date-picker')).forEach(item=>{
-    const dp = new AirDatepicker((item), options);
+const bindCalendar=(parentElementClassname,inputClassname,options)=>{
+  const parentElement=document.querySelector(`.${parentElementClassname}`)
+  console.log('🚀 ~ bindCalendar ~ parentElement', parentElement)
+  const inputs=parentElement.querySelectorAll(`.${inputClassname}`)
+  inputs.forEach(item=>{
+    const dp=new AirDatepicker(item,options)
     dp.$datepicker.addEventListener('click', (event)=>event.stopPropagation());
     item.addEventListener('click', (e)=>{
       toggleDPVisibility(dp.$datepicker);
     });
-  });
-  return true;
-};
-document.addEventListener('DOMContentLoaded', handleContentLoaded);
+ return true
+  })
+}
+// const handleContentLoaded = ()=>{
+//   Array.from(document.getElementsByClassName('js-date-picker')).forEach(item=>{
+//     const dp = new AirDatepicker((item), options);
+//     dp.$datepicker.addEventListener('click', (event)=>event.stopPropagation());
+//     item.addEventListener('click', (e)=>{
+//       toggleDPVisibility(dp.$datepicker);
+//     });
+//   });
+//   return true;
+// };
+// document.addEventListener('DOMContentLoaded', handleContentLoaded);
+export  {options,bindCalendar}

@@ -3,9 +3,9 @@ import '../toggle/toggle.js';
 import '../button/button.js';
 import '../radio-buttons/radio-buttons.js';
 import './registration.scss';
-const birthdayOptions = {
-  mask: Date,
-  pattern: 'd.`m.`Y',
+const birthdayOptions= {
+  mask: Date,  
+  pattern: 'd.`m.`Y', 
   blocks: {
     d: {
       mask: IMask.MaskedRange,
@@ -23,13 +23,13 @@ const birthdayOptions = {
       mask: IMask.MaskedRange,
       from: 1900,
       to: 2022,
+    }}}
+
+
+    const handleContentLoaded=()=>{
+      const birthdayItem=document.querySelector('.js-registration-card__input--with-birthday')
+      const mask=IMask(birthdayItem,birthdayOptions)
     }
-  }
-};
+    
+    document.addEventListener('DOMContentLoaded',handleContentLoaded)
 
-const handleContentLoaded = ()=>{
-  const birthdayItem = document.querySelector('.js-registration-card__input--with-birthday');
-  const mask = IMask(birthdayItem, birthdayOptions);
-};
-
-document.addEventListener('DOMContentLoaded', handleContentLoaded);

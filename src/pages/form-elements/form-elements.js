@@ -19,70 +19,10 @@ import '../../components/subscription-text-field/subscription-text-field.js';
 import '../../components/text-field/text-field.js';
 import '../../components/toggle/toggle.js';
 import '../../components/air-datepicker/air-datepicker.js';
-
+import { options,bindCalendar } from '../../components/air-datepicker/air-datepicker.js';
 import '../../components/hotel-card/hotel-card.js';
-
 import './form-elements.scss';
-// $(function () {
-//   const $filterDateDropdown = $('.date-picker--single').find('.date-picker__item');
-//   $filterDateDropdown.daterangepicker({
-//     parentEl:$filterDateDropdown.parent(),
-//     maxSpan: {
-//       days: 7,
-//     },
-//     locale: {
-//       format: 'MM/DD/YYYY',
-//       separator: ' - ',
-//       applyLabel: 'применить',
-//       cancelLabel: 'очистить',
-//       fromLabel: 'From',
-//       toLabel: 'To',
-//       customRangeLabel: 'Custom',
-//       weekLabel: 'W',
-//       daysOfWeek: ['Вс', 'Пон', 'Вт', 'Ср', 'Чт', 'Пятн', 'Суб'],
-//       monthNames: [
-//         'Январь',
-//         'Февраль',
-//         'Март',
-//         'Апрель',
-//         'Май',
-//         'Июнь',
-//         'Июль',
-//         'Август',
-//         'Сентябрь',
-//         'Октябрь',
-//         'Ноябрь',
-//         'Декабрь',
-//       ],
-//       firstDay: 1,
-//     },
-//     linkedCalendars: false,
-//     startDate: '02/04/2021',
-//     endDate: '02/11/2021',
-//   });
-//   const onApply = function (ev, picker) {
-//     var thisMonth = moment()
-//       .locale('ru')
-//       .format('MMMM');
-
-//     if (thisMonth[thisMonth.length - 1] === 'т') {
-//       thisMonth += 'а';
-//     } else if (thisMonth[thisMonth.length - 1] !== 'т') {
-//       thisMonth = thisMonth.slice(0, 6) + 'я';
-//     }
-
-//     $(this).val(
-//       picker.startDate.format('D ' + thisMonth)
-//         + ' - '
-//         + picker.endDate.format('D ' + thisMonth)
-//     );
-//   };
-//   $filterDateDropdown.on('apply.daterangepicker', onApply);
-
-//   // eslint-disable-next-line fsd/jq-use-js-prefix-in-selector
-//   $('.daterangepicker').css('top', '20%');
-//   const onHide = function () {
-//     $('.js-card__datepicker').click();
-//   };
-//   $('.js-card__datepicker').on('hide.daterangepicker', onHide);
-// });
+const handleContentLoaded=()=>{
+  bindCalendar('form-elements__column','js-date-picker__input',options)
+}
+document.addEventListener('DOMContentLoaded',handleContentLoaded)

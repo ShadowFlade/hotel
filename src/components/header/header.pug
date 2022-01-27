@@ -5,9 +5,10 @@ include ../navbar/navbar.pug
 mixin header(options={username:'Юлий Цезарь',leftButtonLabel:'Войти',rightButtonLabel:'Зарегестрироваться'})
   header.header
     .header__content
-      .header__logo
+      .header__logo-and-burger
         +burgerMenu({list:[{name:'О с',arrow:'false'},{name:'Услуги',arrow:'true'},{name:'Вакансии',arrow:'false'},{name:'Новости',arrow:'false'},{name:'Соглашения',arrow:'true'}]})
-        img.logo(src="assets/img/fsdlogo.svg",alt="company logo") 
+        .header__logo
+          img.logo(src="assets/img/fsdlogo.svg",alt="company logo") 
       .header__interactive
         .header__navbar 
           .header__items

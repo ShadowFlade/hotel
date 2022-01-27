@@ -21,23 +21,21 @@ const options = {
 const toggleDPVisibility = (datepicker)=>{
   if (datepicker.style.display === 'block') {
     datepicker.style.display = 'none';
-    return false
-  } else {
-    datepicker.style.display = 'block';
-    return true
+    return false;
   }
-
+  datepicker.style.display = 'block';
+  return true;
 };
-const bindCalendar=(parentElementClassname,inputClassname,options)=>{
-  const parentElement=document.querySelector(`.${parentElementClassname}`)
-  const inputs=parentElement.querySelectorAll(`.${inputClassname}`)
+const bindCalendar = (parentElementClassname, inputClassname, optionsForCalendar)=>{
+  const parentElement = document.querySelector(`.${parentElementClassname}`);
+  const inputs = parentElement.querySelectorAll(`.${inputClassname}`);
   inputs.forEach(item=>{
-    const dp=new AirDatepicker(item,options)
+    const dp = new AirDatepicker(item, optionsForCalendar);
     dp.$datepicker.addEventListener('click', (event)=>event.stopPropagation());
     item.addEventListener('click', (e)=>{
       toggleDPVisibility(dp.$datepicker);
     });
- return true
-  })
-}
-export  {options,bindCalendar}
+    return true;
+  });
+};
+export { options, bindCalendar };

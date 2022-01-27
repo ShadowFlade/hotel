@@ -5,7 +5,7 @@ const prohibitTyping = (event)=>{
     return true;
   }
   event.preventDefault();
-  return true
+  return true;
 };
 const handleContentLoaded = ()=>{
   const dropdowns = Array.from(document.getElementsByClassName('js-dropdown-accom'));

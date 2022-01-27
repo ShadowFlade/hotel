@@ -19,10 +19,10 @@ import '../../components/subscription-text-field/subscription-text-field.js';
 import '../../components/text-field/text-field.js';
 import '../../components/toggle/toggle.js';
 import '../../components/air-datepicker/air-datepicker.js';
-import { options,bindCalendar } from '../../components/air-datepicker/air-datepicker.js';
+import { options, bindCalendar } from '../../components/air-datepicker/air-datepicker.js';
 import '../../components/hotel-card/hotel-card.js';
 import './form-elements.scss';
-const handleContentLoaded=()=>{
-  bindCalendar('form-elements__column','js-date-picker__input',options)
-}
-document.addEventListener('DOMContentLoaded',handleContentLoaded)
+const handleContentLoaded = ()=>{
+  bindCalendar('form-elements__column', 'js-date-picker__input', options);
+};
+document.addEventListener('DOMContentLoaded', handleContentLoaded);

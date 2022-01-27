@@ -8,11 +8,8 @@ $(function () {
   });
   $('.ui-datepicker-calendar a.ui-state-default').css('width', '20px');
   const prohibitTyping = (event)=>{
-    console.log(event, event.char);
     if (event.key === 'Tab') {
       return true;
-    } else if (event.key=='c' && event.ctrlKey && event.shiftKey) {
-      return true
     }
     event.preventDefault();
     return true;

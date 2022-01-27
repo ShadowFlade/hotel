@@ -2,8 +2,8 @@ include ../date-picker/date-picker.pug
 include ../dropdown-submit-and-clear/dropdown-submit-and-clear.pug
 include ../dropdown/dropdown.pug
 include ../pay-button/pay-button.pug
-mixin bill
-  .bill.js-bill
+mixin bill(options)
+  .bill.js-bill(class=(options.modif ?`bill--${options.modif} js-bill--${options.modif}`: false))
     form.bill__content
       .bill__header
         .bill__lux-number

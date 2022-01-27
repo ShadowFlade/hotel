@@ -21,36 +21,37 @@
     &__item {
       height: 50%;
       width: 100%;
-      @media screen and (max-width: 765px) {
-        & {
-          width: 100%;
-        }
-      }
+
       &--big {
         height: auto;
       }
-    }
-    &__pic {
       @media screen and (max-width: 765px) {
         & {
           width: 100%;
         }
       }
+    }
+    &__pic {
       display: block;
       max-width: 100%;
       max-height: 100%;
       height: 100%;
-    }
-    &__column {
       @media screen and (max-width: 765px) {
         & {
           width: 100%;
         }
       }
+    }
+    &__column {
       display: flex;
       flex-wrap: wrap;
       width: 50%;
       height: 100%;
+      @media screen and (max-width: 765px) {
+        & {
+          width: 100%;
+        }
+      }
     }
   }
   .content {

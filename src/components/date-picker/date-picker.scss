@@ -5,16 +5,17 @@
   font-size: rem(11);
   width: 100%;
   position: relative;
-  @media screen and (max-width: 625px) {
-    & {
-      width: auto;
-    }
-  }
+
   &--small {
     width: 150px;
   }
   &--single {
     width: 266px;
+  }
+  @media screen and (max-width: 625px) {
+    & {
+      width: auto;
+    }
   }
   &__label {
     margin-bottom: rem(4);
@@ -24,13 +25,14 @@
   &__item {
     position: relative;
     width: 100%;
+
+    &::last-child {
+      margin-right: 0;
+    }
     @media screen and (max-width: 625px) {
       & {
         width: auto;
       }
-    }
-    &::last-child {
-      margin-right: 0;
     }
   }
   &__input {

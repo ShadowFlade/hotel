@@ -10,7 +10,7 @@ mixin footer (options={specialElementPosition:3,lists:[{listTitle:'Навига�
           .footer__logo
             img(src="assets/img/fsdlogo.svg",alt="company's logo")
           .footer__info 
-          p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+          p.footer__review Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
         each list in options.lists
           .footer__list
             .footer__item.footer__item--section #{list.listTitle}

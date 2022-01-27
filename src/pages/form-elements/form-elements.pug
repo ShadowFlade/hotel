@@ -58,10 +58,12 @@ block content
 			.form-elements__item
 				+checkboxButtons
 			.form-elements__item
-				span.radio-buttons__label RADIO BUTTONS
+				h6.radio-buttons__label RADIO BUTTONS
 			.form-elements__item
 
 				+radioButtons({list:['Мужчина','Женщина'],name:'gender'})    
+				+radioButtons({list:['Мужчина','Женщина'],name:'smth'})    
+
 	
 			.form-elements__item
 				.toggle__label TOGGLE
@@ -74,7 +76,7 @@ block content
 						+like({numberOfLikes:'12',id:'like'})
 			.form-elements__item
 				.rate__buttons
-					span.rate__label RATE BUTTON
+					h6.rate__label RATE BUTTON
 					.rate__items
 						+rateButton(5)
 						+rateButton(5)
@@ -93,7 +95,7 @@ block content
 				.range-slider__box
 					+rangeSlider('RANGE SLIDER')
 			.form-elements__item
-				span.buttons__label buttons
+				h6.buttons__label buttons
 				.buttons
 					.buttons__box
 						+button({modifs:['full'],text:'click me'})

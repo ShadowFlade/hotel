@@ -13,16 +13,16 @@ mixin registrationCard
         .registration-card__item.registration-card__item--radio
           +radioButtons({list:['Мужчина','Женщина'],name:'gender'})
         .registration-card__item
-          label.registration-card__label Дата рождения
+          h6.registration-card__label Дата рождения
           input.registration-card__input.js-registration-card__input.registration-card__input--with-birthday.js-registration-card__input--with-birthday(type="text",placeholder="ДД.ММ.ГГГГ")
         .registration-card__item
-          label.registration-card__label Данные для входа в сервис
+          h6.registration-card__label Данные для входа в сервис
           input.registration-card__input.js-registration-card__input.registration-card__input--with-email.js-registration-card__input--with-email(type="text",placeholder="Email")
           input.registration-card__input(type="password",placeholder="Пароль")
           +toggle({list:['Получать спецпредложения']})
         .registration-card__item
           +payButton({label:'Зарегестрироваться',arrow:true,type:'submit'})
       .registration-card__footer
-        span.registration-card__account-availability Уже есть аккаунт на Toxin
+        p.registration-card__account-availability Уже есть аккаунт на Toxin
         .registration-card__button
           +button({text:"Войти",modifs:['hollow']})

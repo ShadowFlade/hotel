@@ -10,11 +10,6 @@ $cell-length: 40px;
     top: 158%;
     display: none;
     box-sizing: border-box;
-    @media screen {
-      & {
-        left: 0;
-      }
-    }
   }
   &-cell {
     width: $cell-length;

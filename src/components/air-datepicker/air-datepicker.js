@@ -30,7 +30,6 @@ const toggleDPVisibility = (datepicker)=>{
 };
 const bindCalendar=(parentElementClassname,inputClassname,options)=>{
   const parentElement=document.querySelector(`.${parentElementClassname}`)
-  console.log('🚀 ~ bindCalendar ~ parentElement', parentElement)
   const inputs=parentElement.querySelectorAll(`.${inputClassname}`)
   inputs.forEach(item=>{
     const dp=new AirDatepicker(item,options)
@@ -41,15 +40,4 @@ const bindCalendar=(parentElementClassname,inputClassname,options)=>{
  return true
   })
 }
-// const handleContentLoaded = ()=>{
-//   Array.from(document.getElementsByClassName('js-date-picker')).forEach(item=>{
-//     const dp = new AirDatepicker((item), options);
-//     dp.$datepicker.addEventListener('click', (event)=>event.stopPropagation());
-//     item.addEventListener('click', (e)=>{
-//       toggleDPVisibility(dp.$datepicker);
-//     });
-//   });
-//   return true;
-// };
-// document.addEventListener('DOMContentLoaded', handleContentLoaded);
 export  {options,bindCalendar}

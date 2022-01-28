@@ -163,8 +163,10 @@
     }
   }
   &__copyright {
+    display: flex;
     small {
       font-size: 1rem;
+      margin: 0 auto;
       @media screen and (max-width: 768px) {
         & {
           text-align: center;

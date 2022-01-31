@@ -2,6 +2,7 @@
 @import '../../common/mixins.scss';
 .room-details {
   overflow: hidden;
+  flex: 1 0 auto;
   .gallery {
     width: 102%;
     &__pictures {

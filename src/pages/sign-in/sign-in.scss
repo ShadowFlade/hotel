@@ -1,5 +1,6 @@
 @import '../../common/mixins.scss';
 .sign-in {
+  flex: 1 0 auto;
   &__auth {
     left: 37.5%;
     position: absolute;

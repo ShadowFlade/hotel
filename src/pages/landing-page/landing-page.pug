@@ -1,12 +1,12 @@
 extends ../../layout/landing/landing
+block variables
+  - var title = 'landing page';
+  - var description = 'landing page';
+  - var page='landing-page'
 include ../../components/header/header.pug
 include ../../components/footer/footer.pug
 include ../../components/rooms-for-you/rooms-for-you.pug
 
-block variables
-  - var title = 'landing page';
-  - var description = 'landing page';
-  - var pageClass='landing-page'
 block content
   main 
     .landing-page__bgp 

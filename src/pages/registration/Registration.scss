@@ -1,5 +1,6 @@
 @import '../../common/mixins.scss';
 .registration {
+  flex: 1 0 auto;
   &__bgp {
     height: 49rem;
     background: url('./last-page.jpg');

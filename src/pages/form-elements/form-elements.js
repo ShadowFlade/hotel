@@ -23,6 +23,8 @@ import { options, bindCalendar } from '../../components/air-datepicker/air-datep
 import '../../components/hotel-card/hotel-card.js';
 import './form-elements.scss';
 const handleContentLoaded = ()=>{
-  bindCalendar('form-elements__column', 'js-date-picker__input', options);
+  bindCalendar('form-elements__column', 'js-date-picker__input', options,'js-date-picker__input--range');
+  bindCalendar('form-elements__column', 'js-date-picker__input--range', {...options,range:true});
+
 };
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

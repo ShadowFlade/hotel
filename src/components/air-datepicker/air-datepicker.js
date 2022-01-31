@@ -12,6 +12,7 @@ const options = {
   navTitles: {
     days: 'MMMM  yyyy '
   },
+  multipleDatesSeparator:' - ',
   prevHtml: '<img src="./assets/img/arrow_back.jpg"/>',
   nextHtml: '<img src="./assets/img/arrow_forward.jpg"/>',
   buttons: [clearButton, submitButton],
@@ -26,9 +27,9 @@ const toggleDPVisibility = (datepicker)=>{
   datepicker.style.display = 'block';
   return true;
 };
-const bindCalendar = (parentElementClassname, inputClassname, optionsForCalendar)=>{
+const bindCalendar = (parentElementClassname, inputClassname, optionsForCalendar,elementToIgnore)=>{
   const parentElement = document.querySelector(`.${parentElementClassname}`);
-  const inputs = parentElement.querySelectorAll(`.${inputClassname}`);
+  const inputs = Array.from(parentElement.querySelectorAll(`.${inputClassname}`)).filter(item=>!item.className.includes(elementToIgnore));
   inputs.forEach(item=>{
     const dp = new AirDatepicker(item, optionsForCalendar);
     dp.$datepicker.addEventListener('click', (event)=>event.stopPropagation());

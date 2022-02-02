@@ -3,9 +3,9 @@ mixin checkboxList(options={label:'expandable checkbox list',list:['Завтра
   .checkbox-ul
     details.checkbox-ul__content
       summary.checkbox-ul__label #{options.label}
-      .checkbox-ul__list
+      ul.checkbox-ul__list
         each val in options.list
-          .checkbox-ul__item
+          li.checkbox-ul__item
             +checkbox-button({text:val})
 
 

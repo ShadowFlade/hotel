@@ -4,6 +4,6 @@ mixin checkboxButtons(options={label:'Правила дома',list:['Можно
     span.checkbox-buttons__label #{options.label}
     ul.checkbox-buttons__list
       each val in options.list
-        li.checkbox-button__option
+        li.checkbox-buttons__option
           +checkbox-button({text:val})
 

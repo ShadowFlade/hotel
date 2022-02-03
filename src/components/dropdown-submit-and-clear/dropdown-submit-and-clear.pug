@@ -5,21 +5,22 @@ mixin dropdownSubmitAndClear(options={label:'dropdown',placeholder:'3 гостя
     .dropdown-accom__input-box
       input.dropdown-accom__input.js-dropdown-accom__input(type="text",placeholder=options.placeholder)
       img.dropdown-accom__arrow(src="assets/img/expand_more.jpg",alt="")
-    ul.dropdown-accom__ul.js-dropdown-accom__ul(style=options.option ==='none' ? {'height':'123px'}: false)
-      each val in options.list
-        li.dropdown-accom__option.js-dropdown-accom__option
-          .dropdown-accom__variant #{val}
-          .dropdown-accom__btn-group
-            button.dropdown-accom__button.dropdown-accom__button--prev(type="button") -
-            .dropdown-accom__info 2 
-            button.dropdown-accom__button.dropdown-accom__button--next(type="button") +
-      if (options.option!=='none')
-        li.dropdown-accom__footer
-          if (options.option=='submit')
+    ul.dropdown-accom__ul.js-dropdown-accom__ul(style=options.option ==='none' ? {'height':'118px'}: false)
+      .dropdown-accom__content
+        each val in options.list
+          li.dropdown-accom__option.js-dropdown-accom__option
+            .dropdown-accom__variant #{val}
+            .dropdown-accom__btn-group(class=options.modif ? `dropdown-accom__btn-group--${options.modif}` : false )
+              button.dropdown-accom__button.dropdown-accom__button--prev(type="button") -
+              .dropdown-accom__info 2 
+              button.dropdown-accom__button.dropdown-accom__button--next(type="button") +
+        if (options.option==='submit')
+          .dropdown-accom__footer.dropdown-accom__footer--single
             .dropdown-accom__submit
               +button({modifs:['inline'],type:'submit',text:'Применить'})
-          else if (options.option=='clear')
-          .dropdown-accom__clear.js-dropdown-accom__clear
-            +button({modifs:['inline','submit'],text:'Очистить'})
-          .dropdown-accom__submit.js-dropdown-accom__submit
-            +button({modifs:['inline','clear'],type:'submit',text:'Применить'})
+        else if options.option==='clear'
+          .dropdown-accom__footer
+            .dropdown-accom__clear.js-dropdown-accom__clear
+              +button({modifs:['inline','submit'],text:'Очистить'})
+            .dropdown-accom__submit.js-dropdown-accom__submit
+              +button({modifs:['inline','clear'],type:'submit',text:'Применить'})

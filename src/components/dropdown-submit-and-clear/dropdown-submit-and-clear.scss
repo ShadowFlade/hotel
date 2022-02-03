@@ -31,9 +31,9 @@
     @include input-arrow();
   }
   &__ul {
+    display: none;
     position: absolute;
     bottom: 0;
-    left: -1px;
     background: #000;
     border: 1px solid rgba(31, 32, 65, 0.5);
     top: 100%;
@@ -43,23 +43,31 @@
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px;
     z-index: 10;
-    height: 163px;
-    display: none;
+    height: 158px;
+    border-radius: 3px;
+  }
+  &__content {
+    padding: 1px 6px 0 14px;
   }
   &__option {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
-    height: 40px;
     align-items: center;
-    padding: 5px 10px;
+    margin-top: 7px;
+    &:first-child {
+      margin-top: 3px;
+    }
   }
   &__btn-group {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 41%;
+    width: 31%;
+    &--small {
+      width: 38%;
+    }
   }
   &__button {
     width: 10%;
@@ -74,24 +82,25 @@
       margin-right: 0;
     }
   }
+  &__info {
+    font-size: 12px;
+  }
   &__footer {
     width: 100%;
-    height: 20%;
+    height: 23%;
     z-index: 2;
     background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    .button {
-      padding: 0 7px;
+    padding-top: 1.5rem;
+    &--single {
+      justify-content: flex-end;
     }
   }
-  &__submit {
-    float: right;
-    padding: rem(19) rem(13);
-  }
-  &__clear {
-    padding: rem(19) rem(13);
-  }
+  // &__submit,
+  // &__clear {
+  //   padding: 1.57rem 0.35rem 0 0.43rem;
+  // }
 }

@@ -1,6 +1,8 @@
 include  ../rate-button/rate-button.pug
 mixin hotelCard(options={pictures: ['assets/img/hotel1.jpg','assets/img/hotel2.jpg'],luxNumber:888,price:'9900₽',stars:'5',numberOfReviews:145,lux:true})
   .hotel-card
+    //- img.hotel-card__arrow.hotel-card__arrow--prev(src='./hotel-arrow.jpg')
+    //- img.hotel-card__arrow.hotel-card__arrow--next(src='./hotel-arrow.jpg')
     .hotel-card__slider.js-hotel-card__slider
       each pic in options.pictures
         img.hotel-card__pic(src=pic,alt="interior of the room")
@@ -16,7 +18,7 @@ mixin hotelCard(options={pictures: ['assets/img/hotel1.jpg','assets/img/hotel2.j
           span.day  в сутки
       .hotel-card__row
         span.hotel-card__stars
-          +rateButton(4)
+          +rateButton(5)
         span.hotel-card__numerical-info
           b #{options.numberOfReviews} 
           |Отзывов

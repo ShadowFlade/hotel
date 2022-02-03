@@ -23,5 +23,8 @@
   }
   &__option {
     margin-bottom: 0.9rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

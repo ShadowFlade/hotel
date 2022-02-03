@@ -1,5 +1,5 @@
 include ../svg-arrow-right/svg-arrow-right.pug
-mixin pagination(options={numberOfFirstPages:3,lastPage:15})
+mixin pagination(options)
   .pagination
     .pagination__pages
       - let n=1
@@ -10,5 +10,5 @@ mixin pagination(options={numberOfFirstPages:3,lastPage:15})
       .pagination__item.pagination__item--last-page.js-pagination__item #{options.lastPage}
       button.pagination__arrow-item
         +svgArrowRight({color:'#FFFFFF',endColor:'#FFFFFF',modif:'in-pagination'})
-    .pagination__info 1 – 12 из 100+ вариантов аренды
+    .pagination__info 1 – #{options.itemsOnPage} из #{options.itemsTotal} вариантов аренды
 

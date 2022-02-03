@@ -1,4 +1,4 @@
-mixin textField
+mixin textField(options)
 	.text-field
-		label.text-field__label text field
-			input.text-field__input(type="text",placeholder="Email")
+		label.text-field__label #{options.label}
+			input.text-field__input(type=options.type,placeholder=options.placeholder)

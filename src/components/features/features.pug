@@ -4,7 +4,7 @@ mixin features(options={features:[{pic:'assets/img/smile.png',feature:'Комф�
       each feature in options.features 
         li.features__item
           .features__pic 
-            img(src=feature.pic,alt="")
+            img(src=feature.pic,alt=feature.alt)
           .features__info
             .features__label #{feature.feature}
             .features__desc #{feature.desc}

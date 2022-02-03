@@ -19,7 +19,7 @@ mixin footer(options)
                 a #{link.text}
             if n===options.specialElementPosition  
               form.footer__form
-                +subsTextField({modif:'in-footer'})
+                +subsTextField({modif:'in-footer',placeholder:'Email'})
           - n++
     .footer__bottom
       .footer__bottom-container

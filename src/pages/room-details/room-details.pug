@@ -28,7 +28,7 @@ block content
           .content__item 
             .content__title Сведения о номере
             .features__box
-              +features({features:[{pic:'assets/img/smile.png',feature:'Комфорт',desc:'Шумопоглощающие стены'},{pic:'assets/img/comfort2.png',feature:'Удобство',desc:'Окно в каждой из спален'},{pic:'assets/img/whatshot.png',feature:'Уют',desc:'Номер оснащен камином'}]})
+              +features({features:[{pic:'assets/img/smile.png',feature:'Комфорт',desc:'Шумопоглощающие стены',alt:''},{pic:'assets/img/comfort2.png',feature:'Удобство',desc:'Окно в каждой из спален',alt:''},{pic:'assets/img/whatshot.png',feature:'Уют',desc:'Номер оснащен камином',alt:''}]})
           .content__item 
             .graph
               .graph__title Впечатления от номера
@@ -73,6 +73,6 @@ text:'Великолепный матрас на кровати в основн�
                 .info-card__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
         .content__side 
           .content__item 
-            +bill({modif:'on-room-details'})
+            +bill({modif:'on-room-details',roomNumber:888,isLux:true,perDay:'9 990',numberOfDays:4,sale:'2 179'})
    
    

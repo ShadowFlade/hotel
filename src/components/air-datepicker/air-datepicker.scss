@@ -22,6 +22,9 @@ $cell-length: 40px;
         color: rgba(31, 32, 65, 0.25);
       }
       &.-selected- {
+        background-image: linear-gradient(180deg, #bc9cff, #8ba4f9);
+      }
+      &.-current- {
         background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
       }
     }

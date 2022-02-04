@@ -12,6 +12,7 @@ import '../../components/date-picker/date-picker.js';
 import '../../components/checkbox-buttons/checkbox-buttons.js';
 import { options, bindCalendar } from '../../components/air-datepicker/air-datepicker';
 import './search-room-and-filter.scss';
+
 const handleContentLoaded = ()=>{
   bindCalendar('js-date-picker__item', 'js-date-picker__input', { ...options, range: true,dateFormat: 'dd MMM'});
 };

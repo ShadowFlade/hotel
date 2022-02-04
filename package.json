@@ -4,7 +4,7 @@
   "description": "My template + pug",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack serve --open --config ./build/webpack.dev.conf.js",
+    "dev": "cross-env NODE_ENV=development webpack serve --open --config ./build/webpack.dev.conf.js ",
     "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.build.conf.js",
     "deploy": "gh-pages -d dist",
     "lint": "eslint --debug src/",

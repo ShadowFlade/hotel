@@ -8,12 +8,21 @@ function position({ $datepicker, $target, $pointer }) {
   $datepicker.style.left = window.scrollX + roomsForYouCoords.left;
 }
 
-const onShow = ()=>{
-
-};
+const renderToAnotherInput=({datepicker,parent})=>{
+  const parentItem=document.querySelector(`.${parent}`)
+  const inputs=Array.from(parentItem.querySelectorAll('.js-date-picker__input'))
+  const dates=datepicker.selectedDates
+  const formattedDates=dates.map(date=>datepicker.formatDate(date,'dd.MM.yyyy'))  
+  inputs[0].value=formattedDates[0]
+  if(formattedDates[1]){
+    inputs[1].value=formattedDates[1]
+  }
+}
 const handleContentLoaded = ()=>{
   const newOptions = {
     ...options,
+    range:true,
+
     classes: 'air-datepicker--rooms-for-you',
     position({ $datepicker, $target, $pointer }) {
       let coords = $target.getBoundingClientRect();
@@ -27,8 +36,13 @@ const handleContentLoaded = ()=>{
       $datepicker.style.top = `${Number(top) + 200}px`;
 
       $pointer.style.display = 'none';
+    },
+    onSelect:({date,formattedDate,datepicker})=>{
+      renderToAnotherInput({datepicker,parent:'rooms-for-you'})
     }
+  }
+  bindCalendar('js-rooms-for-you',document.querySelector('.rooms-for-you .js-date-picker__input'), newOptions);
+
   };
-  bindCalendar('js-rooms-for-you', 'js-date-picker__input', newOptions);
-};
+
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

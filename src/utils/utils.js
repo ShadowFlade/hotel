@@ -1,3 +1,4 @@
+
 const isVisible = elem => !!elem && !!(elem.offsetWidth || elem.offsetHeight
   || elem.getClientRects().length);
 
@@ -10,7 +11,11 @@ const bindOutsideClickDetection = (clickElementName, popElementName)=>{
   } else if (typeof clickElementName === 'object') {
     clickElement = clickElementName;
   }
-  popElement = clickElement.querySelector(popElementName);
+  if (typeof popElementName === 'string') {
+    popElement = document.querySelector(popElementName);
+  } else if (typeof popElementName === 'object') {
+    popElement = popElementName;
+  }
 
   const cat = (e)=>{
     const isClickInside = clickElement.contains(e.target)
@@ -32,4 +37,15 @@ const bindOutsideClickDetection = (clickElementName, popElementName)=>{
   clickElement.addEventListener('click', handleElementClicked);
 };
 
-export { isVisible, bindOutsideClickDetection };
+const getDOMElement=(element,isSingle)=>{
+  console.log(typeof element)
+  if(typeof element==='object'){
+    return [element]
+  } else if (typeof element==='string' && !isSingle){
+    return Array.from(document.getElementsByClassName(element))
+  } else if (typeof element==='string' && isSingle){
+    return document.querySelector(element)
+  }
+}
+
+export { isVisible, bindOutsideClickDetection,getDOMElement };

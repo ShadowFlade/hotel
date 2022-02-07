@@ -8,7 +8,7 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  padding: 2.85714em 1.9286em 0;
+  padding: 2.58714em 1.9286em 0;
   &--on-room-details {
     margin: 0 auto;
   }
@@ -45,6 +45,8 @@
   &__room-price {
     vertical-align: bottom;
     font-size: 0.5rem;
+    padding-bottom: 0.1rem;
+    padding-right: 0.35rem;
   }
   &__price {
     font-family: Montserrat;
@@ -58,7 +60,7 @@
   }
   &__destination {
     display: flex;
-    margin-top: 1.5rem;
+    margin-top: 1.7rem;
     .date-picker:not(:last-child) {
       margin-right: rem(15);
     }
@@ -91,12 +93,14 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    min-width: 30%;
     float: right;
     text-align: right;
     background-color: #ffff;
     z-index: 2;
     padding-left: 4px;
+    min-width: 33%;
+    position: relative;
+    top: -2px;
     &--single {
       display: inline;
       min-width: 0;
@@ -144,7 +148,7 @@
   &__result {
     float: left;
     text-align: left;
-    font-size: rem(17);
+    font-size: 1.357rem;
     position: relative;
     display: flex;
     background-color: #fff;

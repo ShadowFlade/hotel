@@ -19,8 +19,9 @@ mixin registrationCard
           h6.registration-card__label Данные для входа в сервис
           input.registration-card__input.js-registration-card__input.registration-card__input--with-email.js-registration-card__input--with-email(type="text",placeholder="Email")
           input.registration-card__input(type="password",placeholder="Пароль")
+        .registration-card__item.registration-card__item--toggle
           +toggle({list:['Получать спецпредложения']})
-        .registration-card__item
+        .registration-card__item.registration-card__item--button
           +payButton({label:'Зарегистрироваться',arrow:true,type:'submit'})
       .registration-card__footer
         p.registration-card__account-availability Уже есть аккаунт на Toxin

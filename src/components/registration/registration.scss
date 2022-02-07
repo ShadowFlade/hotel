@@ -21,9 +21,15 @@
     margin-top: 1.5rem;
   }
   &__item {
-    margin-top: rem(20);
+    margin-top: 1.55rem;
     &--radio {
-      margin-top: rem(10);
+      margin-top: 0.6rem;
+    }
+    &--toggle {
+      margin-top: 0.5rem;
+    }
+    &--button {
+      margin-top: 1.65rem;
     }
   }
   &__label {
@@ -41,7 +47,7 @@
 
   &__footer {
     width: 97%;
-    padding: 2.2rem 0;
+    padding: 2.1rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;

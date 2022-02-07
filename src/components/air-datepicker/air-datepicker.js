@@ -37,7 +37,6 @@ const hideDP = (datepicker)=>{
 };
 const bindCalendar = (parentElementClassname, inputClassname, optionsForCalendar,elementToIgnore)=>{
   const parentElement=getDOMElement(parentElementClassname,true)
-  console.log(getDOMElement(inputClassname,false,'DOM element'))
   const inputs = getDOMElement(inputClassname,false).filter(item=>!item.className.includes(elementToIgnore));
   const datePickers=[]
   inputs.forEach(input=>{

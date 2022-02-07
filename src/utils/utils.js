@@ -39,7 +39,6 @@ const bindOutsideClickDetection = (clickElementName, popElementName)=>{
 };
 
 const getDOMElement=(element,isSingle)=>{
-  console.log(typeof element)
   if(typeof element==='object'){
     return [element]
   } else if (typeof element==='string' && !isSingle){

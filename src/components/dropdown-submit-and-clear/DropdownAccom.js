@@ -15,11 +15,9 @@ class DropdownAccom {
       this.element = elementName;
     }
     this.list = this.element.querySelector(this.listName);
-    console.log('🚀 ~ DropdownAccom ~ bindPopup ~ this.list', this.list)
     this.input = this.element.getElementsByClassName('js-dropdown-accom__input')[0];
 
     bindOutsideClickDetection(this.element, this.list);
-    this.element.onclick=()=>console.log(this.element)
     const submitButton = this.element.querySelector('.js-dropdown-accom__submit');
     this.submit = submitButton;
     const clearButton = this.element.querySelector('.js-dropdown-accom__clear');
@@ -67,7 +65,7 @@ class DropdownAccom {
       this.input.setAttribute('placeholder', `${this.total} гостей`);
     };
     const onClear = ()=>{
-      this.returnToDefault();
+      this.reset();
       this.refresh();
       this.input.setAttribute('placeholder', `${this.total} гостей`);
     };
@@ -80,12 +78,12 @@ class DropdownAccom {
     }
   }
 
-  returnToDefault() {
+  reset() {
     Array.from(this.count.keys()).forEach((item)=>{
       if (item === 'total') {
         return false;
       }
-      this.count.get(item).set('value', 2);
+      this.count.get(item).set('value', 0);
       return true;
     });
   }
@@ -130,8 +128,10 @@ class DropdownAccom {
     const decrement = this.count.get(category).get('decrement');
     if (value === this.limit) {
       decrement.disabled = true;
+      decrement.classList.add('dropdown-accom__button--disabled')
       return false;
     }
+    decrement.classList.remove('dropdown-accom__button--disabled')
     decrement.disabled = false;
     return true;
   }

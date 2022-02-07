@@ -47,7 +47,7 @@
     border-radius: 3px;
   }
   &__content {
-    padding: 1px 6px 0 14px;
+    padding: 0 0.5rem 0 1rem;
   }
   &__option {
     font-family: 'Montserrat', sans-serif;
@@ -81,6 +81,9 @@
     &--next {
       margin-right: 0;
     }
+    &--disabled {
+      opacity: 0.3;
+    }
   }
   &__info {
     font-size: 12px;
@@ -94,7 +97,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding-top: 1.5rem;
+    padding-top: 1.6rem;
     &--single {
       justify-content: flex-end;
     }

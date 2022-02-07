@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0 9.5% 0 9.72222%;
+    padding: 0.2rem 9.5% 0 9.72222%;
     @media screen and (max-width: 1131px) {
       & {
         padding: 0 3%;
@@ -54,7 +54,6 @@
     justify-content: flex-end;
     align-items: center;
     width: auto;
-    padding-right: 0.45rem;
     @media screen and (max-width: 1021px) {
       & {
         display: none;
@@ -78,11 +77,11 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
     border-left: 1px solid rgba(31, 32, 65, 0.1);
-    padding: rem(5) 0 0 rem(24);
+    padding: 0.2571428571rem 0.1rem 0 1.5142857143rem;
     @media screen and (max-width: 1021px) {
       & {
         padding: 0;
@@ -92,7 +91,8 @@
   &__auth {
     display: flex;
     align-items: center;
-
+    padding-right: 0.2rem;
+    padding-top: 0.2rem;
     .button--hollow-wrapper {
       width: 87px;
       height: 34px;

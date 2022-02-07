@@ -15,13 +15,13 @@
   flex: 0 0 auto;
   @media screen and (max-width: 768px) {
     & {
-      padding: 14% 0 14% 0;
+      padding: 14.3% 0;
     }
   }
   &__container {
     border-bottom: 1px solid rgba(31, 32, 65, 0.25);
     border-top: 1px solid rgba(31, 32, 65, 0.25);
-    padding: 6.95% 7% 5.8% 9.6%;
+    padding: 7.05% 7% 5.8% 9.5%;
     @media screen and (max-width: 1193px) {
       & {
         padding-left: 3%;
@@ -53,8 +53,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin-right: 3.8rem;
-
+    margin-right: 3.85rem;
     &--big {
       width: 22%;
       margin-right: 2.8rem;
@@ -91,10 +90,15 @@
       }
     }
   }
+  &__logo {
+    padding-left: 0.2rem;
+  }
   &__info {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
+    margin-top: 1.18rem;
     width: 100%;
+    padding-left: 0.1rem;
     @media screen and (max-width: 768px) {
       & {
         display: none;
@@ -108,14 +112,7 @@
       }
     }
   }
-  &__logo {
-    margin-bottom: 1.5rem;
-    @media screen and (max-width: 768px) {
-      & {
-        margin-bottom: 0;
-      }
-    }
-  }
+
   &__item {
     margin-bottom: 1rem;
     width: 106%;
@@ -129,6 +126,9 @@
     &--subscription-field {
       margin-top: 10px;
     }
+  }
+  &__form {
+    padding-right: 0.6rem;
   }
   &__item:not(:first-child) {
     &:hover {
@@ -151,7 +151,7 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 1.5% 9.72222%;
+    padding: 2.4% 9.72222%;
     @media screen and (max-width: 1193px) {
       & {
         padding-right: 3%;
@@ -181,10 +181,12 @@
   &__socials {
     display: flex;
     flex-wrap: wrap;
+    padding-left: 0.2rem;
     @media screen and (max-width: 768px) {
       & {
         justify-content: center;
-        margin-top: 1.8rem;
+        padding-left: 0.2rem;
+        margin-top: 1.3rem;
       }
     }
   }

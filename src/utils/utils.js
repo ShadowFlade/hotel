@@ -34,6 +34,7 @@ const bindOutsideClickDetection = (clickElementName, popElementName)=>{
       document.removeEventListener('click', cat);
     }
   };
+  
   clickElement.addEventListener('click', handleElementClicked);
 };
 

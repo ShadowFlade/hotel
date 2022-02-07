@@ -15,9 +15,11 @@ class DropdownAccom {
       this.element = elementName;
     }
     this.list = this.element.querySelector(this.listName);
+    console.log('🚀 ~ DropdownAccom ~ bindPopup ~ this.list', this.list)
     this.input = this.element.getElementsByClassName('js-dropdown-accom__input')[0];
 
-    bindOutsideClickDetection(elementName, listName);
+    bindOutsideClickDetection(this.element, this.list);
+    this.element.onclick=()=>console.log(this.element)
     const submitButton = this.element.querySelector('.js-dropdown-accom__submit');
     this.submit = submitButton;
     const clearButton = this.element.querySelector('.js-dropdown-accom__clear');

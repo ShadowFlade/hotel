@@ -10,7 +10,6 @@
   font-style: normal;
   font-size: $mainFontSize;
   color: $DarkShade50;
-  text-transform: capitalize;
   position: relative;
   width: calc(222 / 12) * 1em;
   max-width: 266px;
@@ -52,11 +51,14 @@
     z-index: 10;
     position: absolute;
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 1.2rem;
   }
   &__item {
     display: flex;
-    margin-bottom: rem(10);
+    margin-top: rem(11);
     position: relative;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }

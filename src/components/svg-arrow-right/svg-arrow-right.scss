@@ -9,4 +9,17 @@
     box-sizing: content-box;
     position: static;
   }
+  &--subscription {
+    $length: 1.428rem;
+    right: 0.83rem;
+    top: 0.06rem;
+    width: $length;
+    height: $length;
+  }
+  &--in-pay-button {
+    $length: 1rem;
+    width: $length;
+    height: $length;
+    right: 1rem;
+  }
 }

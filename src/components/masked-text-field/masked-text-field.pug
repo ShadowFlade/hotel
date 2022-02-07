@@ -1,9 +1,9 @@
 mixin defInput(options={label:'masked text field',placeholder:'ДД.ММ.ГГГГ',nameOfClass:'text-field'})
   div.text-field.js-text-field
-    label.text-field__label.js-text-field__label #{options.label}
-      input.text-field__input.js-text-field__input(type="text",placeholder=options.placeholder)
-      if options.arrow 
-        img.filter-date-dropdown__arrow(src="assets/img/arrow_forward.jpg",alt="")
+    h6.text-field__label.js-text-field__label #{options.label}
+    input.text-field__input.js-text-field__input(type="text",placeholder=options.placeholder)
+    if options.arrow 
+      img.filter-date-dropdown__arrow(src="assets/img/arrow_forward.jpg",alt="")
 
 
       

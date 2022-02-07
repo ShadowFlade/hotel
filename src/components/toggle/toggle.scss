@@ -3,6 +3,12 @@
 .toggles {
   position: relative;
   @include small;
+
+  &__label {
+    @include label;
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
   &-group {
     top: 100%;
     left: 0;
@@ -77,7 +83,7 @@
       border-radius: 50%;
       position: absolute;
       top: 52%;
-      left: 23%;
+      left: 26%;
       transform: translate(-50%, -50%) scale(1);
       transition: all 0.3s ease-out;
       &--passive {

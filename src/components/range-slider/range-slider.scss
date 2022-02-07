@@ -38,7 +38,8 @@
     &:after {
       content: '-';
       position: relative;
-      left: 1px;
+      left: 0.07rem;
+      margin-right: 0.5rem;
     }
   }
   &__caption {

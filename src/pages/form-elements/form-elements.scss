@@ -35,9 +35,7 @@ html {
     margin-top: rem(18);
     margin-bottom: 2.82rem;
   }
-  .subscription-field {
-    margin-top: 20px;
-  }
+
   .dropdown-accom__big--small {
     width: 266px;
   }
@@ -46,12 +44,8 @@ html {
   }
   .radio-buttons__label {
     @include small;
-    margin-bottom: rem(16);
   }
-  .toggle__label {
-    @include label;
-    font-size: 12px;
-  }
+
   .rate__buttons,
   .like-buttons {
     display: flex;
@@ -59,12 +53,6 @@ html {
 
     &__group {
       display: flex;
-    }
-    &__label {
-      font-weight: 530;
-      font-size: rem(12);
-      margin-bottom: 1.21429rem;
-      @include label;
     }
   }
   .rate__items {
@@ -101,5 +89,11 @@ html {
   .rate__label,
   .pagination__label {
     @include label;
+  }
+  .rate__label {
+    margin-bottom: 1.2rem;
+  }
+  .pagination__label {
+    margin-bottom: 1.1rem;
   }
 }

@@ -25,10 +25,12 @@
     user-select: none;
     width: 100%;
     @include input();
+    padding: 0.5em 2.21429em 0.57143em 1.04em;
     cursor: pointer;
   }
   &__arrow {
     @include input-arrow();
+    right: 0.7429rem;
   }
   &__ul {
     display: none;
@@ -47,7 +49,7 @@
     border-radius: 3px;
   }
   &__content {
-    padding: 0 0.5rem 0 1rem;
+    padding: 2px 0.5rem 0 0.9rem;
   }
   &__option {
     font-family: 'Montserrat', sans-serif;
@@ -60,11 +62,17 @@
       margin-top: 3px;
     }
   }
+  &__variant {
+    text-transform: uppercase;
+    font-size: 0.857rem;
+    width: 62%;
+  }
   &__btn-group {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 31%;
+
     &--small {
       width: 38%;
     }
@@ -97,13 +105,9 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding-top: 1.6rem;
+    padding-top: 1.5rem;
     &--single {
       justify-content: flex-end;
     }
   }
-  // &__submit,
-  // &__clear {
-  //   padding: 1.57rem 0.35rem 0 0.43rem;
-  // }
 }

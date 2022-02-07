@@ -31,7 +31,7 @@
     justify-content: center;
     position: relative;
     left: -12px;
-    padding-top: 1.2rem;
+    padding-top: 1.4rem;
   }
   &__name {
     font-family: 'Montserrat';
@@ -58,5 +58,6 @@
     color: rgba(31, 32, 65, 0.75);
     text-transform: none;
     padding-top: 0.8rem;
+    padding-left: 0.14rem;
   }
 }

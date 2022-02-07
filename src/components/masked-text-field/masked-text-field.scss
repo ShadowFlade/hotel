@@ -3,6 +3,7 @@
 .text-field {
   &__input {
     @include input();
+    width: 100%;
   }
   &__label {
     @include label;

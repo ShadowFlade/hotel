@@ -5,7 +5,7 @@ $cell-length: 40px;
   &.-inline- {
     min-width: 320px;
     min-height: 369px;
-    padding: 1rem 1.62rem 1rem 1.1rem;
+    padding: 0.8rem 1.8rem 1rem 1.3rem;
     position: absolute;
     top: 158%;
     display: none;
@@ -74,11 +74,20 @@ $cell-length: 40px;
     border-bottom: 0;
     padding: 0;
     margin-bottom: 2rem;
+    width: 103%;
+    &--action {
+      padding-top: 0.2rem;
+    }
+    & [data-action='prev'] {
+      padding-right: 0.5rem;
+    }
   }
   &-nav--title {
     color: black;
     font-size: 1.4rem;
     font-weight: bold;
+    padding: 0 0 0 0.7rem;
+    letter-spacing: 0.8px;
     i {
       color: inherit;
       margin-right: 1px;
@@ -97,6 +106,7 @@ $cell-length: 40px;
         color: rgba(188, 156, 255, 1);
         width: $cell-length;
         height: $cell-length;
+        text-transform: capitalize;
       }
       &-names {
         grid-template-columns: repeat(7, $cell-length);
@@ -108,10 +118,12 @@ $cell-length: 40px;
     display: flex;
     justify-content: space-between;
     padding: 0;
+    width: 102%;
   }
   &--buttons {
     border-top: 0;
     padding: 0;
     padding-top: calc(9 / 14) * 1rem;
+    padding: 0.8rem 0;
   }
 }

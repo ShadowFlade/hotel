@@ -65,13 +65,8 @@
   &__destination {
     display: flex;
     margin-top: 1.7rem;
-    justify-content: space-evenly;
-    .date-picker {
-      margin-right: rem(15);
-    }
-    .date-picker:last-child {
-      margin-right: rem(15);
-    }
+    justify-content: space-between;
+    padding-right: 0.1rem;
     @media screen and (max-width: 420px) {
       & {
         flex-wrap: wrap;

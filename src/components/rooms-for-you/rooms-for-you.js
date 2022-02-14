@@ -41,7 +41,7 @@ const handleContentLoaded = ()=>{
       renderToAnotherInput({datepicker,parent:'rooms-for-you'})
     },
   }
-  bindCalendar('js-rooms-for-you',document.querySelector('.rooms-for-you .js-date-picker__input'), newOptions);
+  bindCalendar('js-rooms-for-you','js-date-picker__input', newOptions);
 
   };
 

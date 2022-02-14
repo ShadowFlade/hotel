@@ -22,7 +22,7 @@ const handleContentLoaded = ()=>{
   const newOptions = {
     ...options,
     range:true,
-
+    selectOtherMonths:false,
     classes: 'air-datepicker--rooms-for-you',
     position({ $datepicker, $target, $pointer }) {
       let coords = $target.getBoundingClientRect();
@@ -39,7 +39,7 @@ const handleContentLoaded = ()=>{
     },
     onSelect:({date,formattedDate,datepicker})=>{
       renderToAnotherInput({datepicker,parent:'rooms-for-you'})
-    }
+    },
   }
   bindCalendar('js-rooms-for-you',document.querySelector('.rooms-for-you .js-date-picker__input'), newOptions);
 

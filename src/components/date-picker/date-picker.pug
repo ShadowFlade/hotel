@@ -1,7 +1,7 @@
-mixin datePicker(options)
-  .date-picker.js-date-picker(class=(options.modif ? `date-picker--${options.modif} date-picker--${options.sizeModif}`:false))
-    label.date-picker__label #{options.label}
+mixin datePicker({modif,sizeModif,label,placeholder,tabIndex})
+  .date-picker.js-date-picker(class=(modif ? `date-picker--${modif} date-picker--${sizeModif}`:false))
+    label.date-picker__label #{label}
     .date-picker__item.js-date-picker__item
-      input.date-picker__input.js-date-picker__input(class=(options.modif ? `date-picker__input--${options.modif} js-date-picker__input--${options.modif}`:false) ,type="text",placeholder=options.placeholder,tabIndex=options.tabIndex)
+      input.date-picker__input.js-date-picker__input(class=(modif ? `date-picker__input--${modif} js-date-picker__input--${modif}`:false) ,type="text",placeholder=placeholder,tabIndex=tabIndex)
       img.date-picker__arrow(src="assets/img/expand_more.jpg",alt="")
 

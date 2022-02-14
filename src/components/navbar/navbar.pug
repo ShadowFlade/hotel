@@ -1,6 +1,6 @@
-mixin navbar(options)
+mixin navbar({list})
   navbar.navigation 
-    each el in options.list 
+    each el in list 
       if el.arrow==true
         .navigation__item
           span.navigation__text #{el.name}

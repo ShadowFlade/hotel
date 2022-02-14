@@ -1,9 +1,9 @@
-mixin burgerMenu(options) 
+mixin burgerMenu({list,}) 
   .burger.js-burger
     button.burger__button
       span.burger__base
     ul.burger__menu.js-burger__menu
-      each val in options.list
+      each val in list
         if typeof val=='array'
           li.burger__option #{val.name}
             ul.burger__inner-menu

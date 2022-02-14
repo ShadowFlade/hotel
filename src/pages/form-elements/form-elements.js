@@ -4,7 +4,6 @@ import '../../components/button/button.js';
 import '../../components/masked-text-field/masked-text-field.js';
 import '../../components/checkbox-buttons/checkbox-buttons.js';
 import '../../components/bullet-list/bullet-list.js';
-import '../../components/dropdown/dropdown.js';
 import '../../components/checkbox-rich/checkbox-rich.js';
 import '../../components/date-picker/date-picker.js';
 import '../../components/dropdown-submit-and-clear/dropdown-submit-and-clear.js';

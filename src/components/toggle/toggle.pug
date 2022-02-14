@@ -1,7 +1,7 @@
-mixin toggle(options)
+mixin toggle({list})
   .toggles
     .toggles-group
-      each val in options.list
+      each val in list
         .toggles__item
           label.toggles__title(for=val) 
             input.toggles__input(type="checkbox",name=val,id=val)

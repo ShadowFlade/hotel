@@ -1,7 +1,7 @@
-mixin features(options)
+mixin features({features})
   .features
     ul.features__list
-      each feature in options.features 
+      each feature in features 
         li.features__item
           .features__pic 
             img(src=feature.pic,alt=feature.alt)

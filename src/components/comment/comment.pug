@@ -1,16 +1,16 @@
 include ../like/like.pug
-mixin comment(options)
+mixin comment({img,name,daysAgo,text})
   article.comment
     .comment__wrapper
       .comment__avatar
         .comment__pic
-          img.comment__img(src=options.img,alt="person's avatar")
+          img.comment__img(src=img,alt="person's avatar")
         .comment__like
           +like({numberOfLikes:'12'})
       .comment__body
-        .comment__name #{options.name}
-        .comment__time-passed #{options.daysAgo}  назад
-        .comment__text #{options.text}
+        .comment__name #{name}
+        .comment__time-passed #{daysAgo}  назад
+        .comment__text #{text}
 
 
 

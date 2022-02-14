@@ -1,24 +1,24 @@
 include ../button/button.pug
-mixin dropdownSubmitAndClear(options)
-  .dropdown-accom.js-dropdown-accom(class=options.modif ? `dropdown-accom--${options.modif}` : false)
-    label.dropdown-accom__label #{options.label}
+mixin dropdownSubmitAndClear({modif,label,placeholder,option,list,})
+  .dropdown-accom.js-dropdown-accom(class=modif ? `dropdown-accom--${modif}` : false)
+    label.dropdown-accom__label #{label}
     .dropdown-accom__input-box
-      input.dropdown-accom__input.js-dropdown-accom__input(type="text",placeholder=options.placeholder)
+      input.dropdown-accom__input.js-dropdown-accom__input(type="text",placeholder=placeholder)
       img.dropdown-accom__arrow(src="assets/img/expand_more.jpg",alt="")
-    ul.dropdown-accom__ul.js-dropdown-accom__ul(style=options.option ==='none' ? {'height':'118px'}: false)
+    ul.dropdown-accom__ul.js-dropdown-accom__ul(style=option ==='none' ? {'height':'118px'}: false)
       .dropdown-accom__content
-        each val in options.list
+        each val in list
           li.dropdown-accom__option.js-dropdown-accom__option
             .dropdown-accom__variant #{val}
-            .dropdown-accom__btn-group(class=options.modif ? `dropdown-accom__btn-group--${options.modif}` : false )
+            .dropdown-accom__btn-group(class=modif ? `dropdown-accom__btn-group--${modif}` : false )
               button.dropdown-accom__button.dropdown-accom__button--prev(type="button") -
               .dropdown-accom__info 2 
               button.dropdown-accom__button.dropdown-accom__button--next(type="button") +
-        if (options.option==='submit')
+        if (option==='submit')
           .dropdown-accom__footer.dropdown-accom__footer--single
             .dropdown-accom__submit
               +button({modifs:['inline'],type:'submit',text:'Применить'})
-        else if options.option==='clear'
+        else if option==='clear'
           .dropdown-accom__footer
             .dropdown-accom__clear.js-dropdown-accom__clear
               +button({modifs:['inline','submit'],text:'Очистить'})

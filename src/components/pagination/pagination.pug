@@ -1,14 +1,14 @@
 include ../svg-arrow-right/svg-arrow-right.pug
-mixin pagination(options)
+mixin pagination({numberOfFirstPages,itemsOnPage,itemsTotal,lastPage})
   .pagination
     .pagination__pages
       - let n=1
-      while n<options.numberOfFirstPages+1
+      while n<numberOfFirstPages+1
         .pagination__item.js-pagination__item #{n}
         -n++
       .pagination__item.pagination__item--intro.js-pagination__item ...
-      .pagination__item.pagination__item--last-page.js-pagination__item #{options.lastPage}
+      .pagination__item.pagination__item--last-page.js-pagination__item #{lastPage}
       button.pagination__arrow-item
         +svgArrowRight({color:'#FFFFFF',endColor:'#FFFFFF',modif:'in-pagination'})
-    .pagination__info 1 – #{options.itemsOnPage} из #{options.itemsTotal} вариантов аренды
+    .pagination__info 1 – #{itemsOnPage} из #{itemsTotal} вариантов аренды
 

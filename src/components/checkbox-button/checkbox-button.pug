@@ -1,12 +1,12 @@
-mixin checkbox-button(options)
+mixin checkbox-button({desc,text})
   label.checkbox-button
-    if options.desc 
+    if desc 
       .checkbox-button__info
         input.checkbox-button__input(type="checkbox",tabindex="0")
-        .checkbox-button__text.checkbox-button__text--rich #{options.text}
-        .checkbox-button__desc #{options.desc}
+        .checkbox-button__text.checkbox-button__text--rich #{text}
+        .checkbox-button__desc #{desc}
         span.checkbox-button__custom
     else 
       input.checkbox-button__input(type="checkbox")
-      .checkbox-button__text #{options.text}
+      .checkbox-button__text #{text}
       span.checkbox-button__custom

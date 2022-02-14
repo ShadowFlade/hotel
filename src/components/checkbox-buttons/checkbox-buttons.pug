@@ -1,9 +1,9 @@
 include ../checkbox-button/checkbox-button.pug
-mixin checkboxButtons(options)
+mixin checkboxButtons({label,list})
   .checkbox-buttons
-    span.checkbox-buttons__label #{options.label}
+    span.checkbox-buttons__label #{label}
     ul.checkbox-buttons__list
-      each val in options.list
+      each val in list
         li.checkbox-buttons__option
           +checkbox-button({text:val})
 

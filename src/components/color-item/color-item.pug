@@ -1,6 +1,6 @@
-mixin color-item(options)
+mixin colorItem({leftPartColor,rightPartColors})
   .item  
-    .item__color(style={background:options.leftPart})
+    .item__color(style={background:leftPartColor})
     .item__desc 
-      .item__dark #{options.rightPart[0]}
-      .item__code #{options.rightPart[1]}
+      .item__dark #{rightPartColors[0]}
+      .item__code #{rightPartColors[1]}

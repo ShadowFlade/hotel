@@ -1,8 +1,8 @@
-mixin defInput(options)
+mixin defInput({label,placeholder,arrow})
   div.text-field.js-text-field
-    h6.text-field__label.js-text-field__label #{options.label}
-    input.text-field__input.js-text-field__input(type="text",placeholder=options.placeholder)
-    if options.arrow 
+    h6.text-field__label.js-text-field__label #{label}
+    input.text-field__input.js-text-field__input(type="text",placeholder=placeholder)
+    if arrow 
       img.filter-date-dropdown__arrow(src="assets/img/arrow_forward.jpg",alt="")
 
 

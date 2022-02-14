@@ -9,6 +9,12 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  @media screen and (max-width: 400px) {
+    & {
+      padding: 1.7em 1 em 0;
+      min-width: inherit;
+    }
+  }
   &__content {
     padding: 2.7314em 2em 0;
   }
@@ -25,6 +31,11 @@
   &__input {
     @include input();
     width: 100%;
+    @media screen and (max-width: 400px) {
+      & {
+        width: 100%;
+      }
+    }
   }
 
   &__footer {
@@ -34,5 +45,10 @@
     justify-content: space-between;
     margin: 0;
     padding: 1.3rem 2px 2.3rem 0;
+    @media screen and (max-width: 400px) {
+      & {
+        flex-direction: column;
+      }
+    }
   }
 }

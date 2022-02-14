@@ -1,6 +1,7 @@
 @import '../../common/mixins.scss';
 .landing-page {
   flex: 1 0 auto;
+  overflow: hidden;
   @media screen and (max-width: 400px) {
     & {
       overflow: hidden;

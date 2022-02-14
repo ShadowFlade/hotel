@@ -9,6 +9,11 @@
   border-radius: 4px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   padding: 2.58714em 1.9286em 0;
+  @media screen and (max-width: 420px) {
+    & {
+      width: auto;
+    }
+  }
   &--on-room-details {
     margin: 0 auto;
   }
@@ -61,8 +66,28 @@
     display: flex;
     margin-top: 1.7rem;
     justify-content: space-evenly;
-    .date-picker:not(:last-child) {
+    .date-picker {
       margin-right: rem(15);
+    }
+    .date-picker:last-child {
+      margin-right: rem(15);
+    }
+    @media screen and (max-width: 420px) {
+      & {
+        flex-wrap: wrap;
+        .date-picker--in-bill {
+          max-width: inherit;
+          width: 100%;
+          margin-right: 0;
+          margin-top: 1rem;
+        }
+        .date-picker--in-bill:first-child {
+          margin-top: 0;
+        }
+        .date-picker:last-child {
+          margin-right: 0;
+        }
+      }
     }
   }
   &__guests {

@@ -26,6 +26,12 @@
         left: 0;
         top: 13%;
       }
+      .rooms-for-you__destination {
+        flex-wrap: wrap;
+        .date-picker:not(:first-child) {
+          margin-top: 1rem;
+        }
+      }
     }
   }
 

@@ -1,6 +1,7 @@
 @import '../../common/mixins.scss';
 .registration {
   flex: 1 0 auto;
+  overflow: hidden;
   &__bgp {
     height: 48.8rem;
     background: url('./last-page.jpg');
@@ -18,6 +19,7 @@
     @media screen and (max-width: 465px) {
       & {
         left: 1%;
+        width: auto;
       }
     }
   }

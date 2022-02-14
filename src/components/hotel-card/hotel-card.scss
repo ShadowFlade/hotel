@@ -24,7 +24,7 @@
     object-fit: contain;
   }
   &__info {
-    padding: 1.4rem 1.25rem 1.4rem 1.37rem;
+    padding: 1.5rem 1.25rem 1.4rem 1.32rem;
   }
   &__row {
     display: flex;
@@ -57,6 +57,8 @@
     line-height: rem(15);
     text-transform: uppercase;
     color: #bc9cff;
+    margin-left: 0.5rem;
+    vertical-align: text-bottom;
   }
   &__numerical-info {
     font-size: 1rem;
@@ -120,7 +122,7 @@
   background-color: transparent;
 }
 .slick-arrow.slick-prev {
-  right: 1.07rem;
+  left: 1.07rem;
   transform: rotate(180deg);
 }
 .slick-arrow.slick-next {

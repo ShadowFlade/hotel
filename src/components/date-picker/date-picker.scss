@@ -12,6 +12,9 @@
   &--single {
     width: 266px;
   }
+  &--in-bill {
+    max-width: 10.7rem;
+  }
   @media screen and (max-width: 625px) {
     & {
       width: auto;

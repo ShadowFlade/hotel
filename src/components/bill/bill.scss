@@ -41,9 +41,9 @@
     text-transform: uppercase;
     color: #bc9cff;
     margin-left: 0.7rem;
+    vertical-align: bottom;
   }
   &__room-price {
-    vertical-align: bottom;
     font-size: 0.5rem;
     padding-bottom: 0.1rem;
     padding-right: 0.35rem;
@@ -52,7 +52,6 @@
     font-family: Montserrat;
     font-style: normal;
     font-size: rem(14);
-    line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
   }
   &__day {
@@ -61,6 +60,7 @@
   &__destination {
     display: flex;
     margin-top: 1.7rem;
+    justify-content: space-evenly;
     .date-picker:not(:last-child) {
       margin-right: rem(15);
     }

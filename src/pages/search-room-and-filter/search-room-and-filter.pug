@@ -15,65 +15,65 @@ block variables
   - var description = 'display of different variants of the room we have';
   - var page='search-room'
 block content 
-  .search-room
-    main.main 
-      .sidebar
-        form.sidebar__container 
-          .sidebar__item.sidebar__item--input 
-            +datePicker({label:'даты пребывания в отеле',placeholder:'19 авг - 23 авг'})
-          .sidebar__item
-            +dropdownSubmitAndClear({label:'гости',placeholder:'3 гостя',list:['взрослые','дети','младенцы'],option:'clear',modif:'small'})
-          .sidebar__item 
-            +rangeSlider('Диапазон цены')
-          .sidebar__item 
-            +checkboxButtons({label:'Правила дома',list:['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']})
-          .sidebar__item
-            +checkboxRich()
+  main.main 
+    .sidebar
+      form.sidebar__container 
+        .sidebar__item.sidebar__item--input 
+          +datePicker({label:'даты пребывания в отеле',placeholder:'19 авг - 23 авг'})
+        .sidebar__item
+          +dropdownSubmitAndClear({label:'гости',placeholder:'3 гостя',list:['взрослые','дети','младенцы'],option:'clear',modif:'small'})
+        .sidebar__item 
+          +rangeSlider('Диапазон цены')
+        .sidebar__item 
+          +checkboxButtons({label:'Правила дома',list:['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']})
+        .sidebar__item
+          +checkboxRich({label:'Доступность',name:'facilities',list:[['Широкий коридор','Ширина коридоров в номере не менее 91 см.'],['Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.']]})
 
-          .sidebar__item
-            +dropdownSubmitAndClear({label:'удобство номера',placeholder:'2 спальни, 2 кровати',list:['спальни','кровати','ванные комнаты'],option:'clear',modif:'small'})
-          .sidebar__item 
-            +checkboxList({label:'expandable checkbox list',list:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь']})       .content 
-        .content__title Номера, которые мы для вас подобрали
-        .content__items 
-          .content__item
-            +hotelCard({pictures:['assets/img/image.jpg','assets/img/image.jpg'],
-                  luxNumber:'888',price:'9990',stars:5,numberOfReviews:'145',lux:true})
-          .content__item
-            +hotelCard({pictures:['assets/img/image-2.jpg','assets/img/image.jpg'],
-                  luxNumber:'840',price:'9990',stars:4,numberOfReviews:'65',lux:false})
-          .content__item
-            +hotelCard({pictures:['assets/img/image3.jpg','assets/img/image.jpg'],
-                  luxNumber:'980',price:'8500',stars:3,numberOfReviews:'35',lux:true})
-          .content__item
-            +hotelCard({pictures:['assets/img/image4.jpg','assets/img/image.jpg'],
-                  luxNumber:'856',price:'7300',stars:4,numberOfReviews:'19',lux:false})
-          .content__item
-            +hotelCard({pictures:['assets/img/image5.jpg','assets/img/image.jpg'],
-                  luxNumber:'740',price:'5800',stars:3,numberOfReviews:'44',lux:false})
-          .content__item
-            +hotelCard({pictures:['assets/img/image6.jpg','assets/img/image.jpg'],
-                  luxNumber:'982',price:'5800',stars:3,numberOfReviews:'56',lux:false})
-          .content__item
-            +hotelCard({pictures:['assets/img/image7.jpg','assets/img/image.jpg'],
-                  luxNumber:'678',price:'5500',stars:5,numberOfReviews:'45',lux:false})
-          .content__item
-            +hotelCard({pictures:['assets/img/image8.jpg','assets/img/image.jpg'],
-                  luxNumber:'450',price:'5300',stars:4,numberOfReviews:'39',lux:false})
-          .content__item
-            +hotelCard({pictures:['assets/img/image9.jpg','assets/img/image.jpg'],
-                  luxNumber:'350',price:'5000',stars:3,numberOfReviews:'77',lux:false})
-          .content__item
-            +hotelCard({pictures:['assets/img/image10.jpg','assets/img/image.jpg'],
-                  luxNumber:'666',price:'5000',stars:5,numberOfReviews:'25',lux:false})
-          .content__item
-            +hotelCard({pictures:['assets/img/image11.jpg','assets/img/image.jpg'],
-                  luxNumber:'444',price:'5000',stars:3,numberOfReviews:'55',lux:false})
-          .content__item
-            +hotelCard({pictures:['assets/img/image12.jpg','assets/img/image.jpg'],
-                  luxNumber:'352',price:'5300',stars:4,numberOfReviews:'39',lux:false})
-        .content__pagination 
-          +pagination({numberOfFirstPages:3,lastPage:15,itemsOnPage:12,itemsTotal:'100+'})
+        .sidebar__item
+          +dropdownSubmitAndClear({label:'удобство номера',placeholder:'2 спальни, 2 кровати',list:['спальни','кровати','ванные комнаты'],option:'clear',modif:'small'})
+        .sidebar__item 
+          +checkboxList({label:'expandable checkbox list',list:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь']})       .content 
+    .content
+      .content__title Номера, которые мы для вас подобрали
+      .content__items 
+        .content__item
+          +hotelCard({pictures:['assets/img/image.jpg','assets/img/image.jpg'],
+                luxNumber:'888',price:'9990',stars:5,numberOfReviews:'145',lux:true})
+        .content__item
+          +hotelCard({pictures:['assets/img/image-2.jpg','assets/img/image.jpg'],
+                luxNumber:'840',price:'9990',stars:4,numberOfReviews:'65',lux:false})
+        .content__item
+          +hotelCard({pictures:['assets/img/image3.jpg','assets/img/image.jpg'],
+                luxNumber:'980',price:'8500',stars:3,numberOfReviews:'35',lux:true})
+        .content__item
+          +hotelCard({pictures:['assets/img/image4.jpg','assets/img/image.jpg'],
+                luxNumber:'856',price:'7300',stars:4,numberOfReviews:'19',lux:false})
+        .content__item
+          +hotelCard({pictures:['assets/img/image5.jpg','assets/img/image.jpg'],
+                luxNumber:'740',price:'5800',stars:3,numberOfReviews:'44',lux:false})
+        .content__item
+          +hotelCard({pictures:['assets/img/image6.jpg','assets/img/image.jpg'],
+                luxNumber:'982',price:'5800',stars:3,numberOfReviews:'56',lux:false})
+        .content__item
+          +hotelCard({pictures:['assets/img/image7.jpg','assets/img/image.jpg'],
+                luxNumber:'678',price:'5500',stars:5,numberOfReviews:'45',lux:false})
+        .content__item
+          +hotelCard({pictures:['assets/img/image8.jpg','assets/img/image.jpg'],
+                luxNumber:'450',price:'5300',stars:4,numberOfReviews:'39',lux:false})
+        .content__item
+          +hotelCard({pictures:['assets/img/image9.jpg','assets/img/image.jpg'],
+                luxNumber:'350',price:'5000',stars:3,numberOfReviews:'77',lux:false})
+        .content__item
+          +hotelCard({pictures:['assets/img/image10.jpg','assets/img/image.jpg'],
+                luxNumber:'666',price:'5000',stars:5,numberOfReviews:'25',lux:false})
+        .content__item
+          +hotelCard({pictures:['assets/img/image11.jpg','assets/img/image.jpg'],
+                luxNumber:'444',price:'5000',stars:3,numberOfReviews:'55',lux:false})
+        .content__item
+          +hotelCard({pictures:['assets/img/image12.jpg','assets/img/image.jpg'],
+                luxNumber:'352',price:'5300',stars:4,numberOfReviews:'39',lux:false})
+      .content__pagination 
+        +pagination({numberOfFirstPages:3,lastPage:15,itemsOnPage:12,itemsTotal:'100+'})
 
     
     

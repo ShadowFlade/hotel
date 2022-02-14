@@ -1,4 +1,4 @@
-mixin button(options={modifs:['full','inline'],text:'click me'})
+mixin button(options)
   if options.modifs[0]=='hollow' 
     .button--hollow-wrapper(tabindex="0")
       button.button.button--hollow(class=`button--${options.modifs[1]}` ,type=(options.type ? options.type : "button"),tabindex="-1")  #{options.text}

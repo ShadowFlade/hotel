@@ -1,3 +1,3 @@
-mixin link(options={className:'link',text:'Im a text inside a link!',link:'default/mock-address.com'})
+mixin link(options)
   a(class=options.className,href=options.link || 'default/mock-address.com',title='this link most likely leads nowhere!')  #{options.text}
    

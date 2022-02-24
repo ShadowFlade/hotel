@@ -15,8 +15,8 @@ const options = {
     days: 'MMMM  yyyy '
   },
   multipleDatesSeparator:' - ',
-  prevHtml: '<img src="./assets/img/arrow_back.jpg"/>',
-  nextHtml: '<img src="./assets/img/arrow_forward.jpg"/>',
+  prevHtml: '<img src="./assets/img/arrow_back.png"/>',
+  nextHtml: '<img src="./assets/img/arrow_forward.png"/>',
   buttons: [clearButton, submitButton],
   inline: true,
 };

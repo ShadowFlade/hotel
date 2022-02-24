@@ -7,7 +7,7 @@ $cell-length: 40px;
     min-height: 369px;
     padding: 0.8rem 1.8rem 1rem 1.3rem;
     position: absolute;
-    top: 158%;
+    top: 118%;
     display: none;
     box-sizing: border-box;
   }
@@ -17,7 +17,6 @@ $cell-length: 40px;
     border-radius: 50%;
     &.-day- {
       color: rgba(31, 32, 65, 0.5);
-
       &.-other-month- {
         color: rgba(31, 32, 65, 0.25);
       }
@@ -29,8 +28,7 @@ $cell-length: 40px;
       }
     }
     &.-in-range- {
-      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-      opacity: 0.25;
+      background: rgb(233, 231, 254);
     }
     &.-range-to-:not(.selected),
     &.-range-from-:not(.selected) {
@@ -77,9 +75,6 @@ $cell-length: 40px;
     width: 103%;
     &--action {
       padding-top: 0.2rem;
-    }
-    & [data-action='prev'] {
-      padding-right: 0.5rem;
     }
   }
   &-nav--title {

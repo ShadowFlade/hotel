@@ -37,10 +37,10 @@
 
   &__title {
     @include big;
-    line-height: 1.3;
+    line-height: 1.24;
     font-family: 'Montserrat', 'sans-serif';
     font-weight: bold;
-    margin-bottom: 1.45rem;
+    margin-bottom: 1.5rem;
     letter-spacing: 0;
   }
   &__destination {

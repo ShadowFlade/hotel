@@ -14,6 +14,10 @@ import { options, bindCalendar } from '../../components/air-datepicker/air-datep
 import './search-room-and-filter.scss';
 
 const handleContentLoaded = () => {
-  bindCalendar('js-date-picker__item', 'js-date-picker__input', { ...options, range: true, dateFormat: 'dd MMM' });
+  bindCalendar({
+    parentElementClassname: 'js-sidebar',
+    inputsClassname: 'js-date-picker',
+    optionsForCalendar: { ...options, range: true },
+  });
 };
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

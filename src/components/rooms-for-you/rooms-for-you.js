@@ -49,3 +49,4 @@ const handleContentLoaded = () => {
 };
 
 document.addEventListener('DOMContentLoaded', handleContentLoaded);
+export { renderToAnotherInput };

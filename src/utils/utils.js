@@ -1,9 +1,11 @@
-
-const isVisible = elem => !!elem && !!(elem.offsetWidth || elem.offsetHeight
-  || elem.getClientRects().length);
+const isVisible = (elem) => {
+  if (!!elem && !!(elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length)) {
+    return true;
+  }
+};
 
 // +closes and opens a popelement on click on clickelement
-const bindOutsideClickDetection = (clickElementName, popElementName)=>{
+const bindOutsideClickDetection = (clickElementName, popElementName) => {
   let clickElement;
   let popElement;
   if (typeof clickElementName === 'string') {
@@ -16,36 +18,40 @@ const bindOutsideClickDetection = (clickElementName, popElementName)=>{
   } else if (typeof popElementName === 'object') {
     popElement = popElementName;
   }
-
-  const cat = (e)=>{
-    const isClickInside = clickElement.contains(e.target)
-    || clickElement.parentNode.contains(e.target);
+  const cat = (e) => {
+    const isClickInside = clickElement.contains(e.target) || clickElement.parentNode.contains(e.target);
     if (!isClickInside) {
+      // console.warn(e.target, clickElement, isClickInside);
       popElement.style.display = 'none';
     }
   };
-  const handleElementClicked = (e)=>{
+  const handleElementClicked = (e) => {
     const kidsHaveTarget = popElement.contains(e.target);
     if (!isVisible(popElement)) {
       popElement.style.display = 'block';
+      // console.warn('blocked');
+      e.stopPropagation();
       document.addEventListener('click', cat);
     } else if (isVisible(popElement) && !kidsHaveTarget) {
       popElement.style.display = 'none';
       document.removeEventListener('click', cat);
     }
   };
-  
-  clickElement.addEventListener('click', handleElementClicked);
+  try {
+    clickElement.addEventListener('click', handleElementClicked);
+  } catch (e) {
+    console.warn(`Element with classname ${clickElementName} not found`);
+  }
 };
 
-const getDOMElement=(element,isSingle)=>{
-  if(typeof element==='object'){
-    return [element]
-  } else if (typeof element==='string' && !isSingle){
-    return Array.from(document.getElementsByClassName(element))
-  } else if (typeof element==='string' && isSingle){
-    return document.querySelector(element)
+const getDOMElement = (element, isSingle) => {
+  if (typeof element === 'object') {
+    return [element];
+  } else if (typeof element === 'string' && !isSingle) {
+    return Array.from(document.getElementsByClassName(element));
+  } else if (typeof element === 'string' && isSingle) {
+    return document.querySelector(element);
   }
-}
+};
 
-export { isVisible, bindOutsideClickDetection,getDOMElement };
+export { isVisible, bindOutsideClickDetection, getDOMElement };

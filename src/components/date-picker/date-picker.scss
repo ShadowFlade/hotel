@@ -42,6 +42,7 @@
     width: 100%;
     @include input();
     cursor: pointer;
+    user-select: none;
   }
   &__arrow {
     @include input-arrow();

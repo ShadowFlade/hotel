@@ -56,6 +56,9 @@
     .ui-slider-handle {
       cursor: pointer;
     }
+    .ui-slider-range.ui-widget-header + span {
+      left: 60%;
+    }
   }
 }
 

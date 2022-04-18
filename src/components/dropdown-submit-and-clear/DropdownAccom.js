@@ -27,44 +27,48 @@ class DropdownAccom {
   bindIncrement() {
     const listChildren = Array.from(this.element.querySelectorAll('.js-dropdown-accom__option'));
     this.count = new Map();
-    const handleIncrementClick = (e)=>{
+    const handleIncrementClick = (e) => {
       const target = e.target;
       const li = target.closest('li');
-      const category = li.getElementsByClassName('dropdown-accom__variant')[0].textContent.toLowerCase();
+      const category = li
+        .getElementsByClassName('dropdown-accom__variant')[0]
+        .textContent.toLowerCase();
       const storage = this.count.get(category);
       const value = Number(storage.get('value'));
       this.restrictDecrement(category, value + 1);
       this.count.get(category).set('value', value + 1);
       this.refresh(category);
     };
-    const handleDecrementClick = (e)=>{
+    const handleDecrementClick = (e) => {
       const target = e.target;
       const li = target.closest('li');
-      const category = li.getElementsByClassName('dropdown-accom__variant')[0].textContent.toLowerCase();
+      const category = li
+        .getElementsByClassName('dropdown-accom__variant')[0]
+        .textContent.toLowerCase();
       const storage = this.count.get(category);
       const value = Number(storage.get('value'));
       this.restrictDecrement(category, value - 1);
       this.count.get(category).set('value', value - 1);
       this.refresh(category);
     };
-    listChildren.forEach((child)=>{
+    listChildren.forEach((child) => {
       const textElement = child.getElementsByClassName('dropdown-accom__info')[0];
-      const increment = child.getElementsByClassName('dropdown-accom__button--next')[0];
-      const decrement = child.getElementsByClassName('dropdown-accom__button--prev')[0];
+      const incrementButton = child.getElementsByClassName('dropdown-accom__button--next')[0];
+      const decrementButton = child.getElementsByClassName('dropdown-accom__button--prev')[0];
       const category = child.getElementsByClassName('dropdown-accom__variant')[0];
       const storage = new Map();
-      storage.set('increment', increment);
-      storage.set('decrement', decrement);
+      storage.set('increment', incrementButton);
+      storage.set('decrement', decrementButton);
       storage.set('value', Number(textElement.textContent));
       storage.set('textElement', textElement);
       this.count.set(category.textContent.toLowerCase(), storage);
-      increment.addEventListener('click', handleIncrementClick);
-      decrement.addEventListener('click', handleDecrementClick);
+      incrementButton.addEventListener('click', handleIncrementClick);
+      decrementButton.addEventListener('click', handleDecrementClick);
     });
-    const onSubmit = ()=>{
+    const onSubmit = () => {
       this.input.setAttribute('placeholder', `${this.total} гостей`);
     };
-    const onClear = ()=>{
+    const onClear = () => {
       this.reset();
       this.refresh();
       this.input.setAttribute('placeholder', `${this.total} гостей`);
@@ -79,7 +83,7 @@ class DropdownAccom {
   }
 
   reset() {
-    Array.from(this.count.keys()).forEach((item)=>{
+    Array.from(this.count.keys()).forEach((item) => {
       if (item === 'total') {
         return false;
       }
@@ -90,12 +94,8 @@ class DropdownAccom {
 
   refresh(category) {
     if (category === undefined) {
-      let categories = Array.from(this.count.keys());
-      categories = categories.filter((item)=>item !== 'total');
-      categories.forEach((item)=>{
-        if (item === 'total') {
-          return false;
-        }
+      let categories = Array.from(this.count.keys()).filter((item) => item !== 'total');
+      categories.forEach((item) => {
         this.refresh(item);
         return true;
       });
@@ -105,16 +105,15 @@ class DropdownAccom {
     this.restrictDecrement(category, value);
     const textElement = this.count.get(category).get('textElement');
     textElement.textContent = String(value);
-    if (this.submit) {
-      const total = this.countTotal();
-      this.total = total;
-    }
+    const total = this.countTotal();
+    this.total = total;
+    this.input.setAttribute('placeholder', `${this.total} гостей`);
     return true;
   }
 
   countTotal() {
     let total = 0;
-    Array.from(this.count.keys()).forEach((item)=>{
+    Array.from(this.count.keys()).forEach((item) => {
       if (item === 'total') {
         return false;
       }
@@ -128,10 +127,10 @@ class DropdownAccom {
     const decrement = this.count.get(category).get('decrement');
     if (value === this.limit) {
       decrement.disabled = true;
-      decrement.classList.add('dropdown-accom__button--disabled')
+      decrement.classList.add('dropdown-accom__button--disabled');
       return false;
     }
-    decrement.classList.remove('dropdown-accom__button--disabled')
+    decrement.classList.remove('dropdown-accom__button--disabled');
     decrement.disabled = false;
     return true;
   }

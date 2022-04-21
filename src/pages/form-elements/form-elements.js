@@ -27,7 +27,12 @@ const handleContentLoaded = () => {
     optionsForCalendar: options,
     parentElementClassname: 'js-form-elements__item',
   });
-  bindCalendar('form-elements__column', 'js-date-picker__input', options, 'js-date-picker__input--range');
-  bindCalendar('form-elements__column', 'js-date-picker__input--range', { ...options, range: true });
+  bindCalendar({
+    parentElementClassname: 'form-elements__item--filter-date-dropdown',
+    inputsClassname: 'js-date-picker',
+    optionsForCalendar: { ...options, range: true },
+    applyRangeSelectedDates: true,
+  });
+  // bindCalendar('form-elements__column', 'js-date-picker__input--range', { ...options, range: true });
 };
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

@@ -1,7 +1,7 @@
 // prettier-ignore
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
-import { bindOutsideClickDetection, getDOMElement } from '../../utils/utils';
+import { bindOutsideClickDetection, getDOMElement, formatMe } from '../../utils/utils';
 import './air-datepicker.scss';
 const clearButton = {
   content:
@@ -61,6 +61,7 @@ const bindCalendar = ({
   inputsClassname,
   optionsForCalendar = options,
   parentElementClassname,
+  applyRangeSelectedDates,
 }) => {
   const parentElement =
     Array.from(document.getElementsByClassName(parentElementClassname))[0] || document;
@@ -70,7 +71,6 @@ const bindCalendar = ({
     ...optionsForCalendar,
     startDate: placeholder,
   });
-  dp.selectDate(placeholder);
   Array.from(document.getElementsByClassName('js-button--inline')).forEach((item) =>
     item.addEventListener('click', (e) => {
       e.preventDefault();
@@ -87,5 +87,24 @@ const bindCalendar = ({
       e.stopPropagation();
     });
   });
+  if (applyRangeSelectedDates) {
+    const dayRange = 4;
+    const inputElement = inputElements.at(-1).querySelector('input');
+    console.log(new Date(Date.now() - 86400 * dayRange * 1000).getDate(), ' SMTHSMTH');
+    const month = new Intl.DateTimeFormat('ru-RU', {
+      month: 'short',
+    })
+      .format(Date.now())
+      .replace(/\./, '');
+    const startDate = new Date(Date.now() - 86400 * dayRange * 1000);
+    const startDateString = `${startDate.getDate()} ${month}`;
+    const endDate = new Date(Date.now());
+    const endDateString = `${endDate.getDate()} ${month}`;
+    const newPlaceholder = `${startDateString} - ${endDateString}`;
+    inputElement.placeholder = newPlaceholder;
+    dp.selectDate([startDate, endDate]);
+  } else {
+    dp.selectDate(placeholder);
+  }
 };
 export { options, bindCalendar };

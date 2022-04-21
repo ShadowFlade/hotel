@@ -18,6 +18,8 @@ const handleContentLoaded = () => {
     parentElementClassname: 'js-sidebar',
     inputsClassname: 'js-date-picker',
     optionsForCalendar: { ...options, range: true },
+    applyRangeSelectedDates: true,
+    // startDate: `${Date.now() - 4} - ${Date.now()}`,
   });
 };
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

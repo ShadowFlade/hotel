@@ -24,7 +24,7 @@ include ../../components/air-datepicker/air-datepicker.pug
 block variables
 	- let title = 'form-elements';
 	- let description = 'smth';
-	- let page='form-elements';
+	- let page = 'form-elements';
 block content 	
 	.form-elements
 		.form-elements__column
@@ -40,7 +40,7 @@ block content
 						+datePicker({label:'date dropdown',placeholder:'ДД.ММ.ГГГГ'})
 					.form-elements__datepicker
 						+datePicker({label:'date dropdown',placeholder:'19.08.2019'})
-			.form-elements__item
+			.form-elements__item.form-elements__item--filter-date-dropdown
 				+datePicker({label:'filter date dropdown',placeholder:'19 авг- 23 авг',modif:'range',sizeModif:'single',arrow:true})
 			.form-elements__item
 				h6.subscription-field__label subscription text field

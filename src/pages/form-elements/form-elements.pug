@@ -31,7 +31,7 @@ block content
 			.form-elements__item
 				+textField({label:'text field',type:'text',placeholder:'Email'})
 			.form-elements__item
-				+dropdownSubmitAndClear({label:'dropdown',placeholder:'Сколько гостей',list:['взрослые','дети','младенцы'],option:'submit',modif:'big'})
+				+dropdownSubmitAndClear({label:'dropdown',list:['взрослые','дети','младенцы'],option:'submit',modif:'big'})
 			.form-elements__item.form-elements__item--text-field
 				+defInput({label:'masked text field',placeholder:'ДД.ММ.ГГГГ',nameOfClass:'text-field'})
 			.form-elements__item.js-form-elements__item
@@ -76,7 +76,7 @@ block content
 						+rateButton(5)
 			.form-elements__item
 				.dropdown
-					+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',list:['взрослые','дети','младенцы'],option:'submit',modif:'big'})
+					+dropdownSubmitAndClear({label:'dropdown',list:['взрослые','дети','младенцы'],option:'submit',modif:'big'})
 			.form-elements__item
 				+checkboxRich({label:'RICH CHECKBOX BUTTONS',name:'facilities',list:[['Широкий коридор','Ширина коридоров в номере не менее 91 см.'],['Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.']]})
 			.form-elements__item
@@ -103,7 +103,7 @@ block content
 				+pagination({numberOfFirstPages:3,lastPage:15,itemsOnPage:12,itemsTotal:'100+'})
 			.form-elements__item
 				.dropdown
-					+dropdownSubmitAndClear({label:'dropdown',placeholder:'3 гостя',list:["взрослые","дети","младенцы"],option:'clear',modif:'big'})
+					+dropdownSubmitAndClear({label:'dropdown',list:["взрослые","дети","младенцы"],option:'clear',modif:'big'})
 			.form-elements__item
 				.bullet-list__title
 					+bulletList({title:'bullet list',list:['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']})

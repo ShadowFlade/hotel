@@ -20,7 +20,7 @@ mixin bill({modif,roomNumber,isLux,perDay,numberOfDays,sale})
         +datePicker({label:'Прибытие',placeholder:'19.08.2019',modif:'in-bill'})
         +datePicker({label:'Выезд',placeholder:'23.08.2019',modif:'in-bill'})  
       .bill__guests
-        +dropdownSubmitAndClear({label:'Гости',placeholder:'3 гостя',list:['Взрослые','Дети','Младенцы'],option:'clear'})
+        +dropdownSubmitAndClear({label:'Гости',list:['Взрослые','Дети','Младенцы'],option:'clear'})
       ul.bill__list
         li.bill__row 
           .bill__calculating-sum #{perDay}₽ х #{numberOfDays} суток

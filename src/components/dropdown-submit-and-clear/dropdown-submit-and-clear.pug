@@ -1,9 +1,9 @@
 include ../button/button.pug
-mixin dropdownSubmitAndClear({modif,label,placeholder,option,list,})
+mixin dropdownSubmitAndClear({modif,label,option,list,})
   .dropdown-accom.js-dropdown-accom(class=modif ? `dropdown-accom--${modif}` : false)
     label.dropdown-accom__label #{label}
     .dropdown-accom__input-box
-      input.dropdown-accom__input.js-dropdown-accom__input(type="text",placeholder=placeholder)
+      input.dropdown-accom__input.js-dropdown-accom__input(type="text")
       img.dropdown-accom__arrow(src="assets/img/expand_more.jpg",alt="")
     ul.dropdown-accom__ul.js-dropdown-accom__ul(style=option ==='none' ? {'height':'118px'}: false)
       .dropdown-accom__content

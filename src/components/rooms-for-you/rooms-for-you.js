@@ -2,9 +2,11 @@ import AirDatepicker from 'air-datepicker';
 import { options, bindCalendar } from '../air-datepicker/air-datepicker.js';
 import '../dropdown-submit-and-clear/dropdown-submit-and-clear.js';
 import './rooms-for-you.scss';
+import DropdownAccom from '../dropdown-submit-and-clear/DropdownAccom.js';
 
 function position({ $datepicker, $target, $pointer }) {
-  const roomsForYouCoords = $target.parentElement.parentElement.parentElement.getBoundingClientRect();
+  const roomsForYouCoords =
+    $target.parentElement.parentElement.parentElement.getBoundingClientRect();
   $datepicker.style.left = window.scrollX + roomsForYouCoords.left;
 }
 
@@ -46,6 +48,13 @@ const handleContentLoaded = () => {
     optionsForCalendar: newOptions,
     parentElementClassname: 'js-rooms-for-you',
   });
+
+  new DropdownAccom(
+    document.querySelector('.js-rooms-for-you .js-dropdown-accom'),
+    '.js-dropdown-accom__ul',
+    0,
+    'people'
+  );
 };
 
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

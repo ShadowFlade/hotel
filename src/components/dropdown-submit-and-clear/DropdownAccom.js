@@ -29,6 +29,7 @@ class DropdownAccom {
     } else if (typeof elementName === 'object') {
       this.element = elementName;
     }
+    console.log(this.element);
     this.list = this.element.querySelector(this.listName);
     this.input = this.element.getElementsByClassName('js-dropdown-accom__input')[0];
 
@@ -113,7 +114,6 @@ class DropdownAccom {
   }
 
   refresh(category) {
-    console.log(this.count, this.type, 'TYPE', this.total);
     if (category === undefined) {
       let categories = Array.from(this.count.keys());
       categories.forEach((item) => {
@@ -165,27 +165,14 @@ class DropdownAccom {
       let result = 0;
       const iterator = this.count.entries();
 
-      console.log(
-        '🚀 ~ file: DropdownAccom.js ~ line 172 ~ DropdownAccom ~ countTotal ~ iterator',
-        iterator
-      );
       for (let i = 0; i < this.count.size; i++) {
         const element = iterator.next().value;
         const value = element[1].get('value');
         const key = element[0];
-        console.log(
-          '🚀 ~ file: DropdownAccom.js ~ line 174 ~ DropdownAccom ~ countTotal ~ key',
-          key
-        );
-        console.log(
-          '🚀 ~ file: DropdownAccom.js ~ line 178 ~ DropdownAccom ~ countTotal ~ value',
-          value
-        );
 
         if (this.includeInFurnitute.includes(key)) result += value;
       }
       this.total = result;
-      console.log(this.total, 'TOTAL');
     }
   }
 

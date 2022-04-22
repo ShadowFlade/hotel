@@ -20,8 +20,8 @@ block content
       form.sidebar__container 
         .sidebar__item.sidebar__item--input 
           +datePicker({label:'даты пребывания в отеле',placeholder:'19 авг - 23 авг'})
-        .sidebar__item
-          +dropdownSubmitAndClear({label:'гости',placeholder:'3 гостя, 1 младенец',list:['взрослые','дети','младенцы'],option:'clear',modif:'small'})
+        .sidebar__item.js-sidebar__item.js-sidebar__item--dropdown-accom-people
+          +dropdownSubmitAndClear({label:'гости',list:['взрослые','дети','младенцы'],option:'clear',modif:'small'})
         .sidebar__item 
           +rangeSlider('Диапазон цены')
         .sidebar__item 
@@ -29,7 +29,7 @@ block content
         .sidebar__item
           +checkboxRich({label:'Доступность',name:'facilities',list:[['Широкий коридор','Ширина коридоров в номере не менее 91 см.'],['Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.']]})
 
-        .sidebar__item
+        .sidebar__item.js-sidebar__item--dropdown-accom-furniture
           +dropdownSubmitAndClear({label:'удобство номера',placeholder:'2 спальни, 2 кровати',list:['спальни','кровати','ванные комнаты'],option:'clear',modif:'small'})
         .sidebar__item 
           +checkboxList({label:'expandable checkbox list',list:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь']})       .content 

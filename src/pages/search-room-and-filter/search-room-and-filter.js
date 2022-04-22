@@ -12,6 +12,7 @@ import '../../components/date-picker/date-picker.js';
 import '../../components/checkbox-buttons/checkbox-buttons.js';
 import { options, bindCalendar } from '../../components/air-datepicker/air-datepicker';
 import './search-room-and-filter.scss';
+import DropdownAccom from '../../components/dropdown-submit-and-clear/DropdownAccom.js';
 
 const handleContentLoaded = () => {
   bindCalendar({
@@ -19,7 +20,18 @@ const handleContentLoaded = () => {
     inputsClassname: 'js-date-picker',
     optionsForCalendar: { ...options, range: true },
     applyRangeSelectedDates: true,
-    // startDate: `${Date.now() - 4} - ${Date.now()}`,
   });
+  new DropdownAccom(
+    document.querySelector('.js-sidebar__item--dropdown-accom-people .js-dropdown-accom'),
+    '.js-dropdown-accom__ul',
+    0,
+    'people'
+  );
+  new DropdownAccom(
+    document.querySelector('.js-sidebar__item--dropdown-accom-furniture .js-dropdown-accom'),
+    '.js-dropdown-accom__ul',
+    0,
+    'furniture'
+  );
 };
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

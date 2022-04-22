@@ -11,6 +11,7 @@ class DropdownAccom {
   count;
   adults = ['взрослые', 'дети'];
   juvenile = ['младенцы'];
+  includeInFurnitute = ['спальни', 'кровати'];
 
   constructor(element, list, limit, type) {
     this.listName = list;
@@ -76,17 +77,13 @@ class DropdownAccom {
       storage.set('value', Number(textElement.textContent));
       storage.set('textElement', textElement);
       this.count.set(category.textContent.toLowerCase(), storage);
-      const mapIterator = this.count.entries;
+
       if (this.type === 'people') {
         let totalAdults = 0;
-        for (let i = 0; i < mapIterator.length; i++) {
-          const entry = mapIterator.next().value[1];
-
-          totalAdults += entry[0] !== 'младенцы' && entry[0] !== 'total' ? entry[1] : 0;
-        }
-        this.count.set('adults', totalAdults);
-        this.count.set('juvenile', (this.total || 0) - totalAdults);
+        this.totalAdults = totalAdults;
+        this.totalJuvenile = this.total - totalAdults;
       }
+
       incrementButton.addEventListener('click', handleIncrementClick);
       decrementButton.addEventListener('click', handleDecrementClick);
     });
@@ -100,7 +97,7 @@ class DropdownAccom {
     };
     if (this.submit && this.count) {
       this.submit.addEventListener('click', onSubmit);
-      this.count.set('total', 0);
+      this.total = 0;
     }
     if (this.count && this.clear) {
       this.clear.addEventListener('click', onClear);
@@ -109,20 +106,16 @@ class DropdownAccom {
 
   reset() {
     Array.from(this.count.keys()).forEach((item) => {
-      if (item === 'total') {
-        return false;
-      }
       this.count.get(item).set('value', 0);
       return true;
     });
+    this.total = 0;
   }
 
   refresh(category) {
-    console.log(this.count);
+    console.log(this.count, this.type, 'TYPE', this.total);
     if (category === undefined) {
-      let categories = Array.from(this.count.keys()).filter(
-        (item) => item !== 'total' && item !== 'adults' && item !== 'juvenile'
-      );
+      let categories = Array.from(this.count.keys());
       categories.forEach((item) => {
         this.refresh(item);
         return true;
@@ -133,9 +126,7 @@ class DropdownAccom {
     this.restrictDecrement(category, value);
     const textElement = this.count.get(category).get('textElement');
     textElement.textContent = String(value);
-    const total = this.countTotal();
-
-    this.total = total;
+    this.countTotal();
     if (this.total > 0 && this.type === 'people') {
       this.input.setAttribute(
         'placeholder',
@@ -143,8 +134,15 @@ class DropdownAccom {
           this.totalJuvenile > 0 ? `, ${this.totalJuvenile} младенцев` : ''
         }`
       );
-    } else if (total === 0 && this.type === 'people') {
+    } else if (this.total === 0 && this.type === 'people') {
       this.input.setAttribute('placeholder', 'Сколько гостей');
+    } else if (this.type === 'furniture' && this.total > 0) {
+      const numOfBedrooms = this.count.get('спальни').get('value');
+      const numOfBeds = this.count.get('кровати').get('value');
+      this.input.setAttribute(
+        'placeholder',
+        `${numOfBedrooms} спальней${numOfBeds ? `, ${numOfBeds} кроватей` : ''}`
+      );
     }
     return true;
   }
@@ -152,29 +150,42 @@ class DropdownAccom {
   countTotal() {
     if (this.type === 'people') {
       let totalAdults = 0;
-      if (this.type === 'people') {
-      }
       this.adults.forEach((item) => {
         totalAdults += Number(this.count.get(item).get('value'));
       });
 
-      this.count.set('adults', totalAdults);
+      this.totalAdults = totalAdults;
       let totalJuvenile = 0;
       this.juvenile.forEach((item) => {
         totalJuvenile += this.count.get(item).get('value');
       });
-      this.count.set('juvenile', totalJuvenile);
       this.totalJuvenile = totalJuvenile;
       this.totalAdults = this.total = totalAdults;
-
-      return totalAdults;
     } else {
       let result = 0;
       const iterator = this.count.entries();
-      for (let i = 0; i < iterator.length; i++) {
-        result += iterator.next().value[1];
+
+      console.log(
+        '🚀 ~ file: DropdownAccom.js ~ line 172 ~ DropdownAccom ~ countTotal ~ iterator',
+        iterator
+      );
+      for (let i = 0; i < this.count.size; i++) {
+        const element = iterator.next().value;
+        const value = element[1].get('value');
+        const key = element[0];
+        console.log(
+          '🚀 ~ file: DropdownAccom.js ~ line 174 ~ DropdownAccom ~ countTotal ~ key',
+          key
+        );
+        console.log(
+          '🚀 ~ file: DropdownAccom.js ~ line 178 ~ DropdownAccom ~ countTotal ~ value',
+          value
+        );
+
+        if (this.includeInFurnitute.includes(key)) result += value;
       }
       this.total = result;
+      console.log(this.total, 'TOTAL');
     }
   }
 

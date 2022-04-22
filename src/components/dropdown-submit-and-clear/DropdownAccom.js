@@ -1,11 +1,25 @@
 import { bindOutsideClickDetection } from '../../utils/utils';
 
 class DropdownAccom {
-  constructor(element, list, limit) {
+  input;
+  list;
+  listname;
+  limit;
+  type;
+  submit;
+  clear;
+  count;
+  adults = ['взрослые', 'дети'];
+  juvenile = ['младенцы'];
+
+  constructor(element, list, limit, type) {
     this.listName = list;
+    this.type = type;
+    this.limit = limit;
     this.bindPopup(element, list);
     this.bindIncrement();
-    this.limit = limit;
+    this.countTotal();
+    this.refresh();
   }
 
   bindPopup(elementName, listName) {
@@ -62,6 +76,17 @@ class DropdownAccom {
       storage.set('value', Number(textElement.textContent));
       storage.set('textElement', textElement);
       this.count.set(category.textContent.toLowerCase(), storage);
+      const mapIterator = this.count.entries;
+      if (this.type === 'people') {
+        let totalAdults = 0;
+        for (let i = 0; i < mapIterator.length; i++) {
+          const entry = mapIterator.next().value[1];
+
+          totalAdults += entry[0] !== 'младенцы' && entry[0] !== 'total' ? entry[1] : 0;
+        }
+        this.count.set('adults', totalAdults);
+        this.count.set('juvenile', (this.total || 0) - totalAdults);
+      }
       incrementButton.addEventListener('click', handleIncrementClick);
       decrementButton.addEventListener('click', handleDecrementClick);
     });
@@ -93,8 +118,11 @@ class DropdownAccom {
   }
 
   refresh(category) {
+    console.log(this.count);
     if (category === undefined) {
-      let categories = Array.from(this.count.keys()).filter((item) => item !== 'total');
+      let categories = Array.from(this.count.keys()).filter(
+        (item) => item !== 'total' && item !== 'adults' && item !== 'juvenile'
+      );
       categories.forEach((item) => {
         this.refresh(item);
         return true;
@@ -106,21 +134,47 @@ class DropdownAccom {
     const textElement = this.count.get(category).get('textElement');
     textElement.textContent = String(value);
     const total = this.countTotal();
+
     this.total = total;
-    this.input.setAttribute('placeholder', `${this.total} гостей`);
+    // console.log(this.total);
+    if (this.total > 0 && this.type === 'people') {
+      this.input.setAttribute(
+        'placeholder',
+        `${this.totalAdults} гостей ${this.totalJuvenile ? `,${this.totalJuvenile} младенцев` : ''}`
+      );
+    } else if (total === 0 && this.type === 'people') {
+      this.input.setAttribute('placeholder', 'Сколько гостей');
+    }
     return true;
   }
 
   countTotal() {
-    let total = 0;
-    Array.from(this.count.keys()).forEach((item) => {
-      if (item === 'total') {
-        return false;
+    if (this.type === 'people') {
+      let totalAdults = 0;
+      if (this.type === 'people') {
       }
-      total += Number(this.count.get(item).get('value'));
-      return true;
-    });
-    return total;
+      this.adults.forEach((item) => {
+        // console.log(item, this.count, this.count.get(item).get('value'));
+        totalAdults += Number(this.count.get(item).get('value'));
+      });
+
+      this.count.set('adults', totalAdults);
+      let totalJuvenile = 0;
+      this.juvenile.forEach((item) => {
+        totalJuvenile += this.count.get(item).value;
+      });
+      this.count.set('juvenile', totalJuvenile);
+      this.totalAdults = this.total = totalAdults;
+
+      return totalAdults;
+    } else {
+      let result = 0;
+      const iterator = this.count.entries();
+      for (let i = 0; i < iterator.length; i++) {
+        result += iterator.next().value[1];
+      }
+      this.total = result;
+    }
   }
 
   restrictDecrement(category, value) {
@@ -133,6 +187,16 @@ class DropdownAccom {
     decrement.classList.remove('dropdown-accom__button--disabled');
     decrement.disabled = false;
     return true;
+  }
+
+  prohibitTyping() {
+    this.input.addEventListener('keydown', (event) => {
+      if (event.key === 'Tab') {
+        return true;
+      }
+      event.preventDefault();
+      return true;
+    });
   }
 }
 

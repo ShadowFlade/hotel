@@ -19,6 +19,7 @@ import '../../components/text-field/text-field.js';
 import '../../components/toggle/toggle.js';
 import '../../components/air-datepicker/air-datepicker.js';
 import { options, bindCalendar } from '../../components/air-datepicker/air-datepicker.js';
+import DropdownAccom from '../../components/dropdown-submit-and-clear/DropdownAccom.js';
 import '../../components/hotel-card/hotel-card.js';
 import './form-elements.scss';
 const handleContentLoaded = () => {
@@ -33,6 +34,12 @@ const handleContentLoaded = () => {
     optionsForCalendar: { ...options, range: true },
     applyRangeSelectedDates: true,
   });
+  const datePickers = Array.from(document.getElementsByClassName('js-dropdown-accom'));
+  new DropdownAccom(datePickers[0], '.js-dropdown-accom__ul', 0, 'people');
+  new DropdownAccom(datePickers[1], '.js-dropdown-accom__ul', 0, 'furniture');
+  new DropdownAccom(datePickers[2], '.js-dropdown-accom__ul', 0, 'people');
+  new DropdownAccom(datePickers[3], '.js-dropdown-accom__ul', 0, 'people');
+
   // bindCalendar('form-elements__column', 'js-date-picker__input--range', { ...options, range: true });
 };
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

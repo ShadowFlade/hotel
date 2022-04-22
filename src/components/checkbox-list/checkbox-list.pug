@@ -1,12 +1,12 @@
 include ../checkbox-button/checkbox-button.pug
-mixin checkboxList({label,list})
+mixin checkboxList({label,list,name})
   .checkbox-ul
     details.checkbox-ul__content
       summary.checkbox-ul__label #{label}
       ul.checkbox-ul__list
         each val in list
           li.checkbox-ul__item
-            +checkbox-button({text:val})
+            +checkbox-button({text:val,name})
 
 
 

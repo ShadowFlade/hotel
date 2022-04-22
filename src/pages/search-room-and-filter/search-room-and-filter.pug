@@ -25,14 +25,14 @@ block content
         .sidebar__item 
           +rangeSlider('Диапазон цены')
         .sidebar__item 
-          +checkboxButtons({label:'Правила дома',list:['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']})
+          +checkboxButtons({name:'rules',label:'Правила дома',list:['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']})
         .sidebar__item
-          +checkboxRich({label:'Доступность',name:'facilities',list:[['Широкий коридор','Ширина коридоров в номере не менее 91 см.'],['Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.']]})
+          +checkboxRich({label:'Доступность',name:'affordability',list:[['Широкий коридор','Ширина коридоров в номере не менее 91 см.'],['Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.']]})
 
         .sidebar__item.js-sidebar__item--dropdown-accom-furniture
           +dropdownSubmitAndClear({label:'удобство номера',list:['спальни','кровати','ванные комнаты'],option:'clear',modif:'small'})
         .sidebar__item 
-          +checkboxList({label:'expandable checkbox list',list:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь']})       .content 
+          +checkboxList({name:'conveniences',label:'дополнительные удобства',list:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь']})       .content 
     .content
       .content__title Номера, которые мы для вас подобрали
       .content__items 

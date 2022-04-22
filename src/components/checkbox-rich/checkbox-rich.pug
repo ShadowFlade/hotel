@@ -1,10 +1,10 @@
 include ../checkbox-button/checkbox-button.pug
-mixin checkboxRich({label,list})
+mixin checkboxRich({label,list,name})
   h6.checkbox-rich__label #{label}
   .checkbox-rich 
     ul.checkbox-rich__list
       each val in list
         li.checkbox-rich__option
-          +checkbox-button({desc:val[1],text:val[0],})
+          +checkbox-button({desc:val[1],text:val[0],name})
 
 

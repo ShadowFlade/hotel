@@ -136,11 +136,12 @@ class DropdownAccom {
     const total = this.countTotal();
 
     this.total = total;
-    // console.log(this.total);
     if (this.total > 0 && this.type === 'people') {
       this.input.setAttribute(
         'placeholder',
-        `${this.totalAdults} гостей ${this.totalJuvenile ? `,${this.totalJuvenile} младенцев` : ''}`
+        `${this.totalAdults} гостей${
+          this.totalJuvenile > 0 ? `, ${this.totalJuvenile} младенцев` : ''
+        }`
       );
     } else if (total === 0 && this.type === 'people') {
       this.input.setAttribute('placeholder', 'Сколько гостей');
@@ -154,16 +155,16 @@ class DropdownAccom {
       if (this.type === 'people') {
       }
       this.adults.forEach((item) => {
-        // console.log(item, this.count, this.count.get(item).get('value'));
         totalAdults += Number(this.count.get(item).get('value'));
       });
 
       this.count.set('adults', totalAdults);
       let totalJuvenile = 0;
       this.juvenile.forEach((item) => {
-        totalJuvenile += this.count.get(item).value;
+        totalJuvenile += this.count.get(item).get('value');
       });
       this.count.set('juvenile', totalJuvenile);
+      this.totalJuvenile = totalJuvenile;
       this.totalAdults = this.total = totalAdults;
 
       return totalAdults;

@@ -94,7 +94,6 @@ class DropdownAccom {
     const onClear = () => {
       this.reset();
       this.refresh();
-      this.input.setAttribute('placeholder', `${this.total} гостей`);
     };
     if (this.submit && this.count) {
       this.submit.addEventListener('click', onSubmit);
@@ -127,7 +126,10 @@ class DropdownAccom {
     const textElement = this.count.get(category).get('textElement');
     textElement.textContent = String(value);
     this.countTotal();
+    console.log(this.total === 0, this.type === 'people');
+
     if (this.total > 0 && this.type === 'people') {
+      console.log('after clear');
       this.input.setAttribute(
         'placeholder',
         `${this.totalAdults} гостей${

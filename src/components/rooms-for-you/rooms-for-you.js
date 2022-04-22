@@ -49,12 +49,9 @@ const handleContentLoaded = () => {
     parentElementClassname: 'js-rooms-for-you',
   });
 
-  new DropdownAccom(
-    document.querySelector('.js-rooms-for-you .js-dropdown-accom'),
-    '.js-dropdown-accom__ul',
-    0,
-    'people'
-  );
+  new DropdownAccom({
+    element: document.querySelector('.js-rooms-for-you .js-dropdown-accom'),
+  });
 };
 
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

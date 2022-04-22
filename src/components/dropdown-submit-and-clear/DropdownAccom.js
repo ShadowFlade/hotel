@@ -13,7 +13,7 @@ class DropdownAccom {
   juvenile = ['младенцы'];
   includeInFurnitute = ['спальни', 'кровати'];
 
-  constructor(element, list, limit, type) {
+  constructor({ element, list = '.js-dropdown-accom__ul', limit = 0, type = 'people' }) {
     this.listName = list;
     this.type = type;
     this.limit = limit;

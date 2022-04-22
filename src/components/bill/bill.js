@@ -11,11 +11,8 @@ const handleContentLoaded = () => {
       renderToAnotherInput({ datepicker, parent: 'js-bill' });
     },
   });
-  new DropdownAccom(
-    document.querySelector('.js-bill .js-dropdown-accom'),
-    '.js-dropdown-accom__ul',
-    0,
-    'people'
-  );
+  new DropdownAccom({
+    element: document.querySelector('.js-bill .js-dropdown-accom'),
+  });
 };
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

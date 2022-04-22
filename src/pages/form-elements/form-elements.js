@@ -35,11 +35,18 @@ const handleContentLoaded = () => {
     applyRangeSelectedDates: true,
   });
   const datePickers = Array.from(document.getElementsByClassName('js-dropdown-accom'));
-  new DropdownAccom(datePickers[0], '.js-dropdown-accom__ul', 0, 'people');
-  new DropdownAccom(datePickers[1], '.js-dropdown-accom__ul', 0, 'furniture');
-  new DropdownAccom(datePickers[2], '.js-dropdown-accom__ul', 0, 'people');
-  new DropdownAccom(datePickers[3], '.js-dropdown-accom__ul', 0, 'people');
-
-  // bindCalendar('form-elements__column', 'js-date-picker__input--range', { ...options, range: true });
+  new DropdownAccom({
+    element: datePickers[0],
+  });
+  new DropdownAccom({
+    element: datePickers[1],
+    type: 'furniture',
+  });
+  new DropdownAccom({
+    element: datePickers[2],
+  });
+  new DropdownAccom({
+    element: datePickers[3],
+  });
 };
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

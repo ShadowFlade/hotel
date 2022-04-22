@@ -21,17 +21,14 @@ const handleContentLoaded = () => {
     optionsForCalendar: { ...options, range: true },
     applyRangeSelectedDates: true,
   });
-  new DropdownAccom(
-    document.querySelector('.js-sidebar__item--dropdown-accom-people .js-dropdown-accom'),
-    '.js-dropdown-accom__ul',
-    0,
-    'people'
-  );
-  new DropdownAccom(
-    document.querySelector('.js-sidebar__item--dropdown-accom-furniture .js-dropdown-accom'),
-    '.js-dropdown-accom__ul',
-    0,
-    'furniture'
-  );
+  new DropdownAccom({
+    element: document.querySelector('.js-sidebar__item--dropdown-accom-people .js-dropdown-accom'),
+  });
+  new DropdownAccom({
+    element: document.querySelector(
+      '.js-sidebar__item--dropdown-accom-furniture .js-dropdown-accom'
+    ),
+    type: 'furniture',
+  });
 };
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

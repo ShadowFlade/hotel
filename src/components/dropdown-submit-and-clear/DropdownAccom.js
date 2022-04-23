@@ -11,7 +11,7 @@ class DropdownAccom {
   count;
   adults = ['взрослые', 'дети'];
   juvenile = ['младенцы'];
-  includeInFurnitute = ['спальни', 'кровати'];
+  includeInFurniture = ['спальни', 'кровати'];
 
   constructor({ element, list = '.js-dropdown-accom__ul', limit = 0, type = 'people' }) {
     this.listName = list;
@@ -29,13 +29,12 @@ class DropdownAccom {
     } else if (typeof elementName === 'object') {
       this.element = elementName;
     }
-    console.log(this.element);
     this.list = this.element.querySelector(this.listName);
     this.input = this.element.getElementsByClassName('js-dropdown-accom__input')[0];
 
     bindOutsideClickDetection(this.element, this.list);
     const submitButton = this.element.querySelector('.js-dropdown-accom__submit');
-    this.submit = submitButton;
+    this.submitButton = submitButton;
     const clearButton = this.element.querySelector('.js-dropdown-accom__clear');
     this.clear = clearButton;
   }
@@ -43,6 +42,7 @@ class DropdownAccom {
   bindIncrement() {
     const listChildren = Array.from(this.element.querySelectorAll('.js-dropdown-accom__option'));
     this.count = new Map();
+    this.form = this.element.querySelector('form');
     const handleIncrementClick = (e) => {
       const target = e.target;
       const li = target.closest('li');
@@ -72,11 +72,13 @@ class DropdownAccom {
       const incrementButton = child.getElementsByClassName('dropdown-accom__button--next')[0];
       const decrementButton = child.getElementsByClassName('dropdown-accom__button--prev')[0];
       const category = child.getElementsByClassName('dropdown-accom__variant')[0];
+      const hiddenState = child.querySelector('.js-dropdown-accom__hidden');
       const storage = new Map();
       storage.set('increment', incrementButton);
       storage.set('decrement', decrementButton);
       storage.set('value', Number(textElement.textContent));
       storage.set('textElement', textElement);
+      storage.set('hiddenState', hiddenState);
       this.count.set(category.textContent.toLowerCase(), storage);
 
       if (this.type === 'people') {
@@ -88,15 +90,18 @@ class DropdownAccom {
       incrementButton.addEventListener('click', handleIncrementClick);
       decrementButton.addEventListener('click', handleDecrementClick);
     });
-    const onSubmit = () => {
-      this.input.setAttribute('placeholder', `${this.total} гостей`);
+    const onSubmit = async () => {
+      await fetch('path/to/backend', {
+        method: 'POST',
+        body: new FormData(this.form),
+      });
     };
     const onClear = () => {
       this.reset();
       this.refresh();
     };
-    if (this.submit && this.count) {
-      this.submit.addEventListener('click', onSubmit);
+    if (this.submitButton && this.count) {
+      this.submitButton.addEventListener('click', onSubmit);
       this.total = 0;
     }
     if (this.count && this.clear) {
@@ -124,12 +129,11 @@ class DropdownAccom {
     let value = this.count.get(category).get('value');
     this.restrictDecrement(category, value);
     const textElement = this.count.get(category).get('textElement');
+    this.count.get(category).get('hiddenState').value = value;
     textElement.textContent = String(value);
     this.countTotal();
-    console.log(this.total === 0, this.type === 'people');
 
     if (this.total > 0 && this.type === 'people') {
-      console.log('after clear');
       this.input.setAttribute(
         'placeholder',
         `${this.totalAdults} гостей${
@@ -172,7 +176,7 @@ class DropdownAccom {
         const value = element[1].get('value');
         const key = element[0];
 
-        if (this.includeInFurnitute.includes(key)) result += value;
+        if (this.includeInFurniture.includes(key)) result += value;
       }
       this.total = result;
     }

@@ -27,6 +27,7 @@ const handleContentLoaded = () => {
     inputsClassname: 'js-date-picker',
     optionsForCalendar: options,
     parentElementClassname: 'js-form-elements__item',
+    // applyRangeSelectedDates: true,
   });
   bindCalendar({
     parentElementClassname: 'form-elements__item--filter-date-dropdown',

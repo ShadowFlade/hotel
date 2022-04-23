@@ -13,7 +13,7 @@ const submitButton = {
 };
 const options = {
   moveToOtherMonthsOnSelect: false,
-  range: false,
+  range: true,
   navTitles: {
     days: 'MMMM  yyyy ',
   },
@@ -56,10 +56,52 @@ const readDatePlaceholder = (elements) => {
   });
   return placeholders.at(-1)?.trim();
 };
-const sendDataToInputs = ({ date, startInput, endInput }) => {
-  console.log(date.constructor);
-  startInput.value = date.constructor.toLowerCase === 'array' ? date.at(0).toISOString() : date;
-  endInput.value = date.constructor.toLowerCase === 'array' ? date.at(1).toISOString() : date;
+const formatDate = (date) => {
+  return `${date.getDate()}.${
+    date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1
+  }.${date.getFullYear()}`;
+};
+const sendDataToInputsAndUpdatePlaceholder = ({ date, startInput, endInput, inputElements }) => {
+  const inputs = inputElements.map((item) => item.querySelector('input'));
+  const isArray = date.constructor.name.toLowerCase() === 'array';
+
+  startInput.value = isArray ? date.at(0).toISOString() : date.toISOString();
+  endInput.value = isArray ? date.at(1)?.toISOString() : date.toISOString() || 'not set';
+  try {
+    if (isArray) {
+      inputs.at(0).placeholder = `${date.at(0).getDate()}.${
+        date.at(0).getMonth() + 1 < 10 ? `0${date.at(0).getMonth() + 1}` : date.at(0).getMonth() + 1
+      }.${date.at(0).getFullYear()}`;
+      inputs.at(1).placeholder = `${date.at(1).getDate()}.${
+        date.at(1).getMonth() + 1 < 10 ? `0${date.at(1).getMonth() + 1}` : date.at(1).getMonth() + 1
+      }.${date.at(1).getFullYear()}`;
+    } else {
+      inputs.at(0).placeholder = `${date.getDate()}.${
+        date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1
+      }.${date.getFullYear()}`;
+      inputs.at(1).placeholder = `${date.getDate()}.${
+        date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1
+      }.${date.getFullYear()}`;
+    }
+  } catch (e) {
+    //doing nothing,because we try to get the second date,which is not there, but it is still in the placeholder,therefore its ok
+  }
+};
+const updatePlaceholderInSingleInputElement = ({ date, inputElement }) => {
+  console.log(date);
+  const fromMonth = new Intl.DateTimeFormat('ru-RU', {
+    month: 'short',
+  }).format(date.at(0));
+  const toMonth = new Intl.DateTimeFormat('ru-RU', {
+    month: 'short',
+  }).format(date.at(1));
+  const fromDate = `${date.at(0).getDate()} ${fromMonth}`;
+  try {
+    const toDate = `${date.at(1).getDate()} ${toMonth}`;
+    inputElement.placeholder = `${fromDate} - ${toDate}`;
+  } catch (e) {
+    //same
+  }
 };
 
 const bindCalendar = ({
@@ -98,7 +140,17 @@ const bindCalendar = ({
     ...optionsForCalendar,
     startDate: placeholder,
     onSelect({ date }) {
-      sendDataToInputs({ date, startInput: hiddenInputStart, endInput: hiddenInputEnd });
+      !applyRangeSelectedDates
+        ? sendDataToInputsAndUpdatePlaceholder({
+            date,
+            startInput: hiddenInputStart,
+            endInput: hiddenInputEnd,
+            inputElements,
+          })
+        : updatePlaceholderInSingleInputElement({
+            date,
+            inputElement: inputElements.at(-1).querySelector('input'),
+          });
     },
   });
   dp.$datepicker.append(hiddenInputStart, hiddenInputEnd);
@@ -121,12 +173,14 @@ const bindCalendar = ({
   });
   if (applyRangeSelectedDates) {
     const inputElement = inputElements.at(-1).querySelector('input');
-
     const newPlaceholder = `${startDateString} - ${endDateString}`;
     inputElement.placeholder = newPlaceholder;
     dp.selectDate([startDate, endDate]);
   } else {
     dp.selectDate(placeholder);
+    setTimeout(() => {
+      inputElements.at(0).querySelector('input').placeholder = 'ДД.ММ.ГГГГ';
+    }, 0);
   }
 };
 export { options, bindCalendar };

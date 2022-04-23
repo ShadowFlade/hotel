@@ -5,7 +5,7 @@ mixin dropdownSubmitAndClear({modif,label,option,list,type='people'})
     .dropdown-accom__input-box
       input.dropdown-accom__input.js-dropdown-accom__input(type="text")
       img.dropdown-accom__arrow(src="assets/img/expand_more.jpg",alt="")
-    form.dropdown-accom__ul.js-dropdown-accom__ul(style= option ==='none' ? {'height':'118px'}: false)
+    .dropdown-accom__ul.js-dropdown-accom__ul(style= option ==='none' ? {'height':'118px'}: false)
       ul.dropdown-accom__content
         each val in list
           li.dropdown-accom__option.js-dropdown-accom__option

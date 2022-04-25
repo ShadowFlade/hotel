@@ -12,6 +12,24 @@ class DropdownAccom {
   adults = ['взрослые', 'дети'];
   juvenile = ['младенцы'];
   includeInFurniture = ['спальни', 'кровати'];
+  dictionary = {
+    guests: {
+      adults: ['взсролый', 'взрослых'],
+      juvenile: ['младенец', 'младенца', 'младенцев'],
+    },
+    furniture: {
+      beds: {
+        1: 'кровать',
+        2: 'кровати',
+        5: 'кроватей',
+      },
+      bedrooms: {
+        1: 'спальня',
+        2: 'спальни',
+        5: 'спален',
+      },
+    },
+  };
 
   constructor({ element, list = '.js-dropdown-accom__ul', limit = 0, type = 'people' }) {
     this.listName = list;
@@ -145,9 +163,21 @@ class DropdownAccom {
     } else if (this.type === 'furniture' && this.total > 0) {
       const numOfBedrooms = this.count.get('спальни').get('value');
       const numOfBeds = this.count.get('кровати').get('value');
+      const matchToNumOfBedrooms = this.findTheClosestNumber(
+        numOfBedrooms,
+        Object.keys(this.dictionary.furniture.bedrooms)
+      );
+      const matchToNumOfBeds = this.findTheClosestNumber(
+        numOfBeds,
+        Object.keys(this.dictionary.furniture.beds)
+      );
       this.input.setAttribute(
         'placeholder',
-        `${numOfBedrooms} спальней${numOfBeds ? `, ${numOfBeds} кроватей` : ''}`
+        `${numOfBedrooms} ${this.dictionary.furniture.bedrooms[matchToNumOfBedrooms]} ${
+          matchToNumOfBeds
+            ? `, ${numOfBeds} ${this.dictionary.furniture.beds[matchToNumOfBeds]} `
+            : ''
+        }`
       );
     }
     return true;
@@ -192,6 +222,21 @@ class DropdownAccom {
     decrement.classList.remove('dropdown-accom__button--disabled');
     decrement.disabled = false;
     return true;
+  }
+
+  findTheClosestNumber(number, arrayOfNumbers) {
+    let intermediat = Infinity;
+    arrayOfNumbers.forEach((item) => {
+      console.log({
+        whatWorkingWith: arrayOfNumbers,
+        number,
+        item,
+        intermediat,
+      });
+      number >= Number(item) ? (intermediat = item) : false;
+    });
+    console.log(intermediat, ' result');
+    return intermediat;
   }
 
   prohibitTyping() {

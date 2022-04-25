@@ -181,7 +181,6 @@ const bindCalendar = ({
     }, 0);
   }
 };
-export { options, bindCalendar };
 
 $(function () {
   $('.js-card__datepicker').click();
@@ -198,3 +197,4 @@ $(function () {
   };
   $('.js-date-picker__input').on('keydown', prohibitTyping);
 });
+export { options, bindCalendar };

@@ -69,32 +69,30 @@ const sendDataToInputsAndUpdatePlaceholder = ({ date, startInput, endInput, inpu
   endInput.value = isArray ? date.at(1)?.toISOString() : date.toISOString() || 'not set';
   try {
     if (isArray) {
-      inputs.at(0).placeholder = `${date.at(0).getDate()}.${
-        date.at(0).getMonth() + 1 < 10 ? `0${date.at(0).getMonth() + 1}` : date.at(0).getMonth() + 1
-      }.${date.at(0).getFullYear()}`;
-      inputs.at(1).placeholder = `${date.at(1).getDate()}.${
-        date.at(1).getMonth() + 1 < 10 ? `0${date.at(1).getMonth() + 1}` : date.at(1).getMonth() + 1
-      }.${date.at(1).getFullYear()}`;
+      inputs.at(0).placeholder = formatDate(date.at(0));
+      inputs.at(1).placeholder = formatDate(date.at(1));
     } else {
-      inputs.at(0).placeholder = `${date.getDate()}.${
-        date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1
-      }.${date.getFullYear()}`;
-      inputs.at(1).placeholder = `${date.getDate()}.${
-        date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1
-      }.${date.getFullYear()}`;
+      inputs.at(0).placeholder = formatDate(date);
+      inputs.at(1).placeholder = formatDate(date);
     }
   } catch (e) {
     //doing nothing,because we try to get the second date,which is not there, but it is still in the placeholder,therefore its ok
   }
 };
 const updatePlaceholderInSingleInputElement = ({ date, inputElement }) => {
-  console.log(date);
-  const fromMonth = new Intl.DateTimeFormat('ru-RU', {
-    month: 'short',
-  }).format(date.at(0));
-  const toMonth = new Intl.DateTimeFormat('ru-RU', {
-    month: 'short',
-  }).format(date.at(1));
+  const deleteDot = (month) => {
+    return month.replace(/(w+)\./, $1);
+  };
+  const fromMonth = deleteDot(
+    new Intl.DateTimeFormat('ru-RU', {
+      month: 'short',
+    }).format(date.at(0))
+  );
+  const toMonth = deleteDot(
+    new Intl.DateTimeFormat('ru-RU', {
+      month: 'short',
+    }).format(date.at(1))
+  );
   const fromDate = `${date.at(0).getDate()} ${fromMonth}`;
   try {
     const toDate = `${date.at(1).getDate()} ${toMonth}`;

@@ -1,5 +1,5 @@
 import AirDatepicker from 'air-datepicker';
-import { options, bindCalendar } from '../air-datepicker/air-datepicker.js';
+import { options, bindCalendar } from '../date-picker/date-picker.js';
 import '../dropdown-submit-and-clear/dropdown-submit-and-clear.js';
 import './rooms-for-you.scss';
 import DropdownAccom from '../dropdown-submit-and-clear/DropdownAccom.js';

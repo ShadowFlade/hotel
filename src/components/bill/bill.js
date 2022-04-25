@@ -1,4 +1,4 @@
-import { options, bindCalendar } from '../air-datepicker/air-datepicker';
+import { options, bindCalendar } from '../date-picker/date-picker';
 import { renderToAnotherInput } from '../rooms-for-you/rooms-for-you';
 import './bill.scss';
 import DropdownAccom from '../dropdown-submit-and-clear/DropdownAccom';

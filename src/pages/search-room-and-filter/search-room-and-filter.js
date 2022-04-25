@@ -10,7 +10,7 @@ import '../../components/pagination/pagination.js';
 import '../../components/checkbox-list/checkbox-list.js';
 import '../../components/date-picker/date-picker.js';
 import '../../components/checkbox-buttons/checkbox-buttons.js';
-import { options, bindCalendar } from '../../components/air-datepicker/air-datepicker';
+import { options, bindCalendar } from '../../components/date-picker/date-picker.js';
 import './search-room-and-filter.scss';
 import DropdownAccom from '../../components/dropdown-submit-and-clear/DropdownAccom.js';
 

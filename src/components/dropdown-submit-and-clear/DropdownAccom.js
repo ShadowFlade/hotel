@@ -14,8 +14,15 @@ class DropdownAccom {
   includeInFurniture = ['спальни', 'кровати'];
   dictionary = {
     guests: {
-      adults: ['взсролый', 'взрослых'],
-      juvenile: ['младенец', 'младенца', 'младенцев'],
+      adults: {
+        1: 'взрослый',
+        2: 'взрослых',
+      },
+      juvenile: {
+        1: 'младенец',
+        2: 'младенца',
+        5: 'младенцев',
+      },
     },
     furniture: {
       beds: {
@@ -150,12 +157,21 @@ class DropdownAccom {
     this.count.get(category).get('hiddenState').value = value;
     textElement.textContent = String(value);
     this.countTotal();
-
+    const matchToNumberOfGuests = this.findTheClosestNumber(
+      this.total,
+      Object.keys(this.dictionary.guests.adults)
+    );
+    const matchToNumberOfKids = this.findTheClosestNumber(
+      this.totalJuvenile,
+      Object.keys(this.dictionary.guests.juvenile)
+    );
     if (this.total > 0 && this.type === 'people') {
       this.input.setAttribute(
         'placeholder',
-        `${this.totalAdults} гостей${
-          this.totalJuvenile > 0 ? `, ${this.totalJuvenile} младенцев` : ''
+        `${this.total} ${this.dictionary.guests.adults[matchToNumberOfGuests]}${
+          this.totalJuvenile > 0
+            ? `, ${this.totalJuvenile} ${this.dictionary.guests.juvenile[matchToNumberOfKids]}`
+            : ''
         }`
       );
     } else if (this.total === 0 && this.type === 'people') {

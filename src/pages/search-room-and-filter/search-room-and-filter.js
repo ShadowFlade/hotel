@@ -4,7 +4,6 @@ import '../../components/subscription-text-field/subscription-text-field.js';
 import '../../components/text-field/text-field.js';
 import '../../components/toggle/toggle.js';
 import '../../components/checkbox-rich/checkbox-rich.js';
-import '../../components/dropdown-submit-and-clear/dropdown-submit-and-clear.js';
 import '../../components/hotel-card/hotel-card.js';
 import '../../components/pagination/pagination.js';
 import '../../components/checkbox-list/checkbox-list.js';

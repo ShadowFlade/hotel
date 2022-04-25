@@ -5,7 +5,6 @@ import '../../components/comment/comment.js';
 import '../../components/bill/bill.js';
 import '../../components/features/features.js';
 import '../../components/date-picker/date-picker.js';
-import '../../components/dropdown-submit-and-clear/dropdown-submit-and-clear.js';
 import './room-details.scss';
 
 $(function () {
@@ -20,12 +19,7 @@ $(function () {
         borderColor: ['rgb(229, 229, 229)'],
         borderWidth: 3,
 
-        backgroundColor: [
-          'red',
-          'rgba(54, 162, 235)',
-          'rgba(255, 206, 86 )',
-          'black',
-        ],
+        backgroundColor: ['red', 'rgba(54, 162, 235)', 'rgba(255, 206, 86 )', 'black'],
       },
     ],
   };

@@ -6,7 +6,6 @@ import '../../components/checkbox-buttons/checkbox-buttons.js';
 import '../../components/bullet-list/bullet-list.js';
 import '../../components/checkbox-rich/checkbox-rich.js';
 import '../../components/date-picker/date-picker.js';
-import '../../components/dropdown-submit-and-clear/dropdown-submit-and-clear.js';
 import '../../components/features/features.js';
 import '../../components/like/like.js';
 import '../../components/pagination/pagination.js';
@@ -27,7 +26,6 @@ const handleContentLoaded = () => {
     inputsClassname: 'js-date-picker',
     optionsForCalendar: options,
     parentElementClassname: 'js-form-elements__item',
-    // applyRangeSelectedDates: true,
   });
   bindCalendar({
     parentElementClassname: 'form-elements__item--filter-date-dropdown',

@@ -1,4 +1,5 @@
 import { bindOutsideClickDetection } from '../../utils/utils';
+import './dropdown-submit-and-clear.scss';
 
 class DropdownAccom {
   input;
@@ -49,11 +50,14 @@ class DropdownAccom {
   }
 
   bindPopup(elementName, listName) {
+    console.log(elementName, typeof elementName);
+
     if (typeof elementName === 'string') {
       this.element = document.querySelector(elementName);
     } else if (typeof elementName === 'object') {
       this.element = elementName;
     }
+
     this.list = this.element.querySelector(this.listName);
     this.input = this.element.getElementsByClassName('js-dropdown-accom__input')[0];
 
@@ -157,11 +161,11 @@ class DropdownAccom {
     this.count.get(category).get('hiddenState').value = value;
     textElement.textContent = String(value);
     this.countTotal();
-    const matchToNumberOfGuests = this.findTheClosestNumber(
+    const matchToNumberOfGuests = this.findTheClosestNumberAndMatchTheGrammar(
       this.total,
       Object.keys(this.dictionary.guests.adults)
     );
-    const matchToNumberOfKids = this.findTheClosestNumber(
+    const matchToNumberOfKids = this.findTheClosestNumberAndMatchTheGrammar(
       this.totalJuvenile,
       Object.keys(this.dictionary.guests.juvenile)
     );
@@ -179,11 +183,11 @@ class DropdownAccom {
     } else if (this.type === 'furniture' && this.total > 0) {
       const numOfBedrooms = this.count.get('спальни').get('value');
       const numOfBeds = this.count.get('кровати').get('value');
-      const matchToNumOfBedrooms = this.findTheClosestNumber(
+      const matchToNumOfBedrooms = this.findTheClosestNumberAndMatchTheGrammar(
         numOfBedrooms,
         Object.keys(this.dictionary.furniture.bedrooms)
       );
-      const matchToNumOfBeds = this.findTheClosestNumber(
+      const matchToNumOfBeds = this.findTheClosestNumberAndMatchTheGrammar(
         numOfBeds,
         Object.keys(this.dictionary.furniture.beds)
       );
@@ -240,19 +244,15 @@ class DropdownAccom {
     return true;
   }
 
-  findTheClosestNumber(number, arrayOfNumbers) {
-    let intermediat = Infinity;
+  findTheClosestNumberAndMatchTheGrammar(number, arrayOfNumbers) {
+    let intermediate = Infinity;
+    const theNumber = Number(String(number).match(/\d$/));
+    const workingNumber = number > 20 ? theNumber : number;
     arrayOfNumbers.forEach((item) => {
-      console.log({
-        whatWorkingWith: arrayOfNumbers,
-        number,
-        item,
-        intermediat,
-      });
-      number >= Number(item) ? (intermediat = item) : false;
+      workingNumber >= Number(item) || workingNumber === 0 ? (intermediate = item) : false;
     });
-    console.log(intermediat, ' result');
-    return intermediat;
+    console.log(intermediate);
+    return intermediate;
   }
 
   prohibitTyping() {

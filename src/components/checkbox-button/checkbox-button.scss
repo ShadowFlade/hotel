@@ -63,7 +63,7 @@
         background-color: transparent;
       }
     }
-    &:focus + .checkbox-button__text {
+    &:checked + .checkbox-button__text {
       color: #bc9cff;
     }
   }

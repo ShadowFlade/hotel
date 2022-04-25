@@ -6,6 +6,9 @@ import './date-picker.scss';
 const clearButton = {
   content:
     '<button class="button button--inline js-button--inline" type="button">Очистить</button>',
+  onClick: (dp) => {
+    dp.clear();
+  },
 };
 const submitButton = {
   content:
@@ -80,19 +83,16 @@ const sendDataToInputsAndUpdatePlaceholder = ({ date, startInput, endInput, inpu
   }
 };
 const updatePlaceholderInSingleInputElement = ({ date, inputElement }) => {
-  const deleteDot = (month) => {
-    return month.replace(/(w+)\./, $1);
-  };
-  const fromMonth = deleteDot(
-    new Intl.DateTimeFormat('ru-RU', {
-      month: 'short',
-    }).format(date.at(0))
-  );
-  const toMonth = deleteDot(
-    new Intl.DateTimeFormat('ru-RU', {
-      month: 'short',
-    }).format(date.at(1))
-  );
+  const fromMonth = new Intl.DateTimeFormat('ru-RU', {
+    month: 'short',
+  })
+    .format(date.at(0))
+    .replace(/\./, '');
+  const toMonth = new Intl.DateTimeFormat('ru-RU', {
+    month: 'short',
+  })
+    .format(date.at(1))
+    .replace(/\./, '');
   const fromDate = `${date.at(0).getDate()} ${fromMonth}`;
   try {
     const toDate = `${date.at(1).getDate()} ${toMonth}`;

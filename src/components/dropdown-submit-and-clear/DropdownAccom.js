@@ -50,8 +50,6 @@ class DropdownAccom {
   }
 
   bindPopup(elementName, listName) {
-    console.log(elementName, typeof elementName);
-
     if (typeof elementName === 'string') {
       this.element = document.querySelector(elementName);
     } else if (typeof elementName === 'object') {
@@ -251,7 +249,6 @@ class DropdownAccom {
     arrayOfNumbers.forEach((item) => {
       workingNumber >= Number(item) || workingNumber === 0 ? (intermediate = item) : false;
     });
-    console.log(intermediate);
     return intermediate;
   }
 

@@ -1,5 +1,5 @@
 import AirDatepicker from 'air-datepicker';
-import { options, bindCalendar } from '../date-picker/date-picker.js';
+import { DatePicker } from '../date-picker/date-picker.js';
 import './rooms-for-you.scss';
 import DropdownAccom from '../dropdown-submit-and-clear/DropdownAccom.js';
 
@@ -21,7 +21,6 @@ const renderToAnotherInput = ({ datepicker, parent }) => {
 };
 const handleContentLoaded = () => {
   const newOptions = {
-    ...options,
     range: true,
     selectOtherMonths: false,
     classes: 'air-datepicker--rooms-for-you',
@@ -42,7 +41,7 @@ const handleContentLoaded = () => {
       renderToAnotherInput({ datepicker, parent: 'rooms-for-you' });
     },
   };
-  bindCalendar({
+  new DatePicker({
     inputsClassname: 'js-date-picker',
     optionsForCalendar: newOptions,
     parentElementClassname: 'js-rooms-for-you',

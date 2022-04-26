@@ -18,7 +18,7 @@ import '../../components/text-field/text-field.js';
 import '../../components/toggle/toggle.js';
 import '../../components/date-picker/date-picker.js';
 import formatTheValue from '../../components/range-slider/range-slider.js';
-import { options, bindCalendar } from '../../components/date-picker/date-picker.js';
+import { DatePicker } from '../../components/date-picker/date-picker.js';
 import DropdownAccom from '../../components/dropdown-submit-and-clear/DropdownAccom.js';
 import '../../components/hotel-card/hotel-card.js';
 import './form-elements.scss';
@@ -42,18 +42,18 @@ const handleContentLoaded = () => {
   Array.from(document.getElementsByClassName('range-slider__start'))[0].textContent =
     sliderValues[0];
   Array.from(document.getElementsByClassName('range-slider__end'))[0].textContent = sliderValues[1];
-  bindCalendar({
+  new DatePicker({
     inputsClassname: 'js-date-picker',
-    optionsForCalendar: options,
     parentElementClassname: 'js-form-elements__item',
   });
-  bindCalendar({
+  new DatePicker({
     parentElementClassname: 'form-elements__item--filter-date-dropdown',
     inputsClassname: 'js-date-picker',
-    optionsForCalendar: { ...options, range: true },
+    options: { range: true },
     applyRangeSelectedDates: true,
   });
   const datePickers = Array.from(document.getElementsByClassName('js-dropdown-accom'));
+
   new DropdownAccom({
     element: datePickers[0],
   });

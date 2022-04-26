@@ -10,7 +10,7 @@ import '../../components/checkbox-list/checkbox-list.js';
 import '../../components/date-picker/date-picker.js';
 import '../../components/checkbox-buttons/checkbox-buttons.js';
 import formatTheValue from '../../components/range-slider/range-slider.js';
-import { options, bindCalendar } from '../../components/date-picker/date-picker.js';
+import { DatePicker } from '../../components/date-picker/date-picker.js';
 import './search-room-and-filter.scss';
 import DropdownAccom from '../../components/dropdown-submit-and-clear/DropdownAccom.js';
 
@@ -33,10 +33,10 @@ const handleContentLoaded = () => {
   Array.from(document.getElementsByClassName('range-slider__start'))[0].textContent =
     sliderValues[0];
   Array.from(document.getElementsByClassName('range-slider__end'))[0].textContent = sliderValues[1];
-  bindCalendar({
+  new DatePicker({
     parentElementClassname: 'js-sidebar',
     inputsClassname: 'js-date-picker',
-    optionsForCalendar: { ...options, range: true },
+    optionsForCalendar: { range: true },
     applyRangeSelectedDates: true,
   });
   new DropdownAccom({

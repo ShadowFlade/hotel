@@ -1,10 +1,10 @@
-import { options, bindCalendar } from '../date-picker/date-picker';
+import { DatePicker } from '../date-picker/date-picker';
 import './bill.scss';
 import DropdownAccom from '../dropdown-submit-and-clear/DropdownAccom';
 const handleContentLoaded = () => {
-  bindCalendar({
+  new DatePicker({
     inputsClassname: 'js-date-picker',
-    optionsForCalendar: { ...options, range: true },
+    optionsForCalendar: { range: true },
     parentElementClassname: 'js-bill',
   });
   new DropdownAccom({

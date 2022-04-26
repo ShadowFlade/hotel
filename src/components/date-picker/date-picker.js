@@ -1,7 +1,7 @@
 // prettier-ignore
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
-import { bindOutsideClickDetection, getDOMElement, formatMe } from '../../utils/utils';
+import { bindOutsideClickDetection } from '../../utils/utils';
 import './date-picker.scss';
 
 class DatePicker {
@@ -32,14 +32,8 @@ class DatePicker {
     inline: true,
   };
 
-  constructor({
-    inputsClassname,
-    options = this.defaultOptions,
-    parentElementClassname,
-    applyRangeSelectedDates,
-  }) {
+  constructor({ inputsClassname, options = this.defaultOptions, parentElementClassname }) {
     this.optionsForCalendar = { ...this.defaultOptions, options };
-    this.applyRangeSelectedDates = applyRangeSelectedDates;
     this.init({ inputsClassname, parentElementClassname });
   }
 
@@ -50,30 +44,7 @@ class DatePicker {
     this.prohibitTyping();
   }
 
-  initializeValues() {
-    if (this.applyRangeSelectedDates) {
-      const month = new Intl.DateTimeFormat('ru-RU', {
-        month: 'short',
-      })
-        .format(Date.now())
-        .replace(/\./, '');
-      const inputElement = this.inputElements.at(-1).querySelector('input');
-      const startDateString = `${this.startDate.getDate()} ${month}`;
-      const endDateString = `${this.endDate.getDate()} ${month}`;
-
-      const newPlaceholder = `${startDateString} - ${endDateString}`;
-      inputElement.placeholder = newPlaceholder;
-      this.dp.selectDate([this.startDate, this.endDate]);
-    } else {
-      const placeholder = this.readDatePlaceholder(this.inputElements);
-      this.dp.selectDate(placeholder);
-      setTimeout(() => {
-        this.inputElements.at(0).querySelector('input').placeholder = 'ДД.ММ.ГГГГ';
-      }, 0);
-    }
-  }
-
-  bindCalendarToDOMElements({ inputsClassname, parentElementClassname, applyRangeSelectedDates }) {
+  bindCalendarToDOMElements({ inputsClassname, parentElementClassname }) {
     const hiddenInputStart = document.createElement('input');
     hiddenInputStart.type = 'hidden';
     hiddenInputStart.name = 'from';
@@ -86,13 +57,14 @@ class DatePicker {
     this.DOMParent =
       Array.from(document.getElementsByClassName(parentElementClassname))[0] || document;
     this.inputElements = Array.from(this.DOMParent.getElementsByClassName(inputsClassname));
-    const placeholder = this.readDatePlaceholder(this.inputElements);
+    this.isDoubleInputs = this.inputElements.length > 1;
+    const placeholder = this.getDateFromPlaceholder(this.inputElements);
 
     this.dp = new AirDatepicker(this.inputElements.at(0), {
       ...this.defaultOptions,
       startDate: placeholder,
       onSelect: ({ date }) => {
-        !this.applyRangeSelectedDates
+        this.isDoubleInputs
           ? this.sendDataToInputsAndUpdatePlaceholder({
               date,
               startInput: hiddenInputStart,
@@ -119,9 +91,31 @@ class DatePicker {
     });
   }
 
-  readDatePlaceholder(elements) {
+  initializeValues() {
+    if (!this.isDoubleInputs) {
+      const month = new Intl.DateTimeFormat('ru-RU', {
+        month: 'short',
+      })
+        .format(Date.now())
+        .replace(/\./, '');
+      const inputElement = this.inputElements.at(-1).querySelector('input');
+      const startDateString = `${this.startDate.getDate()} ${month}`;
+      const endDateString = `${this.endDate.getDate()} ${month}`;
+
+      const newPlaceholder = `${startDateString} - ${endDateString}`;
+      inputElement.placeholder = newPlaceholder;
+      this.dp.selectDate([this.startDate, this.endDate]);
+    } else {
+      const placeholder = this.getDateFromPlaceholder(this.inputElements);
+      this.dp.selectDate(placeholder);
+      setTimeout(() => {
+        this.inputElements.at(0).querySelector('input').placeholder = 'ДД.ММ.ГГГГ';
+      }, 0);
+    }
+  }
+
+  getDateFromPlaceholder(elements) {
     const pattern = new RegExp(/(\d{2})\.(\d{2})\.(\d+)/);
-    const replace = new RegExp(/\./, 'gi');
     const placeholders = [];
     elements.forEach((element) => {
       const placeholder = Array.from(element.getElementsByTagName('input')).at(0).placeholder;
@@ -199,20 +193,5 @@ class DatePicker {
     });
   }
 }
-//нужно ли это?
-// $(function () {
-//   $('.js-card__datepicker').click();
-//   $(document).mouseup(function () {
-//     $('.end-date').removeClass('in-range');
-//   });
-//   $('.ui-datepicker-calendar a.ui-state-default').css('width', '20px');
-//   const prohibitTyping = (event) => {
-//     if (event.key === 'Tab') {
-//       return true;
-//     }
-//     event.preventDefault();
-//     return true;
-//   };
-//   $('.js-date-picker__input').on('keydown', prohibitTyping);
-// });
+
 export { DatePicker };

@@ -11,8 +11,8 @@ import '../../components/date-picker/date-picker.js';
 import '../../components/checkbox-buttons/checkbox-buttons.js';
 import formatTheValue from '../../components/range-slider/range-slider.js';
 import { DatePicker } from '../../components/date-picker/date-picker.js';
-import './search-room-and-filter.scss';
 import DropdownAccom from '../../components/dropdown-submit-and-clear/DropdownAccom.js';
+import './search-room-and-filter.scss';
 
 const handleContentLoaded = () => {
   const sliderValues = [5000, 10000];
@@ -37,7 +37,6 @@ const handleContentLoaded = () => {
     parentElementClassname: 'js-sidebar',
     inputsClassname: 'js-date-picker',
     optionsForCalendar: { range: true },
-    applyRangeSelectedDates: true,
   });
   new DropdownAccom({
     element: document.querySelector('.js-sidebar__item--dropdown-accom-people .js-dropdown-accom'),

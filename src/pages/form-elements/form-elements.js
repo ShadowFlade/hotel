@@ -30,7 +30,7 @@ const handleContentLoaded = () => {
     max: 14000,
     min: 500,
     width: 70,
-    slide: function (event, ui) {
+    slide: function (ui) {
       const value0 = formatTheValue(ui.values[0]);
       const value1 = formatTheValue(ui.values[1]);
       $('.range-slider__start').text(`${value0}Р `);
@@ -50,7 +50,6 @@ const handleContentLoaded = () => {
     parentElementClassname: 'form-elements__item--filter-date-dropdown',
     inputsClassname: 'js-date-picker',
     options: { range: true },
-    applyRangeSelectedDates: true,
   });
   const datePickers = Array.from(document.getElementsByClassName('js-dropdown-accom'));
 

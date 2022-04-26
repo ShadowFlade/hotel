@@ -1,9 +1,8 @@
-import AirDatepicker from 'air-datepicker';
 import { DatePicker } from '../date-picker/date-picker.js';
-import './rooms-for-you.scss';
 import DropdownAccom from '../dropdown-submit-and-clear/DropdownAccom.js';
+import './rooms-for-you.scss';
 
-function position({ $datepicker, $target, $pointer }) {
+function position({ $datepicker, $target }) {
   const roomsForYouCoords =
     $target.parentElement.parentElement.parentElement.getBoundingClientRect();
   $datepicker.style.left = window.scrollX + roomsForYouCoords.left;
@@ -37,7 +36,7 @@ const handleContentLoaded = () => {
 
       $pointer.style.display = 'none';
     },
-    onSelect: ({ date, formattedDate, datepicker }) => {
+    onSelect: ({ datepicker }) => {
       renderToAnotherInput({ datepicker, parent: 'rooms-for-you' });
     },
   };

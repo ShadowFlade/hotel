@@ -21,6 +21,7 @@ class DatePicker {
   };
   defaultOptions = {
     moveToOtherMonthsOnSelect: false,
+    selectOtherMonths: false,
     range: true,
     navTitles: {
       days: 'MMMM  yyyy ',

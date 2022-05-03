@@ -31,6 +31,7 @@ class DatePicker {
     nextHtml: '<img src="./assets/img/arrow_forward.png"/>',
     buttons: [this.clearButton, this.submitButton],
     inline: true,
+    minDate: new Date(Date.now()),
   };
 
   constructor({ inputsClassname, options = this.defaultOptions, parentElementClassname }) {

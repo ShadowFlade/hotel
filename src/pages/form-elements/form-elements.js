@@ -30,6 +30,7 @@ const handleContentLoaded = () => {
     inputsClassname: 'js-date-picker',
     parentElementClassname: 'js-form-elements__item',
   });
+
   new DatePicker({
     parentElementClassname: 'form-elements__item--filter-date-dropdown',
     inputsClassname: 'js-date-picker',

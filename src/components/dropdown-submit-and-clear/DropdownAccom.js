@@ -11,15 +11,16 @@ class DropdownAccom {
   clear;
   count;
   adults = ['взрослые', 'дети'];
-  juvenile = ['младенцы'];
+  babies = ['младенцы'];
   includeInFurniture = ['спальни', 'кровати'];
   dictionary = {
     guests: {
       adults: {
-        1: 'взрослый',
-        2: 'взрослых',
+        1: 'гость',
+        2: 'гостя',
+        5: 'гостей',
       },
-      juvenile: {
+      babies: {
         1: 'младенец',
         2: 'младенца',
         5: 'младенцев',
@@ -43,13 +44,119 @@ class DropdownAccom {
     this.listName = list;
     this.type = type;
     this.limit = limit;
-    this.bindPopup(element, list);
-    this.bindIncrement();
+    this.#bindPopup(element, list);
+    this.#bindIncrement();
     this.countTotal();
-    this.refresh();
+    this.refreshAllCategories();
+    this.#prohibitTyping();
+  }
+  countTotal() {
+    if (this.type === 'people') {
+      let totalAdults = 0;
+      this.adults.forEach((item) => {
+        totalAdults += Number(this.count.get(item).get('value'));
+      });
+
+      this.totalAdults = totalAdults;
+      let totalBabies = 0;
+      this.babies.forEach((item) => {
+        totalBabies += this.count.get(item).get('value');
+      });
+      this.totalBabies = totalBabies;
+      this.totalAdults = this.total = totalAdults;
+    } else {
+      let result = 0;
+      const iterator = this.count.entries();
+
+      for (let i = 0; i < this.count.size; i++) {
+        const element = iterator.next().value;
+        const value = element[1].get('value');
+        const key = element[0];
+
+        if (this.includeInFurniture.includes(key)) result += value;
+      }
+      this.total = result;
+    }
+  }
+  reset() {
+    Array.from(this.count.keys()).forEach((item) => {
+      this.count.get(item).set('value', 0);
+      return true;
+    });
+    this.total = 0;
   }
 
-  bindPopup(elementName, listName) {
+  refreshCategory(category) {
+    let value = this.count.get(category).get('value');
+    if (this.#doesValueExceedsRestriction(category, value)) {
+      this.#restrictDecrement(category);
+    }
+    const categoryElement = this.count.get(category).get('categoryElement');
+    this.count.get(category).get('hiddenState').value = value;
+    categoryElement.textContent = String(value);
+    this.countTotal();
+    this.totalAdults <= 0 && this.#restrictDecrement('младенцы');
+    this.#refreshPlaceholder();
+  }
+  #refreshPlaceholder() {
+    if (this.type === 'people') {
+      this.#refreshPlaceholderWithPeople();
+    } else if (this.type === 'furniture') {
+      this.#refreshPlaceholderWithFurniture();
+    }
+  }
+  #refreshPlaceholderWithPeople() {
+    if (this.totalAdults > 0) {
+      const matchToNumberOfGuests = this.#findTheClosestNumberAndMatchTheGrammar(
+        this.totalAdults,
+        Object.keys(this.dictionary.guests.adults)
+      );
+      const matchToNumberOfKids = this.#findTheClosestNumberAndMatchTheGrammar(
+        this.totalBabies,
+        Object.keys(this.dictionary.guests.babies)
+      );
+      this.input.setAttribute(
+        'placeholder',
+        `${this.totalAdults} ${this.dictionary.guests.adults[matchToNumberOfGuests]}${
+          this.totalBabies > 0
+            ? `, ${this.totalBabies} ${this.dictionary.guests.babies[matchToNumberOfKids]}`
+            : ''
+        }`
+      );
+    } else {
+      this.input.setAttribute('placeholder', 'Сколько гостей');
+    }
+  }
+  #refreshPlaceholderWithFurniture() {
+    if (this.total >= 0) {
+      const numOfBedrooms = this.count.get('спальни').get('value');
+      const numOfBeds = this.count.get('кровати').get('value');
+      const matchToNumOfBedrooms = this.#findTheClosestNumberAndMatchTheGrammar(
+        numOfBedrooms,
+        Object.keys(this.dictionary.furniture.bedrooms)
+      );
+      const matchToNumOfBeds = this.#findTheClosestNumberAndMatchTheGrammar(
+        numOfBeds,
+        Object.keys(this.dictionary.furniture.beds)
+      );
+      this.input.setAttribute(
+        'placeholder',
+        `${numOfBedrooms} ${this.dictionary.furniture.bedrooms[matchToNumOfBedrooms]} ${
+          matchToNumOfBeds
+            ? `, ${numOfBeds} ${this.dictionary.furniture.beds[matchToNumOfBeds]} `
+            : ''
+        }`
+      );
+    }
+  }
+  refreshAllCategories() {
+    let categories = Array.from(this.count.keys());
+    categories.forEach((item) => {
+      console.log(item);
+      this.refreshCategory(item);
+    });
+  }
+  #bindPopup(elementName) {
     if (typeof elementName === 'string') {
       this.element = document.querySelector(elementName);
     } else if (typeof elementName === 'object') {
@@ -66,7 +173,7 @@ class DropdownAccom {
     this.clear = clearButton;
   }
 
-  bindIncrement() {
+  #bindIncrement() {
     const listChildren = Array.from(this.element.querySelectorAll('.js-dropdown-accom__option'));
     this.count = new Map();
     this.form = this.element.querySelector('form');
@@ -78,9 +185,11 @@ class DropdownAccom {
         .textContent.toLowerCase();
       const storage = this.count.get(category);
       const value = Number(storage.get('value'));
-      this.restrictDecrement(category, value + 1);
+      if (this.#doesValueExceedsRestriction(category, value + 1)) {
+        this.#restrictDecrement(category);
+      }
       this.count.get(category).set('value', value + 1);
-      this.refresh(category);
+      this.refreshCategory(category);
     };
     const handleDecrementClick = (e) => {
       const target = e.target;
@@ -90,12 +199,14 @@ class DropdownAccom {
         .textContent.toLowerCase();
       const storage = this.count.get(category);
       const value = Number(storage.get('value'));
-      this.restrictDecrement(category, value - 1);
+      if (this.#doesValueExceedsRestriction(category, value - 1)) {
+        this.#restrictDecrement(category);
+      }
       this.count.get(category).set('value', value - 1);
-      this.refresh(category);
+      this.refreshCategory(category);
     };
     listChildren.forEach((child) => {
-      const textElement = child.getElementsByClassName('dropdown-accom__info')[0];
+      const valueEl = child.getElementsByClassName('dropdown-accom__value')[0];
       const incrementButton = child.getElementsByClassName('dropdown-accom__button--next')[0];
       const decrementButton = child.getElementsByClassName('dropdown-accom__button--prev')[0];
       const category = child.getElementsByClassName('dropdown-accom__variant')[0];
@@ -103,15 +214,15 @@ class DropdownAccom {
       const storage = new Map();
       storage.set('increment', incrementButton);
       storage.set('decrement', decrementButton);
-      storage.set('value', Number(textElement.textContent));
-      storage.set('textElement', textElement);
+      storage.set('value', Number(valueEl.textContent));
+      storage.set('categoryElement', valueEl);
       storage.set('hiddenState', hiddenState);
       this.count.set(category.textContent.toLowerCase(), storage);
 
       if (this.type === 'people') {
         let totalAdults = 0;
         this.totalAdults = totalAdults;
-        this.totalJuvenile = this.total - totalAdults;
+        this.totalBabies = this.total - totalAdults;
       }
 
       incrementButton.addEventListener('click', handleIncrementClick);
@@ -125,7 +236,7 @@ class DropdownAccom {
     };
     const onClear = () => {
       this.reset();
-      this.refresh();
+      this.refreshAllCategories();
     };
     if (this.submitButton && this.count) {
       this.submitButton.addEventListener('click', onSubmit);
@@ -136,113 +247,23 @@ class DropdownAccom {
     }
   }
 
-  reset() {
-    Array.from(this.count.keys()).forEach((item) => {
-      this.count.get(item).set('value', 0);
-      return true;
-    });
-    this.total = 0;
-  }
-
-  refresh(category) {
-    if (category === undefined) {
-      let categories = Array.from(this.count.keys());
-      categories.forEach((item) => {
-        this.refresh(item);
-        return true;
-      });
-      return true;
-    }
-    let value = this.count.get(category).get('value');
-    this.restrictDecrement(category, value);
-    const textElement = this.count.get(category).get('textElement');
-    this.count.get(category).get('hiddenState').value = value;
-    textElement.textContent = String(value);
-    this.countTotal();
-    const matchToNumberOfGuests = this.findTheClosestNumberAndMatchTheGrammar(
-      this.total,
-      Object.keys(this.dictionary.guests.adults)
-    );
-    const matchToNumberOfKids = this.findTheClosestNumberAndMatchTheGrammar(
-      this.totalJuvenile,
-      Object.keys(this.dictionary.guests.juvenile)
-    );
-    if (this.total > 0 && this.type === 'people') {
-      this.input.setAttribute(
-        'placeholder',
-        `${this.total} ${this.dictionary.guests.adults[matchToNumberOfGuests]}${
-          this.totalJuvenile > 0
-            ? `, ${this.totalJuvenile} ${this.dictionary.guests.juvenile[matchToNumberOfKids]}`
-            : ''
-        }`
-      );
-    } else if (this.total === 0 && this.type === 'people') {
-      this.input.setAttribute('placeholder', 'Сколько гостей');
-    } else if (this.type === 'furniture' && this.total > 0) {
-      const numOfBedrooms = this.count.get('спальни').get('value');
-      const numOfBeds = this.count.get('кровати').get('value');
-      const matchToNumOfBedrooms = this.findTheClosestNumberAndMatchTheGrammar(
-        numOfBedrooms,
-        Object.keys(this.dictionary.furniture.bedrooms)
-      );
-      const matchToNumOfBeds = this.findTheClosestNumberAndMatchTheGrammar(
-        numOfBeds,
-        Object.keys(this.dictionary.furniture.beds)
-      );
-      this.input.setAttribute(
-        'placeholder',
-        `${numOfBedrooms} ${this.dictionary.furniture.bedrooms[matchToNumOfBedrooms]} ${
-          matchToNumOfBeds
-            ? `, ${numOfBeds} ${this.dictionary.furniture.beds[matchToNumOfBeds]} `
-            : ''
-        }`
-      );
-    }
-    return true;
-  }
-
-  countTotal() {
-    if (this.type === 'people') {
-      let totalAdults = 0;
-      this.adults.forEach((item) => {
-        totalAdults += Number(this.count.get(item).get('value'));
-      });
-
-      this.totalAdults = totalAdults;
-      let totalJuvenile = 0;
-      this.juvenile.forEach((item) => {
-        totalJuvenile += this.count.get(item).get('value');
-      });
-      this.totalJuvenile = totalJuvenile;
-      this.totalAdults = this.total = totalAdults;
-    } else {
-      let result = 0;
-      const iterator = this.count.entries();
-
-      for (let i = 0; i < this.count.size; i++) {
-        const element = iterator.next().value;
-        const value = element[1].get('value');
-        const key = element[0];
-
-        if (this.includeInFurniture.includes(key)) result += value;
-      }
-      this.total = result;
-    }
-  }
-
-  restrictDecrement(category, value) {
+  #doesValueExceedsRestriction(category, value) {
     const decrement = this.count.get(category).get('decrement');
     if (value === this.limit) {
-      decrement.disabled = true;
-      decrement.classList.add('dropdown-accom__button--disabled');
-      return false;
+      return true;
+    } else {
+      decrement.disabled = false;
+      decrement.classList.remove('dropdown-accom__button--disabled');
     }
-    decrement.classList.remove('dropdown-accom__button--disabled');
-    decrement.disabled = false;
+  }
+  #restrictDecrement(category) {
+    const decrement = this.count.get(category).get('decrement');
+    decrement.classList.add('dropdown-accom__button--disabled');
+    decrement.disabled = true;
     return true;
   }
 
-  findTheClosestNumberAndMatchTheGrammar(number, arrayOfNumbers) {
+  #findTheClosestNumberAndMatchTheGrammar(number, arrayOfNumbers) {
     let intermediate = Infinity;
     const theNumber = Number(String(number).match(/\d$/));
     const workingNumber = number > 20 ? theNumber : number;
@@ -252,7 +273,7 @@ class DropdownAccom {
     return intermediate;
   }
 
-  prohibitTyping() {
+  #prohibitTyping() {
     this.input.addEventListener('keydown', (event) => {
       if (event.key === 'Tab') {
         return true;

@@ -100,7 +100,13 @@ class DropdownAccom {
     this.count.get(category).get('hiddenState').value = value;
     categoryElement.textContent = String(value);
     this.countTotal();
-    this.totalAdults <= 0 && this.#restrictDecrement('младенцы');
+    if (this.totalAdults <= 0) {
+      this.#restrictDecrement('младенцы');
+      this.#restrictIncrement('младенцы');
+    } else {
+      this.#removeDecrementRestrictions('младенцы');
+      this.#removeIncrementRestrictions('младенцы');
+    }
     this.#refreshPlaceholder();
   }
   #refreshPlaceholder() {
@@ -274,7 +280,21 @@ class DropdownAccom {
     const decrement = this.count.get(category).get('decrement');
     decrement.classList.add('dropdown-accom__button--disabled');
     decrement.disabled = true;
-    return true;
+  }
+  #restrictIncrement(category) {
+    const increment = this.count.get(category).get('increment');
+    increment.classList.add('dropdown-accom__button--disabled');
+    increment.disabled = true;
+  }
+  #removeIncrementRestrictions(category) {
+    const increment = this.count.get(category).get('increment');
+    increment.classList.remove('dropdown-accom__button--disabled');
+    increment.disabled = false;
+  }
+  #removeDecrementRestrictions(category) {
+    const decrement = this.count.get(category).get('decrement');
+    decrement.classList.remove('dropdown-accom__button--disabled');
+    decrement.disabled = false;
   }
 
   #findTheClosestNumberAndMatchTheGrammar(number, arrayOfNumbers) {

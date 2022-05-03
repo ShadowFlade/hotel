@@ -6,8 +6,8 @@ import './date-picker.scss';
 
 class DatePicker {
   dayRange = 4;
-  startDate = new Date(Date.now() - 86400 * this.dayRange * 1000);
-  endDate = new Date(Date.now());
+  startDate = new Date(Date.now());
+  endDate = new Date(Date.now() + 86400 * this.dayRange * 1000);
   clearButton = {
     content:
       '<button class="button button--inline js-button--inline" type="button">Очистить</button>',
@@ -60,11 +60,10 @@ class DatePicker {
       Array.from(document.getElementsByClassName(parentElementClassname))[0] || document;
     this.inputElements = Array.from(this.DOMParent.getElementsByClassName(inputsClassname));
     this.isDoubleInputs = this.inputElements.length > 1;
-    const placeholder = this.getDateFromPlaceholder(this.inputElements);
 
     this.dp = new AirDatepicker(this.inputElements.at(0), {
       ...this.defaultOptions,
-      startDate: placeholder,
+      startDate: this.startDate,
       onSelect: ({ date }) => {
         this.isDoubleInputs
           ? this.sendDataToInputsAndUpdatePlaceholder({
@@ -108,8 +107,6 @@ class DatePicker {
       inputElement.placeholder = newPlaceholder;
       this.dp.selectDate([this.startDate, this.endDate]);
     } else {
-      const placeholder = this.getDateFromPlaceholder(this.inputElements);
-      this.dp.selectDate(placeholder);
       setTimeout(() => {
         this.inputElements.at(0).querySelector('input').placeholder = 'ДД.ММ.ГГГГ';
       }, 0);

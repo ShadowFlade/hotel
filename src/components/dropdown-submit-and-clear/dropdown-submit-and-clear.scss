@@ -25,8 +25,11 @@
     user-select: none;
     width: 100%;
     @include input();
-    padding: 0.5em 2.21429em 0.57143em 1.04em;
+    padding: 0.5em 6em 0.57143em 1.04em;
     cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   &__arrow {
     @include input-arrow();

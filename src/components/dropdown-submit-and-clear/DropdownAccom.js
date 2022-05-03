@@ -37,6 +37,11 @@ class DropdownAccom {
         2: 'спальни',
         5: 'спален',
       },
+      bathrooms: {
+        1: 'ванная комната',
+        2: 'ванные комнаты',
+        5: 'ванных комнат',
+      },
     },
   };
 
@@ -131,9 +136,14 @@ class DropdownAccom {
     if (this.total >= 0) {
       const numOfBedrooms = this.count.get('спальни').get('value');
       const numOfBeds = this.count.get('кровати').get('value');
+      const numbOfBathrooms = this.count.get('ванные комнаты').get('value');
       const matchToNumOfBedrooms = this.#findTheClosestNumberAndMatchTheGrammar(
         numOfBedrooms,
         Object.keys(this.dictionary.furniture.bedrooms)
+      );
+      const matchToNumOfBathrooms = this.#findTheClosestNumberAndMatchTheGrammar(
+        numbOfBathrooms,
+        Object.keys(this.dictionary.furniture.bathrooms)
       );
       const matchToNumOfBeds = this.#findTheClosestNumberAndMatchTheGrammar(
         numOfBeds,
@@ -144,6 +154,10 @@ class DropdownAccom {
         `${numOfBedrooms} ${this.dictionary.furniture.bedrooms[matchToNumOfBedrooms]} ${
           matchToNumOfBeds
             ? `, ${numOfBeds} ${this.dictionary.furniture.beds[matchToNumOfBeds]} `
+            : ''
+        } ${
+          matchToNumOfBathrooms
+            ? `, ${numbOfBathrooms} ${this.dictionary.furniture.bathrooms[matchToNumOfBathrooms]} `
             : ''
         }`
       );

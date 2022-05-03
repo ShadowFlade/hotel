@@ -1,6 +1,7 @@
 // prettier-ignore
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
+import { data } from 'autoprefixer';
 import { bindOutsideClickDetection } from '../../utils/utils';
 import './date-picker.scss';
 
@@ -9,11 +10,16 @@ class DatePicker {
   startDate = new Date(Date.now());
   endDate = new Date(Date.now() + 86400 * this.dayRange * 1000);
   clearButton = {
-    content:
-      '<button class="button button--inline js-button--inline" type="button">Очистить</button>',
+    content: 'Очистить',
     onClick: (dp) => {
       dp.clear();
+      this.disableButtonsDefaultBehavior();
     },
+    className: 'button button--inline js-button--inline',
+    attrs: {
+      type: 'button',
+    },
+    tagName: 'button',
   };
   submitButton = {
     content:
@@ -59,12 +65,14 @@ class DatePicker {
     this.DOMParent =
       Array.from(document.getElementsByClassName(parentElementClassname))[0] || document;
     this.inputElements = Array.from(this.DOMParent.getElementsByClassName(inputsClassname));
-    this.isDoubleInputs = this.inputElements.length > 1;
 
     this.dp = new AirDatepicker(this.inputElements.at(0), {
       ...this.defaultOptions,
       startDate: this.startDate,
       onSelect: ({ date }) => {
+        if (date.length > 1) {
+          return;
+        }
         this.isDoubleInputs
           ? this.sendDataToInputsAndUpdatePlaceholder({
               date,
@@ -78,12 +86,14 @@ class DatePicker {
             });
       },
     });
+
+    this.isDoubleInputs = this.inputElements.length > 1;
+
     this.dp.$datepicker.append(hiddenInputStart, hiddenInputEnd);
     this.inputElements.forEach((input) => {
       if (!!parentElementClassname && !!this.DOMParent && !this.DOMParent.contains(input)) {
         console.warn('No parent element found');
         return;
-      } else {
       }
       bindOutsideClickDetection(input, this.dp.$datepicker);
       input.addEventListener('click', (e) => {
@@ -132,22 +142,14 @@ class DatePicker {
   }
 
   sendDataToInputsAndUpdatePlaceholder({ date, startInput, endInput, inputElements }) {
-    const inputs = inputElements.map((item) => item.querySelector('input'));
-    const isArray = date.constructor.name.toLowerCase() === 'array';
-
-    startInput.value = isArray ? date.at(0).toISOString() : date.toISOString();
-    endInput.value = isArray ? date.at(1)?.toISOString() : date.toISOString() || 'not set';
-    try {
-      if (isArray) {
-        inputs.at(0).placeholder = this.formatDate(date.at(0));
-        inputs.at(1).placeholder = this.formatDate(date.at(1));
-      } else {
-        inputs.at(0).placeholder = this.formatDate(date);
-        inputs.at(1).placeholder = this.formatDate(date);
-      }
-    } catch (e) {
-      //doing nothing,because we try to get the second date,which is not there, but it is still in the placeholder,therefore its ok
+    if (date.length === 0) {
+      return;
     }
+    const inputs = inputElements.map((item) => item.querySelector('input'));
+    startInput.value = date.at(0) ? date.at(0).toISOString() : 'not set';
+    endInput.value = date.at(1) ? date.at(1)?.toISOString() : 'not set';
+    date.at(0) ? (inputs.at(0).placeholder = this.formatDate(date.at(0))) : false;
+    date.at(1) ? (inputs.at(1).placeholder = this.formatDate(date.at(1))) : false;
   }
 
   updatePlaceholderInSingleInputElement({ date, inputElement }) {

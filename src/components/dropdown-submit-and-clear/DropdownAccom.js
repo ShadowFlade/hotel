@@ -294,9 +294,7 @@ class DropdownAccom {
     increment.disabled = false;
   }
   #removeDecrementRestrictions(category) {
-    console.log(category, this.count, 'DED');
     const decrement = this.count.get(category).get('decrement');
-
     decrement.classList.remove('dropdown-accom__button--disabled');
     decrement.disabled = false;
   }

@@ -93,19 +93,22 @@ class DropdownAccom {
 
   refreshCategory(category) {
     let value = this.count.get(category).get('value');
-    if (this.#doesValueExceedsRestriction(category, value)) {
-      this.#restrictDecrement(category);
-    }
+
     const categoryElement = this.count.get(category).get('categoryElement');
     this.count.get(category).get('hiddenState').value = value;
     categoryElement.textContent = String(value);
     this.countTotal();
-    if (this.totalAdults <= 0) {
-      this.#restrictDecrement('младенцы');
-      this.#restrictIncrement('младенцы');
-    } else {
-      this.#removeDecrementRestrictions('младенцы');
-      this.#removeIncrementRestrictions('младенцы');
+    if (this.type === 'people') {
+      if (this.totalAdults <= 0) {
+        this.#restrictDecrement('младенцы');
+        this.#restrictIncrement('младенцы');
+      } else {
+        this.#removeDecrementRestrictions('младенцы');
+        this.#removeIncrementRestrictions('младенцы');
+      }
+    }
+    if (this.#doesValueExceedsRestriction(category, value)) {
+      this.#restrictDecrement(category);
     }
     this.#refreshPlaceholder();
   }
@@ -172,7 +175,6 @@ class DropdownAccom {
   refreshAllCategories() {
     let categories = Array.from(this.count.keys());
     categories.forEach((item) => {
-      console.log(item);
       this.refreshCategory(item);
     });
   }
@@ -292,7 +294,9 @@ class DropdownAccom {
     increment.disabled = false;
   }
   #removeDecrementRestrictions(category) {
+    console.log(category, this.count, 'DED');
     const decrement = this.count.get(category).get('decrement');
+
     decrement.classList.remove('dropdown-accom__button--disabled');
     decrement.disabled = false;
   }

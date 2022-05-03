@@ -7,15 +7,16 @@ import '../../components/radio-buttons/radio-buttons.js';
 import '../../components/pay-button/pay-button.js';
 import '../../components/hotel-card/hotel-card.js';
 import '../../components/toggle/toggle.js';
+import '../../components/logo-landing/logo-landing.js';
 import '../../components/date-picker/date-picker.js';
 import './hotel-card.js';
 import './cards.scss';
-const handleContentLoaded = ()=>{
+const handleContentLoaded = () => {
   const datepickerItem = document.querySelector('.js-cards__datepicker');
   const datepicker = new AirDatepicker(datepickerItem, {
     inline: true,
     visible: true,
-    position: 'center'
+    position: 'center',
   });
   datepicker.$datepicker.style.display = 'block';
   datepicker.$datepicker.style.top = '0%';

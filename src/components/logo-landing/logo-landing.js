@@ -1,0 +1,1 @@
+import './logo-landing.scss';

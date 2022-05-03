@@ -16,6 +16,8 @@ import '../../components/rate-button/rate-button.js';
 import '../../components/subscription-text-field/subscription-text-field.js';
 import '../../components/text-field/text-field.js';
 import '../../components/toggle/toggle.js';
+import '../../components/logo-landing/logo-landing.js';
+
 import '../../components/date-picker/date-picker.js';
 import initSlider from '../../components/range-slider/range-slider.js';
 import { DatePicker } from '../../components/date-picker/date-picker.js';

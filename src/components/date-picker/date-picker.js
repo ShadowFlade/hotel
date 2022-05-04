@@ -8,9 +8,11 @@ class DatePicker {
   dayRange = 4;
   startDate = new Date(Date.now());
   endDate = new Date(Date.now() + 86400 * this.dayRange * 1000);
+  #hiddenInputs = [];
   clearButton = {
     content: 'Очистить',
     onClick: (dp) => {
+      this.#clearInputs();
       dp.clear();
       this.disableButtonsDefaultBehavior();
     },
@@ -63,11 +65,13 @@ class DatePicker {
     hiddenInputStart.type = 'hidden';
     hiddenInputStart.name = 'from';
     hiddenInputStart.value = this.#formatDateToISO(this.startDate);
+    this.#hiddenInputs.push(hiddenInputStart);
 
     const hiddenInputEnd = document.createElement('input');
     hiddenInputEnd.type = 'hidden';
     hiddenInputEnd.name = 'to';
     hiddenInputEnd.value = this.#formatDateToISO(this.endDate);
+    this.#hiddenInputs.push(hiddenInputEnd);
     this.DOMParent =
       Array.from(document.getElementsByClassName(parentElementClassname))[0] || document;
     this.inputElements = Array.from(this.DOMParent.getElementsByClassName(inputsClassname));
@@ -81,13 +85,13 @@ class DatePicker {
           return;
         }
         this.isDoubleInputs
-          ? this.sendDataToInputsAndUpdatePlaceholder({
+          ? this.sendDataToInputsAndUpdateVisibleInputs({
               date,
               startInput: hiddenInputStart,
               endInput: hiddenInputEnd,
               inputElements: this.inputElements,
             })
-          : this.sendDataToInputsAndUpdatePlaceholderInSingleInputElement({
+          : this.sendDataToInputsAndUpdateVisibleInputsInSingleInputElement({
               date,
               startInput: hiddenInputStart,
               endInput: hiddenInputEnd,
@@ -108,18 +112,18 @@ class DatePicker {
       });
     });
   }
-  sendDataToInputsAndUpdatePlaceholder({ date, startInput, endInput, inputElements }) {
+  sendDataToInputsAndUpdateVisibleInputs({ date, startInput, endInput, inputElements }) {
     if (date.length === 0) {
       return;
     }
     const inputs = inputElements.map((item) => item.querySelector('input'));
     startInput.value = date.at(0) ? this.#formatDateToISO(date.at(0)) : 'not set';
     endInput.value = date.at(1) ? this.#formatDateToISO(date.at(1)) : 'not set';
-    date.at(0) ? (inputs.at(0).placeholder = this.formatDate(date.at(0))) : false;
-    date.at(1) ? (inputs.at(1).placeholder = this.formatDate(date.at(1))) : false;
+    date.at(0) ? (inputs.at(0).value = this.formatDate(date.at(0))) : false;
+    date.at(1) ? (inputs.at(1).value = this.formatDate(date.at(1))) : false;
   }
 
-  sendDataToInputsAndUpdatePlaceholderInSingleInputElement({
+  sendDataToInputsAndUpdateVisibleInputsInSingleInputElement({
     date,
     startInput,
     endInput,
@@ -141,7 +145,7 @@ class DatePicker {
 
     const toDate = date.at(1) ? `${date.at(1).getDate()} ${toMonth}` : false;
     if (fromDate && toDate) {
-      inputElement.placeholder = `${fromDate} - ${toDate}`;
+      inputElement.value = `${fromDate} - ${toDate}`;
     }
   }
 
@@ -151,8 +155,8 @@ class DatePicker {
     }.${date.getFullYear()}`;
   }
   #formatDateToISO(date) {
-    const d = new Date();
-    const timeZoneOffset = new Date().getTimezoneOffset() * 60 * 1000;
+    const d = new Date(date);
+    const timeZoneOffset = new Date(date).getTimezoneOffset() * 60 * 1000;
     let localDate = d - timeZoneOffset;
     localDate = new Date(localDate);
     let iso = localDate.toISOString();
@@ -171,17 +175,21 @@ class DatePicker {
       const startDateString = `${this.startDate.getDate()} ${month}`;
       const endDateString = `${this.endDate.getDate()} ${month}`;
 
-      const newPlaceholder = `${startDateString} - ${endDateString}`;
-      inputElement.placeholder = newPlaceholder;
-      this.dp.selectDate([this.startDate, this.endDate]);
+      const newVisibleInputs = `${startDateString} - ${endDateString}`;
+      inputElement.placeholder = newVisibleInputs;
     } else {
       setTimeout(() => {
         this.inputElements.at(0).querySelector('input').placeholder = 'ДД.ММ.ГГГГ';
       }, 0);
+      console.log(this.inputElements.at(1), 'pl');
+      const secondInput = this.inputElements.at(1).querySelector('input');
+      if (!secondInput.placeholder) {
+        secondInput.placeholder = this.formatDate(new Date(Date.now() + 86400 * 1000 * 10));
+      }
     }
   }
 
-  getDateFromPlaceholder(elements) {
+  getDateFromPlaceholders(elements) {
     const pattern = new RegExp(/(\d{2})\.(\d{2})\.(\d+)/);
     const placeholders = [];
     elements.forEach((element) => {
@@ -206,7 +214,10 @@ class DatePicker {
       })
     );
   }
-
+  #clearInputs() {
+    this.inputElements.forEach((item) => (item.querySelector('input').value = ''));
+    this.#hiddenInputs.forEach((item) => (item.value = ''));
+  }
   prohibitTyping() {
     this.inputElements.forEach((inputElement) => {
       inputElement.addEventListener('keydown', (event) => {

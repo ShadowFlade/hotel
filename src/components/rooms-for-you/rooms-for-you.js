@@ -8,16 +8,6 @@ function position({ $datepicker, $target }) {
   $datepicker.style.left = window.scrollX + roomsForYouCoords.left;
 }
 
-const renderToAnotherInput = ({ datepicker, parent }) => {
-  const parentItem = document.querySelector(`.${parent}`);
-  const inputs = Array.from(parentItem.querySelectorAll('.js-date-picker__input'));
-  const dates = datepicker.selectedDates;
-  const formattedDates = dates.map((date) => datepicker.formatDate(date, 'dd.MM.yyyy'));
-  inputs[0].value = formattedDates[0];
-  if (formattedDates[1]) {
-    inputs[1].value = formattedDates[1];
-  }
-};
 const handleContentLoaded = () => {
   const newOptions = {
     classes: 'air-datepicker--rooms-for-you',
@@ -47,4 +37,3 @@ const handleContentLoaded = () => {
 };
 
 document.addEventListener('DOMContentLoaded', handleContentLoaded);
-export { renderToAnotherInput };

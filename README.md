@@ -36,7 +36,7 @@ npm run build
     "chart.js": "^2.9.4",
     "material-design-icons": "^3.0.1",
     "moment": "^2.29.1"
-    ["air-datepicker": "^3.1.0"](https://air-datepicker.com/ru/docs),
+    "air-datepicker": "^3.1.0",
 ```
 
 P.S.: Also used [jquery plugin](https://api.jqueryui.com/slider/):

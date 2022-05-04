@@ -34,11 +34,8 @@ const handleContentLoaded = () => {
 
       $pointer.style.display = 'none';
     },
-    onSelect: ({ datepicker }) => {
-      renderToAnotherInput({ datepicker, parent: 'rooms-for-you' });
-    },
   };
-  const dp = new DatePicker({
+  new DatePicker({
     inputsClassname: 'js-date-picker',
     optionsForCalendar: newOptions,
     parentElementClassname: 'js-rooms-for-you',
@@ -47,13 +44,6 @@ const handleContentLoaded = () => {
   new DropdownAccom({
     element: document.querySelector('.js-rooms-for-you .js-dropdown-accom'),
   });
-  // dp.DOMParent.querySelector('#clear').addEventListener('click', (e) => {
-  //   e.stopPropagation();
-  //   e.preventDefault();
-  // });
-  // dp.$datepicker.querySelector('#clear').addEventListener('click', (e) => {
-  //   e.preventDefault();
-  // });
 };
 
 document.addEventListener('DOMContentLoaded', handleContentLoaded);

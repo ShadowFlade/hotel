@@ -37,6 +37,9 @@ class DatePicker {
     buttons: [this.clearButton, this.submitButton],
     inline: true,
     minDate: new Date(Date.now()),
+    dateFormat: (date) => {
+      return this.#formatDateToISO(date);
+    },
   };
 
   constructor({ inputsClassname, options = this.defaultOptions, parentElementClassname }) {
@@ -55,21 +58,22 @@ class DatePicker {
     const hiddenInputStart = document.createElement('input');
     hiddenInputStart.type = 'hidden';
     hiddenInputStart.name = 'from';
-    hiddenInputStart.value = this.startDate.toISOString();
+    hiddenInputStart.value = this.#formatDateToISO(this.startDate);
 
     const hiddenInputEnd = document.createElement('input');
     hiddenInputEnd.type = 'hidden';
     hiddenInputEnd.name = 'to';
-    hiddenInputEnd.value = this.endDate.toISOString();
+    hiddenInputEnd.value = this.#formatDateToISO(this.endDate);
     this.DOMParent =
       Array.from(document.getElementsByClassName(parentElementClassname))[0] || document;
     this.inputElements = Array.from(this.DOMParent.getElementsByClassName(inputsClassname));
+    this.isDoubleInputs = this.inputElements.length > 1;
 
     this.dp = new AirDatepicker(this.inputElements.at(0), {
       ...this.defaultOptions,
       startDate: this.startDate,
       onSelect: ({ date }) => {
-        if (date.length > 1) {
+        if (date.length < 1) {
           return;
         }
         this.isDoubleInputs
@@ -79,14 +83,14 @@ class DatePicker {
               endInput: hiddenInputEnd,
               inputElements: this.inputElements,
             })
-          : this.updatePlaceholderInSingleInputElement({
+          : this.sendDataToInputsAndUpdatePlaceholderInSingleInputElement({
               date,
+              startInput: hiddenInputStart,
+              endInput: hiddenInputEnd,
               inputElement: this.inputElements.at(-1).querySelector('input'),
             });
       },
     });
-
-    this.isDoubleInputs = this.inputElements.length > 1;
 
     this.dp.$datepicker.append(hiddenInputStart, hiddenInputEnd);
     this.inputElements.forEach((input) => {
@@ -99,6 +103,55 @@ class DatePicker {
         e.stopPropagation();
       });
     });
+  }
+  sendDataToInputsAndUpdatePlaceholder({ date, startInput, endInput, inputElements }) {
+    if (date.length === 0) {
+      return;
+    }
+    const inputs = inputElements.map((item) => item.querySelector('input'));
+    startInput.value = date.at(0) ? this.#formatDateToISO(date.at(0)) : 'not set';
+    endInput.value = date.at(1) ? this.#formatDateToISO(date.at(1)) : 'not set';
+    date.at(0) ? (inputs.at(0).placeholder = this.formatDate(date.at(0))) : false;
+    date.at(1) ? (inputs.at(1).placeholder = this.formatDate(date.at(1))) : false;
+  }
+
+  sendDataToInputsAndUpdatePlaceholderInSingleInputElement({
+    date,
+    startInput,
+    endInput,
+    inputElement,
+  }) {
+    const fromMonth = new Intl.DateTimeFormat('ru-RU', {
+      month: 'short',
+    })
+      .format(date.at(0))
+      .replace(/\./, '');
+    const toMonth = new Intl.DateTimeFormat('ru-RU', {
+      month: 'short',
+    })
+      .format(date.at(1))
+      .replace(/\./, '');
+    const fromDate = `${date.at(0).getDate()} ${fromMonth}`;
+    startInput.value = date.at(0) ? this.#formatDateToISO(date.at(0)) : 'not set';
+    endInput.value = date.at(1) ? this.#formatDateToISO(date.at(1)) : 'not set';
+
+    const toDate = `${date.at(1).getDate()} ${toMonth}`;
+    inputElement.placeholder = `${fromDate} - ${toDate}`;
+  }
+
+  formatDate(date) {
+    return `${date.getDate()}.${
+      date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1
+    }.${date.getFullYear()}`;
+  }
+  #formatDateToISO(date) {
+    const d = new Date();
+    const timeZoneOffset = new Date().getTimezoneOffset() * 60 * 1000;
+    let localDate = d - timeZoneOffset;
+    localDate = new Date(localDate);
+    let iso = localDate.toISOString();
+    iso = iso.slice(0, 11).replace('T', '');
+    return iso;
   }
 
   initializeValues() {
@@ -138,43 +191,6 @@ class DatePicker {
       }
     });
     return placeholders.at(-1)?.trim();
-  }
-
-  sendDataToInputsAndUpdatePlaceholder({ date, startInput, endInput, inputElements }) {
-    if (date.length === 0) {
-      return;
-    }
-    const inputs = inputElements.map((item) => item.querySelector('input'));
-    startInput.value = date.at(0) ? date.at(0).toISOString() : 'not set';
-    endInput.value = date.at(1) ? date.at(1)?.toISOString() : 'not set';
-    date.at(0) ? (inputs.at(0).placeholder = this.formatDate(date.at(0))) : false;
-    date.at(1) ? (inputs.at(1).placeholder = this.formatDate(date.at(1))) : false;
-  }
-
-  updatePlaceholderInSingleInputElement({ date, inputElement }) {
-    const fromMonth = new Intl.DateTimeFormat('ru-RU', {
-      month: 'short',
-    })
-      .format(date.at(0))
-      .replace(/\./, '');
-    const toMonth = new Intl.DateTimeFormat('ru-RU', {
-      month: 'short',
-    })
-      .format(date.at(1))
-      .replace(/\./, '');
-    const fromDate = `${date.at(0).getDate()} ${fromMonth}`;
-    try {
-      const toDate = `${date.at(1).getDate()} ${toMonth}`;
-      inputElement.placeholder = `${fromDate} - ${toDate}`;
-    } catch (e) {
-      //same
-    }
-  }
-
-  formatDate(date) {
-    return `${date.getDate()}.${
-      date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1
-    }.${date.getFullYear()}`;
   }
 
   disableButtonsDefaultBehavior() {

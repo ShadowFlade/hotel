@@ -34,7 +34,6 @@ const handleContentLoaded = () => {
   new DatePicker({
     parentElementClassname: 'form-elements__item--filter-date-dropdown',
     inputsClassname: 'js-date-picker',
-    options: { range: true },
   });
   const datePickers = Array.from(document.getElementsByClassName('js-dropdown-accom'));
 

@@ -103,10 +103,8 @@ class DropdownAccom {
     }
     if (this.type === 'people' && category !== 'младенцы') {
       const amountOfBabies = this.count.get('младенцы').get('value');
-      console.log(amountOfBabies, 'haha');
       if (amountOfBabies === 0) {
         this.#restrictDecrement('младенцы');
-        console.log('no baby decrement');
       }
       if (this.totalAdults === 0) {
         this.#restrictDecrement('младенцы');
@@ -299,7 +297,6 @@ class DropdownAccom {
     increment.disabled = true;
   }
   #removeIncrementRestrictions(category) {
-    console.log(category);
     const increment = this.count.get(category).get('increment');
     increment.classList.remove('dropdown-accom__button--disabled');
     increment.disabled = false;

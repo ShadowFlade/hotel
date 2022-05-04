@@ -21,8 +21,12 @@ class DatePicker {
     tagName: 'button',
   };
   submitButton = {
-    content:
-      '<button class="button button--inline js-button--inline" type="button">Применить</button>',
+    content: 'Применить',
+    className: 'button button--inline js-button--inline',
+    attrs: {
+      type: 'button',
+    },
+    tagName: 'button',
   };
   defaultOptions = {
     moveToOtherMonthsOnSelect: false,
@@ -135,8 +139,10 @@ class DatePicker {
     startInput.value = date.at(0) ? this.#formatDateToISO(date.at(0)) : 'not set';
     endInput.value = date.at(1) ? this.#formatDateToISO(date.at(1)) : 'not set';
 
-    const toDate = `${date.at(1).getDate()} ${toMonth}`;
-    inputElement.placeholder = `${fromDate} - ${toDate}`;
+    const toDate = date.at(1) ? `${date.at(1).getDate()} ${toMonth}` : false;
+    if (fromDate && toDate) {
+      inputElement.placeholder = `${fromDate} - ${toDate}`;
+    }
   }
 
   formatDate(date) {

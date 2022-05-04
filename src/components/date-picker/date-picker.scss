@@ -178,3 +178,6 @@ $cell-length: 40px;
     @include input-arrow();
   }
 }
+.button--inline span {
+  color: #bc9cff;
+}

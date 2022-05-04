@@ -19,7 +19,6 @@ const handleContentLoaded = () => {
   new DatePicker({
     parentElementClassname: 'js-sidebar',
     inputsClassname: 'js-date-picker',
-    optionsForCalendar: { range: true },
   });
   new DropdownAccom({
     element: document.querySelector('.js-sidebar__item--dropdown-accom-people .js-dropdown-accom'),

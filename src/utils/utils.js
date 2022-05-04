@@ -39,7 +39,11 @@ const bindOutsideClickDetection = (clickElementName, popElementName) => {
   try {
     clickElement.addEventListener('click', handleElementClicked);
   } catch (e) {
-    console.warn(`Element with classname ${clickElementName} not found`);
+    let errMsg = `Element with classname ${clickElementName} not found`;
+    if (clickElementName.includes('burger')) {
+      errMsg += `\n Probably no header on the page`;
+    }
+    console.warn(errMsg);
   }
 };
 

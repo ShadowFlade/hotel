@@ -181,7 +181,6 @@ class DatePicker {
       setTimeout(() => {
         this.inputElements.at(0).querySelector('input').placeholder = 'ДД.ММ.ГГГГ';
       }, 0);
-      console.log(this.inputElements.at(1), 'pl');
       const secondInput = this.inputElements.at(1).querySelector('input');
       if (!secondInput.placeholder) {
         secondInput.placeholder = this.formatDate(new Date(Date.now() + 86400 * 1000 * 10));

@@ -4,7 +4,6 @@ import DropdownAccom from '../dropdown-submit-and-clear/DropdownAccom';
 const handleContentLoaded = () => {
   new DatePicker({
     inputsClassname: 'js-date-picker',
-    optionsForCalendar: { range: true },
     parentElementClassname: 'js-bill',
   });
   new DropdownAccom({

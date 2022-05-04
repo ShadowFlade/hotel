@@ -1,7 +1,6 @@
 // prettier-ignore
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
-import { data } from 'autoprefixer';
 import { bindOutsideClickDetection } from '../../utils/utils';
 import './date-picker.scss';
 

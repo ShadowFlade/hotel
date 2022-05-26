@@ -30,6 +30,8 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    color: rgba(31, 32, 65, 0.75);
+    user-select: none;
   }
   &__arrow {
     @include input-arrow();

@@ -122,12 +122,12 @@ class DropdownAccom {
   }
   #refreshPlaceholder() {
     if (this.type === 'people') {
-      this.#refreshPlaceholderWithPeople();
+      this.#refreshValueWithPeople();
     } else if (this.type === 'furniture') {
-      this.#refreshPlaceholderWithFurniture();
+      this.#refreshValueWithFurniture();
     }
   }
-  #refreshPlaceholderWithPeople() {
+  #refreshValueWithPeople() {
     if (this.totalAdults > 0) {
       const matchToNumberOfGuests = this.#findTheClosestNumberAndMatchTheGrammar(
         this.totalAdults,
@@ -137,19 +137,21 @@ class DropdownAccom {
         this.totalBabies,
         Object.keys(this.dictionary.guests.babies)
       );
-      this.input.setAttribute(
-        'placeholder',
-        `${this.totalAdults} ${this.dictionary.guests.adults[matchToNumberOfGuests]}${
-          this.totalBabies > 0
-            ? `, ${this.totalBabies} ${this.dictionary.guests.babies[matchToNumberOfKids]}`
-            : ''
-        }`
-      );
+      const howManyAdults =
+        this.totalAdults > 0
+          ? `${this.totalAdults} ${this.dictionary.guests.adults[matchToNumberOfGuests]},`
+          : '';
+      const howManyKids =
+        this.totalBabies > 0
+          ? `${this.totalBabies} ${this.dictionary.guests.babies[matchToNumberOfKids]},`
+          : '';
+      const resultString = `${howManyAdults}${howManyKids}`;
+      this.input.value = resultString;
     } else {
       this.input.setAttribute('placeholder', 'Сколько гостей');
     }
   }
-  #refreshPlaceholderWithFurniture() {
+  #refreshValueWithFurniture() {
     if (this.total >= 0) {
       const numOfBedrooms = this.count.get('спальни').get('value');
       const numOfBeds = this.count.get('кровати').get('value');
@@ -166,18 +168,28 @@ class DropdownAccom {
         numOfBeds,
         Object.keys(this.dictionary.furniture.beds)
       );
-      this.input.setAttribute(
-        'placeholder',
-        `${numOfBedrooms} ${this.dictionary.furniture.bedrooms[matchToNumOfBedrooms]} ${
-          matchToNumOfBeds
-            ? `, ${numOfBeds} ${this.dictionary.furniture.beds[matchToNumOfBeds]} `
-            : ''
-        } ${
-          matchToNumOfBathrooms
-            ? `, ${numbOfBathrooms} ${this.dictionary.furniture.bathrooms[matchToNumOfBathrooms]} `
-            : ''
-        }`
-      );
+      const howManyBedrooms =
+        numOfBedrooms > 0
+          ? `${numOfBedrooms} ${this.dictionary.furniture.bedrooms[matchToNumOfBedrooms]}`
+          : '';
+      const howManyBeds =
+        numOfBeds > 0 ? `${numOfBeds} ${this.dictionary.furniture.beds[matchToNumOfBeds]}` : '';
+      const howManyBathrooms =
+        numbOfBathrooms > 0
+          ? `${`${numbOfBathrooms} ${this.dictionary.furniture.bathrooms[matchToNumOfBathrooms]}`}`
+          : '';
+      const resultString = [howManyBedrooms, howManyBeds, howManyBathrooms]
+        .map((item, index, arr) => {
+          if (index === 0) {
+            return `${item}`;
+          } else if (!!arr[index - 1]) {
+            return `, ${item}`;
+          } else {
+            return `${item}`;
+          }
+        })
+        .join('');
+      this.input.value = resultString;
     }
   }
   refreshAllCategories() {

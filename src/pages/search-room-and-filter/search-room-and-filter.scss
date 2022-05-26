@@ -38,6 +38,7 @@
     }
     &__container {
       padding-right: calc(60 / 1440) * 100%;
+      padding-top: 1px;
       @media screen and (max-width: 995px) {
         & {
           width: 100%;
@@ -53,7 +54,7 @@
       }
     }
     &__item {
-      margin-bottom: 2.2rem;
+      margin-bottom: 2.12rem;
       width: 266px;
       &--input {
         margin-bottom: 1.5rem;

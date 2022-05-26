@@ -19,7 +19,7 @@ mixin dropdownSubmitAndClear({modif,label,option,list,type='people'})
           .dropdown-accom__footer.dropdown-accom__footer--single
             .dropdown-accom__submit.js-dropdown-accom__submit
               +button({modifs:['inline'],type:'submit',text:'Применить'})
-        else if option==='clear'
+        else if (option==='clear')
           .dropdown-accom__footer
             .dropdown-accom__clear.js-dropdown-accom__clear
               +button({modifs:['inline','submit'],text:'Очистить'})

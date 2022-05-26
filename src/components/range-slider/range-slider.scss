@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     font-size: rem(12);
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.45rem;
   }
   &__title {
     text-align: left;
@@ -37,10 +37,6 @@
   &__start {
     &:after {
       content: '-';
-      position: relative;
-      left: 0.07rem;
-      margin-right: 0.5rem;
-      margin-left: 0.5rem;
     }
   }
   &__caption {

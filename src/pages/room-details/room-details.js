@@ -16,15 +16,13 @@ $(function () {
     datasets: [
       {
         data: [10, 20, 30],
-        borderColor: ['rgb(229, 229, 229)'],
-        borderWidth: 3,
+        borderWidth: 0,
 
-        backgroundColor: ['red', 'rgba(54, 162, 235)', 'rgba(255, 206, 86 )', 'black'],
+        backgroundColor: ['#b59eff', '#6fcf99', '#ffc19c', 'black'],
       },
     ],
   };
-  // eslint-disable-next-line no-unused-vars
-  var myChart = new Chart($('.js-my-chart'), {
+  new Chart($('.js-my-chart'), {
     type: 'pie',
     options: options,
     data: data,

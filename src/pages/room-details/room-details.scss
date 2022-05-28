@@ -220,14 +220,14 @@
   }
   &__capture {
     display: flex;
+    height: 100%;
+    width: 100%;
     position: absolute;
-    width: 90%;
-    height: 90%;
     left: 50%;
     top: 54%;
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0.87);
-    background: #e5e5e5;
+    background: white;
     justify-content: center;
     flex-direction: column;
     font-size: 1.1rem;

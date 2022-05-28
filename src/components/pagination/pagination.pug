@@ -4,6 +4,8 @@ mixin pagination({numberOfFirstPages,itemsOnPage,itemsTotal,lastPage})
     .pagination__pages
       - let n=1
       while n<numberOfFirstPages+1
+        if n==3
+          .pagination__item.js-pagination__item.pagination__item--active #{n}
         .pagination__item.js-pagination__item #{n}
         -n++
       .pagination__item.pagination__item--intro.js-pagination__item ...

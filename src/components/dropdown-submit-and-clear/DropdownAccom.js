@@ -115,9 +115,14 @@ class DropdownAccom {
       } else if (this.totalAdults > 0 && amountOfBabies === 0) {
         this.#removeIncrementRestrictions('младенцы');
       }
-      // this.#doesValueExceedsRestriction('младенцы', amountOfBabies);
     }
-
+    if (this.totalAdults == 0 && this.submitButton) {
+      this.submitButton.disabled = true;
+      this.submitButton.classList.add('dropdown-accom__button--disabled');
+    } else if (this.submitButton) {
+      this.submitButton.disabled = false;
+      this.submitButton.classList.remove('dropdown-accom__button--disabled');
+    }
     this.#refreshPlaceholder();
   }
   #refreshPlaceholder() {
@@ -128,7 +133,7 @@ class DropdownAccom {
     }
   }
   #refreshValueWithPeople() {
-    if (this.totalAdults > 0) {
+    if (this.totalAdults >= 0) {
       const matchToNumberOfGuests = this.#findTheClosestNumberAndMatchTheGrammar(
         this.totalAdults,
         Object.keys(this.dictionary.guests.adults)
@@ -139,16 +144,21 @@ class DropdownAccom {
       );
       const howManyAdults =
         this.totalAdults > 0
-          ? `${this.totalAdults} ${this.dictionary.guests.adults[matchToNumberOfGuests]},`
+          ? `${this.totalAdults} ${this.dictionary.guests.adults[matchToNumberOfGuests]}`
           : '';
       const howManyKids =
         this.totalBabies > 0
-          ? `${this.totalBabies} ${this.dictionary.guests.babies[matchToNumberOfKids]},`
+          ? `${this.totalBabies} ${this.dictionary.guests.babies[matchToNumberOfKids]}`
           : '';
-      const resultString = `${howManyAdults}${howManyKids}`;
-      this.input.value = resultString;
+      // const resultString = this.totalAdults > 0 ? `${howManyAdults}${howManyKids}` : '';
+      if (this.totalAdults > 0) {
+        const resultString = this.#formatToFinalString([howManyAdults, howManyKids]);
+        this.input.value = resultString;
+      } else {
+        this.input.value = '';
+      }
     } else {
-      this.input.setAttribute('placeholder', 'Сколько гостей');
+      this.input.value = '';
     }
   }
   #refreshValueWithFurniture() {
@@ -178,19 +188,31 @@ class DropdownAccom {
         numbOfBathrooms > 0
           ? `${`${numbOfBathrooms} ${this.dictionary.furniture.bathrooms[matchToNumOfBathrooms]}`}`
           : '';
-      const resultString = [howManyBedrooms, howManyBeds, howManyBathrooms]
-        .map((item, index, arr) => {
-          if (index === 0) {
-            return `${item}`;
-          } else if (!!arr[index - 1]) {
-            return `, ${item}`;
-          } else {
-            return `${item}`;
-          }
-        })
-        .join('');
+      const resultString = this.#formatToFinalString([
+        howManyBedrooms,
+        howManyBeds,
+        howManyBathrooms,
+      ]);
+
       this.input.value = resultString;
     }
+  }
+  #formatToFinalString(dataArr) {
+    console.log(dataArr, 'origingal');
+    let result = [];
+    dataArr.forEach((item, index, arr) => {
+      if (!!item) {
+        if (index === 0) {
+          result.push(`${item}`);
+        } else if (!!arr[index - 1]) {
+          result.push(`${item}`);
+        } else {
+          result.push(item);
+        }
+      }
+    });
+    result = result.join(', ');
+    return result;
   }
   refreshAllCategories() {
     let categories = Array.from(this.count.keys());
@@ -207,7 +229,11 @@ class DropdownAccom {
 
     this.list = this.element.querySelector(this.listName);
     this.input = this.element.getElementsByClassName('js-dropdown-accom__input')[0];
-
+    if (this.type === 'people') {
+      this.input.setAttribute('placeholder', 'Сколько гостей ');
+    } else {
+      this.input.setAttribute('placeholder', 'Выберите количество комнат');
+    }
     bindOutsideClickDetection(this.element, this.list);
     const submitButton = this.element.querySelector('.js-dropdown-accom__submit');
     this.submitButton = submitButton;

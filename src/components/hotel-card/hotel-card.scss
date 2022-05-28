@@ -16,6 +16,9 @@
 
   &__slider {
     height: 60%;
+    &:hover .slick-arrow {
+      visibility: visible;
+    }
   }
   &__pic {
     max-width: 100%;
@@ -111,6 +114,8 @@
   z-index: 10;
   font-size: 0;
   transform: translateY(-45%);
+  visibility: hidden;
+  transition: visibility 0.3s linear;
 }
 
 .slick-arrow.slick-prev,

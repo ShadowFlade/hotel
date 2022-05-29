@@ -2,9 +2,9 @@
 .sign-in {
   flex: 1 0 auto;
   &__auth {
+    top: 25.7%;
     left: 40.1%;
     position: absolute;
-    top: 23.9%;
     width: 380px;
     @media screen and (max-width: 625px) {
       & {

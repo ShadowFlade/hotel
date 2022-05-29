@@ -33,7 +33,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 23px;
+    margin-bottom: 21px;
   }
   &__stars {
     padding-left: 3px;
@@ -47,7 +47,7 @@
   }
   &__sign {
     font-size: 1rem;
-    margin-right: 4px;
+    margin-right: 5px;
   }
   &__room-number {
     font-size: calc(19 / 14) * 1rem;
@@ -60,14 +60,14 @@
     line-height: rem(15);
     text-transform: uppercase;
     color: #bc9cff;
-    margin-left: 0.5rem;
+    margin-left: 0.1rem;
     vertical-align: text-bottom;
   }
   &__numerical-info {
     font-size: 1rem;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
-
+    margin-right: 2px;
     .day {
       font-size: 1rem;
       letter-spacing: -1px;

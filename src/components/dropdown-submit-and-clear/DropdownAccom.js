@@ -198,7 +198,6 @@ class DropdownAccom {
     }
   }
   #formatToFinalString(dataArr) {
-    console.log(dataArr, 'origingal');
     let result = [];
     dataArr.forEach((item, index, arr) => {
       if (!!item) {

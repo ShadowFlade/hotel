@@ -25,6 +25,8 @@
   }
   &__start,
   &__end {
+    position: relative;
+    right: -1px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -37,6 +39,7 @@
   &__start {
     &:after {
       content: '-';
+      margin: 0px 1px;
     }
   }
   &__caption {
@@ -88,4 +91,13 @@ html .ui-button.ui-state-disabled:active {
   border: 2px solid #ffffff;
   margin-left: -0.3em;
   top: -6px;
+}
+
+/* Inline #30 | http://localhost:8081/search-room-and-filter.html */
+
+.range-slider__start::after {
+}
+
+.range-slider__end,
+.range-slider__start {
 }

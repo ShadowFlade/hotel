@@ -13,4 +13,5 @@ mixin signInCard
         +payButton({label:'войти',arrow:true})
       .sign-in-card__footer 
         span.card__account-availability Нет аккаунта на Toxin?
-        +button({text:'Создать',modifs:['hollow']})
+        //- +button({text:'Создать',modifs:['hollow']})
+        +button({type:'link',modifs:['hollow'],text:'Создать'})

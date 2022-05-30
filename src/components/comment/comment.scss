@@ -22,17 +22,18 @@
     top: 10%;
   }
   &__like {
+    left: 5px;
     position: relative;
-    left: 6px;
-    top: -10px;
+    top: -7px;
   }
   &__body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    left: -12px;
-    padding-top: 1.4rem;
+
+    left: -10px;
+    padding-top: 1.3rem;
   }
   &__name {
     font-family: 'Montserrat';
@@ -58,7 +59,8 @@
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
     text-transform: none;
-    padding-top: 0.8rem;
+    padding-top: 0.7rem;
+
     padding-left: 0.14rem;
   }
 }

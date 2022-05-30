@@ -1,25 +1,18 @@
 import './range-slider.scss';
-const formatTheValue = (number) => {
-  const results = [];
-  let isOk = true;
-  let decrement = 3;
-  const numberArray = Array.from(number.toString());
-  while (isOk) {
-    results.push(numberArray.splice(numberArray.length - decrement, 3).join(''));
-    decrement += 3;
-    if (numberArray.length < decrement) {
-      isOk = false;
-      results.push(numberArray.join(''));
-    }
-  }
-  return results.reverse().join(' ');
-};
-const initSlider = (selector, valuesList, options) => {
-  const defaultValues = [500, 7000];
-  const values = valuesList && valuesList.length > 1 ? valuesList : defaultValues;
 
-  $('.range-slider__start').text(`${values[0]}Р`);
-  $('.range-slider__end').text(` ${values[1]}Р`);
+const initSlider = (selector, valuesList, options) => {
+  const defaultValues = [5000, 10000];
+  const values = valuesList && valuesList.length > 1 ? valuesList : defaultValues;
+  const rubles = new Intl.NumberFormat('ru-RU', {
+    style: 'currency',
+    currency: 'RUB',
+    notation: 'standard',
+    compactDisplay: 'short',
+    maximumFractionDigits: 0,
+  });
+
+  $('.range-slider__start').text(rubles.format(values[0]));
+  $('.range-slider__end').text(rubles.format(values[1]));
   const defaultOptions = {
     range: true,
     step: 500,
@@ -27,10 +20,10 @@ const initSlider = (selector, valuesList, options) => {
     min: 500,
     width: 70,
     slide: function (_, ui) {
-      const value0 = formatTheValue(ui.values[0]);
-      const value1 = formatTheValue(ui.values[1]);
-      $('.range-slider__start').text(`${value0}Р `);
-      $('.range-slider__end').text(` ${value1}Р`);
+      const value0 = rubles.format(ui.values[0]);
+      const value1 = rubles.format(ui.values[1]);
+      $('.range-slider__start').text(value0);
+      $('.range-slider__end').text(value1);
     },
     values: values,
   };

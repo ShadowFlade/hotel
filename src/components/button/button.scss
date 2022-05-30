@@ -1,13 +1,19 @@
 @import '../../common/vars.scss';
 @import '../../common/mixins.scss';
+$buttonWidth: 8.25em;
 .button {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
   position: relative;
   text-transform: uppercase;
+  cursor: pointer;
+  font-size: rem(14);
   &--full {
-    width: 8.2em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: $buttonWidth;
     height: 3.56667em;
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     border-radius: 22px;
@@ -19,31 +25,33 @@
     }
   }
   &--hollow {
-    flex: 1 1 50%;
-    width: 96%;
+    display: inline-block;
     height: 88%;
-    border-radius: 22px;
+    width: 96%;
+    text-align: center;
+    // line-height: 39px;
     background: #fff;
-    font-size: rem(12);
-    line-height: 15px;
     color: #bc9cff;
     z-index: 10;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    font-size: 12px;
+    border-radius: 22px;
+
     &-wrapper {
+      height: 3.7em;
+      width: $buttonWidth;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-      width: 8.2em;
-      height: 3.66667em;
-      border-radius: 22px;
+      border-radius: 26px;
       font-size: 12px;
       &:hover,
       &:focus {
         opacity: 0.5;
       }
     }
+  }
+  &--link {
+    padding: 12px 0px;
   }
   &--inline {
     font-size: rem(12);

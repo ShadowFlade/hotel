@@ -1,6 +1,19 @@
 mixin button({modifs,type,text})
-  if modifs[0]=='hollow' 
-    .button--hollow-wrapper(tabindex="0")
-      button.button.button--hollow(class=`button--${modifs[1]}` ,type=(type ? type : "button"),tabindex="-1")  #{text}
+  if type!=='link'
+    if modifs[0]=='hollow' 
+      .button--hollow-wrapper(tabindex="0")
+        button.button.button--hollow(class=`button--${modifs[1]}` ,type=(type ? type : "button"),tabindex="-1")  #{text}
+    else 
+      button.button(class=( `button--${modifs[0]} js-button--${modifs[0]} button--${modifs[1]} js-button--${modifs[1]}`),type=(type ? type : "button")) #{text}
   else 
-    button.button(class=( `button--${modifs[0]} js-button--${modifs[0]} button--${modifs[1]} js-button--${modifs[1]}`),type=(type ? type : "button")) #{text}
+    if modifs[0]=='hollow' 
+      .button--hollow-wrapper(tabindex="0")
+        a.button.button--hollow.button--link(class=`button--${modifs[1]}` ,tabindex="-1")  #{text}
+    else 
+      a.button.button--link(class=( `button--${modifs[0]} js-button--${modifs[0]} button--${modifs[1]} js-button--${modifs[1]}`)) #{text}
+
+      
+
+
+
+

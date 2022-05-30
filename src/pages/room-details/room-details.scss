@@ -109,16 +109,19 @@
     &__comments {
       max-width: rem(711);
       width: 98%;
-      margin-top: 6px;
+      margin-top: 5px;
       .content__title {
         margin-bottom: 0;
       }
+    }
+    &__list-of-comments {
+      padding-top: 2px;
     }
     &__comment {
       width: 105%;
     }
     &__comment:not(:first-child) {
-      margin-top: 0.2rem;
+      margin-top: 0.35rem;
     }
     .comment {
       margin-left: -20px;
@@ -240,7 +243,7 @@
     display: flex;
   }
   &__info {
-    padding: 3rem 0 0 1.9em;
+    padding: 3.02rem 0 0 1.7em;
   }
   &__grade {
     position: relative;
@@ -256,4 +259,15 @@
   &__review {
     padding-left: rem(5);
   }
+}
+
+/* Element | http://localhost:8081/room-details.html */
+
+.content__list-of-comments {
+}
+
+/* Inline #40 | http://localhost:8081/room-details.html */
+
+.room-details .content__comment:not(:first-child) {
+  /* margin-top: .2rem; */
 }

@@ -116,6 +116,21 @@
   transform: translateY(-45%);
   visibility: hidden;
   transition: visibility 0.3s linear;
+  &:before {
+    height: 10.8rem;
+    content: '';
+    position: absolute;
+    left: -30px;
+    width: 4rem;
+    z-index: 11;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 99.99%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
 }
 
 .slick-arrow.slick-prev,
@@ -129,10 +144,16 @@
 .slick-arrow.slick-prev {
   left: 1.07rem;
   transform: rotate(180deg);
+  &:before {
+    top: -71px;
+  }
 }
 .slick-arrow.slick-next {
   right: 1.07rem;
   top: 49%;
+  &:before {
+    top: -70.4px;
+  }
 }
 #card__datepicker {
   padding: 0;

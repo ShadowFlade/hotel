@@ -3,7 +3,7 @@
   flex: 1 0 auto;
   overflow: hidden;
   &__bgp {
-    height: 49rem;
+    height: 48.9rem;
     background: url('./last-page.jpg');
   }
   &__register {
@@ -38,14 +38,6 @@
     }
     .text-field {
       margin-bottom: 0;
-    }
-  }
-  .footer {
-    .footer__list:nth-child(2) {
-      margin-right: 4rem;
-    }
-    .footer__bottom-container {
-      padding: 1.6% 9.72222%;
     }
   }
 }

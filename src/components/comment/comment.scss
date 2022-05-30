@@ -22,9 +22,10 @@
     top: 10%;
   }
   &__like {
+    top: -10px;
+
     left: 5px;
     position: relative;
-    top: -7px;
   }
   &__body {
     display: flex;

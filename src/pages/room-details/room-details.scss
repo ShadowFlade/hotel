@@ -56,10 +56,10 @@
     }
   }
   .content {
+    padding: 4.9rem 9.7% 2.3% 9.6%;
     display: flex;
     width: 100%;
     justify-content: center;
-    padding: 5rem 9.7% 2.2% 9.6%;
     @media screen and (max-width: 1100px) {
       & {
         flex-wrap: wrap;
@@ -90,16 +90,16 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        padding-top: 1.6rem;
+        padding-top: 1.8rem;
         width: 100%;
       }
     }
     &__title {
+      line-height: 25px;
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
       font-size: 1.35rem;
-      line-height: 23px;
       color: #1f2041;
       margin-bottom: 1.7571rem;
       display: flex;
@@ -107,9 +107,9 @@
       width: 104%;
     }
     &__comments {
+      margin-top: 1px;
       max-width: rem(711);
       width: 98%;
-      margin-top: 5px;
       .content__title {
         margin-bottom: 0;
       }
@@ -140,11 +140,11 @@
         margin-right: 0;
       }
       &__title {
+        line-height: 21px;
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
         font-size: 19px;
-        line-height: 23px;
         margin-bottom: 1em;
         color: #1f2041;
         &--bullet-list {
@@ -261,13 +261,4 @@
   }
 }
 
-/* Element | http://localhost:8081/room-details.html */
-
-.content__list-of-comments {
-}
-
 /* Inline #40 | http://localhost:8081/room-details.html */
-
-.room-details .content__comment:not(:first-child) {
-  /* margin-top: .2rem; */
-}

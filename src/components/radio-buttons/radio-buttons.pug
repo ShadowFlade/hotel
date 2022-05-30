@@ -3,6 +3,7 @@ mixin radioButtons({list,name})
     .radio-buttons__box
       each val in list
         .radio-buttons__option
-          input.radio-buttons__input(type="radio",name=name,value=val,id=val,tabindex='0')
           label.radio-buttons__title(for=val) #{val}
+            input.radio-buttons__input(type="radio",name=name,value=val,id=val,tabindex='0')
+            span.radio-buttons__fake-radio
 
